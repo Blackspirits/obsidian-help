@@ -1,5 +1,4 @@
 ---
-localized: false
 permalink: sync/troubleshoot
 cssclasses:
   - soft-embed
@@ -8,91 +7,91 @@ mobile: true
 description: This page lists uncommon issues you may encounter with Obsidian Sync and how to resolve them.
 ---
 
-This page lists uncommon issues you may encounter with [[Introdução ao Obsidian Sync|Obsidian Sync]] and how to resolve them. Before proceeding, we recommend reviewing the [[Ícone de estado e mensagens]] and [[Perguntas frequentes]] pages.
+Esta página lista problemas pouco comuns que pode encontrar com o [[Introdução ao Obsidian Sync|Obsidian Sync]] e como resolvê-los. Antes de prosseguir, recomendamos a consulta das páginas [[Ícone de estado e mensagens]] e [[Perguntas frequentes]].
 
-## General
+## Geral
 
-### Conflict resolution
+### Resolução de conflitos
 
-A conflict happens when you change the same file on two or more devices before they sync. For example, you edit a note on your computer. Before that change uploads, you also change the same note on your phone.
+Um conflito ocorre quando altera o mesmo ficheiro em dois ou mais dispositivos antes de estes sincronizarem. Por exemplo, edita uma nota no computador. Antes de essa alteração ser carregada, altera também a mesma nota no telemóvel.
 
-Conflicts happen more often when you work offline. There are more changes and longer time between syncs, which increases the chance of conflicts.
+Os conflitos ocorrem com mais frequência quando trabalha sem ligação à internet. Há mais alterações e mais tempo entre sincronizações, o que aumenta a probabilidade de conflitos.
 
-#### How Obsidian Sync handles conflicts
+#### Como o Obsidian Sync gere os conflitos
 
-When Obsidian Sync finds a conflict, the result depends on the file type:
+Quando o Obsidian Sync detecta um conflito, o resultado depende do tipo de ficheiro:
 
-- **Markdown files**: Obsidian Sync merges the changes using Google's [diff-match-patch](https://github.com/google/diff-match-patch) algorithm.
-- **Other file types**: For all other files, including canvases, Obsidian uses a "last modified wins" approach. The most recently modified version replaces earlier versions.
+- **Ficheiros Markdown**: O Obsidian Sync combina as alterações utilizando o algoritmo [diff-match-patch](https://github.com/google/diff-match-patch) da Google.
+- **Outros tipos de ficheiro**: Para todos os outros ficheiros, incluindo canvas, o Obsidian utiliza a abordagem de "a última modificação prevalece". A versão modificada mais recentemente substitui as versões anteriores.
 
-For conflicts in Obsidian settings, such as plugin settings, Obsidian Sync merges the JSON files. It applies keys from the local JSON on top of the remote JSON.
+Para conflitos nas configurações do Obsidian, como as configurações de plugins, o Obsidian Sync combina os ficheiros JSON. Aplica as chaves do JSON local sobre o JSON remoto.
 
-#### Conflict resolution options
+#### Opções de resolução de conflitos
 
-Starting in Obsidian 1.9.7, you can choose how to handle conflicts. To configure this setting:
+A partir do Obsidian 1.9.7, pode escolher como gerir os conflitos. Para configurar esta definição:
 
-1. Open **[[Configurações]]**.
-2. In the sidebar, select **Sync**.
-3. Under **[[Configurações do Sync e sincronização selectiva#Conflict resolution|Conflict resolution]]**, choose your preferred option:
-   - **Automatically merge** (default): Obsidian Sync combines all changes from different devices into a single file. This saves all edits, but it may sometimes create duplicate text or formatting problems. You will need to fix these manually.
-   - **Create conflict file**: When Obsidian finds conflicting changes, it creates a separate conflict file instead of merging automatically. You can then review both versions and merge them yourself. This gives you full control over the final result.
+1. Abra as **[[Configurações]]**.
+2. Na barra lateral, seleccione **Sync**.
+3. Em **[[Configurações do Sync e sincronização selectiva#Conflict resolution|Resolução de conflitos]]**, escolha a opção que preferir:
+   - **Combinar automaticamente** (predefinição): O Obsidian Sync combina todas as alterações de diferentes dispositivos num único ficheiro. Isto guarda todas as edições, mas pode por vezes criar texto duplicado ou problemas de formatação. Terá de os corrigir manualmente.
+   - **Criar ficheiro de conflito**: Quando o Obsidian detecta alterações em conflito, cria um ficheiro de conflito separado em vez de combinar automaticamente. Pode então rever ambas as versões e combiná-las manualmente. Isto dá-lhe controlo total sobre o resultado final.
 
-> [!warning]+ Configure on all devices
-> Conflict resolution settings are device-specific. You must configure your preferred option on each of your devices. This ensures the same behavior across all your synced devices.
+> [!warning]+ Configurar em todos os dispositivos
+> As definições de resolução de conflitos são específicas de cada dispositivo. Tem de configurar a opção pretendida em cada um dos seus dispositivos. Isto garante o mesmo comportamento em todos os dispositivos sincronizados.
 
-**Conflict file naming pattern**
+**Padrão de nomenclatura do ficheiro de conflito**
 
-When you use the "Create conflict file" option, Obsidian creates a new file with this naming pattern:
+Quando utiliza a opção "Criar ficheiro de conflito", o Obsidian cria um novo ficheiro com o seguinte padrão de nomenclatura:
 
 ```
 original-note-name (Conflicted copy device-name YYYYMMDDHHMM).md
 ```
 
-For example, if a conflict happens in a note called `Meeting notes.md`, the conflict file might be named:
+Por exemplo, se ocorrer um conflito numa nota chamada `Meeting notes.md`, o ficheiro de conflito pode ter o nome:
 
 ```
 Meeting notes (Conflicted copy MyMacBook2 202411281430).md
 ```
 
-The conflict file contains the changes from the device where the conflict was detected. The original file keeps the remote version. You can compare both files and manually merge the content.
+O ficheiro de conflito contém as alterações do dispositivo onde o conflito foi detectado. O ficheiro original mantém a versão remota. Pode comparar ambos os ficheiros e combinar o conteúdo manualmente.
 
-> [!info]+ Check the Sync log
-> To check when conflicts happened, open the [[Ícone de estado e mensagens#Sync activity log|Sync log]]. Filter for "Merge Conflicts" or search for "Conflict".
+> [!info]+ Consultar o registo do Sync
+> Para verificar quando ocorreram conflitos, abra o [[Ícone de estado e mensagens#Sync activity log|registo do Sync]]. Filtre por "Merge Conflicts" ou pesquise por "Conflict".
 
-###  Sync deleted a note I just created on two devices
+### O Sync eliminou uma nota que acabei de criar em dois dispositivos
 
-Obsidian Sync typically tries to [[#Conflict resolution|resolve conflicts]] by merging conflicting notes across devices. However, problems can happen for users who automatically create or change notes on startup. This includes [[Notas diárias]] or when using the community plugin [Templater](https://github.com/SilentVoid13/Templater).
+O Obsidian Sync normalmente tenta [[#Resolução de conflitos|resolver conflitos]] combinando notas em conflito entre dispositivos. No entanto, podem ocorrer problemas com utilizadores que criam ou alteram notas automaticamente no arranque. Isto inclui as [[Notas diárias]] ou quando se utiliza o plugin da comunidade [Templater](https://github.com/SilentVoid13/Templater).
 
-If you create a note locally on one device and, within a couple of minutes, Sync downloads a remote version of that same note, Sync will keep the remote version without merging the two. In this case, you can recover the local version using [[Recuperação de ficheiros]].
+Se criar uma nota localmente num dispositivo e, ao fim de alguns minutos, o Sync transferir uma versão remota dessa mesma nota, o Sync manterá a versão remota sem combinar as duas. Neste caso, pode recuperar a versão local utilizando [[Recuperação de ficheiros]].
 
-### Sync will not sync my plugins and settings updates
+### O Sync não sincroniza as actualizações dos meus plugins e configurações
 
-Obsidian [[Perguntas frequentes#Does Obsidian Sync live-reload my settings?|does not live-reload all settings]]. After you update settings or plugins, you need to restart Obsidian on other devices to see the changes. On mobile devices, you may need to force-quit the app.
+O Obsidian [[Perguntas frequentes#Does Obsidian Sync live-reload my settings?|não recarrega todas as configurações em tempo real]]. Depois de actualizar configurações ou plugins, tem de reiniciar o Obsidian nos outros dispositivos para ver as alterações. Nos dispositivos móveis, poderá ser necessário forçar o fecho da aplicação.
 
-> [!example]- Changing a theme
-> - On your primary device (usually a computer), you change your theme back to the default from a custom theme.
-> - The Sync log confirms the updated files were sent to the remote vault, but your mobile device still shows the custom theme.
-> - On the mobile device, check the Sync log to confirm receipt of the updated `appearance.json` file.
-> - Reload or restart Obsidian on the mobile device.
-> - After reloading or restarting, the mobile device should display the same theme as your computer.
+> [!example]- Alterar um tema
+> - No seu dispositivo principal (normalmente um computador), muda o tema de volta para o predefinido a partir de um tema personalizado.
+> - O registo do Sync confirma que os ficheiros actualizados foram enviados para o cofre remoto, mas o seu dispositivo móvel continua a mostrar o tema personalizado.
+> - No dispositivo móvel, consulte o registo do Sync para confirmar a recepção do ficheiro `appearance.json` actualizado.
+> - Recarregue ou reinicie o Obsidian no dispositivo móvel.
+> - Após recarregar ou reiniciar, o dispositivo móvel deverá apresentar o mesmo tema que o computador.
 
-### My files keep disappearing from Sync as soon as I restore it
+### Os meus ficheiros continuam a desaparecer do Sync assim que os restauro
 
-This issue is most common on Windows. Windows Defender may quarantine files with code blocks, which causes certain notes to disappear.
+Este problema é mais comum no Windows. O Windows Defender pode colocar em quarentena ficheiros com blocos de código, o que faz com que determinadas notas desapareçam.
 
-Another common cause is double-syncing. This happens when Obsidian Sync runs alongside another syncing service.
+Outra causa comum é a dupla sincronização. Isto acontece quando o Obsidian Sync é executado em conjunto com outro serviço de sincronização.
 
 ![[Migrar para o Obsidian Sync#Move your vault out of your third-party syncing service or cloud storage]]
 
 ---
 
-Finally, this can happen when you restore a file on one device, but then it is removed from a secondary device. This happens when the filename has [[Ícone de estado e mensagens#Skipped messages|illegal characters]].
+Por fim, isto pode acontecer quando restaura um ficheiro num dispositivo, mas este é depois removido de um dispositivo secundário. Isto ocorre quando o nome do ficheiro contém [[Ícone de estado e mensagens#Skipped messages|caracteres inválidos]].
 
 ## Android
 
-**My device is deleting my attachments I receive through Sync**
+**O meu dispositivo está a eliminar os anexos que recebo através do Sync**
 
-This issue is likely due to Google or Android Photos managing your attachments. To prevent the system from changing files received via Sync, add a `.nomedia` [file to your vault](https://support.google.com/android/thread/60342076/what-are-these-nomedia-files?hl=en) on your Android device.
+Este problema deve-se provavelmente à gestão dos seus anexos pelo Google ou pelo Android Photos. Para evitar que o sistema altere os ficheiros recebidos via Sync, adicione um ficheiro `.nomedia` [ao seu cofre](https://support.google.com/android/thread/60342076/what-are-these-nomedia-files?hl=en) no seu dispositivo Android.
 
-> [!tip]- Use a plugin
-> The community plugin [Android Nomedia](https://obsidian.md/plugins?id=android-nomedia) makes this easier. Install it on your Android phone. Note that `.nomedia` files are not synced across devices through Obsidian Sync.
+> [!tip]- Utilizar um plugin
+> O plugin da comunidade [Android Nomedia](https://obsidian.md/plugins?id=android-nomedia) facilita este processo. Instale-o no seu telemóvel Android. Note que os ficheiros `.nomedia` não são sincronizados entre dispositivos através do Obsidian Sync.
