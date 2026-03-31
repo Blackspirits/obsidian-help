@@ -22,6 +22,13 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
+// Configure proxy for Node.js fetch (needed in container environments)
+if (process.env.HTTPS_PROXY || process.env.https_proxy) {
+  const { ProxyAgent, setGlobalDispatcher } = await import("undici");
+  const proxyUrl = process.env.HTTPS_PROXY || process.env.https_proxy || "";
+  setGlobalDispatcher(new ProxyAgent(proxyUrl));
+}
+
 // Load .env from repo root
 const envPath = path.resolve(import.meta.dirname, "../.env");
 if (fs.existsSync(envPath)) {
