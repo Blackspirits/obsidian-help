@@ -48,4 +48,4 @@ Se seguiu estas sugestões e o seu problema continuar por resolver, é possível
 
 ## Privacidade
 
-O plugin Importer do Obsidian utiliza [OAuth](https://learn.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow) para autenticar com a sua conta Microsoft e importar os seus cadernos do OneNote. Isto concede um token de acesso de curta duração à sua conta, que é utilizado apenas a partir do seu computador e nunca é armazenado. Após a conclusão da importação, pode opcionalmente revogar o token na [página de aplicações e serviços da Microsoft](https://account.live.com/consent/Manage).
+O plugin Importer do Obsidian utiliza [OAuth](https://learn.microsoft.com/en-us/azure/ative-directory/develop/v2-oauth2-auth-code-flow) para autenticar com a sua conta Microsoft e importar os seus cadernos do OneNote. Isto concede um token de acesso de curta duração à sua conta, que é utilizado apenas a partir do seu computador e nunca é armazenado. Após a conclusão da importação, pode opcionalmente revogar o token na [página de aplicações e serviços da Microsoft](https://account.live.com/consent/Manage).

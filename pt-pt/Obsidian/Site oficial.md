@@ -1,10 +1,9 @@
 ---
-localized: false
 permalink: official-site
 ---
-Obsidian’s official website is at https://obsidian.md
+O site oficial do Obsidian está em https://obsidian.md
 
-There you can:
+Aí pode:
 
-- [Download](https://obsidian.md/download) the latest installer if your installer version is old.
-- Register an account, and access your [account dashboard](https://obsidian.md/account), if you want to purchase [[Licença Catalyst]], [[Licença comercial]], [[Introdução ao Obsidian Sync|Obsidian Sync]], or [[Introdução ao Obsidian Publish|Obsidian Publish]].
+- [Descarregar](https://obsidian.md/download) o instalador mais recente se a sua versão do instalador estiver desatualizada.
+- Registar uma conta e aceder ao seu [painel de conta](https://obsidian.md/account), se pretender adquirir [[Licença Catalyst]], [[Licença comercial]], [[Introdução ao Obsidian Sync|Obsidian Sync]] ou [[Introdução ao Obsidian Publish|Obsidian Publish]].

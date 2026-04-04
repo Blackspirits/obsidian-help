@@ -58,7 +58,7 @@ Quando se referir a múltiplas interações de UI em sequência, use o símbolo 
 - Use "note" quando se referir a um ficheiro Markdown no cofre.
 - Use "file" quando se referir a outras extensões de ficheiro que não Markdown.
 - Preferir "note name" a "note title".
-- Preferir "active note" a "current note".
+- Preferir "ative note" a "current note".
 - Preferir "folder" a "directory".
 - Preferir "file type" a "file format", exceto quando se referir especificamente ao formato de dados do conteúdo do ficheiro.
 

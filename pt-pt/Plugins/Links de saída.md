@@ -2,7 +2,7 @@
 permalink: plugins/outgoing-links
 publish: true
 mobile: false
-description: 'Outgoing links is a core plugin that shows links from the active note at a glance, as well as potential links to be made.'
+description: 'Outgoing links is a core plugin that shows links from the ative note at a glance, as well as potential links to be made.'
 ---
 Links de saída é um [[Plugins nativos|plugin nativo]] que mostra as ligações da nota ativa de relance, bem como potenciais ligações a criar. É semelhante ao plugin [[Links inversos]], que em vez disso mostra as ligações _recebidas_ para a nota ativa.
 

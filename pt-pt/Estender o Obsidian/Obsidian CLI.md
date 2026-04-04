@@ -1,169 +1,168 @@
 ---
-localized: false
 permalink: cli
-description: Anything you can do in Obsidian can be done from the command line.
+description: Tudo o que consegue fazer no Obsidian pode ser feito a partir da linha de comandos.
 ---
-Obsidian CLI is a command line interface that lets you control Obsidian from your terminal for scripting, automation, and integration with external tools.
+O Obsidian CLI é uma interface de linha de comandos que permite controlar o Obsidian a partir do terminal — ideal para scripting, automação e integração com ferramentas externas.
 
-Anything you can do in Obsidian you can do from the command line. Obsidian CLI even includes [[#Developer commands|developer commands]] to access developer tools, inspect elements, take screenshots, reload plugins, and more.
+Tudo o que consegue fazer no Obsidian pode ser feito pela linha de comandos. O Obsidian CLI inclui ainda [[#Developer commands|comandos de programador]] para aceder às ferramentas de desenvolvimento, inspecionar elementos, tirar capturas de ecrã, recarregar plugins e muito mais.
 
 ![[obsidian-cli.mp4#interface]]
 
-> [!warning] Requires Obsidian 1.12 installer
-> Using the CLI requires the Obsidian 1.12 installer. See the [[Atualizar o Obsidian#Installer updates|installer version update guide]].
+> [!warning] Requer o instalador do Obsidian 1.12
+> A utilização do CLI requer o instalador do Obsidian 1.12. Consulte o [[Atualizar o Obsidian#Installer updates|guia de atualização da versão do instalador]].
 
-## Install Obsidian CLI
+## Instalar o Obsidian CLI
 
-Upgrade to the latest [[Atualizar o Obsidian|Obsidian installer version]] (1.11.7) and the latest [[Versões de acesso antecipado|early access version]] (1.12.x).
+Atualize para a [[Atualizar o Obsidian|versão mais recente do instalador do Obsidian]] (1.11.7) e para a [[Versões de acesso antecipado|versão de acesso antecipado]] mais recente (1.12.x).
 
-Enable Obsidian CLI in Obsidian:
+Para ativar o Obsidian CLI:
 
-1. Go to **Settings** → **General**.
-2. Enable **Command line interface**.
-3. Follow the prompt to register Obsidian CLI.
+1. Aceda a **[[Configurações]]** → **Geral**.
+2. Ative a **Interface de linha de comandos**.
+3. Siga as instruções para registar o Obsidian CLI.
 
-If you run into issues installing Obsidian CLI see [[#Troubleshooting]].
+Se tiver dificuldades a instalar o Obsidian CLI, consulte [[#Troubleshooting|Resolução de problemas]].
 
 ## Get started
 
-Obsidian CLI supports both single commands and a terminal user interface (TUI) with interactive help and autocomplete.
+O Obsidian CLI suporta comandos individuais e uma interface de utilizador em modo terminal (TUI) com ajuda interativa e preenchimento automático.
 
-> [!info] Obsidian app must be running
-> Obsidian CLI requires the Obsidian app to be running. If Obsidian is not running, the first command you run launches Obsidian.
+> [!info] A aplicação Obsidian tem de estar em execução
+> O Obsidian CLI requer que a aplicação Obsidian esteja em execução. Se o Obsidian não estiver aberto, o primeiro comando que executar irá lançá-lo automaticamente.
 >
-> Looking to sync without the desktop app? See [[Obsidian Headless|Obsidian Headless]].
+> Pretende sincronizar sem a aplicação de secretária? Consulte [[Obsidian Headless|Obsidian Headless]].
 
-### Run a command
+### Executar um comando
 
-Run an individual command without opening the TUI:
+Execute um comando individual sem abrir a TUI:
 
 ```shell
-# Run the help command
+# Executar o comando de ajuda
 obsidian help
 ```
 
-### Use the terminal interface
+### Usar a interface de terminal
 
-Use the TUI by entering `obsidian`. Subsequent commands can be entered without `obsidian`.
+Abra a TUI digitando `obsidian`. Os comandos seguintes podem ser introduzidos sem `obsidian`.
 
 ```shell
-# Open the TUI, then run help
+# Abrir a TUI e executar a ajuda
 obsidian
 help
 ```
 
-The TUI supports autocomplete, command history, and reverse search. Use `Ctrl+R` to search your command history. See [[#Keyboard shortcuts]] for all available shortcuts.
+A TUI suporta preenchimento automático, histórico de comandos e pesquisa inversa. Use `Ctrl+R` para pesquisar no histórico de comandos. Consulte [[#Keyboard shortcuts|Atalhos de teclado]] para ver todos os atalhos disponíveis.
 
-## Examples
+## Exemplos
 
-Here are a few examples of what Obsidian CLI can do.
+Alguns exemplos do que o Obsidian CLI consegue fazer.
 
-### Everyday use
+### Uso do dia a dia
 
 ```shell
-# Open today's daily note
+# Abrir a nota diária de hoje
 obsidian daily
 
-# Add a task to your daily note
-obsidian daily:append content="- [ ] Buy groceries"
+# Adicionar uma tarefa à nota diária
+obsidian daily:append content="- [ ] Comprar mantimentos"
 
-# Search your vault
-obsidian search query="meeting notes"
+# Pesquisar no cofre
+obsidian search query="notas de reunião"
 
-# Read the active file
+# Ler o ficheiro ativo
 obsidian read
 
-# List all tasks from your daily note
+# Listar todas as tarefas da nota diária
 obsidian tasks daily
 
-# Create a new note from a template
-obsidian create name="Trip to Paris" template=Travel
+# Criar uma nova nota a partir de um modelo
+obsidian create name="Viagem a Lisboa" template=Viagem
 
-# List all tags in your vault with counts
+# Listar todas as etiquetas do cofre com contagens
 obsidian tags counts
 
-# Compare two versions of a file
+# Comparar duas versões de um ficheiro
 obsidian diff file=README from=1 to=3
 ```
 
-### For developers
+### Para programadores
 
-Many [[#Developer commands]] are available for plugin and theme development. These commands allow agentic coding tools to automatically test and debug.
+Existem muitos [[#Developer commands|comandos de programador]] disponíveis para o desenvolvimento de plugins e temas. Estes comandos permitem que ferramentas de programação automática testem e depurem código automaticamente.
 
 ```shell
-# Open developer tools
+# Abrir as ferramentas de programador
 obsidian devtools
 
-# Reload a community plugin you're developing
-obsidian plugin:reload id=my-plugin
+# Recarregar um plugin da comunidade em desenvolvimento
+obsidian plugin:reload id=o-meu-plugin
 
-# Take a screenshot of the app
-obsidian dev:screenshot path=screenshot.png
+# Tirar uma captura de ecrã da aplicação
+obsidian dev:screenshot path=captura.png
 
-# Run JavaScript in the app console
+# Executar JavaScript na consola da aplicação
 obsidian eval code="app.vault.getFiles().length"
 ```
 
-## How to
+## Como fazer
 
-### Use parameters and flags
+### Usar parâmetros e sinalizadores
 
-Commands can use **parameters** and **flags**. Most commands do not require any parameters or flags. Required parameters are marked as `required`. For example:
+Os comandos podem usar **parâmetros** e **sinalizadores**. A maioria dos comandos não requer qualquer parâmetro ou sinalizador. Os parâmetros obrigatórios estão marcados como `required`. Por exemplo:
 
 ```shell
-# Create a new note using the default "Untitled" name
+# Criar uma nova nota com o nome predefinido "Sem título"
 obsidian create
 ```
 
-A **parameter** takes a value, written as `parameter=value`. If the value has spaces, wrap it in quotes:
+Um **parâmetro** recebe um valor, escrito como `parâmetro=valor`. Se o valor tiver espaços, coloque-o entre aspas:
 
 ```shell
-# Create a new note called "Note" with content "Hello world"
-obsidian create name=Note content="Hello world"
+# Criar uma nova nota chamada "Nota" com o conteúdo "Olá mundo"
+obsidian create name=Nota content="Olá mundo"
 ```
 
-A **flag** is a boolean switch with no value. Include it to turn it on, for example `open` and `overwrite` are flags:
+Um **sinalizador** é um interruptor booleano sem valor. Inclua-o para o ativar; por exemplo, `open` e `overwrite` são sinalizadores:
 
 ```shell
-# Create a note and open it
-obsidian create name=Note content="Hello" open overwrite
+# Criar uma nota e abri-la
+obsidian create name=Nota content="Olá" open overwrite
 ```
 
-For multiline content use `\n` for newline. Use `\t` for tab.
+Para conteúdo em várias linhas, use `\n` para nova linha e `\t` para tabulação.
 
 ```bash
-obsidian create name=Note content="# Title\n\nBody text"
+obsidian create name=Nota content="# Título\n\nTexto do corpo"
 ```
 
-### Target a vault
+### Escolher um cofre
 
-If your terminal's current working directory is a vault folder, that vault is used by default. Otherwise, the currently active vault is used.
+Se o diretório de trabalho atual do terminal for uma pasta de cofre, esse cofre é usado por predefinição. Caso contrário, é utilizado o cofre atualmente ativo.
 
-Use `vault=<name>` or `vault=<id>` to target a specific vault. This must be the first parameter before your command:
+Use `vault=<nome>` ou `vault=<id>` para indicar um cofre específico. Este deve ser o primeiro parâmetro antes do comando:
 
 ```shell
-obsidian vault=Notes daily
-obsidian vault="My Vault" search query="test"
+obsidian vault=Notas daily
+obsidian vault="O Meu Cofre" search query="teste"
 ```
 
-In the TUI, use `vault:open <name>` or `<id>` to switch to a different vault.
+Na TUI, use `vault:open <nome>` ou `<id>` para mudar para um cofre diferente.
 
-### Target a file
+### Escolher um ficheiro
 
-Many commands accept `file` and `path` parameters to target a specific file. If neither is provided, the command defaults to the active file.
+Muitos comandos aceitam os parâmetros `file` e `path` para indicar um ficheiro específico. Se nenhum for fornecido, o comando utiliza o ficheiro ativo por predefinição.
 
-- `file=<name>` resolves the file using the same link resolution as [[Links internos|wikilinks]], matching by file name without requiring the full path or extension.
-- `path=<path>` requires the exact path from the vault root, e.g. `folder/note.md`.
+- `file=<nome>` resolve o ficheiro usando a mesma lógica de resolução de ligações dos [[Links internos|wikilinks]], encontrando-o pelo nome sem precisar do caminho completo nem da extensão.
+- `path=<caminho>` requer o caminho exato a partir da raiz do cofre, por exemplo `pasta/nota.md`.
 
 ```shell
-# These are equivalent if "Recipe.md" is the only file with that name
+# Equivalentes se "Recipe.md" for o único ficheiro com esse nome
 obsidian read file=Recipe
 obsidian read path="Templates/Recipe.md"
 ```
 
-### Copy output
+### Copiar resultado
 
-Add `--copy` to any command to copy the output to the clipboard:
+Adicione `--copy` a qualquer comando para copiar o resultado para a área de transferência:
 
 ```shell
 read --copy
@@ -171,265 +170,265 @@ search query="TODO" --copy
 ```
 
 
-## General commands
+## Comandos gerais
 
 ### `help`
 
-Show list of all available commands.
+Mostra a lista de todos os comandos disponíveis.
 
-| Parameter   | Description                       |
-| ----------- | --------------------------------- |
-| `<command>` | Show help for a specific command. |
+| Parâmetro   | Descrição                              |
+| ----------- | -------------------------------------- |
+| `<command>` | Mostra a ajuda de um comando específico. |
 
 ### `version`
 
-Show Obsidian version.
+Mostra a versão do Obsidian.
 
 ### `reload`
 
-Reload the app window.
+Recarrega a janela da aplicação.
 
 ### `restart`
 
-Restart the app.
+Reinicia a aplicação.
 
 
 ## Bases
 
-Commands for [[Introdução ao Bases|Bases]].
+Comandos para [[Introdução ao Bases|Bases]].
 
 ### `bases`
 
-List all `.base` files in the vault.
+Lista todos os ficheiros `.base` no cofre.
 
 ### `base:views`
 
-List views in the current base file.
+Lista as vistas do ficheiro de base atual.
 
 ### `base:create`
 
-Create a new item in a base. Defaults to the active base view if no file is specified.
+Cria um novo item numa base. Usa a vista de base ativa por predefinição, se não for indicado nenhum ficheiro.
 
 ```bash
-file=<name>        # base file name
-path=<path>        # base file path
-view=<name>        # view name
-name=<name>        # new file name
-content=<text>     # initial content
+file=<name>        # nome do ficheiro de base
+path=<path>        # caminho do ficheiro de base
+view=<name>        # nome da vista
+name=<name>        # nome do novo ficheiro
+content=<text>     # conteúdo inicial
 
-open               # open file after creating
-newtab             # open in new tab
+open               # abrir o ficheiro após criação
+newtab             # abrir em novo separador
 ```
 
 ### `base:query`
 
-Query a base and return results.
+Consulta uma base e devolve os resultados.
 
 ```bash
-file=<name>                    # base file name
-path=<path>                    # base file path
-view=<name>                    # view name to query
-format=json|csv|tsv|md|paths   # output format (default: json)
+file=<name>                    # nome do ficheiro de base
+path=<path>                    # caminho do ficheiro de base
+view=<name>                    # nome da vista a consultar
+format=json|csv|tsv|md|paths   # formato de saída (predefinição: json)
 ```
 
-## Bookmarks
+## Favoritos
 
-Commands for [[Favoritos]].
+Comandos para [[Favoritos]].
 
 ### `bookmarks`
 
-List bookmarks.
+Lista os favoritos.
 
 ```bash
-total              # return bookmark count
-verbose            # include bookmark types
-format=json|tsv|csv  # output format (default: tsv)
+total              # devolver o número de favoritos
+verbose            # incluir tipos de favoritos
+format=json|tsv|csv  # formato de saída (predefinição: tsv)
 ```
 
 ### `bookmark`
 
-Add a bookmark.
+Adiciona um favorito.
 
 ```bash
-file=<path>        # file to bookmark
-subpath=<subpath>  # subpath (heading or block) within file
-folder=<path>      # folder to bookmark
-search=<query>     # search query to bookmark
-url=<url>          # URL to bookmark
-title=<title>      # bookmark title
+file=<path>        # ficheiro a adicionar aos favoritos
+subpath=<subpath>  # subcaminho (cabeçalho ou bloco) dentro do ficheiro
+folder=<path>      # pasta a adicionar aos favoritos
+search=<query>     # consulta de pesquisa a adicionar aos favoritos
+url=<url>          # URL a adicionar aos favoritos
+title=<title>      # título do favorito
 ```
 
-## Command palette
+## Paleta de comandos
 
-Commands for [[Paleta de comandos]] and [[Teclas de atalho]]. This includes all commands registered by plugins.
+Comandos para a [[Paleta de comandos]] e [[Teclas de atalho]]. Inclui todos os comandos registados por plugins.
 
 ### `commands`
 
-List available command IDs.
+Lista os IDs de comandos disponíveis.
 
 ```bash
-filter=<prefix>    # filter by ID prefix
+filter=<prefix>    # filtrar por prefixo de ID
 ```
 
 ### `command`
 
-Execute an Obsidian command.
+Executa um comando do Obsidian.
 
 ```bash
-id=<command-id>    # (required) command ID to execute
+id=<command-id>    # (obrigatório) ID do comando a executar
 ```
 
 ### `hotkeys`
 
-List hotkeys for all commands.
+Lista as teclas de atalho de todos os comandos.
 
 ```bash
-total              # return hotkey count
-verbose            # show if hotkey is custom
-format=json|tsv|csv  # output format (default: tsv)
+total              # devolver o número de teclas de atalho
+verbose            # mostrar se a tecla de atalho é personalizada
+format=json|tsv|csv  # formato de saída (predefinição: tsv)
 ```
 
 ### `hotkey`
 
-Get hotkey for a command.
+Obtém a tecla de atalho de um comando.
 
 ```bash
-id=<command-id>    # (required) command ID
+id=<command-id>    # (obrigatório) ID do comando
 
-verbose            # show if custom or default
+verbose            # mostrar se é personalizada ou predefinida
 ```
 
-## Daily notes
+## Notas diárias
 
-Commands for [[Notas diárias]].
+Comandos para [[Notas diárias]].
 
 ### `daily`
 
-Open daily note.
+Abre a nota diária.
 
 ```bash
-paneType=tab|split|window    # pane type to open in
+paneType=tab|split|window    # tipo de painel para abrir
 ```
 
 ### `daily:path`
 
-Get daily note path. Returns the expected path even if the file hasn't been created yet.
+Obtém o caminho da nota diária. Devolve o caminho esperado mesmo que o ficheiro ainda não tenha sido criado.
 
 ### `daily:read`
 
-Read daily note contents.
+Lê o conteúdo da nota diária.
 
 ### `daily:append`
 
-Append content to daily note.
+Acrescenta conteúdo à nota diária.
 
 ```bash
-content=<text>     # (required) content to append
-paneType=tab|split|window    # pane type to open in
+content=<text>     # (obrigatório) conteúdo a acrescentar
+paneType=tab|split|window    # tipo de painel para abrir
 
-inline             # append without newline
-open               # open file after adding
+inline             # acrescentar sem nova linha
+open               # abrir o ficheiro após adicionar
 ```
 
 ### `daily:prepend`
 
-Prepend content to daily note.
+Adiciona conteúdo ao início da nota diária.
 
 ```bash
-content=<text>     # (required) content to prepend
-paneType=tab|split|window    # pane type to open in
+content=<text>     # (obrigatório) conteúdo a adicionar
+paneType=tab|split|window    # tipo de painel para abrir
 
-inline             # prepend without newline
-open               # open file after adding
+inline             # adicionar sem nova linha
+open               # abrir o ficheiro após adicionar
 ```
 
-## File history
+## Histórico de ficheiros
 
 ### `diff`
 
-List or compare versions from local [[Recuperação de ficheiros]] and [[Introdução ao Obsidian Sync|Sync]]. Versions are numbered from newest to oldest.
+Lista ou compara versões da [[Recuperação de ficheiros]] local e do [[Introdução ao Obsidian Sync|Sync]]. As versões são numeradas da mais recente para a mais antiga.
 
 ```bash
-file=<name>          # file name
-path=<path>          # file path
-from=<n>             # version number to diff from
-to=<n>               # version number to diff to
-filter=local|sync    # filter by version source
+file=<name>          # nome do ficheiro
+path=<path>          # caminho do ficheiro
+from=<n>             # número da versão de partida
+to=<n>               # número da versão de destino
+filter=local|sync    # filtrar por origem da versão
 ```
 
-**Examples:**
+**Exemplos:**
 
 ```shell
-# List all versions of the active file
+# Listar todas as versões do ficheiro ativo
 diff
 
-# List all versions of a specific file
+# Listar todas as versões de um ficheiro específico
 diff file=Recipe
 
-# Compare the latest version to the current file
+# Comparar a versão mais recente com o ficheiro atual
 diff file=Recipe from=1
 
-# Compare two versions
+# Comparar duas versões
 diff file=Recipe from=2 to=1
 
-# Only show Sync versions
+# Mostrar apenas versões do Sync
 diff filter=sync
 ```
 
 ### `history`
 
-List versions from [[Recuperação de ficheiros]] only. See [[#Sync|sync:history]] for the equivalent Sync command.
+Lista versões apenas da [[Recuperação de ficheiros]]. Consulte [[#Sync|sync:history]] para o comando equivalente do Sync.
 
 ```bash
-file=<name>        # file name
-path=<path>        # file path
+file=<name>        # nome do ficheiro
+path=<path>        # caminho do ficheiro
 ```
 
 ### `history:list`
 
-List all files with local history.
+Lista todos os ficheiros com histórico local.
 
 ### `history:read`
 
-Read a local history version.
+Lê uma versão do histórico local.
 
 ```bash
-file=<name>        # file name
-path=<path>        # file path
-version=<n>        # version number (default: 1)
+file=<name>        # nome do ficheiro
+path=<path>        # caminho do ficheiro
+version=<n>        # número da versão (predefinição: 1)
 ```
 
 ### `history:restore`
 
-Restore a local history version.
+Restaura uma versão do histórico local.
 
 ```bash
-file=<name>        # file name
-path=<path>        # file path
-version=<n>        # (required) version number
+file=<name>        # nome do ficheiro
+path=<path>        # caminho do ficheiro
+version=<n>        # (obrigatório) número da versão
 ```
 
 ### `history:open`
 
-Open file recovery.
+Abre a recuperação de ficheiros.
 
 ```bash
-file=<name>        # file name
-path=<path>        # file path
+file=<name>        # nome do ficheiro
+path=<path>        # caminho do ficheiro
 ```
 
-## Files and folders
+## Ficheiros e pastas
 
 ### `file`
 
-Show file info (default: active file).
+Mostra informações do ficheiro (predefinição: ficheiro ativo).
 
 ```bash
-file=<name>        # file name
-path=<path>        # file path
+file=<name>        # nome do ficheiro
+path=<path>        # caminho do ficheiro
 ```
 
-Example:
+Exemplo:
 
 ```
 path       Notes/Recipe.md
@@ -442,1118 +441,1118 @@ modified   1700001000000
 
 ### `files`
 
-List files in the vault.
+Lista os ficheiros no cofre.
 
 ```bash
-folder=<path>      # filter by folder
-ext=<extension>    # filter by extension
+folder=<path>      # filtrar por pasta
+ext=<extension>    # filtrar por extensão
 
-total              # return file count
+total              # devolver o número de ficheiros
 ```
 
 ### `folder`
 
-Show folder info.
+Mostra informações da pasta.
 
 ```bash
-path=<path>              # (required) folder path
-info=files|folders|size  # return specific info only
+path=<path>              # (obrigatório) caminho da pasta
+info=files|folders|size  # devolver apenas informação específica
 ```
 
 ### `folders`
 
-List folders in the vault.
+Lista as pastas no cofre.
 
 ```bash
-folder=<path>      # filter by parent folder
+folder=<path>      # filtrar por pasta-mãe
 
-total              # return folder count
+total              # devolver o número de pastas
 ```
 
 ### `open`
 
-Open a file.
+Abre um ficheiro.
 
 ```bash
-file=<name>        # file name
-path=<path>        # file path
+file=<name>        # nome do ficheiro
+path=<path>        # caminho do ficheiro
 
-newtab             # open in new tab
+newtab             # abrir em novo separador
 ```
 
 ### `create`
 
-Create or overwrite a file.
+Cria ou substitui um ficheiro.
 
 ```bash
-name=<name>        # file name
-path=<path>        # file path
-content=<text>     # initial content
-template=<name>    # template to use
+name=<name>        # nome do ficheiro
+path=<path>        # caminho do ficheiro
+content=<text>     # conteúdo inicial
+template=<name>    # modelo a usar
 
-overwrite          # overwrite if file exists
-open               # open file after creating
-newtab             # open in new tab
+overwrite          # substituir se o ficheiro existir
+open               # abrir o ficheiro após criação
+newtab             # abrir em novo separador
 ```
 
 ### `read`
 
-Read file contents (default: active file).
+Lê o conteúdo de um ficheiro (predefinição: ficheiro ativo).
 
 ```bash
-file=<name>        # file name
-path=<path>        # file path
+file=<name>        # nome do ficheiro
+path=<path>        # caminho do ficheiro
 ```
 
 ### `append`
 
-Append content to a file (default: active file).
+Acrescenta conteúdo a um ficheiro (predefinição: ficheiro ativo).
 
 ```bash
-file=<name>        # file name
-path=<path>        # file path
-content=<text>     # (required) content to append
+file=<name>        # nome do ficheiro
+path=<path>        # caminho do ficheiro
+content=<text>     # (obrigatório) conteúdo a acrescentar
 
-inline             # append without newline
+inline             # acrescentar sem nova linha
 ```
 
 ### `prepend`
 
-Prepend content after frontmatter (default: active file).
+Adiciona conteúdo antes do corpo do ficheiro, após o frontmatter (predefinição: ficheiro ativo).
 
 ```bash
-file=<name>        # file name
-path=<path>        # file path
-content=<text>     # (required) content to prepend
+file=<name>        # nome do ficheiro
+path=<path>        # caminho do ficheiro
+content=<text>     # (obrigatório) conteúdo a adicionar
 
-inline             # prepend without newline
+inline             # adicionar sem nova linha
 ```
 
 ### `move`
 
-Move or rename a file (default: active file). This will automatically update [[Links internos]] if turned on in your [[Configurações#Automatically update internal links|vault settings]].
+Move ou renomeia um ficheiro (predefinição: ficheiro ativo). Atualiza automaticamente os [[Links internos]] se essa opção estiver ativa nas [[Configurações#Automatically update internal links|definições do cofre]].
 
 ```bash
-file=<name>        # file name
-path=<path>        # file path
-to=<path>          # (required) destination folder or path
+file=<name>        # nome do ficheiro
+path=<path>        # caminho do ficheiro
+to=<path>          # (obrigatório) pasta ou caminho de destino
 ```
 
 ### `rename`
 
-Rename a file (default: active file). The file extension is preserved automatically if omitted from the new name. Use [[#`move`|move]] to rename and move a file at the same time. This will automatically update [[Links internos]] if turned on in your [[Configurações#Automatically update internal links|vault settings]].
+Renomeia um ficheiro (predefinição: ficheiro ativo). A extensão é preservada automaticamente se for omitida do novo nome. Use [[#`move`|move]] para renomear e mover um ficheiro ao mesmo tempo. Atualiza automaticamente os [[Links internos]] se essa opção estiver ativa nas [[Configurações#Automatically update internal links|definições do cofre]].
 
 ```bash
-file=<name>        # file name
-path=<path>        # file path
-name=<name>        # (required) new file name
+file=<name>        # nome do ficheiro
+path=<path>        # caminho do ficheiro
+name=<name>        # (obrigatório) novo nome do ficheiro
 ```
 
 ### `delete`
 
-Delete a file (default: active file, trash by default).
+Elimina um ficheiro (predefinição: ficheiro ativo, para o lixo por predefinição).
 
 ```bash
-file=<name>        # file name
-path=<path>        # file path
+file=<name>        # nome do ficheiro
+path=<path>        # caminho do ficheiro
 
-permanent          # skip trash, delete permanently
+permanent          # ignorar o lixo, eliminar permanentemente
 ```
 
-## Links
+## Ligações
 
-Commands for [[Links inversos]] and [[Links de saída]].
+Comandos para [[Links inversos]] e [[Links de saída]].
 
 ### `backlinks`
 
-List backlinks to a file (default: active file).
+Lista os links inversos de um ficheiro (predefinição: ficheiro ativo).
 
 ```bash
-file=<name>        # target file name
-path=<path>        # target file path
+file=<name>        # nome do ficheiro de destino
+path=<path>        # caminho do ficheiro de destino
 
-counts             # include link counts
-total              # return backlink count
-format=json|tsv|csv  # output format (default: tsv)
+counts             # incluir contagens de ligações
+total              # devolver o número de links inversos
+format=json|tsv|csv  # formato de saída (predefinição: tsv)
 ```
 
 ### `links`
 
-List outgoing links from a file (default: active file).
+Lista as ligações de saída de um ficheiro (predefinição: ficheiro ativo).
 
 ```bash
-file=<name>        # file name
-path=<path>        # file path
+file=<name>        # nome do ficheiro
+path=<path>        # caminho do ficheiro
 
-total              # return link count
+total              # devolver o número de ligações
 ```
 
 ### `unresolved`
 
-List unresolved links in vault.
+Lista as ligações não resolvidas no cofre.
 
 ```bash
-total              # return unresolved link count
-counts             # include link counts
-verbose            # include source files
-format=json|tsv|csv  # output format (default: tsv)
+total              # devolver o número de ligações não resolvidas
+counts             # incluir contagens de ligações
+verbose            # incluir ficheiros de origem
+format=json|tsv|csv  # formato de saída (predefinição: tsv)
 ```
 
 ### `orphans`
 
-List files with no incoming links.
+Lista os ficheiros sem ligações de entrada.
 
 ```bash
-total              # return orphan count
+total              # devolver o número de ficheiros órfãos
 ```
 
 ### `deadends`
 
-List files with no outgoing links.
+Lista os ficheiros sem ligações de saída.
 
 ```bash
-total              # return dead-end count
+total              # devolver o número de becos sem saída
 ```
 
-## Outline
+## Estrutura
 
-Commands for [[Sumário]].
+Comandos para [[Sumário]].
 
 ### `outline`
 
-Show headings for the current file.
+Mostra os cabeçalhos do ficheiro atual.
 
 ```bash
-file=<name>        # file name
-path=<path>        # file path
-format=tree|md|json  # output format (default: tree)
+file=<name>        # nome do ficheiro
+path=<path>        # caminho do ficheiro
+format=tree|md|json  # formato de saída (predefinição: tree)
 
-total              # return heading count
+total              # devolver o número de cabeçalhos
 ```
 
 ## Plugins
 
-Commands for [[Plugins nativos]] and [[Plugins da comunidade]].
+Comandos para [[Plugins nativos]] e [[Plugins da comunidade]].
 
 ### `plugins`
 
-List installed plugins.
+Lista os plugins instalados.
 
 ```bash
-filter=core|community  # filter by plugin type
+filter=core|community  # filtrar por tipo de plugin
 
-versions               # include version numbers
-format=json|tsv|csv    # output format (default: tsv)
+versions               # incluir números de versão
+format=json|tsv|csv    # formato de saída (predefinição: tsv)
 ```
 
 ### `plugins:enabled`
 
-List enabled plugins.
+Lista os plugins ativos.
 
 ```bash
-filter=core|community  # filter by plugin type
+filter=core|community  # filtrar por tipo de plugin
 
-versions               # include version numbers
-format=json|tsv|csv    # output format (default: tsv)
+versions               # incluir números de versão
+format=json|tsv|csv    # formato de saída (predefinição: tsv)
 ```
 
 ### `plugins:restrict`
 
-Toggle or check restricted mode.
+Ativa/desativa ou verifica o modo restrito.
 
 ```bash
-on                 # enable restricted mode
-off                # disable restricted mode
+on                 # ativar o modo restrito
+off                # desativar o modo restrito
 ```
 
 ### `plugin`
 
-Get plugin info.
+Obtém informações de um plugin.
 
 ```bash
-id=<plugin-id>     # (required) plugin ID
+id=<plugin-id>     # (obrigatório) ID do plugin
 ```
 
 ### `plugin:enable`
 
-Enable a plugin.
+Ativa um plugin.
 
 ```bash
-id=<id>                # (required) plugin ID
-filter=core|community  # plugin type
+id=<id>                # (obrigatório) ID do plugin
+filter=core|community  # tipo de plugin
 ```
 
 ### `plugin:disable`
 
-Disable a plugin.
+Desativa um plugin.
 
 ```bash
-id=<id>                # (required) plugin ID
-filter=core|community  # plugin type
+id=<id>                # (obrigatório) ID do plugin
+filter=core|community  # tipo de plugin
 ```
 
 ### `plugin:install`
 
-Install a community plugin.
+Instala um plugin da comunidade.
 
 ```bash
-id=<id>            # (required) plugin ID
+id=<id>            # (obrigatório) ID do plugin
 
-enable             # enable after install
+enable             # ativar após instalação
 ```
 
 ### `plugin:uninstall`
 
-Uninstall a community plugin.
+Desinstala um plugin da comunidade.
 
 ```bash
-id=<id>            # (required) plugin ID
+id=<id>            # (obrigatório) ID do plugin
 ```
 
 ### `plugin:reload`
 
-Reload a plugin (for developers).
+Recarrega um plugin (para programadores).
 
 ```bash
-id=<id>            # (required) plugin ID
+id=<id>            # (obrigatório) ID do plugin
 ```
 
-## Properties
+## Propriedades
 
-Commands related to [[Propriedades]].
+Comandos para [[Propriedades]].
 
 ### `aliases`
 
-List aliases in the vault. Use `active` or `file`/`path` to show aliases for a specific file.
+Lista os apelidos no cofre. Use `ative` ou `file`/`path` para mostrar os apelidos de um ficheiro específico.
 
 ```bash
-file=<name>        # file name
-path=<path>        # file path
+file=<name>        # nome do ficheiro
+path=<path>        # caminho do ficheiro
 
-total              # return alias count
-verbose            # include file paths
-active             # show aliases for active file
+total              # devolver o número de apelidos
+verbose            # incluir caminhos de ficheiros
+ative             # mostrar apelidos do ficheiro ativo
 ```
 
 ### `properties`
 
-List properties in the vault. Use `active` or `file`/`path` to show properties for a specific file.
+Lista as propriedades no cofre. Use `ative` ou `file`/`path` para mostrar as propriedades de um ficheiro específico.
 
 ```bash
-file=<name>        # show properties for file
-path=<path>        # show properties for path
-name=<name>        # get specific property count
-sort=count         # sort by count (default: name)
-format=yaml|json|tsv  # output format (default: yaml)
+file=<name>        # mostrar propriedades do ficheiro
+path=<path>        # mostrar propriedades do caminho
+name=<name>        # obter contagem de uma propriedade específica
+sort=count         # ordenar por contagem (predefinição: nome)
+format=yaml|json|tsv  # formato de saída (predefinição: yaml)
 
-total              # return property count
-counts             # include occurrence counts
-active             # show properties for active file
+total              # devolver o número de propriedades
+counts             # incluir contagens de ocorrências
+ative             # mostrar propriedades do ficheiro ativo
 ```
 
 ### `property:set`
 
-Set a property on a file (default: active file).
+Define uma propriedade num ficheiro (predefinição: ficheiro ativo).
 
 ```bash
-name=<name>                                    # (required) property name
-value=<value>                                  # (required) property value
-type=text|list|number|checkbox|date|datetime   # property type
-file=<name>                                    # file name
-path=<path>                                    # file path
+name=<name>                                    # (obrigatório) nome da propriedade
+value=<value>                                  # (obrigatório) valor da propriedade
+type=text|list|number|checkbox|date|datetime   # tipo de propriedade
+file=<name>                                    # nome do ficheiro
+path=<path>                                    # caminho do ficheiro
 ```
 
 ### `property:remove`
 
-Remove a property from a file (default: active file).
+Remove uma propriedade de um ficheiro (predefinição: ficheiro ativo).
 
 ```bash
-name=<name>        # (required) property name
-file=<name>        # file name
-path=<path>        # file path
+name=<name>        # (obrigatório) nome da propriedade
+file=<name>        # nome do ficheiro
+path=<path>        # caminho do ficheiro
 ```
 
 ### `property:read`
 
-Read a property value from a file (default: active file).
+Lê o valor de uma propriedade de um ficheiro (predefinição: ficheiro ativo).
 
 ```bash
-name=<name>        # (required) property name
-file=<name>        # file name
-path=<path>        # file path
+name=<name>        # (obrigatório) nome da propriedade
+file=<name>        # nome do ficheiro
+path=<path>        # caminho do ficheiro
 ```
 
-## Publish
+## Publicar
 
-Commands for [[Introdução ao Obsidian Publish|Obsidian Publish]].
+Comandos para o [[Introdução ao Obsidian Publish|Obsidian Publish]].
 
 ### `publish:site`
 
-Show publish site info (slug, URL).
+Mostra informações do site publicado (slug, URL).
 
 ### `publish:list`
 
-List published files.
+Lista os ficheiros publicados.
 
 ```bash
-total              # return published file count
+total              # devolver o número de ficheiros publicados
 ```
 
 ### `publish:status`
 
-List publish changes.
+Lista as alterações pendentes para publicação.
 
 ```bash
-total              # return change count
-new                # show new files only
-changed            # show changed files only
-deleted            # show deleted files only
+total              # devolver o número de alterações
+new                # mostrar apenas ficheiros novos
+changed            # mostrar apenas ficheiros alterados
+deleted            # mostrar apenas ficheiros eliminados
 ```
 
 ### `publish:add`
 
-Publish a file or all changed files (default: active file).
+Publica um ficheiro ou todos os ficheiros alterados (predefinição: ficheiro ativo).
 
 ```bash
-file=<name>        # file name
-path=<path>        # file path
+file=<name>        # nome do ficheiro
+path=<path>        # caminho do ficheiro
 
-changed            # publish all changed files
+changed            # publicar todos os ficheiros alterados
 ```
 
 ### `publish:remove`
 
-Unpublish a file (default: active file).
+Remove um ficheiro da publicação (predefinição: ficheiro ativo).
 
 ```bash
-file=<name>        # file name
-path=<path>        # file path
+file=<name>        # nome do ficheiro
+path=<path>        # caminho do ficheiro
 ```
 
 ### `publish:open`
 
-Open file on published site (default: active file).
+Abre o ficheiro no site publicado (predefinição: ficheiro ativo).
 
 ```bash
-file=<name>        # file name
-path=<path>        # file path
+file=<name>        # nome do ficheiro
+path=<path>        # caminho do ficheiro
 ```
 
-## Random notes
+## Notas aleatórias
 
-Commands for [[Nota aleatória]].
+Comandos para [[Nota aleatória]].
 
 ### `random`
 
-Open a random note.
+Abre uma nota aleatória.
 
 ```bash
-folder=<path>      # limit to folder
+folder=<path>      # limitar a uma pasta
 
-newtab             # open in new tab
+newtab             # abrir em novo separador
 ```
 
 ### `random:read`
 
-Read a random note (includes path).
+Lê uma nota aleatória (inclui o caminho).
 
 ```bash
-folder=<path>      # limit to folder
+folder=<path>      # limitar a uma pasta
 ```
 
-## Search
+## Pesquisa
 
-Commands for [[Pesquisa]].
+Comandos para [[Pesquisa]].
 
 ### `search`
 
-Search vault for text. Returns matching file paths.
+Pesquisa texto no cofre. Devolve os caminhos dos ficheiros correspondentes.
 
 ```bash
-query=<text>       # (required) search query
-path=<folder>      # limit to folder
-limit=<n>          # max files
-format=text|json   # output format (default: text)
+query=<text>       # (obrigatório) consulta de pesquisa
+path=<folder>      # limitar a uma pasta
+limit=<n>          # número máximo de ficheiros
+format=text|json   # formato de saída (predefinição: text)
 
-total              # return match count
-case               # case sensitive
+total              # devolver o número de correspondências
+case               # distinguir maiúsculas de minúsculas
 ```
 
 ### `search:context`
 
-Search with matching line context. Returns grep-style `path:line: text` output.
+Pesquisa com contexto de linha. Devolve resultado no formato grep: `caminho:linha: texto`.
 
 ```bash
-query=<text>       # (required) search query
-path=<folder>      # limit to folder
-limit=<n>          # max files
-format=text|json   # output format (default: text)
+query=<text>       # (obrigatório) consulta de pesquisa
+path=<folder>      # limitar a uma pasta
+limit=<n>          # número máximo de ficheiros
+format=text|json   # formato de saída (predefinição: text)
 
-case               # case sensitive
+case               # distinguir maiúsculas de minúsculas
 ```
 
 ### `search:open`
 
-Open search view.
+Abre a vista de pesquisa.
 
 ```bash
-query=<text>       # initial search query
+query=<text>       # consulta de pesquisa inicial
 ```
 
 ## Sync
 
-Commands for [[Introdução ao Obsidian Sync|Obsidian Sync]].
+Comandos para o [[Introdução ao Obsidian Sync|Obsidian Sync]].
 
-> [!tip] Sync without the desktop app
-> These commands control Sync within the running Obsidian app. To sync vaults from the command line without the desktop app, see [[Sync sem interface]].
+> [!tip] Sincronizar sem a aplicação de secretária
+> Estes comandos controlam o Sync dentro da aplicação Obsidian em execução. Para sincronizar cofres a partir da linha de comandos sem a aplicação de secretária, consulte [[Sync sem interface]].
 
 ### `sync`
 
-Pause or resume sync.
+Pausa ou retoma a sincronização.
 
 ```bash
-on                 # resume sync
-off                # pause sync
+on                 # retomar a sincronização
+off                # pausar a sincronização
 ```
 
 ### `sync:status`
 
-Show sync status and usage.
+Mostra o estado e utilização do Sync.
 
 ### `sync:history`
 
-List sync version history for a file (default: active file).
+Lista o histórico de versões do Sync para um ficheiro (predefinição: ficheiro ativo).
 
 ```bash
-file=<name>        # file name
-path=<path>        # file path
+file=<name>        # nome do ficheiro
+path=<path>        # caminho do ficheiro
 
-total              # return version count
+total              # devolver o número de versões
 ```
 
 ### `sync:read`
 
-Read a sync version (default: active file).
+Lê uma versão do Sync (predefinição: ficheiro ativo).
 
 ```bash
-file=<name>        # file name
-path=<path>        # file path
-version=<n>        # (required) version number
+file=<name>        # nome do ficheiro
+path=<path>        # caminho do ficheiro
+version=<n>        # (obrigatório) número da versão
 ```
 
 ### `sync:restore`
 
-Restore a sync version (default: active file).
+Restaura uma versão do Sync (predefinição: ficheiro ativo).
 
 ```bash
-file=<name>        # file name
-path=<path>        # file path
-version=<n>        # (required) version number
+file=<name>        # nome do ficheiro
+path=<path>        # caminho do ficheiro
+version=<n>        # (obrigatório) número da versão
 ```
 
 ### `sync:open`
 
-Open sync history (default: active file).
+Abre o histórico do Sync (predefinição: ficheiro ativo).
 
 ```bash
-file=<name>        # file name
-path=<path>        # file path
+file=<name>        # nome do ficheiro
+path=<path>        # caminho do ficheiro
 ```
 
 ### `sync:deleted`
 
-List deleted files in sync.
+Lista os ficheiros eliminados no Sync.
 
 ```bash
-total              # return deleted file count
+total              # devolver o número de ficheiros eliminados
 ```
 
-## Tags
+## Etiquetas
 
-Commands for [[Tags]].
+Comandos para [[Tags]].
 
 ### `tags`
 
-List tags in the vault. Use `active` or `file`/`path` to show tags for a specific file.
+Lista as etiquetas no cofre. Use `ative` ou `file`/`path` para mostrar as etiquetas de um ficheiro específico.
 
 ```bash
-file=<name>        # file name
-path=<path>        # file path
-sort=count         # sort by count (default: name)
+file=<name>        # nome do ficheiro
+path=<path>        # caminho do ficheiro
+sort=count         # ordenar por contagem (predefinição: nome)
 
-total              # return tag count
-counts             # include tag counts
-format=json|tsv|csv  # output format (default: tsv)
-active             # show tags for active file
+total              # devolver o número de etiquetas
+counts             # incluir contagens de etiquetas
+format=json|tsv|csv  # formato de saída (predefinição: tsv)
+ative             # mostrar etiquetas do ficheiro ativo
 ```
 
 ### `tag`
 
-Get tag info.
+Obtém informações de uma etiqueta.
 
 ```bash
-name=<tag>         # (required) tag name
+name=<tag>         # (obrigatório) nome da etiqueta
 
-total              # return occurrence count
-verbose            # include file list and count
+total              # devolver o número de ocorrências
+verbose            # incluir lista de ficheiros e contagem
 ```
 
-## Tasks
+## Tarefas
 
-Commands for task management.
+Comandos para gestão de tarefas.
 
 ### `tasks`
 
-List tasks in the vault. Use `active` or `file`/`path` to show tasks for a specific file.
+Lista as tarefas no cofre. Use `ative` ou `file`/`path` para mostrar as tarefas de um ficheiro específico.
 
 ```bash
-file=<name>        # filter by file name
-path=<path>        # filter by file path
-status="<char>"    # filter by status character
+file=<name>        # filtrar por nome de ficheiro
+path=<path>        # filtrar por caminho de ficheiro
+status="<char>"    # filtrar por caráter de estado
 
-total              # return task count
-done               # show completed tasks
-todo               # show incomplete tasks
-verbose            # group by file with line numbers
-format=json|tsv|csv  # output format (default: text)
-active             # show tasks for active file
-daily              # show tasks from daily note
+total              # devolver o número de tarefas
+done               # mostrar tarefas concluídas
+todo               # mostrar tarefas por fazer
+verbose            # agrupar por ficheiro com números de linha
+format=json|tsv|csv  # formato de saída (predefinição: text)
+ative             # mostrar tarefas do ficheiro ativo
+daily              # mostrar tarefas da nota diária
 ```
 
-**Examples:**
+**Exemplos:**
 
 ```bash
-# List all tasks in the vault
+# Listar todas as tarefas no cofre
 tasks
 
-# List incomplete tasks in the vault
+# Listar tarefas por fazer no cofre
 tasks todo
 
-# List completed tasks from a specific file
+# Listar tarefas concluídas de um ficheiro específico
 tasks file=Recipe done
 
-# List tasks from today's daily note
+# Listar tarefas da nota diária de hoje
 tasks daily
 
-# Count tasks in daily note
+# Contar tarefas na nota diária
 tasks daily total
 
-# List tasks with file paths and line numbers
+# Listar tarefas com caminhos e números de linha
 tasks verbose
 
-# Filter by custom status (quote special chars)
+# Filtrar por estado personalizado (colocar chars especiais entre aspas)
 tasks 'status=?'
 ```
 
 ### `task`
 
-Show or update a task.
+Mostra ou atualiza uma tarefa.
 
 ```bash
-ref=<path:line>    # task reference (path:line)
-file=<name>        # file name
-path=<path>        # file path
-line=<n>           # line number
-status="<char>"    # set status character
+ref=<path:line>    # referência da tarefa (caminho:linha)
+file=<name>        # nome do ficheiro
+path=<path>        # caminho do ficheiro
+line=<n>           # número de linha
+status="<char>"    # definir caráter de estado
 
-toggle             # toggle task status
-daily              # daily note
-done               # mark as done
-todo               # mark as todo
+toggle             # alternar o estado da tarefa
+daily              # nota diária
+done               # marcar como concluída
+todo               # marcar como por fazer
 ```
 
-**Examples:**
+**Exemplos:**
 
 ```bash
-# Show task info
+# Mostrar informações da tarefa
 task file=Recipe line=8
 task ref="Recipe.md:8"
 
-# Toggle task completion
+# Alternar conclusão da tarefa
 task ref="Recipe.md:8" toggle
 
-# Toggle task in daily note
+# Alternar tarefa na nota diária
 task daily line=3 toggle
 
-# Set task status
+# Definir estado da tarefa
 task file=Recipe line=8 done      # → [x]
 task file=Recipe line=8 todo      # → [ ]
 task file=Recipe line=8 status=-  # → [-]
-task daily line=3 done            # Mark daily note task as done
+task daily line=3 done            # Marcar tarefa da nota diária como concluída
 ```
 
 
-## Templates
+## Modelos
 
-Commands for [[Plugins/Modelos|Templates]].
+Comandos para [[Plugins/Modelos|Modelos]].
 
 ### `templates`
 
-List templates.
+Lista os modelos.
 
 ```bash
-total              # return template count
+total              # devolver o número de modelos
 ```
 
 ### `template:read`
 
-Read template content.
+Lê o conteúdo de um modelo.
 
 ```bash
-name=<template>    # (required) template name
-title=<title>      # title for variable resolution
+name=<template>    # (obrigatório) nome do modelo
+title=<title>      # título para resolução de variáveis
 
-resolve            # resolve template variables
+resolve            # resolver as variáveis do modelo
 ```
 
 ### `template:insert`
 
-Insert template into active file.
+Insere um modelo no ficheiro ativo.
 
 ```bash
-name=<template>    # (required) template name
+name=<template>    # (obrigatório) nome do modelo
 ```
 
-**Notes:**
-- `resolve` option processes `{{date}}`, `{{time}}`, `{{title}}` variables
-- Use `create path=<path> template=<name>` to create a file with a template
+**Notas:**
+- A opção `resolve` processa as variáveis `{{date}}`, `{{time}}`, `{{title}}`
+- Use `create path=<caminho> template=<nome>` para criar um ficheiro com um modelo
 
-## Themes and snippets
+## Temas e fragmentos
 
-Commands for [[Temas]] and [[Fragmentos CSS]].
+Comandos para [[Temas]] e [[Fragmentos CSS]].
 
 ### `themes`
 
-List installed themes.
+Lista os temas instalados.
 
 ```bash
-versions           # include version numbers
+versions           # incluir números de versão
 ```
 
 ### `theme`
 
-Show active theme or get info.
+Mostra o tema ativo ou obtém informações.
 
 ```bash
-name=<name>        # theme name for details
+name=<name>        # nome do tema para detalhes
 ```
 
 ### `theme:set`
 
-Set active theme.
+Define o tema ativo.
 
 ```bash
-name=<name>        # (required) theme name (empty for default)
+name=<name>        # (obrigatório) nome do tema (vazio para predefinição)
 ```
 
 ### `theme:install`
 
-Install a community theme.
+Instala um tema da comunidade.
 
 ```bash
-name=<name>        # (required) theme name
+name=<name>        # (obrigatório) nome do tema
 
-enable             # activate after install
+enable             # ativar após instalação
 ```
 
 ### `theme:uninstall`
 
-Uninstall a theme.
+Desinstala um tema.
 
 ```bash
-name=<name>        # (required) theme name
+name=<name>        # (obrigatório) nome do tema
 ```
 
 ### `snippets`
 
-List installed CSS snippets.
+Lista os fragmentos CSS instalados.
 
 ### `snippets:enabled`
 
-List enabled CSS snippets.
+Lista os fragmentos CSS ativos.
 
 ### `snippet:enable`
 
-Enable a CSS snippet.
+Ativa um fragmento CSS.
 
 ```bash
-name=<name>        # (required) snippet name
+name=<name>        # (obrigatório) nome do fragmento
 ```
 
 ### `snippet:disable`
 
-Disable a CSS snippet.
+Desativa um fragmento CSS.
 
 ```bash
-name=<name>        # (required) snippet name
+name=<name>        # (obrigatório) nome do fragmento
 ```
 
-## Unique notes
+## Notas únicas
 
-Commands for [[Criador de nota única]].
+Comandos para [[Criador de nota única]].
 
 ### `unique`
 
-Create unique note.
+Cria uma nota única.
 
 ```bash
-name=<text>        # note name
-content=<text>     # initial content
-paneType=tab|split|window    # pane type to open in
+name=<text>        # nome da nota
+content=<text>     # conteúdo inicial
+paneType=tab|split|window    # tipo de painel para abrir
 
-open               # open file after creating
+open               # abrir o ficheiro após criação
 ```
 
-## Vault
+## Cofre
 
 ### `vault`
 
-Show vault info.
+Mostra informações do cofre.
 
 ```bash
-info=name|path|files|folders|size  # return specific info only
+info=name|path|files|folders|size  # devolver apenas informação específica
 ```
 
 ### `vaults`
 
-List known vaults.
+Lista os cofres conhecidos.
 
 ```bash
-total              # return vault count
-verbose            # include vault paths
+total              # devolver o número de cofres
+verbose            # incluir caminhos dos cofres
 ```
 
 ### `vault:open`
 
-Switch to a different vault (TUI only).
+Muda para um cofre diferente (apenas na TUI).
 
 ```bash
-name=<name>        # (required) vault name
+name=<name>        # (obrigatório) nome do cofre
 ```
 
-## Web viewer
+## Visualizador web
 
-Commands for [[Visualizador web]].
+Comandos para [[Visualizador web]].
 
 ### `web`
 
-Open URL in web viewer.
+Abre um URL no visualizador web.
 
 ```bash
-url=<url>          # (required) URL to open
+url=<url>          # (obrigatório) URL a abrir
 
-newtab             # open in new tab
+newtab             # abrir em novo separador
 ```
 
-## Wordcount
+## Contagem de palavras
 
-Commands for [[Contagem de palavras]].
+Comandos para [[Contagem de palavras]].
 
 ### `wordcount`
 
-Count words and characters (default: active file).
+Conta palavras e caracteres (predefinição: ficheiro ativo).
 
 ```bash
-file=<name>        # file name
-path=<path>        # file path
+file=<name>        # nome do ficheiro
+path=<path>        # caminho do ficheiro
 
-words              # return word count only
-characters         # return character count only
+words              # devolver apenas a contagem de palavras
+characters         # devolver apenas a contagem de caracteres
 ```
 
-## Workspace
+## Área de trabalho
 
-Commands for [[Área de trabalho]] and the [[Áreas de trabalho]] plugin.
+Comandos para [[Área de trabalho]] e o plugin [[Áreas de trabalho]].
 
 ### `workspace`
 
-Show workspace tree.
+Mostra a árvore da área de trabalho.
 
 ```bash
-ids                # include workspace item IDs
+ids                # incluir IDs dos itens da área de trabalho
 ```
 
 ### `workspaces`
 
-List saved workspaces.
+Lista as áreas de trabalho guardadas.
 
 ```bash
-total              # return workspace count
+total              # devolver o número de áreas de trabalho
 ```
 
 ### `workspace:save`
 
-Save current layout as workspace.
+Guarda o esquema atual como área de trabalho.
 
 ```bash
-name=<name>        # workspace name
+name=<name>        # nome da área de trabalho
 ```
 
 ### `workspace:load`
 
-Load a saved workspace.
+Carrega uma área de trabalho guardada.
 
 ```bash
-name=<name>        # (required) workspace name
+name=<name>        # (obrigatório) nome da área de trabalho
 ```
 
 ### `workspace:delete`
 
-Delete a saved workspace.
+Elimina uma área de trabalho guardada.
 
 ```bash
-name=<name>        # (required) workspace name
+name=<name>        # (obrigatório) nome da área de trabalho
 ```
 
 ### `tabs`
 
-List open tabs.
+Lista os separadores abertos.
 
 ```bash
-ids                # include tab IDs
+ids                # incluir IDs dos separadores
 ```
 
 ### `tab:open`
 
-Open a new tab.
+Abre um novo separador.
 
 ```bash
-group=<id>         # tab group ID
-file=<path>        # file to open
-view=<type>        # view type to open
+group=<id>         # ID do grupo de separadores
+file=<path>        # ficheiro a abrir
+view=<type>        # tipo de vista a abrir
 ```
 
 ### `recents`
 
-List recently opened files.
+Lista os ficheiros abertos recentemente.
 
 ```bash
-total              # return recent file count
+total              # devolver o número de ficheiros recentes
 ```
 
-## Developer commands
+## Comandos de programador
 
-Commands to help you develop [[Plugins da comunidade]] and [[Temas]]. Learn more by heading to the [Obsidian Developer Documentation](https://docs.obsidian.md).
+Comandos para ajudar no desenvolvimento de [[Plugins da comunidade]] e [[Temas]]. Saiba mais consultando a [Documentação para Programadores do Obsidian](https://docs.obsidian.md).
 
 ### `devtools`
 
-Toggle Electron dev tools.
+Ativa/desativa as ferramentas de desenvolvimento do Electron.
 
 ### `dev:debug`
 
-Attach/detach Chrome DevTools Protocol debugger.
+Liga/desliga o debugger do protocolo Chrome DevTools.
 
 ```bash
-on                 # attach debugger
-off                # detach debugger
+on                 # ligar o debugger
+off                # desligar o debugger
 ```
 
 ### `dev:cdp`
 
-Run a Chrome DevTools Protocol command.
+Executa um comando do protocolo Chrome DevTools.
 
 ```bash
-method=<CDP.method>  # (required) CDP method to call
-params=<json>        # method parameters as JSON
+method=<CDP.method>  # (obrigatório) método CDP a invocar
+params=<json>        # parâmetros do método em JSON
 ```
 
 ### `dev:errors`
 
-Show captured JavaScript errors.
+Mostra os erros JavaScript capturados.
 
 ```bash
-clear              # clear the error buffer
+clear              # limpar o buffer de erros
 ```
 
 ### `dev:screenshot`
 
-Take a screenshot (returns base64 PNG).
+Tira uma captura de ecrã (devolve PNG em base64).
 
 ```bash
-path=<filename>    # output file path
+path=<filename>    # caminho do ficheiro de saída
 ```
 
 ### `dev:console`
 
-Show captured console messages.
+Mostra as mensagens da consola capturadas.
 
 ```bash
-limit=<n>                        # max messages to show (default 50)
-level=log|warn|error|info|debug  # filter by log level
+limit=<n>                        # número máximo de mensagens (predefinição: 50)
+level=log|warn|error|info|debug  # filtrar por nível de log
 
-clear                            # clear the console buffer
+clear                            # limpar o buffer da consola
 ```
 
 ### `dev:css`
 
-Inspect CSS with source locations.
+Inspeciona CSS com localizações de origem.
 
 ```bash
-selector=<css>     # (required) CSS selector
-prop=<name>        # filter by property name
+selector=<css>     # (obrigatório) seletor CSS
+prop=<name>        # filtrar por nome de propriedade
 ```
 
 ### `dev:dom`
 
-Query DOM elements.
+Consulta elementos do DOM.
 
 ```bash
-selector=<css>     # (required) CSS selector
-attr=<name>        # get attribute value
-css=<prop>         # get CSS property value
+selector=<css>     # (obrigatório) seletor CSS
+attr=<name>        # obter valor de atributo
+css=<prop>         # obter valor de propriedade CSS
 
-total              # return element count
-text               # return text content
-inner              # return innerHTML instead of outerHTML
-all                # return all matches instead of first
+total              # devolver o número de elementos
+text               # devolver conteúdo de texto
+inner              # devolver innerHTML em vez de outerHTML
+all                # devolver todas as correspondências em vez da primeira
 ```
 
 ### `dev:mobile`
 
-Toggle mobile emulation.
+Ativa/desativa a emulação de dispositivo móvel.
 
 ```bash
-on                 # enable mobile emulation
-off                # disable mobile emulation
+on                 # ativar emulação de móvel
+off                # desativar emulação de móvel
 ```
 
 ### `eval`
 
-Execute JavaScript and return result.
+Executa JavaScript e devolve o resultado.
 
 ```bash
-code=<javascript>  # (required) JavaScript code to execute
+code=<javascript>  # (obrigatório) código JavaScript a executar
 ```
 
-## Keyboard shortcuts
+## Atalhos de teclado
 
-These shortcuts are available in the [[#Use the terminal interface|TUI]].
+Estes atalhos estão disponíveis na [[#Usar a interface de terminal|TUI]].
 
-### Navigation
+### Navegação
 
-| Action                                                | Shortcut       |
-| ----------------------------------------------------- | -------------- |
-| Move cursor left                                      | `←` / `Ctrl+B` |
-| Move cursor right (accepts suggestion at end of line) | `→` / `Ctrl+F` |
-| Jump to start of line                                 | `Ctrl+A`       |
-| Jump to end of line                                   | `Ctrl+E`       |
-| Move back one word                                    | `Alt+B`        |
-| Move forward one word                                 | `Alt+F`        |
+| Ação                                                        | Atalho         |
+| ----------------------------------------------------------- | -------------- |
+| Mover cursor para a esquerda                                | `←` / `Ctrl+B` |
+| Mover cursor para a direita (aceita sugestão no fim da linha) | `→` / `Ctrl+F` |
+| Saltar para o início da linha                               | `Ctrl+A`       |
+| Saltar para o fim da linha                                  | `Ctrl+E`       |
+| Recuar uma palavra                                          | `Alt+B`        |
+| Avançar uma palavra                                         | `Alt+F`        |
 
-### Editing
+### Edição
 
-| Action                  | Shortcut                   |
+| Ação                    | Atalho                     |
 | ----------------------- | -------------------------- |
-| Delete to start of line | `Ctrl+U`                   |
-| Delete to end of line   | `Ctrl+K`                   |
-| Delete previous word    | `Ctrl+W` / `Alt+Backspace` |
+| Apagar até ao início da linha | `Ctrl+U`                   |
+| Apagar até ao fim da linha    | `Ctrl+K`                   |
+| Apagar palavra anterior       | `Ctrl+W` / `Alt+Backspace` |
 
-### Autocomplete
+### Preenchimento automático
 
-| Action                                             | Shortcut    |
-| -------------------------------------------------- | ----------- |
-| Enter suggestion mode / accept selected suggestion | `Tab`       |
-| Exit suggestion mode                               | `Shift+Tab` |
-| Enter suggestion mode (from fresh input)           | `↓`         |
-| Accept first/selected suggestion (at end of line)  | `→`         |
+| Ação                                                          | Atalho      |
+| ------------------------------------------------------------- | ----------- |
+| Entrar no modo de sugestão / aceitar sugestão selecionada     | `Tab`       |
+| Sair do modo de sugestão                                      | `Shift+Tab` |
+| Entrar no modo de sugestão (a partir de entrada em branco)    | `↓`         |
+| Aceitar a primeira/sugestão selecionada (no fim da linha)     | `→`         |
 
-### History
+### Histórico
 
-| Action                                                     | Shortcut       |
-| ---------------------------------------------------------- | -------------- |
-| Previous history entry / navigate suggestions up           | `↑` / `Ctrl+P` |
-| Next history entry / navigate suggestions down             | `↓` / `Ctrl+N` |
-| Reverse history search (type to filter, `Ctrl+R` to cycle) | `Ctrl+R`       |
+| Ação                                                                 | Atalho         |
+| -------------------------------------------------------------------- | -------------- |
+| Entrada anterior no histórico / navegar sugestões para cima          | `↑` / `Ctrl+P` |
+| Entrada seguinte no histórico / navegar sugestões para baixo         | `↓` / `Ctrl+N` |
+| Pesquisa inversa no histórico (escreva para filtrar, `Ctrl+R` para ciclar) | `Ctrl+R`  |
 
-### Other
+### Outros
 
-| Action                                                 | Shortcut            |
-| ------------------------------------------------------ | ------------------- |
-| Execute command or accept suggestion                   | `Enter`             |
-| Undo autocomplete / exit suggestion mode / clear input | `Escape`            |
-| Clear screen                                           | `Ctrl+L`            |
-| Exit                                                   | `Ctrl+C` / `Ctrl+D` |
+| Ação                                                          | Atalho              |
+| ------------------------------------------------------------- | ------------------- |
+| Executar comando ou aceitar sugestão                          | `Enter`             |
+| Desfazer preenchimento / sair do modo de sugestão / limpar entrada | `Escape`       |
+| Limpar ecrã                                                   | `Ctrl+L`            |
+| Sair                                                          | `Ctrl+C` / `Ctrl+D` |
 
-## Troubleshooting
+## Resolução de problemas
 
-If you are having trouble running Obsidian CLI:
+Se tiver dificuldades a executar o Obsidian CLI:
 
-- Make sure you are using the latest [[Atualizar o Obsidian|Obsidian installer version]] (1.12.4 or above).
-- Restart your terminal after registering the CLI for the PATH changes to take effect.
-- Obsidian must be running. The CLI connects to the running Obsidian instance. If Obsidian is not running, the first CLI command should launch the app.
+- Certifique-se de que está a usar a [[Atualizar o Obsidian|versão mais recente do instalador do Obsidian]] (1.12.4 ou superior).
+- Reinicie o terminal após registar o CLI para que as alterações ao PATH entrem em vigor.
+- O Obsidian tem de estar em execução. O CLI liga-se à instância do Obsidian em execução. Se o Obsidian não estiver aberto, o primeiro comando CLI deverá lançar a aplicação.
 
 ### Windows
 
-Obsidian CLI on Windows requires the Obsidian 1.12.4+ installer. See [[Atualizar o Obsidian|Installer version update]].
+O Obsidian CLI no Windows requer o instalador do Obsidian 1.12.4+. Consulte [[Atualizar o Obsidian|Atualização da versão do instalador]].
 
-Windows uses a terminal redirector that connects Obsidian to stdin/stdout properly. This is necessary because Obsidian normally runs as a GUI app which is incompatible with terminal outputs on Windows. When you install Obsidian 1.12.4+ the `Obsidian.com` terminal redirector will be added in the folder where you installed the `Obsidian.exe` file.
+O Windows usa um redirecionador de terminal que liga o Obsidian corretamente ao stdin/stdout. Isto é necessário porque o Obsidian funciona normalmente como uma aplicação GUI, o que é incompatível com as saídas de terminal no Windows. Ao instalar o Obsidian 1.12.4+, o redirecionador de terminal `Obsidian.com` será adicionado na pasta onde instalou o ficheiro `Obsidian.exe`.
 
 ### macOS
 
-The CLI registration adds the Obsidian binary directory to your PATH via `~/.zprofile`. If you are having trouble, check the following:
+O registo do CLI adiciona o diretório de binários do Obsidian ao seu PATH através de `~/.zprofile`. Se tiver problemas, verifique o seguinte:
 
-Your `~/.zprofile` file should contain the following line. If it's missing, you can add it manually:
+O seu ficheiro `~/.zprofile` deve conter a seguinte linha. Se estiver em falta, pode adicioná-la manualmente:
 
 ```
 export PATH="$PATH:/Applications/Obsidian.app/Contents/MacOS"
 ```
 
-#### Alternate shells
+#### Shells alternativos
 
-The CLI registration only modifies `~/.zprofile`, which is used by zsh (the default macOS shell). If you use a different shell, add the Obsidian binary directory to your shell's configuration file manually:
+O registo do CLI apenas modifica `~/.zprofile`, que é usado pelo zsh (o shell predefinido do macOS). Se usar um shell diferente, adicione o diretório de binários do Obsidian ao ficheiro de configuração do seu shell manualmente:
 
-- Bash: add `export PATH="$PATH:/Applications/Obsidian.app/Contents/MacOS"` to `~/.bash_profile`
-- Fish: run `fish_add_path /Applications/Obsidian.app/Contents/MacOS`
+- Bash: adicione `export PATH="$PATH:/Applications/Obsidian.app/Contents/MacOS"` a `~/.bash_profile`
+- Fish: execute `fish_add_path /Applications/Obsidian.app/Contents/MacOS`
 
 
 ### Linux
 
-The CLI registration creates a symlink at `/usr/local/bin/obsidian` pointing to the Obsidian binary (requires sudo). 
+O registo do CLI cria uma hiperligação simbólica em `/usr/local/bin/obsidian` apontando para o binário do Obsidian (requer sudo).
 
 #### AppImage
 
-For AppImage installs, the symlink points to the `.AppImage` file instead of the internal binary, since the mount path changes each launch. If sudo fails, the symlink is created at `~/.local/bin/obsidian` as a fallback. If you are having trouble, check the following.
+Para instalações AppImage, a hiperligação simbólica aponta para o ficheiro `.AppImage` em vez do binário interno, pois o caminho de montagem muda a cada arranque. Se o sudo falhar, a hiperligação simbólica é criada em `~/.local/bin/obsidian` como alternativa. Se tiver problemas, verifique o seguinte.
 
-Check that the symlink exists and points to the correct binary:
+Confirme que a hiperligação simbólica existe e aponta para o binário correto:
 
 ```
 ls -l /usr/local/bin/obsidian
 ```
 
-If the symlink is missing, create it manually:
+Se a hiperligação simbólica estiver em falta, crie-a manualmente:
 
 ```
-sudo ln -s /path/to/obsidian /usr/local/bin/obsidian
+sudo ln -s /caminho/para/obsidian /usr/local/bin/obsidian
 ```
 
-I the symlink was created in `~/.local/bin/` instead, make sure that directory is in your PATH. Add the following to your `~/.bashrc` or `~/.zshrc`:
+Se a hiperligação simbólica tiver sido criada em `~/.local/bin/`, certifique-se de que esse diretório está no seu PATH. Adicione o seguinte ao seu `~/.bashrc` ou `~/.zshrc`:
 
 ```
 export PATH="$PATH:$HOME/.local/bin"
 ```
 
-If the symlink breaks after moving or renaming the `.AppImage` file, re-register the CLI or update the symlink manually.
+Se a hiperligação simbólica quebrar após mover ou renomear o ficheiro `.AppImage`, volte a registar o CLI ou atualize a hiperligação simbólica manualmente.
 
 #### Snap
 
-The Snap package stores insider build data in its own user data directory. If the CLI doesn't detect the insider `.asar`, set `XDG_CONFIG_HOME` to point to the Snap config path:
+O pacote Snap guarda os dados da compilação insider no seu próprio diretório de dados de utilizador. Se o CLI não detetar o `.asar` insider, defina `XDG_CONFIG_HOME` para apontar para o caminho de configuração do Snap:
 
 ```
 export XDG_CONFIG_HOME="$HOME/snap/obsidian/current/.config"
 ```
 
-Add this to your `~/.bashrc` or `~/.zshrc` to make it persistent.
+Adicione isto ao seu `~/.bashrc` ou `~/.zshrc` para tornar a configuração persistente.
 
 
 #### Flatpak
 
-Obsidian tries to do this automatically, but below are the manual instructions. If it is a system install:
+O Obsidian tenta fazer isto automaticamente, mas abaixo estão as instruções manuais. Se for uma instalação de sistema:
 
 ```
 ln -s /var/lib/flatpak/exports/bin/md.obsidian.Obsidian ~/.local/bin/obsidian
 ```
 
-If it is a user install:
+Se for uma instalação de utilizador:
 
 ```
 ln -s ~/.local/share/flatpak/exports/bin/md.obsidian.Obsidian ~/.local/bin/obsidian

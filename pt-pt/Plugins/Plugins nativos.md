@@ -1,5 +1,4 @@
 ---
-localized: false
 permalink: plugins
 cssclasses:
   - list-cards
@@ -9,81 +8,81 @@ mobile: true
 description: 'This page lists the core plugins that come installed with Obsidian, and community plugins they also maintain.'
 ---
 
-This page lists the core plugins that come installed with Obsidian. Core plugins are officially built and supported by the Obsidian team, and are included within the application.
+Esta página lista os plugins nativos que são instalados com o Obsidian. Os plugins nativos são oficialmente criados e suportados pela equipa do Obsidian, e estão incluídos na aplicação.
 
-Some core plugins are disabled by default. You can enable them under **[[Configurações]] → Core plugins**.
+Alguns plugins nativos estão desativados por predefinição. Pode ativá-los em **[[Configurações]] → Plugins nativos**.
 
-The Obsidian team also maintains the development of certain [[#Other plugins|open-source community plugins]].
+A equipa do Obsidian também mantém o desenvolvimento de determinados [[#Other plugins|plugins da comunidade de código aberto]].
 
-> [!tip] Community plugins
-> If you can't find the plugin you're looking here, check out some of the [[Plugins da comunidade|plugins built by the community]]. You can also [Build a plugin](https://docs.obsidian.md/Plugins/Getting+started/Build+a+plugin) yourself.
+> [!tip] Plugins da comunidade
+> Se não encontrar o plugin que procura aqui, consulte alguns dos [[Plugins da comunidade|plugins criados pela comunidade]]. Também pode [criar um plugin](https://docs.obsidian.md/Plugins/Getting+started/Build+a+plugin) você mesmo.
 
-### All core plugins
+### Todos os plugins nativos
 
 - [[Gravador de áudio]]
-	- Record and save audio recordings directly in a note.
+	- Grave e guarde gravações de áudio diretamente numa nota.
 - [[Links inversos]]
-	- See all the links and unlinked mentions of a note.
+	- Veja todas as ligações e menções não ligadas de uma nota.
 - [[Introdução ao Bases|Bases]]
-	- Create custom views that let you edit, sort, and filter files using their properties.
+	- Crie vistas personalizadas que lhe permitem editar, ordenar e filtrar ficheiros usando as suas propriedades.
 - [[Favoritos]]
-	- Save links to notes, headings, searches, and more.
+	- Guarde ligações para notas, cabeçalhos, pesquisas e mais.
 - [[Canvas]]
-	- Organize notes visually with an infinite space to lay out ideas.
+	- Organize notas visualmente com um espaço infinito para organizar ideias.
 - [[Paleta de comandos]]
-	- Quickly access commands from your keyboard.
+	- Aceda rapidamente a comandos a partir do teclado.
 - [[Notas diárias]]
-	- Create and open notes based on the current date.
+	- Crie e abra notas baseadas na data atual.
 - [[Explorador de ficheiros]]
-	- Browse files and folders inside your vault.
+	- Navegue por ficheiros e pastas no seu cofre.
 - [[Recuperação de ficheiros]]
-	-  Recover your work from regular snapshots.
+	- Recupere o seu trabalho a partir de instantâneos regulares.
 - [[Conversor de formato]]
-	- Convert Markdown from other apps to Obsidian format.
+	- Converta Markdown de outras aplicações para o formato do Obsidian.
 - [[Vista de grafo]]
-	- Visualize relationships between notes in your vault.
+	- Visualize as relações entre notas no seu cofre.
 - [[Compositor de notas]]
-	- Merge two notes or split one into two.
+	- Funda duas notas ou divida uma em duas.
 - [[Links de saída]]
-	- Show all links for the active note.
+	- Mostre todas as ligações da nota ativa.
 - [[Sumário]]
-	- Show the table of contents for the active note.
+	- Mostre o índice da nota ativa.
 - [[Pré-visualização de página]]
-	- Preview the contents of a note by hovering over links.
+	- Pré-visualize o conteúdo de uma nota passando o cursor sobre as ligações.
 - [[Vista de propriedades]]
-	- List all the properties in your vault, and see properties for the active note.
+	- Liste todas as propriedades no seu cofre e veja as propriedades da nota ativa.
 - [[Introdução ao Obsidian Publish|Publish]]
-	- Host your notes as a website, wiki or documentation.
+	- Publique as suas notas como um site, wiki ou documentação.
 - [[Alternador rápido]]
-	- Search, create and open notes from your keyboard.
+	- Pesquise, crie e abra notas a partir do teclado.
 - [[Nota aleatória]]
-	- Opens a random note in your vault.
+	- Abre uma nota aleatória no seu cofre.
 - [[Pesquisa]]
-	- Find files in your vault.
+	- Encontre ficheiros no seu cofre.
 - [[Comandos de barra]]
-	- Perform commands inside the editor using the `/` key.
+	- Execute comandos dentro do editor usando a tecla `/`.
 - [[Apresentações]]
-	- Create a presentation from your notes.
+	- Crie uma apresentação a partir das suas notas.
 - [[Introdução ao Obsidian Sync|Sync]]
-	- Sync your notes across devices.
-- [[Vista de tags|Tags view]]
-	- List all the tags in your vault.
-- [[Plugins/Modelos|Templates]]
-	- Insert pre-defined content into your notes.
+	- Sincronize as suas notas entre dispositivos.
+- [[Vista de tags|Vista de tags]]
+	- Liste todas as tags no seu cofre.
+- [[Plugins/Modelos|Modelos]]
+	- Insira conteúdo predefinido nas suas notas.
 - [[Criador de nota única]]
-	- Create a unique note using a time-coded title.
+	- Crie uma nota única usando um título com código de tempo.
 - [[Visualizador web]]
-	- Open external links in Obsidian.
+	- Abra ligações externas no Obsidian.
 - [[Contagem de palavras]]
-	- Display the number of words and characters.
+	- Apresente o número de palavras e caracteres.
 - [[Áreas de trabalho]]
-	- Save layouts and switch between them.
+	- Guarde esquemas e alterne entre eles.
 
-### Other plugins
+### Outros plugins
 
-The Obsidian team also maintains plugins available through the Community plugin store:
+A equipa do Obsidian também mantém plugins disponíveis através da loja de plugins da comunidade:
 
 - [[Importador]]
-	- Convert files from various apps and formats to Obsidian.
-- [[Vista de mapa|Maps]]
-	- Add a map view to Obsidian Bases.
+	- Converta ficheiros de várias aplicações e formatos para o Obsidian.
+- [[Vista de mapa|Mapas]]
+	- Adicione uma vista de mapa ao Obsidian Bases.

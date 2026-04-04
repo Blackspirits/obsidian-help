@@ -1,63 +1,62 @@
 ---
-localized: false
 permalink: obsidian
 ---
-## What is Obsidian
+## O que é o Obsidian
 
-Obsidian is both a Markdown editor and a knowledge base app.
+O Obsidian é simultaneamente um editor de Markdown e uma aplicação de base de conhecimento.
 
-Used in the most basic way, you can edit and preview Markdown files. But its true power lies in managing a densely networked knowledge base.
+Usado de forma mais básica, pode editar e pré-visualizar ficheiros Markdown. Mas o seu verdadeiro poder reside na gestão de uma base de conhecimento densamente interligada.
 
-How do we start creating a network, you ask? Let's first start making some [[Links internos]]!
+Como começamos a criar uma rede, pergunta? Vamos primeiro criar algumas [[Links internos]]!
 
-## How we're different
+## Como somos diferentes
 
-### You own and control your data
+### É dono dos seus dados e tem controlo sobre eles
 
-We believe in plain text for something as important as your knowledge base. You don't want to put your own brain over someone else's neck, do you? Treat your second brain the same way.
+Acreditamos em texto simples para algo tão importante como a sua base de conhecimento. Não vai querer colocar o seu próprio cérebro sob o controlo de outra pessoa, pois não? Trate o seu segundo cérebro da mesma forma.
 
-Sync is only a utility to facilitate working on multiple devices, the data will always primarily live on your hard disk.
+A sincronização é apenas um utilitário para facilitar o trabalho em vários dispositivos; os dados residirão sempre principalmente no seu disco rígido.
 
-When the file system replaces the cloud, you get flexible options to work with your files: you can back them up with Dropbox, use Git to do versioning, or encrypt your disk for security. Whatever works on your file system will work on your Obsidian knowledge base.
+Quando o sistema de ficheiros substitui a nuvem, obtém opções flexíveis para trabalhar com os seus ficheiros: pode fazer cópias de segurança com o Dropbox, usar o Git para controlo de versões, ou encriptar o seu disco por razões de segurança. O que funcionar no seu sistema de ficheiros funcionará na sua base de conhecimento do Obsidian.
 
-### Links are first-class citizens
+### As ligações são cidadãos de primeira classe
 
-Links and connections are crucial to discovering the relations between what we know.
+As ligações e conexões são cruciais para descobrir as relações entre o que sabemos.
 
-Obsidian greatly values this, and encourages it with [[Links internos]] and [[Vista de grafo]], among other things.
+O Obsidian valoriza muito isso e incentiva-o com [[Links internos]] e [[Vista de grafo]], entre outras coisas.
 
-As John Locke puts it...
+Como John Locke diz...
 
-> The acts of the mind, wherein it exerts its power over simple ideas, are chiefly these three:
+> Os atos da mente, nos quais exerce o seu poder sobre as ideias simples, são principalmente estes três:
 >
-> 1. Combining several simple ideas into one compound one, and thus all complex ideas are made.
-> 2. The second is bringing two ideas, whether simple or complex, together, and setting them by one another so as to take a view of them at once, without uniting them into one, by which it gets all its ideas of relations.
-> 3. The third is separating them from all other ideas that accompany them in their real existence: this is called abstraction, and thus all its general ideas are made.
+> 1. Combinar várias ideias simples numa única composta, e assim todas as ideias complexas são criadas.
+> 2. O segundo é aproximar duas ideias, sejam simples ou complexas, e colocá-las lado a lado de forma a vê-las ao mesmo tempo, sem as unir numa só, pelo qual obtém todas as suas ideias de relações.
+> 3. O terceiro é separá-las de todas as outras ideias que as acompanham na sua existência real: isto chama-se abstração, e assim todas as suas ideias gerais são criadas.
 
  \- John Locke, An Essay Concerning Human Understanding (1690)
 
-Hierarchy gives us No. 1, and linking gives us No. 2. We're still unsure what No. 3 entails in the context of note-taking, but it might have something to do with programming or macros.
+A hierarquia dá-nos o n.º 1, e a ligação dá-nos o n.º 2. Ainda não temos a certeza do que o n.º 3 implica no contexto da tomada de notas, mas pode ter algo a ver com programação ou macros.
 
-### Your own toolkit
+### O seu próprio conjunto de ferramentas
 
-Note-taking is a highly personal activity. Naturally there is no single all-encompassing solution for everyone.
+A tomada de notas é uma atividade altamente pessoal. Naturalmente não existe uma solução única e abrangente para todos.
 
-Instead of providing you with an opinionated and assembled product, [[Sobre o Obsidian]] gives you a foundation and numerous functional building blocks  to discover and build your own solution.
+Em vez de lhe fornecer um produto opinativo e pré-montado, o [[Sobre o Obsidian]] dá-lhe uma base e numerosos blocos de construção funcionais para descobrir e construir a sua própria solução.
 
-The foundation is to be able to view files, edit them, and search them. For the minimalist, that's enough.
+A base é poder visualizar ficheiros, editá-los e pesquisá-los. Para o minimalista, isso é suficiente.
 
-On top of that, you can add isolated, independent building blocks to add features to your note-taking:
+Por cima disso, pode adicionar blocos de construção isolados e independentes para adicionar funcionalidades à sua tomada de notas:
 
-- If you're taking class notes, [[Gravador de áudio]] and LaTeX math might be useful;
-- If you're taking work notes, [[Apresentações]] and [[Links inversos]] may come in handy;
-- If you're a researcher, [[Vista de grafo]] and [[Contagem de palavras]] might be essential to your toolkit.
+- Se está a tirar apontamentos de aulas, [[Gravador de áudio]] e matemática LaTeX podem ser úteis;
+- Se está a tirar notas de trabalho, [[Apresentações]] e [[Links inversos]] podem ser convenientes;
+- Se é investigador, [[Vista de grafo]] e [[Contagem de palavras]] podem ser essenciais para o seu conjunto de ferramentas.
 
-We don't expect plugins to be the silver bullet to solve all the problems, but it does get us closer than a monolith solution, without all the features that you don't need cluttering the interface.
+Não esperamos que os plugins sejam a bala de prata para resolver todos os problemas, mas aproxima-nos mais do que uma solução monolítica, sem todas as funcionalidades de que não precisa a desordenar a interface.
 
-We support [[Fragmentos CSS]], [[Temas]], and [[Plugins da comunidade]], which enable even more interface customization and support less common use cases.
+Suportamos [[Fragmentos CSS]], [[Temas]] e [[Plugins da comunidade]], que permitem ainda mais personalização de interface e suportam casos de uso menos comuns.
 
-## Follow our development
+## Acompanhe o nosso desenvolvimento
 
-Curious how we continue to make Obsidian the best and most refined tool for thought-processing? Check out our [roadmap](https://obsidian.md/roadmap/) to see what we're working on.
+Curioso sobre como continuamos a tornar o Obsidian a melhor e mais refinada ferramenta de processamento de pensamento? Consulte o nosso [roteiro](https://obsidian.md/roadmap/) para ver em que estamos a trabalhar.
 
-Our Twitter handle is [@obsdmd](https://twitter.com/obsdmd), feel free to follow. We mostly tweet about product updates.
+A nossa conta no Twitter é [@obsdmd](https://twitter.com/obsdmd), sinta-se à vontade para seguir. Publicamos principalmente sobre atualizações de produto.

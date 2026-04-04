@@ -1,8 +1,7 @@
 ---
-localized: false
 permalink: language
 ---
 
-The Obsidian interface has been translated to various languages by [[Créditos#Translators|our amazing volunteer translators]]. You can change the interface language either in **[[Configurações]]** ![[lucide-settings.svg#icon]] → **General** or when you create a new vault.
+A interface do Obsidian foi traduzida para vários idiomas pelos nossos [[Créditos#Translators|incríveis tradutores voluntários]]. Pode alterar o idioma da interface em **[[Configurações]]** ![[lucide-settings.svg#icon]] → **Geral** ou quando cria um novo cofre.
 
-Is your language missing from the list? Are you seeing untranslated snippets of text? [[Traduções|Help us translate Obsidian into your language]].
+O seu idioma não está na lista? Está a ver fragmentos de texto não traduzidos? [[Traduções|Ajude-nos a traduzir o Obsidian para o seu idioma]].

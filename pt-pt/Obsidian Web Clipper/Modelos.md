@@ -1,66 +1,65 @@
 ---
-localized: false
 permalink: web-clipper/templates
-description: Learn to create templates that capture and organize web page metadata automatically with Web Clipper.
+description: Aprenda a criar modelos que capturam e organizam metadados de páginas web automaticamente com o Web Clipper.
 ---
-[[Introdução ao Obsidian Web Clipper|Web Clipper]] allows you to create templates that automatically capture and organize metadata from web pages. Example templates are available in the [clipper-templates repo](https://github.com/kepano/clipper-templates). 
+O [[Introdução ao Obsidian Web Clipper|Web Clipper]] permite criar modelos que capturam e organizam automaticamente metadados de páginas web. Modelos de exemplo estão disponíveis no [repositório clipper-templates](https://github.com/kepano/clipper-templates).
 
-## Create or edit a template
+## Criar ou editar um modelo
 
-To **create** a template go to Web Clipper settings and click the **New template** button in the sidebar. You can also **duplicate** a template in the **More** actions menu in the top right corner.
+Para **criar** um modelo, aceda às definições do Web Clipper e clique no botão **Novo modelo** na barra lateral. Também pode **duplicar** um modelo no menu de ações **Mais** no canto superior direito.
 
-To **edit** a template choose a template from the sidebar. Your changes will be saved automatically.
+Para **editar** um modelo, escolha um modelo na barra lateral. As suas alterações serão guardadas automaticamente.
 
-Templates make use of [[Variáveis]] and [[Filtros]], which allow you to tailor how content will be saved.
+Os modelos fazem uso de [[Variáveis]] e [[Filtros]], que permitem personalizar como o conteúdo será guardado.
 
-## Import and export Web Clipper templates
+## Importar e exportar modelos do Web Clipper
 
-To import a template:
+Para importar um modelo:
 
-1. Open the extension and click the **[[Configurações]]** cog icon.
-2. Go to any template in the list.
-3. Click **Import** in the top right or drag and drop your `.json` template file(s) anywhere in the template area.
+1. Abra a extensão e clique no ícone de engrenagem das **[[Configurações]]**.
+2. Aceda a qualquer modelo na lista.
+3. Clique em **Importar** no canto superior direito ou arraste e largue o(s) seu(s) ficheiro(s) de modelo `.json` em qualquer lugar da área de modelos.
 
-To export a template click **Export** in the top right. This will download the template `.json` file. You can also copy the template data to your clipboard via the **More** menu.
+Para exportar um modelo, clique em **Exportar** no canto superior direito. Isto irá descarregar o ficheiro `.json` do modelo. Também pode copiar os dados do modelo para a área de transferência através do menu **Mais**.
 
-## Template settings
+## Definições do modelo
 
-### Behavior
+### Comportamento
 
-Define how content from Web Clipper will be added to Obsidian:
+Defina como o conteúdo do Web Clipper será adicionado ao Obsidian:
 
-- **Create a new note**
-- **Add to an existing note**, at the top or bottom
-- **Add to daily note**, at the top or bottom (requires the [[Notas diárias]] plugin to be active)
+- **Criar uma nova nota**
+- **Adicionar a uma nota existente**, no início ou no fim
+- **Adicionar à nota diária**, no início ou no fim (requer que o plugin [[Notas diárias]] esteja ativo)
 
-### Automatically trigger a template
+### Acionar automaticamente um modelo
 
-Template triggers allow you to automatically select a template based on the current page URL or [schema.org](https://schema.org/) data. You can define multiple rules for each template, separated by a new line.
+Os acionadores de modelos permitem selecionar automaticamente um modelo com base no URL da página atual ou nos dados do [schema.org](https://schema.org/). Pode definir múltiplas regras para cada modelo, separadas por uma nova linha.
 
-The first match in your template list determines which template is used. You can drag templates up and down in Web Clipper settings to change the order in which templates are matched.
+A primeira correspondência na sua lista de modelos determina qual o modelo usado. Pode arrastar os modelos para cima e para baixo nas definições do Web Clipper para alterar a ordem em que os modelos são correspondidos.
 
-#### Simple URL matching
+#### Correspondência simples de URL
 
-Simple matching triggers a template if the current page URL *starts with* the given pattern. For example:
+A correspondência simples aciona um modelo se o URL da página atual *começar com* o padrão fornecido. Por exemplo:
 
-- `https://obsidian.md` will match any URL that starts with this text.
+- `https://obsidian.md` corresponderá a qualquer URL que comece com este texto.
 
-#### Regular expression matching
+#### Correspondência por expressão regular
 
-You can trigger templates based on more complex URL patterns using regular expressions. Enclose your regex pattern in forward slashes (`/`). Remember to escape special characters in regex patterns (like `.` and `/`) with a backslash (`\`). For example:
+Pode acionar modelos com base em padrões de URL mais complexos usando expressões regulares. Envolva o seu padrão regex em barras (`/`). Lembre-se de escapar os caracteres especiais nos padrões regex (como `.` e `/`) com uma barra invertida (`\`). Por exemplo:
 
-- `/^https:\/\/www\.imdb\.com\/title\/tt\d+\/reference\/?$/` will match any IMDB reference page.
+- `/^https:\/\/www\.imdb\.com\/title\/tt\d+\/reference\/?$/` corresponderá a qualquer página de referência do IMDB.
 
-#### Schema.org matching
+#### Correspondência de Schema.org
 
-You can trigger templates based on [schema.org](https://schema.org/) data present on the page. Use the `schema:` prefix followed by the schema key you want to match. You can optionally specify an expected value. For example:
+Pode acionar modelos com base em dados do [schema.org](https://schema.org/) presentes na página. Use o prefixo `schema:` seguido da chave de schema que pretende corresponder. Pode opcionalmente especificar um valor esperado. Por exemplo:
 
-- `schema:@Recipe` will match pages where the schema type is "Recipe".
-- `schema:@Recipe.name` will match pages where `@Recipe.name` is present.
-- `schema:@Recipe.name=Cookie` will match pages where `@Recipe.name` is "Cookie".
+- `schema:@Recipe` corresponderá a páginas onde o tipo de schema é "Recipe".
+- `schema:@Recipe.name` corresponderá a páginas onde `@Recipe.name` está presente.
+- `schema:@Recipe.name=Cookie` corresponderá a páginas onde `@Recipe.name` é "Cookie".
 
-Schema.org values can also be used to [[Variáveis#Schema.org variables|pre-populate data in templates]].
+Os valores do Schema.org também podem ser usados para [[Variáveis#Schema.org variables|pré-preencher dados em modelos]].
 
-### Interpreter context
+### Contexto do Interpretador
 
-When [[Interpretar páginas web|Interpreter]] is enabled, you can use [[Variáveis#Prompt variables|prompt variables]] to extract page content with natural language. For each template you can define the [[Interpretar páginas web#Context|context]] that Interpreter has access too. 
+Quando o [[Interpretar páginas web|Interpretador]] está ativado, pode usar [[Variáveis#Prompt variables|variáveis de prompt]] para extrair conteúdo de páginas com linguagem natural. Para cada modelo pode definir o [[Interpretar páginas web#Context|contexto]] a que o Interpretador tem acesso.

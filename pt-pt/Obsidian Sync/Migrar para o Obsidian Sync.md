@@ -6,7 +6,7 @@ publish: true
 mobile: true
 description: Learn how to transition from your current syncing solution to Obsidian Sync.
 ---
-Saiba como fazer a transição da sua solução de sincronização actual para o Obsidian Sync.
+Saiba como fazer a transição da sua solução de sincronização atual para o Obsidian Sync.
 
 > [!warning] Evite utilizar várias soluções para sincronizar os mesmos ficheiros
 > [[Perguntas frequentes#Can I use a third-party sync with Obsidian Sync?|Não recomendamos]] a utilização do Obsidian Sync em conjunto com serviços de armazenamento em nuvem (por exemplo, iCloud, Dropbox, OneDrive, Google Drive), pois pode originar conflitos. No entanto, os serviços de armazenamento em nuvem podem ter um papel na sua estratégia de [[Criar cópia de segurança dos seus ficheiros do Obsidian|cópias de segurança]].
@@ -22,7 +22,7 @@ Se o seu cofre estiver armazenado em algum dos seguintes locais, é provável qu
 
 Embora o Android e o Linux tendam a ter menos problemas com isto, ainda vale a pena verificar a localização do cofre nesses dispositivos.
 
-> [!tip] Se o seu cofre local actual estiver ligado a um cofre remoto, o Obsidian tentará detectar se o cofre está num serviço de sincronização. Se estiver, verá uma mensagem no topo das configurações do Obsidian Sync.
+> [!tip] Se o seu cofre local atual estiver ligado a um cofre remoto, o Obsidian tentará detectar se o cofre está num serviço de sincronização. Se estiver, verá uma mensagem no topo das configurações do Obsidian Sync.
 
 Para evitar conflitos com serviços de sincronização, recomendamos armazenar os seus cofres do Obsidian nos seguintes locais:
 

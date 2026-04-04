@@ -1,80 +1,83 @@
 ---
-localized: false
+aliases:
+  - Sidebar
+  - left Sidebar
+  - right Sidebar
+description: Saiba mais sobre as barras laterais esquerda e direita do Obsidian e como gerir separadores e grupos de separadores.
+mobile: true
 permalink: sidebar
 publish: true
-mobile: true
-description: Learn about Obsidian's left and right sidebars and how to manage tabs and tab groups.
 ---
 
-Obsidian has two sidebars: a left sidebar and a right sidebar. Sidebars hold tabs created by plugins, such as [[Links inversos]], [[Links de saída]], and the [[Explorador de ficheiros]]. On desktop, you can also drag notes into the sidebar to keep them visible alongside your main editor. 
+O Obsidian tem duas barras laterais: uma barra lateral esquerda e uma barra lateral direita. As barras laterais contêm separadores criados por plugins, como [[Links inversos]], [[Links de saída]] e o [[Explorador de ficheiros]]. No computador, também pode arrastar notas para a barra lateral para as manter visíveis junto ao editor principal.
 
-On desktop and larger tablets, the left sidebar includes the [[Faixa de opções]]. On mobile and smaller tablets, the sidebars are [[#Open hidden sidebars|collapsed by default]]. 
+No computador e em tablets maiores, a barra lateral esquerda inclui a [[Faixa de opções]]. Em dispositivos móveis e tablets mais pequenos, as barras laterais estão [[#Open hidden sidebars|recolhidas por predefinição]].
 
-## Open hidden sidebars
+## Abrir barras laterais ocultas
 
-### Desktop and larger tablets
+### Computador e tablets maiores
 
-On desktop and larger tablets, open a collapsed sidebar by selecting the left expand ![[obsidian-icon-side-bar-left.svg#icon]] or right expand ![[obsidian-icon-side-bar-right.svg#icon]] icon.
+No computador e em tablets maiores, abra uma barra lateral recolhida selecionando o ícone de expandir esquerdo ![[obsidian-icon-side-bar-left.svg#icon]] ou direito ![[obsidian-icon-side-bar-right.svg#icon]].
 
-### Mobile and smaller tablets
+### Dispositivos móveis e tablets mais pequenos
 
-On mobile and smaller tablets, you can open hidden sidebars in the following ways:
+Em dispositivos móveis e tablets mais pequenos, pode abrir barras laterais ocultas das seguintes formas:
 
-- Swipe left or right
-- Select the left expand ![[obsidian-icon-side-bar-left.svg#icon]] icon (left sidebar only)
-- Use the *Toggle left* or *Toggle right* [[Paleta de comandos]] options. 
+- Deslize para a esquerda ou para a direita
+- Selecione o ícone de expandir esquerdo ![[obsidian-icon-side-bar-left.svg#icon]] (apenas barra lateral esquerda)
+- Use as opções *Alternar esquerda* ou *Alternar direita* da [[Paleta de comandos]].
 
-## Tabs
+## Separadores
 
-By default, plugins create new tabs instead of new [[#Tab groups]].
+Por predefinição, os plugins criam novos separadores em vez de novos [[#Tab groups|grupos de separadores]].
 
-You can switch between tabs by selecting on the icon. A tooltip appears to help you identify tabs.
+Pode alternar entre separadores selecionando o ícone. Aparece uma dica de ferramenta para o ajudar a identificar os separadores.
 
-In each pane, you can only see one tab at any given moment. Some actions automatically bring a tab into view. For example, when you select a tag, its tab opens.
+Em cada painel, só pode ver um separador de cada vez. Algumas ações trazem automaticamente um separador para a vista. Por exemplo, quando seleciona uma etiqueta, o seu separador abre.
 
-### Open or reopen tabs
+### Abrir ou reabrir separadores
 
-There are several ways to add tabs to your sidebars:
+Existem várias formas de adicionar separadores às suas barras laterais:
 
-- **Enable a plugin**: Many plugins automatically create sidebar tabs when enabled. Go to **Settings → Community plugins** (or **Core plugins**) and enable the plugin for the tab you want.
-- **Run a command**: Use the [[Paleta de comandos]] to search for commands that open specific tabs. For example, search for "Backlinks" or "Outgoing links" to open those tabs.
-- **Drag a note** (desktop only): On desktop, you can drag a note from the [[Explorador de ficheiros]] or from an editor tab into the sidebar to open it there.
+- **Ativar um plugin**: Muitos plugins criam automaticamente separadores na barra lateral quando ativados. Vá a **Configurações → Plugins da comunidade** (ou **Plugins nativos**) e ative o plugin para o separador que pretende.
+- **Executar um comando**: Use a [[Paleta de comandos]] para pesquisar comandos que abrem separadores específicos. Por exemplo, pesquise "Links inversos" ou "Links de saída" para abrir esses separadores.
+- **Arrastar uma nota** (apenas computador): No computador, pode arrastar uma nota do [[Explorador de ficheiros]] ou de um separador do editor para a barra lateral para a abrir aí.
 
-If you've closed a tab and want to get it back, these same methods will reopen it.
+Se fechou um separador e pretende recuperá-lo, estes mesmos métodos irão reabri-lo.
 
-### Close tabs
+### Fechar separadores
 
-Some tabs can be closed via the right-click menu, while others cannot. If you don't want to see a tab that can't be closed, consider disabling the relevant plugin or collapsing the sidebar by selecting the arrow icon.
+Alguns separadores podem ser fechados através do menu de clique com o botão direito, enquanto outros não. Se não pretender ver um separador que não pode ser fechado, considere desativar o plugin relevante ou recolher a barra lateral selecionando o ícone de seta.
 
-### Rearrange tabs
+### Reorganizar separadores
 
-You can drag and drop tab icons to rearrange them within a group of tabs.
+Pode arrastar e largar ícones de separadores para os reorganizar dentro de um grupo de separadores.
 
-On desktop, you can also drag tabs from the sidebar into the main editor area to open them there.
+No computador, também pode arrastar separadores da barra lateral para a área do editor principal para os abrir aí.
 
-### Pin tabs
+### Afixar separadores
 
-You can pin a tab in the sidebar to control how it updates when you interact with other parts of the app.
+Pode afixar um separador na barra lateral para controlar como é atualizado quando interage com outras partes da aplicação.
 
-To pin or unpin a tab to the sidebar, drag the tab over to or from the sidebar. 
+Para afixar ou desafixar um separador na barra lateral, arraste o separador para a barra lateral ou a partir dela.
 
-The behavior of a pinned tab within the sidebar depends on its content type:
+O comportamento de um separador afixado na barra lateral depende do seu tipo de conteúdo:
 
-- **Notes and Bases**: A pinned note or base tab stays in place. New notes open as separate tabs in the main editor instead of replacing the pinned tab.
-- **Panes** (like [[Links inversos]] or [[Links de saída]]): A pinned pane stays focused on the last selected note. Selecting a different note does not update the pinned pane.
+- **Notas e Bases**: Um separador de nota ou base afixado permanece no lugar. Novas notas abrem como separadores separados no editor principal em vez de substituírem o separador afixado.
+- **Painéis** (como [[Links inversos]] ou [[Links de saída]]): Um painel afixado permanece focado na última nota selecionada. Selecionar uma nota diferente não atualiza o painel afixado.
 
-For information about pinning tabs in the main editor, see [[Separadores#Pin a tab|Pin a tab]].
+Para informações sobre afixar separadores no editor principal, consulte [[Separadores#Pin a tab|Afixar um separador]].
 
-## Tab groups
+## Grupos de separadores
 
-You can have multiple tab groups in the sidebar.
+Pode ter múltiplos grupos de separadores na barra lateral.
 
-### Create tab groups
+### Criar grupos de separadores
 
-To create a new tab group, drag the icon of a tab above or below a current tab group. The highlighted area indicates where the new tab group will be created.
+Para criar um novo grupo de separadores, arraste o ícone de um separador acima ou abaixo de um grupo de separadores atual. A área realçada indica onde o novo grupo de separadores será criado.
 
-### Close tab groups
+### Fechar grupos de separadores
 
-To close a tab group, you can [[#Close tabs|close all tabs in it]], or drag all tabs in the group by their icons and drop them into existing tab groups.
+Para fechar um grupo de separadores, pode [[#Close tabs|fechar todos os separadores nele]], ou arrastar todos os separadores do grupo pelos seus ícones e largá-los em grupos de separadores existentes.
 
-When only the tab area of a tab group is highlighted, the tab being dragged will merge with other tabs in that group.
+Quando apenas a área do separador de um grupo está realçada, o separador que está a ser arrastado irá fundir-se com outros separadores nesse grupo.

@@ -10,19 +10,19 @@ Quando [[Planos e limites de armazenamento#Create a new remote vault|cria um cof
 ## Definições do Sync
 
 **Cofre remoto**
-Esta secção mostra o seu cofre remoto actualmente ligado. Inclui um botão **Disconnect** para se desligar do cofre remoto e um botão **Manage** para ver todos os cofres remotos aos quais a sua conta tem acesso (incluindo cofres partilhados através de [[Colaborar num cofre partilhado|colaboração]]).
+Esta secção mostra o seu cofre remoto atualmente ligado. Inclui um botão **Disconnect** para se desligar do cofre remoto e um botão **Manage** para ver todos os cofres remotos aos quais a sua conta tem acesso (incluindo cofres partilhados através de [[Colaborar num cofre partilhado|colaboração]]).
 
 > [!warning]+ Cofre remoto num serviço de sincronização de terceiros
 > Se o seu cofre remoto estiver localizado num serviço de sincronização de terceiros, verá uma mensagem de erro a vermelho. Siga os passos em [[Migrar para o Obsidian Sync]] para resolver este problema.
 
 **Estado da sincronização**
-Apresenta o estado de sincronização actual do cofre remoto. Esta secção inclui um botão **Pause** ou **Resume**, dependendo do estado.
+Apresenta o estado de sincronização atual do cofre remoto. Esta secção inclui um botão **Pause** ou **Resume**, dependendo do estado.
 
 **Nome do dispositivo**
-Atribua um nome único ao dispositivo que está actualmente a sincronizar. Isto ajuda a acompanhar a actividade no [[Ícone de estado e mensagens#Sync activity log|registo do Sync]]. Esta definição é específica do dispositivo, tal como a [[#Selective syncing|sincronização selectiva]].
+Atribua um nome único ao dispositivo que está atualmente a sincronizar. Isto ajuda a acompanhar a atividade no [[Ícone de estado e mensagens#Sync activity log|registo do Sync]]. Esta definição é específica do dispositivo, tal como a [[#Seletive syncing|sincronização seletiva]].
 
 **[[#Conflict resolution|Resolução de conflitos]]**
-Escolha como resolver conflitos quando modifica um ficheiro em vários dispositivos. Esta definição é específica do dispositivo, tal como a [[#Selective syncing|sincronização selectiva]].
+Escolha como resolver conflitos quando modifica um ficheiro em vários dispositivos. Esta definição é específica do dispositivo, tal como a [[#Seletive syncing|sincronização seletiva]].
 
 **Ficheiros eliminados**
 Contém um botão para **View** ou **Restore** ficheiros eliminados. Para mais detalhes, consulte [[Histórico de versões]].
@@ -31,7 +31,7 @@ Contém um botão para **View** ou **Restore** ficheiros eliminados. Para mais d
 Apresenta uma barra de progresso que mostra quanto do seu armazenamento de sincronização está a ser utilizado.
 
 > [!tip]- Tempo de processamento do servidor
-> Pode demorar até 30 minutos para a utilização actual ser actualizada devido ao processamento do lado do servidor.
+> Pode demorar até 30 minutos para a utilização atual ser atualizada devido ao processamento do lado do servidor.
 
 **Contactar suporte**
 Fornece instruções sobre como [[Ajuda e suporte#Contact Obsidian support|contactar o suporte do Obsidian]], incluindo opções para **Copy debug info** e **Email support**.
@@ -45,17 +45,17 @@ Escolha como resolver conflitos quando modifica um ficheiro em vários dispositi
 
 ---
 
-Também pode escolher o que sincronizar nas definições do plugin nativo Sync. Esta secção aborda a **sincronização selectiva** e a **sincronização da configuração do cofre**, juntamente com as respectivas ressalvas.
+Também pode escolher o que sincronizar nas definições do plugin nativo Sync. Esta secção aborda a **sincronização seletiva** e a **sincronização da configuração do cofre**, juntamente com as respectivas ressalvas.
 
-## Sincronização selectiva
+## Sincronização seletiva
 
-Os ficheiros sincronizados para o seu [[Cofres locais e remotos|cofre remoto]] contribuem para o seu [[Perguntas frequentes#How large can each remote vault be|limite de armazenamento]]. Por predefinição, o Obsidian Sync activa a **sincronização selectiva** para os seguintes tipos de ficheiros:
+Os ficheiros sincronizados para o seu [[Cofres locais e remotos|cofre remoto]] contribuem para o seu [[Perguntas frequentes#How large can each remote vault be|limite de armazenamento]]. Por predefinição, o Obsidian Sync ativa a **sincronização seletiva** para os seguintes tipos de ficheiros:
 - Imagens
 - Áudio
 - Vídeos
 - PDFs
 
-Para sincronizar tipos de ficheiros adicionais, active a opção `Sync all other types`.
+Para sincronizar tipos de ficheiros adicionais, ative a opção `Sync all other types`.
 
 As definições predefinidas de **sincronização da configuração do cofre** incluem:
 - Outros tipos de ficheiros
@@ -63,15 +63,15 @@ As definições predefinidas de **sincronização da configuração do cofre** i
 - Aparência
 - Temas e fragmentos
 - Atalhos de teclado
-- Lista de plugins nativos activos
+- Lista de plugins nativos ativos
 - Definições dos plugins nativos
 
-Para sincronizar plugins da comunidade, active manualmente **Active community plugin list** e **Installed community plugin list**.
+Para sincronizar plugins da comunidade, ative manualmente **Ative community plugin list** e **Installed community plugin list**.
 
 ### Alterar os tipos de ficheiros que pretende sincronizar
 
 1. Abra **[[Configurações]] → Sync**.
-2. Em **Selective sync**, active os tipos de ficheiros que pretende sincronizar.
+2. Em **Seletive sync**, ative os tipos de ficheiros que pretende sincronizar.
 3. Reinicie a aplicação para aplicar as novas definições. Em dispositivos móveis ou tablets, pode ser necessário forçar o fecho.
 
 Note que o seu [[Planos e limites de armazenamento|plano Sync]] define o tamanho máximo de ficheiro que pode sincronizar. O plano Standard permite sincronizar ficheiros até 5 MB, enquanto o plano Plus suporta ficheiros até 200 MB.
@@ -109,7 +109,7 @@ Exemplos comuns de ficheiros e pastas ocultos que não são sincronizados:
 
 As definições do Sync não são sincronizadas entre dispositivos. É necessário configurá-las separadamente em cada dispositivo conforme necessário.
 
-## Actualizar as definições do cofre sincronizado
+## Atualizar as definições do cofre sincronizado
 
 Para modificar as definições de sincronização em vários dispositivos, siga estes passos:
 
@@ -121,16 +121,16 @@ Para modificar as definições de sincronização em vários dispositivos, siga 
 O dispositivo primário actua como fonte de verdade. As alterações efectuadas aqui são sincronizadas para todos os outros dispositivos.
 
 1. Vá a **[[Configurações]] → Sync**.
-2. Active as definições desejadas em **Vault configuration sync**.
+2. Ative as definições desejadas em **Vault configuration sync**.
 3. Recarregue ou reinicie o Obsidian. Em dispositivos móveis ou tablets, pode ser necessário forçar o fecho.
 4. Aguarde algum tempo para que as definições sejam sincronizadas com o seu cofre remoto.
 
 ### Dispositivo(s) secundário(s)
 
-Os dispositivos secundários (como o seu telemóvel) recebem actualizações do dispositivo primário.
+Os dispositivos secundários (como o seu telemóvel) recebem atualizações do dispositivo primário.
 
 1. Vá a **[[Configurações]] → Sync**.
-2. Active as definições necessárias em **Vault configuration sync**.
+2. Ative as definições necessárias em **Vault configuration sync**.
 3. Aguarde que as alterações sejam transferidas do cofre remoto.
 4. Recarregue ou reinicie a aplicação para aplicar as definições sincronizadas. Em dispositivos móveis ou tablets, pode ser necessário forçar o fecho.
 
@@ -138,8 +138,8 @@ Os dispositivos secundários (como o seu telemóvel) recebem actualizações do 
 
 Certas definições podem ser recarregadas em tempo real, enquanto outras requerem um reinício:
 
-- **Recarregamento em tempo real**: A maioria das configurações do Obsidian, incluindo atalhos de teclado e propriedades, definições de aparência e configurações de plugins nativos já activados.
-- **Requer recarregamento**: Alterações CSS (por exemplo, [[Fragmentos CSS]], [[Temas]]), configurações da vista de grafo e estados de plugins nativos (por exemplo, activar/desactivar Notas diárias).
+- **Recarregamento em tempo real**: A maioria das configurações do Obsidian, incluindo atalhos de teclado e propriedades, definições de aparência e configurações de plugins nativos já ativados.
+- **Requer recarregamento**: Alterações CSS (por exemplo, [[Fragmentos CSS]], [[Temas]]), configurações da vista de grafo e estados de plugins nativos (por exemplo, ativar/desativar Notas diárias).
 
 Os plugins da comunidade normalmente não suportam recarregamento em tempo real e requerem um reinício quando são aplicadas novas definições.
 

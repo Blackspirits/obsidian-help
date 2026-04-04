@@ -1,53 +1,52 @@
 ---
-localized: false
 permalink: plugins/workspaces
 ---
-Workspaces is a [[Plugins nativos|core plugin]] that  lets you manage and switch between different application layouts depending on your task, for example journaling, reading, or writing.
+As Áreas de trabalho são um [[Plugins nativos|plugin nativo]] que lhe permite gerir e alternar entre diferentes esquemas da aplicação consoante a sua tarefa, por exemplo escrever um diário, ler ou escrever.
 
-A workspace contains information about open files and tabs, and the width and visibility of each sidebar.
+Uma área de trabalho contém informações sobre ficheiros e separadores abertos, e a largura e visibilidade de cada barra lateral.
 
-## Save a workspace
+## Guardar uma área de trabalho
 
-**Ribbon:**
+**Faixa de opções:**
 
-1. In the ribbon, click **Manage workspace layouts** ![[lucide-panels-top-left.svg#icon]].
-2. Enter a name for the workspace.
-3. Select **Save**.
+1. Na faixa de opções, clique em **Gerir esquemas de área de trabalho** ![[lucide-panels-top-left.svg#icon]].
+2. Introduza um nome para a área de trabalho.
+3. Selecione **Guardar**.
 
-**Command palette:**
+**Paleta de comandos:**
 
-1. Press `Ctrl+P` (or `Cmd+P` on macOS) to open the [[Paleta de comandos]].
-2. Search for the **Manage workspace layouts** command.
-3. Press `Enter` with the command selected.
-4. Enter a name for the workspace.
-5. Select **Save**.
+1. Prima `Ctrl+P` (ou `Cmd+P` no macOS) para abrir a [[Paleta de comandos]].
+2. Pesquise o comando **Gerir esquemas de área de trabalho**.
+3. Prima `Enter` com o comando selecionado.
+4. Introduza um nome para a área de trabalho.
+5. Selecione **Guardar**.
 
-To update an existing workspace, save the workspace with the same name as the workspace you want to update.
+Para atualizar uma área de trabalho existente, guarde a área de trabalho com o mesmo nome da área de trabalho que pretende atualizar.
 
-## Load a workspace
+## Carregar uma área de trabalho
 
-**Ribbon:**
+**Faixa de opções:**
 
-1. In the ribbon, click **Manage workspace layouts**  ![[lucide-panels-top-left.svg#icon]].
-2. Next to the workspace you want to load, select **Load**.
+1. Na faixa de opções, clique em **Gerir esquemas de área de trabalho** ![[lucide-panels-top-left.svg#icon]].
+2. Junto à área de trabalho que pretende carregar, selecione **Carregar**.
 
-**Command palette:**
+**Paleta de comandos:**
 
-1. Press `Ctrl+P` (or `Cmd+P` on macOS) to open the [[Paleta de comandos]].
-2. Search for the **Manage workspace layouts** command.
-3. Press `Enter` with the command selected.
-4. Select the workspace to load.
+1. Prima `Ctrl+P` (ou `Cmd+P` no macOS) para abrir a [[Paleta de comandos]].
+2. Pesquise o comando **Gerir esquemas de área de trabalho**.
+3. Prima `Enter` com o comando selecionado.
+4. Selecione a área de trabalho a carregar.
 
-## Delete a workspace
+## Eliminar uma área de trabalho
 
-**Ribbon:**
+**Faixa de opções:**
 
-1. In the ribbon, click **Manage workspace layouts**  ![[lucide-panels-top-left.svg#icon]].
-2. Next to the workspace you want to delete, select **Delete layout** ![[lucide-x.svg#icon]].
+1. Na faixa de opções, clique em **Gerir esquemas de área de trabalho** ![[lucide-panels-top-left.svg#icon]].
+2. Junto à área de trabalho que pretende eliminar, selecione **Eliminar esquema** ![[lucide-x.svg#icon]].
 
-**Command palette:**
+**Paleta de comandos:**
 
-1. Press `Ctrl+P` (or `Cmd+P` on macOS) to open the [[Paleta de comandos]].
-2. Search for the **Manage workspace layouts** command.
-3. Press `Enter` with the command selected.
-4. Next to the workspace you want to delete, select **Delete layout** ![[lucide-x.svg#icon]].
+1. Prima `Ctrl+P` (ou `Cmd+P` no macOS) para abrir a [[Paleta de comandos]].
+2. Pesquise o comando **Gerir esquemas de área de trabalho**.
+3. Prima `Enter` com o comando selecionado.
+4. Junto à área de trabalho que pretende eliminar, selecione **Eliminar esquema** ![[lucide-x.svg#icon]].

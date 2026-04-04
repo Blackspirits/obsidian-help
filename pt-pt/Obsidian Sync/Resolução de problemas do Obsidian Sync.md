@@ -32,7 +32,7 @@ A partir do Obsidian 1.9.7, pode escolher como gerir os conflitos. Para configur
 
 1. Abra as **[[Configurações]]**.
 2. Na barra lateral, seleccione **Sync**.
-3. Em **[[Configurações do Sync e sincronização selectiva#Conflict resolution|Resolução de conflitos]]**, escolha a opção que preferir:
+3. Em **[[Configurações do Sync e sincronização seletiva#Conflict resolution|Resolução de conflitos]]**, escolha a opção que preferir:
    - **Combinar automaticamente** (predefinição): O Obsidian Sync combina todas as alterações de diferentes dispositivos num único ficheiro. Isto guarda todas as edições, mas pode por vezes criar texto duplicado ou problemas de formatação. Terá de os corrigir manualmente.
    - **Criar ficheiro de conflito**: Quando o Obsidian detecta alterações em conflito, cria um ficheiro de conflito separado em vez de combinar automaticamente. Pode então rever ambas as versões e combiná-las manualmente. Isto dá-lhe controlo total sobre o resultado final.
 
@@ -64,14 +64,14 @@ O Obsidian Sync normalmente tenta [[#Resolução de conflitos|resolver conflitos
 
 Se criar uma nota localmente num dispositivo e, ao fim de alguns minutos, o Sync transferir uma versão remota dessa mesma nota, o Sync manterá a versão remota sem combinar as duas. Neste caso, pode recuperar a versão local utilizando [[Recuperação de ficheiros]].
 
-### O Sync não sincroniza as actualizações dos meus plugins e configurações
+### O Sync não sincroniza as atualizações dos meus plugins e configurações
 
-O Obsidian [[Perguntas frequentes#Does Obsidian Sync live-reload my settings?|não recarrega todas as configurações em tempo real]]. Depois de actualizar configurações ou plugins, tem de reiniciar o Obsidian nos outros dispositivos para ver as alterações. Nos dispositivos móveis, poderá ser necessário forçar o fecho da aplicação.
+O Obsidian [[Perguntas frequentes#Does Obsidian Sync live-reload my settings?|não recarrega todas as configurações em tempo real]]. Depois de atualizar configurações ou plugins, tem de reiniciar o Obsidian nos outros dispositivos para ver as alterações. Nos dispositivos móveis, poderá ser necessário forçar o fecho da aplicação.
 
 > [!example]- Alterar um tema
 > - No seu dispositivo principal (normalmente um computador), muda o tema de volta para o predefinido a partir de um tema personalizado.
-> - O registo do Sync confirma que os ficheiros actualizados foram enviados para o cofre remoto, mas o seu dispositivo móvel continua a mostrar o tema personalizado.
-> - No dispositivo móvel, consulte o registo do Sync para confirmar a recepção do ficheiro `appearance.json` actualizado.
+> - O registo do Sync confirma que os ficheiros atualizados foram enviados para o cofre remoto, mas o seu dispositivo móvel continua a mostrar o tema personalizado.
+> - No dispositivo móvel, consulte o registo do Sync para confirmar a receção do ficheiro `appearance.json` atualizado.
 > - Recarregue ou reinicie o Obsidian no dispositivo móvel.
 > - Após recarregar ou reiniciar, o dispositivo móvel deverá apresentar o mesmo tema que o computador.
 

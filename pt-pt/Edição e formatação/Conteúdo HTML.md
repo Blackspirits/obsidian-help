@@ -1,85 +1,87 @@
 ---
-localized: false
+aliases:
+  - Advanced topics/HTML sanitization
+  - Editing and formatting/Using HTML
+  - Editing and formatting/HTML content
+description: Aprenda a usar HTML no Obsidian, incluindo limitações na renderização de Markdown e requisitos de blocos HTML.
+mobile: true
 permalink: html
 publish: true
-mobile: true
-description: 'Learn how to use HTML in Obsidian, including limitations with Markdown rendering, and HTML block requirements.'
 ---
 
-Obsidian supports HTML to allow you to display your notes the way you want, or even [[Incorporar páginas web|embed web pages]]. Allowing HTML inside your notes comes with risks. To prevent malicious code from doing harm, Obsidian _sanitizes_ any HTML in your notes. 
+O Obsidian suporta HTML para lhe permitir apresentar as suas notas da forma que desejar, ou mesmo [[Incorporar páginas web|incorporar páginas web]]. Permitir HTML nas suas notas acarreta riscos. Para evitar que código malicioso cause danos, o Obsidian _sanitiza_ qualquer HTML nas suas notas.
 
-> [!example] 
-> The `<script>` element normally lets you run JavaScript whenever it loads. If Obsidian didn't sanitize HTML, an attacker could convince you to paste a text containing JavaScript that extracts sensitive information from your computer and sends it back to them.
+> [!example]
+> O elemento `<script>` normalmente permite executar JavaScript sempre que carrega. Se o Obsidian não sanitizasse o HTML, um atacante poderia convencê-lo a colar um texto contendo JavaScript que extrai informações sensíveis do seu computador e as envia de volta para eles.
 
-That said, since Markdown syntax does not support all forms of styling, using sanitized HTML can be yet another way of enhancing the quality of your notes. We've included some of the more common usages of HTML.
+Dito isto, uma vez que a sintaxe Markdown não suporta todas as formas de estilização, o uso de HTML sanitizado pode ser mais uma forma de melhorar a qualidade das suas notas. Incluímos alguns dos usos mais comuns de HTML.
 
-## HTML limitations
+## Limitações do HTML
 
-Obsidian has specific limitations when using HTML in your notes:
+O Obsidian tem limitações específicas ao usar HTML nas suas notas:
 
-### No Markdown inside HTML
+### Sem Markdown dentro de HTML
 
-Obsidian does not render Markdown syntax inside HTML elements. This is an intentional design choice for performance optimization and to keep parser complexity low when managing large documents.
+O Obsidian não renderiza sintaxe Markdown dentro de elementos HTML. Esta é uma escolha de design intencional para otimização de desempenho e para manter a complexidade do parser baixa ao gerir documentos grandes.
 
-For example, this will not work as expected:
+Por exemplo, isto não funcionará como esperado:
 
 ```md
 <div>
-This **will not** be bold and this `will not` be code.
+Este **não ficará** a negrito e este `não será` código.
 </div>
 ```
 
-### HTML blocks must be self-contained
+### Os blocos HTML devem ser autossuficientes
 
-HTML blocks must be complete and cannot contain blank lines within them. Blank lines will break the HTML block.
+Os blocos HTML devem ser completos e não podem conter linhas em branco entre eles. As linhas em branco quebrarão o bloco HTML.
 
-This will work:
+Isto funcionará:
 
 ```md
 <table>
 <tr>
-<td>Content here</td>
+<td>Conteúdo aqui</td>
 </tr>
 </table>
 ```
 
-This will not work correctly:
+Isto não funcionará corretamente:
 
 ```md
 <table>
 
 <tr>
 
-<td>Content here</td>
+<td>Conteúdo aqui</td>
 
 </tr>
 
 </table>
 ```
 
-### When Markdown appears to work in HTML
+### Quando o Markdown parece funcionar em HTML
 
-Some inline HTML tags like `<span>` or `<a>` have limited functionality and may appear to render Markdown, but this is not actually what's happening. The Markdown is being processed outside of the HTML context.
+Algumas tags HTML inline como `<span>` ou `<a>` têm funcionalidade limitada e podem parecer renderizar Markdown, mas não é isso que está a acontecer. O Markdown está a ser processado fora do contexto HTML.
 
-For more details on how Obsidian handles Markdown, see [[Obsidian Flavored Markdown]].
+Para mais detalhes sobre como o Obsidian trata o Markdown, consulte [[Obsidian Flavored Markdown]].
 
-## Common HTML usage
+## Uso comum de HTML
 
-> [!info] More details on using `<iframe>` can be found in [[Incorporar páginas web]].
+> [!info] Mais detalhes sobre o uso de `<iframe>` podem ser encontrados em [[Incorporar páginas web]].
 
-### Comments
+### Comentários
 
-[[Sintaxe de formatação básica#Comments|Markdown comments]] are the preferred way of adding hidden comments within your notes. However some methods of converting Markdown notes, such as [Pandoc](https://pandoc.org), have limited support of Markdown comments. In those instances, you can use a `<!-- HTML Comment -->` instead!
+Os [[Sintaxe de formatação básica#Comments|comentários Markdown]] são a forma preferida de adicionar comentários ocultos nas suas notas. No entanto, alguns métodos de conversão de notas Markdown, como o [Pandoc](https://pandoc.org), têm suporte limitado a comentários Markdown. Nesses casos, pode usar `<!-- Comentário HTML -->` em vez disso!
 
-### Underline
+### Sublinhado
 
-If you need to quickly underline an item in your notes, you can use `<u>Example</u>` to create <u>your underlined text</u>.
+Se precisar de sublinhar rapidamente um item nas suas notas, pode usar `<u>Exemplo</u>` para criar <u>o seu texto sublinhado</u>.
 
 ### Span/Div
 
-Span and div tags can be used to apply custom classes from a [[Fragmentos CSS|CSS snippet]], or custom defined styling, onto a selected area of text. For example, using `<span style="font-family: cursive">your text</span>` can allow you to quickly <span style="font-family: cursive">change your font</span>.
+As tags span e div podem ser usadas para aplicar classes personalizadas de um [[Fragmentos CSS|fragmento CSS]], ou estilização definida de forma personalizada, a uma área selecionada de texto. Por exemplo, usar `<span style="font-family: cursive">o seu texto</span>` pode permitir-lhe <span style="font-family: cursive">alterar rapidamente o tipo de letra</span>.
 
-## Strikethrough
+## Tachado
 
-Need to strike <s>some text</s>? Use `<s>this</s>` to strike it out.
-
+Precisa de tachar <s>algum texto</s>? Use `<s>isto</s>` para o tachar.

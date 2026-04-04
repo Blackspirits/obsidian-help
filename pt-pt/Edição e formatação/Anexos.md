@@ -1,29 +1,30 @@
 ---
-localized: false
+aliases:
+  - How to/Manage attachments
 permalink: attachments
 ---
-You can import [[Formatos de ficheiro aceites]], or _attachments_, to your vault, such as images, audio files, or PDFs. Attachments are regular files that you can access using your file system. Attachments can be [[Incorporar ficheiros|embedded]].
+Pode importar [[Formatos de ficheiro aceites]], ou _anexos_, para o seu cofre, como imagens, ficheiros de áudio ou PDFs. Os anexos são ficheiros normais que pode aceder através do seu sistema de ficheiros. Os anexos podem ser [[Incorporar ficheiros|incorporados]].
 
-## Add an attachment
+## Adicionar um anexo
 
-You can add attachments to your vault in multiple ways. Only [[Formatos de ficheiro aceites]] can be added.
+Pode adicionar anexos ao seu cofre de várias formas. Apenas os [[Formatos de ficheiro aceites]] podem ser adicionados.
 
-> [!todo]- Copy and paste attachments
-> You can paste attachments directly into your notes. Obsidian creates a file with the pasted content in the default attachment location and [[Incorporar ficheiros|embeds]] it in the note.
+> [!todo]- Copiar e colar anexos
+> Pode colar anexos diretamente nas suas notas. O Obsidian cria um ficheiro com o conteúdo colado na localização predefinida dos anexos e [[Incorporar ficheiros|incorpora-o]] na nota.
 
-> [!todo]- Drag and drop attachments
-> If you drag a file from your file system into an open editor, Obsidian copies the file to the default attachment location and [[Incorporar ficheiros|embeds]] it in the note.
+> [!todo]- Arrastar e largar anexos
+> Se arrastar um ficheiro do seu sistema de ficheiros para um editor aberto, o Obsidian copia o ficheiro para a localização predefinida dos anexos e [[Incorporar ficheiros|incorpora-o]] na nota.
 
- > [!todo]- Download attachments to vault folder
- > You can download an attachment directly to your vault, for example if you  [[Importar notas#More formats|import from your browser]], or from other apps that saves files directly to your file system.
+> [!todo]- Descarregar anexos para a pasta do cofre
+> Pode descarregar um anexo diretamente para o seu cofre, por exemplo se [[Importar notas#More formats|importar do browser]], ou de outras aplicações que guardam ficheiros diretamente no seu sistema de ficheiros.
 
-## Change default attachment location
+## Alterar a localização predefinida dos anexos
 
-By default, attachments are added to the root of your vault.
+Por predefinição, os anexos são adicionados à raiz do seu cofre.
 
-You can change the default attachment location under **[[Configurações]] → Files & Links → Default location for new attachments**.
+Pode alterar a localização predefinida dos anexos em **[[Configurações]] → Ficheiros e ligações → Localização predefinida para novos anexos**.
 
-- **Vault folder** adds the attachment to the root of your vault.
-- **In the folder specified below** adds the attachment to a specified folder.
-- **Same folder as current file** adds the attachment to the same folder as the note you added it to.
-- **In subfolder under current folder** adds attachments to a specified folder next to the note you added the attachment to. If it doesn't exist, Obsidian creates it when you add an attachment.
+- **Pasta do cofre** adiciona o anexo à raiz do seu cofre.
+- **Na pasta especificada abaixo** adiciona o anexo a uma pasta especificada.
+- **Mesma pasta que o ficheiro atual** adiciona o anexo à mesma pasta que a nota à qual o adicionou.
+- **Em subpasta sob a pasta atual** adiciona os anexos a uma pasta especificada junto à nota à qual adicionou o anexo. Se não existir, o Obsidian cria-a quando adiciona um anexo.

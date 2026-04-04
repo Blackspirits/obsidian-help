@@ -1,70 +1,69 @@
 ---
-localized: false
 permalink: early-access
 ---
 
-Get early access to upcoming releases by enabling _early access versions_. Early access versions are only available to users with a [[Licença Catalyst]].
+Obtenha acesso antecipado a versões futuras ativando as _versões de acesso antecipado_. As versões de acesso antecipado estão disponíveis apenas para utilizadores com uma [[Licença Catalyst]].
 
-> [!warning] Warning
-> Early access versions are beta releases. They include new features but may be less stable. Don't enable early access versions if you prefer a more reliable experience.
-> 
-> Be aware that community plugin and theme developers receive early access versions at the same time as everyone else. Be patient with developers who need to make updates to support new features.
+> [!warning] Aviso
+> As versões de acesso antecipado são versões beta. Incluem novas funcionalidades, mas podem ser menos estáveis. Não ative as versões de acesso antecipado se preferir uma experiência mais fiável.
+>
+> Tenha em atenção que os programadores de plugins e temas da comunidade recebem as versões de acesso antecipado ao mesmo tempo que todos os outros. Seja paciente com os programadores que precisam de fazer atualizações para suportar novas funcionalidades.
 
-## Enable early access versions for desktop
+## Ativar versões de acesso antecipado para computador
 
-To receive early access versions as soon as they're available, follow these steps:
+Para receber versões de acesso antecipado assim que estiverem disponíveis, siga estes passos:
 
-1. Open **[[Configurações]]**.
-2. In the sidebar, select **General**.
-3. Under **Account → Your Account**, select **Log in**.
-4. In **Email**, enter your email.
-5. In **Password**, enter your password.
-6. Once signed in, return to **[[Configurações]]**.
-7. In the sidebar, select **General**.
-8. Under **App**, enable **Receive early access versions**.
-9. Click **Check for updates** and then **Relaunch**.
+1. Abra as **[[Configurações]]**.
+2. Na barra lateral, selecione **Geral**.
+3. Em **Conta → A sua conta**, selecione **Iniciar sessão**.
+4. Em **Email**, introduza o seu email.
+5. Em **Palavra-passe**, introduza a sua palavra-passe.
+6. Depois de iniciar sessão, regresse às **[[Configurações]]**.
+7. Na barra lateral, selecione **Geral**.
+8. Em **Aplicação**, ative **Receber versões de acesso antecipado**.
+9. Clique em **Verificar atualizações** e depois em **Reiniciar**.
 
-## Install early access versions on mobile devices
+## Instalar versões de acesso antecipado em dispositivos móveis
 
-To find instructions on how to install early access versions on your mobile device, follow these steps:
+Para encontrar instruções sobre como instalar versões de acesso antecipado no seu dispositivo móvel, siga estes passos:
 
-1. Download and install [Discord](<https://discord.com>).
-2. Join the [Obsidian Discord server](https://discord.gg/obsidianmd).
-3. [[Licença Catalyst#Get your Discord badge|Get your Discord badge]] to access insider channels.
-4. In the `#insider-welcome` channel, you will find instructions for accessing your download based on your device type.
+1. Descarregue e instale o [Discord](<https://discord.com>).
+2. Junte-se ao [servidor Discord do Obsidian](https://discord.gg/obsidianmd).
+3. [[Licença Catalyst#Get your Discord badge|Obtenha o seu emblema de Discord]] para aceder aos canais insider.
+4. No canal `#insider-welcome`, encontrará instruções para aceder à sua transferência com base no tipo de dispositivo.
 
-## Report issues and other feedback
+## Reportar problemas e outros comentários
 
-If you discover an issue in an early access version, consider reporting it to the Obsidian team. Before you report an issue, search the [forum](https://forum.obsidian.md/) or Discord to see if someone has already reported it.
+Se descobrir um problema numa versão de acesso antecipado, considere reportá-lo à equipa do Obsidian. Antes de reportar um problema, pesquise no [fórum](https://forum.obsidian.md/) ou no Discord para ver se alguém já o reportou.
 
-To report an issue, use one of the following channels:
+Para reportar um problema, use um dos seguintes canais:
 
-- On Discord, report the issue in the respective `#insider-release` channel.
-- In the forum, create a new topic under [Bug reports](https://forum.obsidian.md/c/bug-reports/7).
+- No Discord, reporte o problema no respetivo canal `#insider-release`.
+- No fórum, crie um novo tópico em [Relatórios de erros](https://forum.obsidian.md/c/bug-reports/7).
 
-When you report an issue, include the build version and the OS you're running it on. You can find the build version under **[[Configurações]] → About → App → Current version**.
+Ao reportar um problema, inclua a versão da compilação e o sistema operativo que está a usar. Pode encontrar a versão da compilação em **[[Configurações]] → Sobre → Aplicação → Versão atual**.
 
-## Switch back to public versions on desktop
+## Voltar para as versões públicas no computador
 
-To switch back to using public versions (not early access) on desktop:
+Para voltar a usar as versões públicas (não de acesso antecipado) no computador:
 
-1. Disable early access versions.
-   1. Open **[[Configurações]]**.
-   2. In the sidebar, select **General**.
-   3. Under **App**, disable **Receive early access versions**.
-2. Close Obsidian.
-3. Delete the `obsidian-VERSION.asar` file, where `VERSION` is the Obsidian version.
-   - Windows: `%APPDATA%\obsidian\obsidian-VERSION.asar`
-   - Mac: `~/Library/Application Support/obsidian/obsidian-VERSION.asar`
-   - Linux: `~/.config/obsidian/obsidian-VERSION.asar`
-4. Restart Obsidian.
+1. Desative as versões de acesso antecipado.
+   1. Abra as **[[Configurações]]**.
+   2. Na barra lateral, selecione **Geral**.
+   3. Em **Aplicação**, desative **Receber versões de acesso antecipado**.
+2. Feche o Obsidian.
+3. Apague o ficheiro `obsidian-VERSÃO.asar`, onde `VERSÃO` é a versão do Obsidian.
+   - Windows: `%APPDATA%\obsidian\obsidian-VERSÃO.asar`
+   - Mac: `~/Library/Application Support/obsidian/obsidian-VERSÃO.asar`
+   - Linux: `~/.config/obsidian/obsidian-VERSÃO.asar`
+4. Reinicie o Obsidian.
 
-## Switch back to public versions on mobile
+## Voltar para as versões públicas no mobile
 
-To switch back to using public versions (not early access) on mobile:
+Para voltar a usar as versões públicas (não de acesso antecipado) no mobile:
 
-1. Back up your vault data
-2. Uninstall Obsidian
-3. Reinstall Obsidian either from the Play Store or Apple App store
-4. Restore your vault data from your backups
-5. Open Obsidian
+1. Faça uma cópia de segurança dos dados do seu cofre
+2. Desinstale o Obsidian
+3. Reinstale o Obsidian a partir da Play Store ou da App Store da Apple
+4. Restaure os dados do seu cofre a partir das suas cópias de segurança
+5. Abra o Obsidian

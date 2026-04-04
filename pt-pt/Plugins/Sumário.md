@@ -1,9 +1,8 @@
 ---
-localized: false
 permalink: plugins/outline
 ---
-Outline is a [[Plugins nativos|core plugin]] that lists the headings in the active note.
+O Sumário é um [[Plugins nativos|plugin nativo]] que lista os cabeçalhos da nota ativa.
 
-To navigate to that section in the note, click on the heading in the outline.
+Para navegar para essa secção na nota, clique no cabeçalho no sumário.
 
-To rearrange sections in the note, click and drag the heading within the outline.
+Para reorganizar secções na nota, clique e arraste o cabeçalho dentro do sumário.

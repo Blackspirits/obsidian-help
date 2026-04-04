@@ -11,7 +11,7 @@ Esta página lista algumas das perguntas mais comuns relacionadas com as questõ
 
 ### Que sistemas operativos são suportados pelo Obsidian Sync?
 
-O Obsidian Sync suporta todas as plataformas em que o Obsidian pode ser executado. Actualmente, isso inclui Windows, macOS, Linux, Android e iOS.
+O Obsidian Sync suporta todas as plataformas em que o Obsidian pode ser executado. Atualmente, isso inclui Windows, macOS, Linux, Android e iOS.
 
 ### O Obsidian funciona com o modo de isolamento da Apple?
 
@@ -21,7 +21,7 @@ O Obsidian pode ser utilizado no [modo de isolamento](https://support.apple.com/
 
 Por omissão, as suas notas do Obsidian, imagens e a sua [[Pasta de configuração]] são sincronizadas.
 
-Pode adicionar opções de sincronização adicionais para PDF, ficheiros de áudio, ficheiros de vídeo e outros ficheiros ao configurar as [[Configurações do Sync e sincronização selectiva]].
+Pode adicionar opções de sincronização adicionais para PDF, ficheiros de áudio, ficheiros de vídeo e outros ficheiros ao configurar as [[Configurações do Sync e sincronização seletiva]].
 
 ### Qual é o meu espaço de armazenamento?
 
@@ -51,7 +51,7 @@ Não, os ficheiros só são sincronizados quando o Obsidian está em execução.
 
 ### O Obsidian Sync recarrega as configurações em tempo real?
 
-O Obsidian Sync pode recarregar automaticamente certas configurações, mas existem algumas limitações. Para mais detalhes, consulte [[Configurações do Sync e sincronização selectiva#Reloading of settings|Recarga de configurações]].
+O Obsidian Sync pode recarregar automaticamente certas configurações, mas existem algumas limitações. Para mais detalhes, consulte [[Configurações do Sync e sincronização seletiva#Reloading of settings|Recarga de configurações]].
 
 ### Posso utilizar um serviço de sincronização de terceiros com o Obsidian Sync?
 

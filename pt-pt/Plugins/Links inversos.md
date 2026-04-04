@@ -2,7 +2,7 @@
 permalink: plugins/backlinks
 publish: true
 mobile: false
-description: 'With the Backlinks plugin, you can see all the backlinks for the active note.'
+description: 'With the Backlinks plugin, you can see all the backlinks for the ative note.'
 ---
 Com o [[Plugins nativos|plugin]] Links inversos, pode ver todos os _links inversos_ da nota ativa.
 

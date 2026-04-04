@@ -1,42 +1,45 @@
 ---
-localized: false
-permalink: refunds
+aliases:
+  - Licenses & Payment/Refund policy
+  - Cancel my subscription
+  - Cancel subscription
 cssclasses:
   - soft-embed
+permalink: refunds
 ---
-We offer full refunds within 7 days of purchase with no questions asked for the following services:
+Oferecemos reembolsos completos dentro de 7 dias após a compra sem perguntas para os seguintes serviços:
 
 - [[Introdução ao Obsidian Publish|Obsidian Publish]]
 - [[Introdução ao Obsidian Sync|Obsidian Sync]]
 
-> [!Warning] Non-refundable purchases
-> Some purchases are **not** refundable:
-> 
-> - [[Licença Catalyst|Catalyst licenses]] and [[Licença comercial|Commercial licenses]] are not refundable. They are intended to support Obsidian development and are not services.
-> - [[Crédito Obsidian]] is not refundable because credit can be transferred to another account.
+> [!Warning] Compras não reembolsáveis
+> Algumas compras **não** são reembolsáveis:
+>
+> - As [[Licença Catalyst|Licenças Catalyst]] e as [[Licença comercial|Licenças Comerciais]] não são reembolsáveis. Destinam-se a apoiar o desenvolvimento do Obsidian e não são serviços.
+> - O [[Crédito Obsidian]] não é reembolsável porque o crédito pode ser transferido para outra conta.
 
-> [!tip] Talk to a human
-> If you have any trouble with a transaction, or you need a refund past 7 days after purchase due to exceptional circumstances, [[Ajuda e suporte#Contact Obsidian support|contact Obsidian support]].
+> [!tip] Falar com uma pessoa
+> Se tiver algum problema com uma transação, ou precisar de um reembolso após 7 dias da compra devido a circunstâncias excecionais, [[Ajuda e suporte#Contact Obsidian support|contacte o suporte do Obsidian]].
 
-## Request a refund
+## Solicitar um reembolso
 
-1. Log into [your Obsidian account](https://obsidian.md/account/billing).
-2. Under **Billing → Invoices and refunds**, select **View**.
-3. Next to the payments you want a refund for, if you’re qualified for a refund, you’ll see a link to **Get refund**. Click on the click.
-4. Your service will be removed and any auto-renewals will be cancelled as well. If you confirm to proceed, click **Request refund**.
+1. Inicie sessão na [sua conta Obsidian](https://obsidian.md/account/billing).
+2. Em **Faturação → Faturas e reembolsos**, selecione **Ver**.
+3. Junto aos pagamentos para os quais pretende um reembolso, se for elegível para um reembolso, verá uma ligação para **Obter reembolso**. Clique nela.
+4. O seu serviço será removido e quaisquer renovações automáticas serão também canceladas. Se confirmar que pretende prosseguir, clique em **Solicitar reembolso**.
 
-## Frequently asked questions
+## Perguntas frequentes
 
-**What happens if I refund my service?**
-Refunding an Obsidian Sync or Obsidian Publish subscription results in the deletion of any remote vaults or publish sites, which cannot be retrieved even if you subscribe again. However, your local data on your devices will remain unaffected.
+**O que acontece se reembolsar o meu serviço?**
+Reembolsar uma subscrição do Obsidian Sync ou do Obsidian Publish resulta na eliminação de quaisquer cofres remotos ou sites publicados, que não podem ser recuperados mesmo que subscreva novamente. No entanto, os seus dados locais nos seus dispositivos permanecerão intactos.
 
-**What if I miss a payment and my subscription expires? Will I lose my remote vault data?**
-No, your data is retained in such cases for 30 days. If you do not resubscribe within that period, your remote vault or publish site data will be deleted. Your local data will remain unaffected.
+**E se perder um pagamento e a minha subscrição expirar? Perderei os dados do meu cofre remoto?**
+Não, os seus dados são retidos nesses casos durante 30 dias. Se não subscrever novamente nesse período, os dados do seu cofre remoto ou site publicado serão eliminados. Os seus dados locais permanecerão intactos.
 
-**If I qualify for a discount but have paid for my subscription in the past 7 days, what should I do?**
-Please contact [[Ajuda e suporte#Contact Obsidian support|Obsidian support]] so we can assess your options.
+**Se for elegível para um desconto mas paguei a minha subscrição nos últimos 7 dias, o que devo fazer?**
+Por favor, contacte o [[Ajuda e suporte#Contact Obsidian support|suporte do Obsidian]] para que possamos avaliar as suas opções.
 ^discount-then-refund
 
-**I purchased my subscription a few weeks ago and now qualify for a discount. Can I get a partial refund?**
-We understand that some may have purchased Sync or Publish without discounts, either due to being unaware of the discount or not qualifying for it at the time. Unfortunately, we do not offer refunds in such cases. However, future renewals will automatically apply the discount if the discount is still valid.
+**Comprei a minha subscrição há algumas semanas e agora sou elegível para um desconto. Posso obter um reembolso parcial?**
+Compreendemos que alguns podem ter adquirido o Sync ou o Publish sem descontos, seja por desconhecerem o desconto ou por não serem elegíveis na altura. Infelizmente, não oferecemos reembolsos nesses casos. No entanto, as renovações futuras aplicarão automaticamente o desconto se o desconto ainda for válido.
 ^purchase-then-discount-then-refund

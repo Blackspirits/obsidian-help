@@ -28,13 +28,13 @@ O diagrama abaixo mostra uma versão simplificada de como estes serviços funcio
 
 ```mermaid
 graph TD
-    A[O seu dispositivo activo - alteração de ficheiro]
+    A[O seu dispositivo ativo - alteração de ficheiro]
     B[O cliente de sincronização detecta a alteração]
     C[Carregar para o armazenamento na nuvem]
     D[Armazenamento na nuvem]
-    E[Outros dispositivos verificam actualizações]
+    E[Outros dispositivos verificam atualizações]
     F[Transferir alterações]
-    G[Outro dispositivo actualizado]
+    G[Outro dispositivo atualizado]
 
     A --> B
     B --> C
@@ -51,7 +51,7 @@ graph TD
     style G fill:#a1dab4
 ```
 
-Se o serviço de nuvem tiver sincronização em segundo plano, alguns destes processos podem estar a ocorrer mesmo quando não está a utilizar activamente as aplicações para ver os ficheiros. Estes serviços monitorizam pastas específicas e sincronizam automaticamente quaisquer ficheiros colocados dentro delas. Os ficheiros devem estar nas pastas designadas do serviço de nuvem para serem sincronizados.
+Se o serviço de nuvem tiver sincronização em segundo plano, alguns destes processos podem estar a ocorrer mesmo quando não está a utilizar ativamente as aplicações para ver os ficheiros. Estes serviços monitorizam pastas específicas e sincronizam automaticamente quaisquer ficheiros colocados dentro delas. Os ficheiros devem estar nas pastas designadas do serviço de nuvem para serem sincronizados.
 
 ## Obsidian Sync
 
@@ -97,7 +97,7 @@ Quando ocorrem conflitos ou quando precisa de controlar quais os ficheiros a sin
 
 ![[Resolução de problemas do Obsidian Sync#Conflict resolution|Resolução de conflitos]]
 
-![[Configurações do Sync e sincronização selectiva#Selective syncing#Exclude a folder from syncing]]
+![[Configurações do Sync e sincronização seletiva#Seletive syncing#Exclude a folder from syncing]]
 
 ### Comportamento offline
 
@@ -106,5 +106,5 @@ As alterações efectuadas offline são colocadas em fila e sincronizadas automa
 ## Próximos passos
 
 - [[Configurar o Obsidian Sync]] para começar a utilizar cofres remotos.
-- [[Migrar para o Obsidian Sync]] se está actualmente a utilizar sincronização baseada em ficheiros e pretende usar o Obsidian Sync.
+- [[Migrar para o Obsidian Sync]] se está atualmente a utilizar sincronização baseada em ficheiros e pretende usar o Obsidian Sync.
 - [[Sincronizar as suas notas entre dispositivos|Explore outras opções de sincronização]] se ainda estiver a decidir.

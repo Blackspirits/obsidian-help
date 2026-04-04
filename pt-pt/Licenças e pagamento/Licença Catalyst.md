@@ -1,55 +1,56 @@
 ---
-localized: false
+aliases:
+  - Licenses & Payment/Catalyst license
 permalink: catalyst
 ---
-The Catalyst license is a one-time purchase that gives you early access to beta versions and helps support continued development of Obsidian. You can support Obsidian by [purchasing a Catalyst license](https://obsidian.md/buy/catalyst). 
+A Licença Catalyst é uma compra única que lhe dá acesso antecipado a versões beta e ajuda a suportar o desenvolvimento contínuo do Obsidian. Pode apoiar o Obsidian [adquirindo uma Licença Catalyst](https://obsidian.md/buy/catalyst).
 
-Benefits include:
+Os benefícios incluem:
 
-- Early access to [[#Enable early access versions|new versions]] of Obsidian
-- Access to exclusive [[#Join our Insider channels|Insider channels]].
-- Exclusive [[#Get your forum badge|forum badges]] and [[#Get your Discord badge|Discord badges]].
+- Acesso antecipado a [[#Enable early access versions|novas versões]] do Obsidian
+- Acesso a [[#Join our Insider channels|canais Insider]] exclusivos.
+- [[#Get your forum badge|Emblemas de fórum]] e [[#Get your Discord badge|emblemas de Discord]] exclusivos.
 
-## Catalyst tiers
+## Níveis Catalyst
 
-There are three tiers of Catalyst based on the amount you contribute: *Insider*, *Supporter*, and *VIP*.
+Existem três níveis de Catalyst com base no montante contribuído: *Insider*, *Supporter* e *VIP*.
 
-| Benefits                                                                           | Insider | Supporter |   VIP    |
-| ---------------------------------------------------------------------------------- | :-----: | :-------: | :------: |
-| Early access to new versions                                                       |    ✓    |     ✓     |    ✓     |
-| Access to exclusive development channels, `#insider-desktop` and `#insider-mobile` |    ✓    |     ✓     |    ✓     |
-| Access to exclusive lounge channel, `#vip-lounge`                                  |         |     ✓     |    ✓     |
-| Insider badge                                                                      |    ✓    |           |          |
-| Supporter badge                                                                    |         |     ✓     |          |
-| VIP badge                                                                          |         |           |    ✓     |
-| **Contribution (USD)**                                                             | **$25** |  **$50**  | **$100** |
+| Benefícios                                                                                     | Insider | Supporter |   VIP    |
+| ---------------------------------------------------------------------------------------------- | :-----: | :-------: | :------: |
+| Acesso antecipado a novas versões                                                              |    ✓    |     ✓     |    ✓     |
+| Acesso aos canais de desenvolvimento exclusivos, `#insider-desktop` e `#insider-mobile`        |    ✓    |     ✓     |    ✓     |
+| Acesso ao canal lounge exclusivo, `#vip-lounge`                                                |         |     ✓     |    ✓     |
+| Emblema Insider                                                                                |    ✓    |           |          |
+| Emblema Supporter                                                                              |         |     ✓     |          |
+| Emblema VIP                                                                                    |         |           |    ✓     |
+| **Contribuição (USD)**                                                                         | **$25** |  **$50**  | **$100** |
 
 
-> [!info] Upgrade your Catalyst tier
-> If you already own a Catalyst license, you can upgrade to a higher Catalyst tier by paying the price difference between your current and the new tier.
+> [!info] Atualizar o seu nível Catalyst
+> Se já possui uma Licença Catalyst, pode atualizar para um nível Catalyst superior pagando a diferença de preço entre o seu nível atual e o novo.
 
-## Access Catalyst benefits
+## Aceder aos benefícios Catalyst
 
-Once you've purchased a Catalyst license, you can access a range of benefits. Learn how to enable them here.
+Depois de adquirir uma Licença Catalyst, pode aceder a uma série de benefícios. Saiba como ativá-los aqui.
 
-### Get your forum badge
+### Obter o seu emblema de fórum
 
-**Note:** To connect your Obsidian account and your forum account, you must use the same email address for both accounts.
+**Nota:** Para associar a sua conta Obsidian e a sua conta de fórum, deve usar o mesmo endereço de email em ambas as contas.
 
-1. If you haven't already, join our [forum](https://forum.obsidian.md/).
-2. Go to your [Obsidian account dashboard](https://obsidian.md/account/catalyst).
-3. Under **Catalyst**, select **Get forum badge**.
+1. Se ainda não o fez, junte-se ao nosso [fórum](https://forum.obsidian.md/).
+2. Aceda ao seu [painel de conta Obsidian](https://obsidian.md/account/catalyst).
+3. Em **Catalyst**, selecione **Obter emblema de fórum**.
 
-### Get your Discord badge
+### Obter o seu emblema de Discord
 
-1. If you haven't already, join our [Discord server](https://discord.gg/veuWUTm).
-2. Go to your [Obsidian account dashboard](https://obsidian.md/account/catalyst).
-3. Under **Catalyst**, select **Get Discord badge**.
+1. Se ainda não o fez, junte-se ao nosso [servidor Discord](https://discord.gg/veuWUTm).
+2. Aceda ao seu [painel de conta Obsidian](https://obsidian.md/account/catalyst).
+3. Em **Catalyst**, selecione **Obter emblema de Discord**.
 
-### Join our Insider channels
+### Juntar-se aos nossos canais Insider
 
-Insiders can chat with the Obsidian team and other Insiders in our exclusive Discord channels. You automatically join the Insider channels after you [[#Get your Discord badge]].
+Os Insiders podem conversar com a equipa Obsidian e outros Insiders nos nossos canais Discord exclusivos. Junta-se automaticamente aos canais Insider depois de [[#Get your Discord badge|obter o seu emblema de Discord]].
 
-### Enable early access versions
+### Ativar versões de acesso antecipado
 
-Learn how to receive [[Versões de acesso antecipado]].
+Saiba como receber [[Versões de acesso antecipado]].

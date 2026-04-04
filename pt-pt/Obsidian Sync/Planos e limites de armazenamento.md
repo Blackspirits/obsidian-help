@@ -51,7 +51,7 @@ Para sincronizar com um novo cofre remoto, siga estes passos:
 
 1. Abra **[[Configurações]] → Sync**.
 2. Seleccione **Gerir** junto a **Cofre remoto**.
-3. Escolha **Criar novo cofre** e siga os passos para o criar. Se ficar sem cofres disponíveis, poderá ter de [[Configurar o Obsidian Sync#Disconnect from a remote vault|desligar]] do cofre remoto actual e [[Configurar o Obsidian Sync#Delete a remote vault|eliminá-lo]] primeiro.
+3. Escolha **Criar novo cofre** e siga os passos para o criar. Se ficar sem cofres disponíveis, poderá ter de [[Configurar o Obsidian Sync#Disconnect from a remote vault|desligar]] do cofre remoto atual e [[Configurar o Obsidian Sync#Delete a remote vault|eliminá-lo]] primeiro.
 4. Configure os ficheiros excluídos antes de iniciar a sincronização com o novo cofre remoto.
 5. Reinicie o Obsidian para aplicar as suas alterações.
 6. Abra **[[Configurações]] → Sync**.
@@ -59,13 +59,13 @@ Para sincronizar com um novo cofre remoto, siga estes passos:
 
 O novo cofre remoto deverá ser mais pequeno do que o cofre anterior, devido à ausência de histórico de versões e de ficheiros excluídos.
 
-## Actualizar o plano
+## Atualizar o plano
 
-Pode actualizar o seu plano iniciando sessão no [painel da sua conta](https://obsidian.md/account/sync). A partir daí, poderá actualizar o seu plano de Sync Standard para Sync Plus e aumentar o armazenamento até 100 GB.
+Pode atualizar o seu plano iniciando sessão no [painel da sua conta](https://obsidian.md/account/sync). A partir daí, poderá atualizar o seu plano de Sync Standard para Sync Plus e aumentar o armazenamento até 100 GB.
 
 ## Reduzir o plano
 
-Se pretender reduzir o seu plano do Sync, mas a sua utilização de armazenamento exceder o limite do novo plano, terá de libertar espaço no seu cofre remoto. Actualmente, não existe um método directo para remover rapidamente ficheiros específicos de um cofre remoto existente. Isto deve-se ao facto de os anexos serem conservados no histórico de versões até duas semanas, e o histórico de versões contar para o limite de armazenamento.
+Se pretender reduzir o seu plano do Sync, mas a sua utilização de armazenamento exceder o limite do novo plano, terá de libertar espaço no seu cofre remoto. Atualmente, não existe um método direto para remover rapidamente ficheiros específicos de um cofre remoto existente. Isto deve-se ao facto de os anexos serem conservados no histórico de versões até duas semanas, e o histórico de versões contar para o limite de armazenamento.
 
 A forma mais rápida de reduzir a utilização do armazenamento do Sync é criar um novo cofre remoto com os anexos desactivados e, em seguida, eliminar o cofre remoto antigo que excede os limites de armazenamento. Tenha em atenção que perderá o histórico de versões ao fazê-lo.
 

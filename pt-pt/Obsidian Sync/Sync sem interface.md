@@ -1,27 +1,26 @@
 ---
-localized: false
 permalink: sync/headless
 cssclasses:
   - reference
 description: 'Obsidian Sync offers a headless client to sync vaults without using the desktop app. Useful for CI pipelines, agents, and automated workflows. Sync the latest changes or keep files continuously up to date.'
 ---
-[[Introdução ao Obsidian Sync|Obsidian Sync]] offers a headless client to sync vaults without using the desktop app. Useful for CI pipelines, agents, and automated workflows. Sync the latest changes or keep files continuously up to date.
+O [[Introdução ao Obsidian Sync|Obsidian Sync]] disponibiliza um cliente sem interface para sincronizar cofres sem utilizar a aplicação de desktop. Útil para pipelines de CI, agentes e fluxos de trabalho automatizados. Sincronize as últimas alterações ou mantenha os ficheiros continuamente atualizados.
 
-Install [[Obsidian Headless]] **(open beta)** to interact with [[Introdução ao Obsidian Sync|Obsidian Sync]] from the command line without the Obsidian desktop app. Headless Sync uses the same [[Segurança e privacidade|encryption and privacy protections]] as the desktop app, including end-to-end encryption.
+Instale o [[Obsidian Headless]] **(beta aberto)** para interagir com o [[Introdução ao Obsidian Sync|Obsidian Sync]] a partir da linha de comandos sem a aplicação de desktop do Obsidian. O Sync sem interface utiliza as mesmas [[Segurança e privacidade|protecções de encriptação e privacidade]] que a aplicação de desktop, incluindo encriptação ponta a ponta.
 
-## Quick start
+## Início rápido
 
-> [!error] Back up your data before you start
-> 1. Always back up your data before you start in case anything unexpected happens.
-> 2. Do not use *both* the desktop app Sync and Headless Sync on the same device, as it can cause data conflicts. Only use one sync method per device.
+> [!error] Faça uma cópia de segurança dos dados antes de começar
+> 1. Faça sempre uma cópia de segurança dos dados antes de começar, em caso de algo inesperado.
+> 2. Não utilize *em simultâneo* o Sync da aplicação de desktop e o Sync sem interface no mesmo dispositivo, pois pode causar conflitos de dados. Utilize apenas um método de sincronização por dispositivo.
 
-Install [[Obsidian Headless|Obsidian Headless]] **(open beta)**:
+Instale o [[Obsidian Headless|Obsidian Headless]] **(beta aberto)**:
 
 ```shell
 npm install -g obsidian-headless
 ```
 
-You must have an active [[Planos e limites de armazenamento|Obsidian Sync subscription]].
+Tem de ter uma [[Planos e limites de armazenamento|subscrição ativa do Obsidian Sync]].
 
 ```shell
 # Login
@@ -41,82 +40,82 @@ ob sync
 ob sync --continuous
 ```
 
-## Commands
+## Comandos
 
 ### `ob sync-list-remote`
 
-List all remote vaults available to your account, including shared vaults.
+Lista todos os cofres remotos disponíveis na sua conta, incluindo cofres partilhados.
 
 ### `ob sync-list-local`
 
-List locally configured vaults and their paths.
+Lista os cofres configurados localmente e os respectivos caminhos.
 
 ### `ob sync-create-remote`
 
-Create a new remote vault.
+Cria um novo cofre remoto.
 
 ```
 ob sync-create-remote --name "Vault Name" [--encryption <standard|e2ee>] [--password <password>] [--region <region>]
 ```
 
-| Option | Description |
+| Opção | Descrição |
 | --- | --- |
-| `--name` | Vault name (required) |
-| `--encryption` | `standard` for managed encryption, `e2ee` for end-to-end encryption |
-| `--password` | End-to-end encryption password (prompted if omitted) |
-| `--region` | Server [[Sync regions\|region]] (automatic if omitted) |
+| `--name` | Nome do cofre (obrigatório) |
+| `--encryption` | `standard` para encriptação gerida, `e2ee` para encriptação ponta a ponta |
+| `--password` | Palavra-passe de encriptação ponta a ponta (solicitada se omitida) |
+| `--region` | [[Sync regions\|Região]] do servidor (automático se omitido) |
 
 ### `ob sync-setup`
 
-Set up sync between a local vault and a remote vault.
+Configura a sincronização entre um cofre local e um cofre remoto.
 
 ```
 ob sync-setup --vault <id-or-name> [--path <local-path>] [--password <password>] [--device-name <name>] [--config-dir <name>]
 ```
 
-| Option | Description |
+| Opção | Descrição |
 | --- | --- |
-| `--vault` | Remote vault ID or name (required) |
-| `--path` | Local directory (default: current directory) |
-| `--password` | E2E encryption password (prompted if omitted) |
-| `--device-name` | Device name shown in [[Version history\|sync version history]] |
-| `--config-dir` | [[Configuration folder\|Config directory]] name (default: `.obsidian`) |
+| `--vault` | ID ou nome do cofre remoto (obrigatório) |
+| `--path` | Directório local (predefinição: directório atual) |
+| `--password` | Palavra-passe de encriptação ponta a ponta (solicitada se omitida) |
+| `--device-name` | Nome do dispositivo apresentado no [[Version history\|histórico de versões do sync]] |
+| `--config-dir` | Nome do [[Configuration folder\|directório de configuração]] (predefinição: `.obsidian`) |
 
 ### `ob sync`
 
-Run sync for a configured vault.
+Executa a sincronização para um cofre configurado.
 
 ```
 ob sync [--path <local-path>] [--continuous]
 ```
 
-| Option | Description |
+| Opção | Descrição |
 | --- | --- |
-| `--path` | Local vault path (default: current directory) |
-| `--continuous` | Run continuously, watching for changes |
+| `--path` | Caminho do cofre local (predefinição: directório atual) |
+| `--continuous` | Executa continuamente, monitorizando as alterações |
 
 ### `ob sync-config`
 
-View or change [[Configurações do Sync e sincronização selectiva|sync settings]] for a vault. Run with no options to display the current configuration.
+Vê ou altera as [[Configurações do Sync e sincronização seletiva|configurações do sync]] para um cofre. Execute sem opções para apresentar a configuração atual.
 
 ```
 ob sync-config [--path <local-path>] [options]
 ```
 
-| Option                | Description                                                                                                                                                                                                    |
+| Opção                | Descrição                                                                                                                                                                                                    |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--path`              | Local vault path (default: current directory)                                                                                                                                                                  |
-| `--mode`              | Sync mode: `bidirectional` (default), `pull-only` (only download, ignore local changes), or `mirror-remote` (only download, revert local changes)                                                              |
-| `--conflict-strategy` | `merge` or `conflict`                                                                                                                                                                                          |
-| `--file-types`        | Attachment types to sync: `image`, `audio`, `video`, `pdf`, `unsupported` (comma-separated, empty to clear)                                                                                                    |
-| `--configs`           | Config categories to sync: `app`, `appearance`, `appearance-data`, `hotkey`, `core-plugin`, `core-plugin-data`, `community-plugin`, `community-plugin-data` (comma-separated, empty to disable config syncing) |
-| `--excluded-folders`  | Folders to exclude (comma-separated, empty to clear)                                                                                                                                                           |
-| `--device-name`       | Device name to identify this client in the sync version history                                                                                                                                                |
-| `--config-dir`        | Config directory name (default: `.obsidian`)                                                                                                                                                                   |
+| `--path`              | Caminho do cofre local (predefinição: directório atual)                                                                                                                                                       |
+| `--mode`              | Modo de sincronização: `bidirectional` (predefinição), `pull-only` (apenas transferir, ignorar alterações locais) ou `mirror-remote` (apenas transferir, reverter alterações locais)                           |
+| `--conflict-strategy` | `merge` ou `conflict`                                                                                                                                                                                          |
+| `--file-types`        | Tipos de anexos a sincronizar: `image`, `audio`, `video`, `pdf`, `unsupported` (separados por vírgula, vazio para limpar)                                                                                      |
+| `--configs`           | Categorias de configuração a sincronizar: `app`, `appearance`, `appearance-data`, `hotkey`, `core-plugin`, `core-plugin-data`, `community-plugin`, `community-plugin-data` (separados por vírgula, vazio para desativar a sincronização de configurações) |
+| `--excluded-folders`  | Pastas a excluir (separadas por vírgula, vazio para limpar)                                                                                                                                                    |
+| `--device-name`       | Nome do dispositivo para identificar este cliente no histórico de versões do sync                                                                                                                              |
+| `--config-dir`        | Nome do directório de configuração (predefinição: `.obsidian`)                                                                                                                                                 |
 
 ### `ob sync-status`
 
-Show sync status and configuration for a vault.
+Apresenta o estado da sincronização e a configuração de um cofre.
 
 ```
 ob sync-status [--path <local-path>]
@@ -124,21 +123,21 @@ ob sync-status [--path <local-path>]
 
 ### `ob sync-unlink`
 
-Disconnect a vault from sync and remove stored credentials.
+Desliga um cofre da sincronização e remove as credenciais armazenadas.
 
 ```
 ob sync-unlink [--path <local-path>]
 ```
 
-## Native modules
+## Módulos nativos
 
-Obsidian Headless includes a prebuilt native addon for setting file creation time (birthtime) on Windows and macOS. This preserves original creation timestamps when downloading files from the server.
+O Obsidian Headless inclui um addon nativo pré-compilado para definir a hora de criação de ficheiros (birthtime) no Windows e macOS. Isto preserva os carimbos temporais de criação originais ao transferir ficheiros do servidor.
 
-The addon targets N-API version 3, so the compiled binaries are ABI-stable and work across Node.js versions without recompilation.
+O addon tem como alvo a versão 3 do N-API, pelo que os binários compilados são estáveis ao nível da ABI e funcionam em diferentes versões do Node.js sem necessidade de recompilação.
 
-On Linux, birthtime is not supported — the addon is not included and sync operates normally without it.
+No Linux, o birthtime não é suportado — o addon não está incluído e a sincronização funciona normalmente sem ele.
 
-Prebuilt binaries are included for:
+Os binários pré-compilados estão incluídos para:
 
 - `win32-x64`
 - `win32-arm64`

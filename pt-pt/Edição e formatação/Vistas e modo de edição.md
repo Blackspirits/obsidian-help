@@ -1,72 +1,79 @@
 ---
-localized: false
+aliases:
+  - How to/Read and edit modes
+  - Editing and formatting/Editing and previewing Markdown
+  - Editing and formatting/Edit and previewing Markdown
+  - Reading view
+  - Live preview
+  - Source mode
+  - Editing view
+  - Editing mode
 permalink: edit-and-read
 ---
 
-Obsidian lets you control how you read and edit notes written in Markdown using _views_ and _modes_.
+O Obsidian permite-lhe controlar como lê e edita notas escritas em Markdown usando _vistas_ e _modos_.
 
-- **Views** toggle between reading and editing your notes.
-- **Modes** control how Markdown appears while you're editing.
+- As **Vistas** alternam entre a leitura e a edição das suas notas.
+- Os **Modos** controlam como o Markdown é apresentado enquanto edita.
 
-> [!note] Note
-> By default, Obsidian opens new tabs in editing mode. You can change this under **[[Configurações]] → Editor → Default view for new tabs**.
+> [!note] Nota
+> Por predefinição, o Obsidian abre novos separadores no modo de edição. Pode alterar isto em **[[Configurações]] → Editor → Vista predefinida para novos separadores**.
 
-## Reading view
+## Vista de leitura
 
-*Reading view* shows your note without Markdown syntax, offering a clean, readable format for focused review.
+A *Vista de leitura* mostra a sua nota sem sintaxe Markdown, oferecendo um formato limpo e legível para revisão focada.
 
-To switch to *Reading view*:
+Para mudar para a *Vista de leitura*:
 
-- Click the view switcher ![[lucide-book-icon.svg#icon]] in the upper-right corner of the editor.
-- Or click the interactive status icon ![[lucide-edit-3.svg#icon]] or ![[lucide-code-xml.svg#icon]] in the status bar and select **Reading view**.
-- Or press `Ctrl+E` (`Cmd+E` on macOS).
+- Clique no alternador de vistas ![[lucide-book-icon.svg#icon]] no canto superior direito do editor.
+- Ou clique no ícone de estado interativo ![[lucide-edit-3.svg#icon]] ou ![[lucide-code-xml.svg#icon]] na barra de estado e selecione **Vista de leitura**.
+- Ou prima `Ctrl+E` (`Cmd+E` no macOS).
 
-> [!note] Note
-> Enable **[[Configurações]] → Appearance → Show tab title bar** to see the view switcher icon.  
-> 
-> If that is disabled, turn on **[[Configurações]] → Editor → Show editing mode in status bar** to toggle views from the status bar.
+> [!note] Nota
+> Ative **[[Configurações]] → Aspeto → Mostrar barra de título do separador** para ver o ícone do alternador de vistas.
+>
+> Se estiver desativado, ative **[[Configurações]] → Editor → Mostrar modo de edição na barra de estado** para alternar as vistas a partir da barra de estado.
 
-> [!tip] View side-by-side  
-> To open a note in both *Editing* and *Reading view* at the same time, hold `Ctrl` (or `Cmd` on macOS) and click the view switcher.
+> [!tip] Ver lado a lado
+> Para abrir uma nota em *Vista de edição* e *Vista de leitura* ao mesmo tempo, mantenha premida a tecla `Ctrl` (ou `Cmd` no macOS) e clique no alternador de vistas.
 
-## Editing view
+## Vista de edição
 
-*Editing view* lets you make changes to your note.
+A *Vista de edição* permite-lhe fazer alterações à sua nota.
 
-While in *Editing view*, the *Editing mode* defines, how Markdown is displayed. You can choose one of two *Editing modes*: *Live Preview* or *Source mode*.
+Na *Vista de edição*, o *Modo de edição* define como o Markdown é apresentado. Pode escolher um de dois *Modos de edição*: *Live Preview* ou *Modo de código-fonte*.
 
 ### Live Preview
 
-*Live Preview* shows formatted text inline while hiding most Markdown syntax. When your cursor enters formatted content, the underlying syntax becomes visible for editing.
+O *Live Preview* mostra texto formatado inline ocultando a maior parte da sintaxe Markdown. Quando o cursor entra em conteúdo formatado, a sintaxe subjacente torna-se visível para edição.
 
-To switch to *Live Preview*:
+Para mudar para *Live Preview*:
 
-- Click the view switcher ![[lucide-edit-3.svg#icon]] in the upper-right corner of the editor.
-- Or click the interactive status icon ![[lucide-book-icon.svg#icon]] or ![[lucide-code-xml.svg#icon]] in the status bar and select **Live Preview**.
-- Or press `Ctrl+E` (`Cmd+E` on macOS).
-- Or use the [[Paleta de comandos|command]] **Toggle Reading view**.
+- Clique no alternador de vistas ![[lucide-edit-3.svg#icon]] no canto superior direito do editor.
+- Ou clique no ícone de estado interativo ![[lucide-book-icon.svg#icon]] ou ![[lucide-code-xml.svg#icon]] na barra de estado e selecione **Live Preview**.
+- Ou prima `Ctrl+E` (`Cmd+E` no macOS).
+- Ou use o [[Paleta de comandos|comando]] **Alternar vista de leitura**.
 
-> [!note] Note
-> By default, editing view is set to *Live Preview*. You can change this under **[[Configurações]] → Editor → Default editing mode**.
+> [!note] Nota
+> Por predefinição, a vista de edição está definida para *Live Preview*. Pode alterar isto em **[[Configurações]] → Editor → Modo de edição predefinido**.
 
-> [!tip] In many cases, Live Preview can eliminate the need to switch to [[#Reading view]].
+> [!tip] Em muitos casos, o Live Preview pode eliminar a necessidade de mudar para a [[#Vista de leitura]].
 
-### Source mode
+### Modo de código-fonte
 
-*Source mode* displays all Markdown syntax exactly as written. Use it if you prefer plain text or need precise formatting control.
+O *Modo de código-fonte* apresenta toda a sintaxe Markdown exatamente como foi escrita. Use-o se preferir texto simples ou precisar de controlo preciso da formatação.
 
-To switch to *Source mode*:
-- Click the interactive status icon ![[lucide-book-icon.svg#icon]] or ![[lucide-edit-3.svg#icon]]  in the status bar and select **Source mode**.
+Para mudar para o *Modo de código-fonte*:
+- Clique no ícone de estado interativo ![[lucide-book-icon.svg#icon]] ou ![[lucide-edit-3.svg#icon]] na barra de estado e selecione **Modo de código-fonte**.
 
-> [!note] Note
-> By default, editing view is set to *Live Preview*. Change this to *Source mode* under **[[Configurações]] → Editor → Default editing mode**.
-> 
-> To switch to *Source mode*, now additionally you can:
-> 
-> - Click the view switcher ![[lucide-edit-3.svg#icon]] in the upper right corner of your note.
-> - Or press `Ctrl+E` (`Cmd+E` on macOS).
-> - Or use the [[Paleta de comandos|command]] **Toggle Reading view**.
+> [!note] Nota
+> Por predefinição, a vista de edição está definida para *Live Preview*. Altere para *Modo de código-fonte* em **[[Configurações]] → Editor → Modo de edição predefinido**.
+>
+> Para mudar para o *Modo de código-fonte*, pode adicionalmente:
+>
+> - Clicar no alternador de vistas ![[lucide-edit-3.svg#icon]] no canto superior direito da sua nota.
+> - Ou premir `Ctrl+E` (`Cmd+E` no macOS).
+> - Ou usar o [[Paleta de comandos|comando]] **Alternar vista de leitura**.
 
-> [!tip] Toggle *Editing mode*
-> To toggle between *Live Preview* and *Source mode* quickly, you can set a [[Teclas de atalho|Hotkey]] for the [[Paleta de comandos|command]] **Toggle Live Preview/Source mode**.
-
+> [!tip] Alternar o *Modo de edição*
+> Para alternar rapidamente entre *Live Preview* e *Modo de código-fonte*, pode definir uma [[Teclas de atalho|Tecla de atalho]] para o [[Paleta de comandos|comando]] **Alternar Live Preview/Modo de código-fonte**.

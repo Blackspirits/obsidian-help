@@ -1,387 +1,388 @@
 ---
-localized: false
+aliases:
+  - Obsidian settings
+description: Aprenda a personalizar o Obsidian através da interface de Configurações.
+mobile: true
 permalink: settings
 publish: true
-mobile: true
-description: Learn how to customize Obsidian through the Settings interface.
 ---
 
-Settings allow you to customize your Obsidian experience. Configure general options, editor preferences, appearance, keyboard shortcuts, and manage both core and community plugins.
+As configurações permitem-lhe personalizar a sua experiência com o Obsidian. Configure opções gerais, preferências do editor, aparência, atalhos de teclado e gerencie plugins nativos e da comunidade.
 
-## Open Settings
+## Abrir Configurações
 
-### Desktop
+### Computador
 
-In the [[Barra lateral#Open hidden sidebars|left sidebar]], select **[[Configurações]]** ![[lucide-cog.svg#icon]]. You can also open Settings with the [[Paleta de comandos]].
+Na [[Barra lateral#Open hidden sidebars|barra lateral esquerda]], selecione **[[Configurações]]** ![[lucide-cog.svg#icon]]. Também pode abrir as Configurações com a [[Paleta de comandos]].
 
-### Mobile
+### Dispositivo móvel
 
-In the left sidebar, select **[[Configurações]]** ![[lucide-cog.svg#icon]].
+Na barra lateral esquerda, selecione **[[Configurações]]** ![[lucide-cog.svg#icon]].
 
-## Settings organization
+## Organização das Configurações
 
-Settings are organized into the following categories:
+As configurações estão organizadas nas seguintes categorias:
 
-- **Options** — Core application settings including [[#General]], [[#Editor]], [[#Files and links]], [[#Appearance]], and [[#Hotkeys]].
-- **[[Plugins nativos]]** — Built-in plugins that come with Obsidian.
-- **[[Plugins da comunidade]]** — Third-party plugins installed from the community.
+- **Opções** — Configurações principais da aplicação, incluindo [[#General|Geral]], [[#Editor]], [[#Files and links|Ficheiros e ligações]], [[#Appearance|Aspeto]] e [[#Hotkeys|Teclas de atalho]].
+- **[[Plugins nativos]]** — Plugins integrados que acompanham o Obsidian.
+- **[[Plugins da comunidade]]** — Plugins de terceiros instalados pela comunidade.
 
-## General
+## Geral
 
-The General page contains version information, update settings, language preferences, and account management.
+A página Geral contém informações de versão, definições de atualização, preferências de idioma e gestão de conta.
 
-### Version and updates
+### Versão e atualizações
 
-View your current Obsidian version and installer version at the top of the page. Select **Check for updates** to manually check for new versions, or select **[Read the changelog](<https://obsidian.md/changelog/>)** to view release notes.
+Veja a sua versão atual do Obsidian e a versão do instalador no topo da página. Selecione **Verificar atualizações** para verificar manualmente novas versões, ou selecione **[Ler o registo de alterações](<https://obsidian.md/changelog/>)** para ver as notas de lançamento.
 
-**Automatic updates**
+**Atualizações automáticas**
 
-When enabled, Obsidian automatically checks for new versions and notifies you when updates are available.
+Quando ativado, o Obsidian verifica automaticamente novas versões e notifica-o quando há atualizações disponíveis.
 
-**Receive early access versions**
+**Receber versões de acesso antecipado**
 
-Auto-update to the latest [[Versões de acesso antecipado]]. These versions include new features but may be less stable.
+Atualizar automaticamente para as [[Versões de acesso antecipado]] mais recentes. Estas versões incluem novas funcionalidades mas podem ser menos estáveis.
 
-> [!info]+ Catalyst license required
-> This option is only available for users with a [[Licença Catalyst]].
+> [!info]+ Licença Catalyst necessária
+> Esta opção só está disponível para utilizadores com uma [[Licença Catalyst]].
 
-### Language
+### Idioma
 
-Select your preferred language for the Obsidian interface. Select **[[Traduções|Learn how to add a new language to Obsidian]]** to contribute a translation.
+Selecione o seu idioma preferido para a interface do Obsidian. Selecione **[[Traduções|Saiba como adicionar um novo idioma ao Obsidian]]** para contribuir com uma tradução.
 
-### Help
+### Ajuda
 
-Select **[[Início|Open]]** to access help resources, including documentation, community forums, and troubleshooting guides.
+Selecione **[[Início|Abrir]]** para aceder aos recursos de ajuda, incluindo documentação, fóruns da comunidade e guias de resolução de problemas.
 
-### Account
+### Conta
 
-Manage your Obsidian account and licenses.
+Gira a sua conta e licenças do Obsidian.
 
-**Your account**
+**A sua conta**
 
-View your account information, including username and email. Select **[Manage](https://obsidian.md/account)** to access account settings, or select **Log out** to sign out on the app.
+Veja as informações da sua conta, incluindo nome de utilizador e email. Selecione **[Gerir](https://obsidian.md/account)** para aceder às definições da conta, ou selecione **Terminar sessão** para sair da aplicação.
 
-**Catalyst license**
+**Licença Catalyst**
 
-View your Catalyst license status. If you have an active [[Licença Catalyst]], your license tier appears here.
+Veja o estado da sua licença Catalyst. Se tiver uma [[Licença Catalyst]] ativa, o seu nível de licença aparece aqui.
 
-**Commercial license**
+**Licença Comercial**
 
-If you support [Obsidian for work](<https://obsidian.md/blog/free-for-work/>), select **Activate** to enter a commercial license key, or select **[Purchase](https://obsidian.md/account/commercial)** to buy a license. Select **[[Licença comercial|Learn more]]** for information about Commercial licenses.
+Se suporta o [Obsidian para trabalho](<https://obsidian.md/blog/free-for-work/>), selecione **Ativar** para introduzir uma chave de licença comercial, ou selecione **[Comprar](https://obsidian.md/account/commercial)** para adquirir uma licença. Selecione **[[Licença comercial|Saber mais]]** para informações sobre licenças Comerciais.
 
-### Advanced
+### Avançadas
 
-#### Notify if startup takes longer than expected
+#### Notificar se o arranque demorar mais do que o esperado
 
-When enabled, Obsidian displays a notification if startup is unusually slow. The notification includes diagnostic information about what's causing the delay. Select the timer icon ![[lucide-timer.svg#icon]] next to this setting to [[Ajuda e suporte#Check startup time|check your startup time]].
+Quando ativado, o Obsidian apresenta uma notificação se o arranque for invulgarmente lento. A notificação inclui informações de diagnóstico sobre o que está a causar o atraso. Selecione o ícone do temporizador ![[lucide-timer.svg#icon]] junto a esta definição para [[Ajuda e suporte#Check startup time|verificar o tempo de arranque]].
 
 ## Editor
 
-The Editor page contains settings for how you view and edit notes.
+A página Editor contém definições sobre como visualiza e edita notas.
 
-### Always focus new tabs
+### Focar sempre novos separadores
 
-When you open a link in a new tab, switch to it immediately.
+Quando abre uma ligação num novo separador, muda para ele imediatamente.
 
-### Default view for new tabs
+### Vista predefinida para novos separadores
 
-The default view that a new Markdown file tab gets opened in. Choose between [[Vistas e modo de edição#Reading view|Reading view]] or [[Vistas e modo de edição#Editing view|Editing view]].
+A vista predefinida em que um novo separador de ficheiro Markdown é aberto. Escolha entre [[Vistas e modo de edição#Reading view|Vista de leitura]] ou [[Vistas e modo de edição#Editing view|Vista de edição]].
 
-### Default editing mode
+### Modo de edição predefinido
 
-The default editing mode a new tab will start with. Choose between [[Vistas e modo de edição#Live Preview|Live preview]] or [[Vistas e modo de edição#Source mode|Source mode]].
+O modo de edição predefinido com que um novo separador começa. Escolha entre [[Vistas e modo de edição#Live Preview|Live Preview]] ou [[Vistas e modo de edição#Source mode|Modo de código-fonte]].
 
-### Show editing mode in status bar
+### Mostrar modo de edição na barra de estado
 
-Show the editing mode toggle in the [[Barra de estado|status bar]].
+Mostra o alternador de modo de edição na [[Barra de estado|barra de estado]].
 
-### Display
+### Apresentação
 
-#### Readable line length
+#### Comprimento de linha legível
 
-Limit maximum line length. Less content fits onscreen, but long blocks of text are more readable.
+Limita o comprimento máximo da linha. Menos conteúdo cabe no ecrã, mas os blocos de texto longos são mais legíveis.
 
-#### Strict line breaks
+#### Quebras de linha estritas
 
-Markdown specs ignore single [[Sintaxe de formatação básica#Line breaks|Line breaks]] in reading view. Turn this off to make single line breaks visible.
+As especificações Markdown ignoram [[Sintaxe de formatação básica#Line breaks|quebras de linha]] únicas na vista de leitura. Desative para tornar as quebras de linha únicas visíveis.
 
-#### Properties in document
+#### Propriedades no documento
 
-Choose how [[Propriedades|properties]] are displayed at the top of notes. Select **source** to show properties as raw YAML.
+Escolha como as [[Propriedades|propriedades]] são apresentadas no topo das notas. Selecione **código-fonte** para mostrar as propriedades em YAML em bruto.
 
-#### Fold heading
+#### Dobrar cabeçalho
 
-[[Dobramento|Fold]] all content under a heading by selecting the collapse icon next to it.
+[[Dobramento|Dobra]] todo o conteúdo sob um cabeçalho selecionando o ícone de recolher ao lado.
 
-### Fold indent
+### Dobrar indentação
 
-[[Dobramento|Fold]] part of an indentation, such as lists, by selecting the collapse icon.
+[[Dobramento|Dobra]] parte de uma indentação, como listas, selecionando o ícone de recolher.
 
-#### Show line numbers
+#### Mostrar números de linha
 
-Show line numbers in the gutter.
+Mostra números de linha na margem.
 
-#### Show indentation guides
+#### Mostrar guias de indentação
 
-Show vertical relationship lines between list items.
+Mostra linhas verticais de relação entre itens de lista.
 
-#### Right-to-left (RTL)
+#### Direita para a esquerda (RTL)
 
-Sets the default text direction of notes to right-to-left.
+Define a direção de texto predefinida das notas como da direita para a esquerda.
 
-#### Auto-pair brackets
+#### Auto-emparelhar parênteses
 
-Pair brackets and quotes automatically.
+Emparelha parênteses e aspas automaticamente.
 
-#### Auto-pair Markdown syntax
+#### Auto-emparelhar sintaxe Markdown
 
-Pair symbols automatically for bold, italic, code, and more.
+Emparelha símbolos automaticamente para negrito, itálico, código e mais.
 
-#### Smart lists
+#### Listas inteligentes
 
-Automatically set indentation and place list items correctly.
+Define automaticamente a indentação e posiciona os itens de lista corretamente.
 
-#### Indent using tabs
+#### Indentar usando tabulações
 
-Use tabs to indent by pressing the Tab key. Turn this off to indent using 4 spaces.
+Usa tabulações para indentar premindo a tecla Tab. Desative para indentar usando 4 espaços.
 
-#### Convert pasted HTML to Markdown
+#### Converter HTML colado para Markdown
 
-Automatically convert HTML to Markdown when pasting and drag-and-drop from web pages. 
+Converte automaticamente HTML para Markdown ao colar e arrastar e largar de páginas web.
 
-Use `Ctrl/Cmd+Shift+V` to paste HTML without converting.
+Use `Ctrl/Cmd+Shift+V` para colar HTML sem converter.
 
-### Behavior
+### Comportamento
 
-#### Spellcheck
+#### Verificação ortográfica
 
-Turn on the spellchecker. Select the gear icon to remove saved items from the custom dictionary.
+Ativa o verificador ortográfico. Selecione o ícone de engrenagem para remover itens guardados do dicionário personalizado.
 
-#### Spellcheck languages
+#### Idiomas de verificação ortográfica
 
-**Windows and Linux:**
+**Windows e Linux:**
 
-Choose the languages for the spellchecker to use. Select the plus (+) icon to add languages. To remove a language, select the X next to it.
+Escolha os idiomas que o verificador ortográfico deve usar. Selecione o ícone de mais (+) para adicionar idiomas. Para remover um idioma, selecione o X ao lado.
 
 **macOS:**
 
-The native spellchecker automatically detects the language used by the OS.
+O verificador ortográfico nativo deteta automaticamente o idioma usado pelo sistema operativo.
 
-#### Indent visual width
+#### Largura visual de indentação
 
-Number of spaces a tab character will render as.
+Número de espaços que um carácter de tabulação renderiza.
 
-### Advanced
+### Avançadas
 
-#### Vim key bindings
+#### Ligações de teclas Vim
 
-Use Vim key bindings when editing.
+Usa ligações de teclas Vim ao editar.
 
-## Files and links
+## Ficheiros e ligações
 
-The Files and links page contains settings for file management, links, and vault behavior.
+A página Ficheiros e ligações contém definições para gestão de ficheiros, ligações e comportamento do cofre.
 
-### Default location for new notes
+### Localização predefinida para novas notas
 
-Where newly created notes are placed. Options include:
+Onde as notas recentemente criadas são colocadas. As opções incluem:
 
-- **Vault folder** — Notes are created in the root of your vault.
-- **Same folder as current file** — Notes are created in the same folder as the currently active note.
-- **In the folder specified below** — Notes are created in a specific folder you choose.
+- **Pasta do cofre** — As notas são criadas na raiz do seu cofre.
+- **Mesma pasta que o ficheiro atual** — As notas são criadas na mesma pasta que a nota atualmente ativa.
+- **Na pasta especificada abaixo** — As notas são criadas numa pasta específica que escolhe.
 
-### Default location for new attachments
+### Localização predefinida para novos anexos
 
-Where newly added [[Anexos|attachments]] are placed. Options include:
+Onde os [[Anexos|anexos]] recentemente adicionados são colocados. As opções incluem:
 
-- **Vault folder** — Attachments are placed in the root of your vault.
-- **In the folder specified below** — Attachments are placed in a specific folder you choose.
-- **Same folder as current file** — Attachments are placed in the same folder as the currently active note.
-- **In subfolder under current folder** — Attachments are placed in a subfolder within the current note's folder.
+- **Pasta do cofre** — Os anexos são colocados na raiz do seu cofre.
+- **Na pasta especificada abaixo** — Os anexos são colocados numa pasta específica que escolhe.
+- **Mesma pasta que o ficheiro atual** — Os anexos são colocados na mesma pasta que a nota atualmente ativa.
+- **Em subpasta sob a pasta atual** — Os anexos são colocados numa subpasta dentro da pasta da nota atual.
 
-### Links
+### Ligações
 
-#### New link format
+#### Formato de nova ligação
 
-What links to insert when auto-generating [[Links internos|internal links]]. Options include:
+Que ligações inserir ao gerar automaticamente [[Links internos|ligações internas]]. As opções incluem:
 
-- **Shortest path when possible** — Uses the shortest unique path to the linked file.
-- **Relative path to file** — Uses a path relative to the current file.
-- **Absolute path in vault** — Uses the full path from the vault root.
+- **Caminho mais curto quando possível** — Usa o caminho único mais curto para o ficheiro ligado.
+- **Caminho relativo ao ficheiro** — Usa um caminho relativo ao ficheiro atual.
+- **Caminho absoluto no cofre** — Usa o caminho completo a partir da raiz do cofre.
 
-#### Automatically update internal links
+#### Atualizar automaticamente ligações internas
 
-When enabled, Obsidian automatically updates internal links when you rename a file. Turn this off to be prompted to update links after renaming.
+Quando ativado, o Obsidian atualiza automaticamente as ligações internas quando renomeia um ficheiro. Desative para ser questionado sobre atualizar as ligações após renomear.
 
-#### Use Wikilinks
+#### Usar Wikilinks
 
-Auto-generate Wikilinks for `[[links]]` and `![[images]]` instead of Markdown links and images. Disable this option to generate Markdown links instead.
+Gera automaticamente Wikilinks para `[[ligações]]` e `![[imagens]]` em vez de ligações e imagens Markdown. Desative esta opção para gerar ligações Markdown em vez disso.
 
-#### Show all file types
+#### Mostrar todos os tipos de ficheiro
 
-Show files with any extension even if Obsidian can't open them natively, so you can link to them and see them in File Explorer and Quick Switcher.
+Mostra ficheiros com qualquer extensão mesmo que o Obsidian não possa abri-los nativamente, para que possa criar ligações para eles e vê-los no Explorador de ficheiros e no Alternador rápido.
 
-### Trash
+### Lixo
 
-#### Confirm file deletion
+#### Confirmar eliminação de ficheiro
 
-Ask before deleting a file.
+Perguntar antes de eliminar um ficheiro.
 
-#### Deleted files
+#### Ficheiros eliminados
 
-What happens to a file after you delete it. Options include:
+O que acontece a um ficheiro após o eliminar. As opções incluem:
 
-- **Move to system trash** — Files are moved to your operating system's trash.
-- **Move to Obsidian trash** — Files are moved to the `.trash` folder in your vault.
-- **Permanently delete** — Files are permanently deleted and cannot be recovered.
+- **Mover para o lixo do sistema** — Os ficheiros são movidos para o lixo do seu sistema operativo.
+- **Mover para o lixo do Obsidian** — Os ficheiros são movidos para a pasta `.trash` no seu cofre.
+- **Eliminar permanentemente** — Os ficheiros são eliminados permanentemente e não podem ser recuperados.
 
-### Advanced
+### Avançadas
 
-#### Excluded files
+#### Ficheiros excluídos
 
-Excluded files will be hidden in [[Pesquisa]], [[Vista de grafo]], and Unlinked Mentions ([[Links inversos]] and [[Links de saída]]), and less noticeable in [[Alternador rápido]] and link suggestions. Select **Manage** to configure excluded files.
+Os ficheiros excluídos serão ocultados na [[Pesquisa]], na [[Vista de grafo]] e em Menções não ligadas ([[Links inversos]] e [[Links de saída]]), e menos visíveis no [[Alternador rápido]] e nas sugestões de ligações. Selecione **Gerir** para configurar ficheiros excluídos.
 
-#### Override config folder
+#### Substituir pasta de configuração
 
-Use a different [[Pasta de configuração|config folder]] than the default one. Must start with a dot.
+Use uma [[Pasta de configuração|pasta de configuração]] diferente da predefinida. Deve começar com um ponto.
 
-#### Allow URI callbacks
+#### Permitir callbacks URI
 
-Enable the use of x-callback-url through x-success or x-error when handling [[Obsidian URI|Obsidian URIs]]. 
+Ativa o uso de x-callback-url através de x-success ou x-error ao processar [[Obsidian URI|URIs do Obsidian]].
 
-#### Rebuild vault cache
+#### Reconstruir cache do cofre
 
-Rebuilds the vault's [[Como o Obsidian armazena dados#Metadata cache|metadata cache]]. Rebuilding the cache could take a few seconds to a few minutes depending on the size of your vault. Select **Rebuild** to start the process.
+Reconstrói a [[Como o Obsidian armazena dados#Metadata cache|cache de metadados]] do cofre. A reconstrução da cache pode demorar alguns segundos a alguns minutos dependendo do tamanho do seu cofre. Selecione **Reconstruir** para iniciar o processo.
 
-## Appearance
+## Aspeto
 
-The Appearance page contains settings for customizing how Obsidian looks.
+A página Aspeto contém definições para personalizar a aparência do Obsidian.
 
-### Base color scheme
+### Esquema de cores base
 
-Choose Obsidian's default color scheme. Options include:
+Escolha o esquema de cores predefinido do Obsidian. As opções incluem:
 
-- **Adapt to system** — Matches your operating system's light or dark mode.
-- **Light** — Uses light mode.
-- **Dark** — Uses dark mode.
+- **Adaptar ao sistema** — Corresponde ao modo claro ou escuro do seu sistema operativo.
+- **Claro** — Usa o modo claro.
+- **Escuro** — Usa o modo escuro.
 
-### Accent color
+### Cor de destaque
 
-Choose the accent color used throughout the app. Select the color picker or reset icon to customize.
+Escolha a cor de destaque usada em toda a aplicação. Selecione o seletor de cor ou o ícone de repor para personalizar.
 
-### Themes
+### Temas
 
-Manage installed [[Temas|themes]] and browse community themes. Select **Manage** to view and install themes. The dropdown shows your currently active theme. The folder icon ![[lucide-folder-open.svg#icon]] opens the themes folder in your [[Pasta de configuração|configuration folder]].
+Gira [[Temas|temas]] instalados e navega por temas da comunidade. Selecione **Gerir** para ver e instalar temas. O menu pendente mostra o seu tema atualmente ativo. O ícone de pasta ![[lucide-folder-open.svg#icon]] abre a pasta de temas na sua [[Pasta de configuração|pasta de configuração]].
 
-### Current community themes
+### Temas da comunidade atuais
 
-Displays the number of community themes you have installed.
+Apresenta o número de temas da comunidade que tem instalados.
 
-### Font
+### Tipo de letra
 
-#### Interface font
+#### Tipo de letra da interface
 
-Set base font for all of Obsidian. Select **Manage** to choose a custom font or enter a font name.
+Define o tipo de letra base para todo o Obsidian. Selecione **Gerir** para escolher um tipo de letra personalizado ou introduzir um nome de tipo de letra.
 
-#### Text font
+#### Tipo de letra de texto
 
-Set font for editing and reading views. Select **Manage** to choose a custom font or enter a font name.
+Define o tipo de letra para as vistas de edição e leitura. Selecione **Gerir** para escolher um tipo de letra personalizado ou introduzir um nome de tipo de letra.
 
-#### Monospace font
+#### Tipo de letra monoespaçado
 
-Set font for places like code blocks and frontmatter. Select **Manage** to choose a custom font or enter a font name.
+Define o tipo de letra para locais como blocos de código e frontmatter. Selecione **Gerir** para escolher um tipo de letra personalizado ou introduzir um nome de tipo de letra.
 
-#### Font size
+#### Tamanho do tipo de letra
 
-Font size in pixels that affects editing and reading views. Adjust using the slider.
+Tamanho do tipo de letra em píxeis que afeta as vistas de edição e leitura. Ajuste usando o controlo de deslize.
 
-#### Quick font size adjustment
+#### Ajuste rápido do tamanho do tipo de letra
 
-Adjust the font size using `Ctrl+Scroll` (Windows/Linux) or `Cmd+Scroll` (macOS), or using the trackpad pinch-zoom gesture.
+Ajuste o tamanho do tipo de letra usando `Ctrl+Scroll` (Windows/Linux) ou `Cmd+Scroll` (macOS), ou usando o gesto de aproximar dedos no trackpad.
 
 ### Interface
 
-#### Show inline title
+#### Mostrar título inline
 
-Displays the filename as an editable title inline with the file contents. The inline title acts as a heading within Obsidian but does not add a heading to your note.
+Apresenta o nome do ficheiro como título editável inline com o conteúdo do ficheiro. O título inline atua como um cabeçalho dentro do Obsidian, mas não adiciona um cabeçalho à sua nota.
 
-#### Show tab title bar
+#### Mostrar barra de título do separador
 
-Display the header at the top of every tab.
+Apresenta o cabeçalho no topo de cada separador.
 
-#### Show ribbon
+#### Mostrar faixa de opções
 
-Display vertical toolbar on the side of the window. Learn more about the [[Faixa de opções|ribbon]].
+Apresenta a barra de ferramentas vertical no lado da janela. Saiba mais sobre a [[Faixa de opções|faixa de opções]].
 
-#### Ribbon menu configuration
+#### Configuração do menu da faixa de opções
 
-Configure what commands appear in the ribbon menu. Select **Manage** to customize.
+Configure que comandos aparecem no menu da faixa de opções. Selecione **Gerir** para personalizar.
 
-> [!info]+ Mobile ribbon configuration
-> On mobile, ribbon customization works differently. See [[Faixa de opções#Mobile|Ribbon customization on mobile]] for details.
+> [!info]+ Configuração da faixa de opções em dispositivos móveis
+> Em dispositivos móveis, a personalização da faixa de opções funciona de forma diferente. Consulte [[Faixa de opções#Mobile|Personalização da faixa de opções em dispositivos móveis]] para mais detalhes.
 
-### Advanced
+### Avançadas
 
-#### Zoom level
+#### Nível de zoom
 
-Controls the overall zoom level of the app. Adjust using the slider.
+Controla o nível de zoom geral da aplicação. Ajuste usando o controlo de deslize.
 
-#### Native menus
+#### Menus nativos
 
-Menus throughout the app will match the operating system. They will not be affected by your theme.
+Os menus em toda a aplicação corresponderão ao sistema operativo. Não serão afetados pelo seu tema.
 
-#### Window frame style
+#### Estilo do frame da janela
 
-Determines the styling of the title bar of Obsidian windows. Requires a full restart to take effect. Options include:
+Determina o estilo da barra de título das janelas do Obsidian. Requer um reinício completo para ter efeito. As opções incluem:
 
-- **Obsidian frame** — Uses Obsidian's custom window frame.
-- **Native frame** — Uses your operating system's default window frame.
-- **Hidden frame** — Hides the title bar completely.
+- **Frame do Obsidian** — Usa o frame de janela personalizado do Obsidian.
+- **Frame nativo** — Usa o frame de janela predefinido do seu sistema operativo.
+- **Frame oculto** — Oculta completamente a barra de título.
 
-#### Custom app icon
+#### Ícone personalizado da aplicação
 
-Set a custom icon for the app. Select **Choose** to pick an icon file (`.icns`, `.ico`, `.png`, or `.svg`). Learn more about [[Aparência#Custom app icon|custom app icons]].
+Define um ícone personalizado para a aplicação. Selecione **Escolher** para selecionar um ficheiro de ícone (`.icns`, `.ico`, `.png` ou `.svg`). Saiba mais sobre [[Aparência#Custom app icon|ícones de aplicação personalizados]].
 
-#### Translucent window
+#### Janela translúcida
 
-Turn on translucency effect to enhance a sense of depth. Best used with dark mode. Not supported on Linux.
+Ativa o efeito de translucidez para melhorar a sensação de profundidade. Melhor usado com o modo escuro. Não suportado no Linux.
 
-> [!info]+ macOS only
-> This feature is primarily designed for macOS. Learn more about [[Aparência#Translucency|translucency]].
+> [!info]+ Apenas macOS
+> Esta funcionalidade é principalmente concebida para macOS. Saiba mais sobre [[Aparência#Translucency|translucidez]].
 
-#### Hardware acceleration
+#### Aceleração de hardware
 
-Turns on Hardware Acceleration, which uses your GPU to make Obsidian smoother. If you turn this off, app performance can be severely degraded but may solve some rare issues. 
+Ativa a Aceleração de Hardware, que usa a sua GPU para tornar o Obsidian mais fluido. Se desativar, o desempenho da aplicação pode ser severamente degradado, mas pode resolver alguns problemas raros.
 
-### CSS snippets
+### Fragmentos CSS
 
-Manage and view [[Fragmentos CSS|CSS snippets]] stored in your vault. CSS Snippets are stored in `/vault/.obsidian/snippets/`. Select the refresh icon to reload snippets, or the folder icon ![[lucide-folder-open.svg#icon]] to open the snippets folder.
+Gira e veja [[Fragmentos CSS|fragmentos CSS]] armazenados no seu cofre. Os fragmentos CSS são armazenados em `/cofre/.obsidian/snippets/`. Selecione o ícone de atualizar para recarregar fragmentos, ou o ícone de pasta ![[lucide-folder-open.svg#icon]] para abrir a pasta de fragmentos.
 
-## Hotkeys
+## Teclas de atalho
 
-The [[Teclas de atalho]] page allows you to view, set, and customize [[Atalhos de edição|keyboard shortcuts]] for commands in Obsidian.
+A página [[Teclas de atalho]] permite-lhe ver, definir e personalizar [[Atalhos de edição|atalhos de teclado]] para comandos no Obsidian.
 
-Use the search bar to filter commands, and select the filter icon to show only commands with assigned hotkeys. To add a hotkey, select the plus (+) icon next to a command. To remove a hotkey, select the X icon next to the keyboard combination.
+Use a barra de pesquisa para filtrar comandos e selecione o ícone de filtro para mostrar apenas comandos com teclas de atalho atribuídas. Para adicionar uma tecla de atalho, selecione o ícone de mais (+) ao lado de um comando. Para remover uma tecla de atalho, selecione o ícone X ao lado da combinação de teclado.
 
-## Core plugins
+## Plugins nativos
 
-[[Plugins nativos]] are built-in plugins that come with Obsidian. Each plugin adds specific functionality to the app.
+Os [[Plugins nativos]] são plugins integrados que acompanham o Obsidian. Cada plugin adiciona funcionalidade específica à aplicação.
 
-To enable or disable a core plugin, select the toggle next to the plugin name. Select the plus ![[lucide-plus-circle.svg#icon]] icon to view the [[Teclas de atalho]] for the plugin. Select the settings ![[lucide-settings.svg#icon]] icon to open the plugin's settings page.
+Para ativar ou desativar um plugin nativo, selecione o alternador ao lado do nome do plugin. Selecione o ícone de mais ![[lucide-plus-circle.svg#icon]] para ver as [[Teclas de atalho]] do plugin. Selecione o ícone de definições ![[lucide-settings.svg#icon]] para abrir a página de definições do plugin.
 
-Use the search bar to filter plugins by name.
+Use a barra de pesquisa para filtrar plugins por nome.
 
-## Community plugins
+## Plugins da comunidade
 
-[[Plugins da comunidade]] are third-party plugins created by the Obsidian community. Browse and install plugins by selecting **Browse**.
+Os [[Plugins da comunidade]] são plugins de terceiros criados pela comunidade Obsidian. Navegue e instale plugins selecionando **Navegar**.
 
-### Restricted mode
+### Modo restrito
 
-[[Segurança de plugins#Restricted mode|Restricted mode]] disables all community plugins for security. Select **Turn on and reload** to enable restricted mode.
+O [[Segurança de plugins#Restricted mode|Modo restrito]] desativa todos os plugins da comunidade por razões de segurança. Selecione **Ativar e recarregar** para ativar o modo restrito.
 
-### Current plugins
+### Plugins atuais
 
-Displays the number of community plugins you have installed. Select **Check for updates** to check for plugin updates.
+Apresenta o número de plugins da comunidade que tem instalados. Selecione **Verificar atualizações** para verificar atualizações de plugins.
 
-### Installed plugins
+### Plugins instalados
 
-View and manage your installed community plugins. Use the search bar to filter plugins by name. Each plugin has icons for settings, hotkeys, funding, uninstalling, and a toggle to enable or disable it.
+Veja e gira os seus plugins da comunidade instalados. Use a barra de pesquisa para filtrar plugins por nome. Cada plugin tem ícones para definições, teclas de atalho, financiamento, desinstalação e um alternador para ativar ou desativar.

@@ -1,18 +1,17 @@
 ---
-localized: false
 permalink: bases/syntax
 publish: true
 mobile: true
-description: This page provides an introduction to Bases syntax in Obsidian.
+description: Esta página fornece uma introdução à sintaxe de Bases no Obsidian.
 ---
 
-When you [[Criar uma base|create a base]] in Obsidian, it is saved as a `.base` file. Bases are typically edited using the app interface, but the syntax can also be edited manually, and embedded in a code block.
+Quando [[Criar uma base|cria uma base]] no Obsidian, esta é guardada como um ficheiro `.base`. As Bases são normalmente editadas através da interface da aplicação, mas a sintaxe também pode ser editada manualmente e incorporada num bloco de código.
 
-The [[Introdução ao Bases|Bases]] syntax defines [[Vistas]], filters, and [[Fórmulas]]. Bases must be valid YAML conforming to the schema defined below.
+A sintaxe de [[Introdução ao Bases|Bases]] define [[Vistas]], filtros e [[Fórmulas]]. As Bases devem ser YAML válido conforme o esquema definido abaixo.
 
-## Example
+## Exemplo
 
-Here's an example of a base file. We'll walk through each section in detail.
+Eis um exemplo de um ficheiro base. Iremos percorrer cada secção em detalhe.
 
 ```yaml
 filters:
@@ -61,15 +60,15 @@ views:
 
 ### Filters
 
-By default a base includes every file in the vault. There is no `from` or `source` like in SQL or Dataview. The `filters` section lets you define conditions to narrow down the dataset.
+Por predefinição, uma base inclui todos os ficheiros do cofre. Não existe `from` ou `source` como em SQL ou Dataview. A secção `filters` permite definir condições para restringir o conjunto de dados.
 
 ```yaml
-# Simple filter:
+# Filtro simples:
 filters:
   and:
     - file.hasTag("tag")
 
-# Complex filter:
+# Filtro complexo:
 filters:
   or:
     - file.hasTag("tag")
@@ -81,23 +80,23 @@ filters:
         - file.inFolder("Required Reading")
 ```
 
-There are two opportunities to apply filters:
+Existem dois momentos para aplicar filtros:
 
-1. At the global `filters` level (shown above) where they apply to all views in the base.
-2. At the `view` level where apply only to a specific view.
+1. Ao nível global de `filters` (mostrado acima), onde se aplicam a todas as vistas da base.
+2. Ao nível da `view`, onde se aplicam apenas a uma vista específica.
 
-These two sections are functionally equivalent and when evaluating for a view they will be concatenated with an `AND`.
+Estas duas secções são funcionalmente equivalentes e, ao avaliar para uma vista, serão concatenadas com um `AND`.
 
-The `filters` section contains either a single filter statement as a string, or a recursively defined filter object. Filter objects may contain one of `and`, `or`, or `not`. These keys are a heterogeneous list of other filter objects or filter statements in strings. A filter statement is a line which evaluates to truthy or falsey when applied to a note. It can be one of the following:
+A secção `filters` contém uma única instrução de filtro como string, ou um objeto de filtro definido recursivamente. Os objetos de filtro podem conter `and`, `or` ou `not`. Estas chaves são uma lista heterogénea de outros objetos de filtro ou instruções de filtro em strings. Uma instrução de filtro é uma linha que avalia como verdadeira ou falsa quando aplicada a uma nota. Pode ser uma das seguintes:
 
-- A basic comparison using standard arithmetic operators.
-- A function. A variety of [[Funções]] are built-in, and plugins can add additional functions.
+- Uma comparação básica usando operadores aritméticos padrão.
+- Uma função. Diversas [[Funções]] estão incorporadas, e os plugins podem adicionar funções adicionais.
 
-The syntax and available functions for filters and formulas are the same.
+A sintaxe e as funções disponíveis para filtros e fórmulas são as mesmas.
 
 ### Formulas
 
-The `formulas` section defines [[Fórmulas|formula properties]] that can be displayed across all views in the base file.
+A secção `formulas` define [[Fórmulas|propriedades de fórmula]] que podem ser apresentadas em todas as vistas do ficheiro base.
 
 ```yaml
 formulas:
@@ -105,26 +104,26 @@ formulas:
   ppu: "(price / age).toFixed(2)"
 ```
 
-Formula properties support basic arithmetic operators and a variety of built-in [[Funções]]. In the future, plugins will be able to add functions for use in formulas.
+As propriedades de fórmula suportam operadores aritméticos básicos e diversas [[Funções]] incorporadas. No futuro, os plugins poderão adicionar funções para uso em fórmulas.
 
-You can reference properties in different ways depending on their type:
+Pode referenciar propriedades de formas diferentes consoante o seu tipo:
 
-- **Note properties** are properties defined in the note’s frontmatter. For example `note.price` or `note["price"]`.  
-  If no prefix is specified, the property is assumed to be a `note` property.
-- **File properties** describe the file itself.  
-  For example `file.size` or `file.ext`. You can also reference the file object directly, e.g., `file.hasLink()`.
-- **Formula properties** are other formulas in the base.  
-  Example `formula.formatted_price`.
+- As **propriedades de nota** são propriedades definidas no frontmatter da nota. Por exemplo `note.price` ou `note["price"]`.  
+  Se não for especificado nenhum prefixo, assume-se que a propriedade é uma propriedade `note`.
+- As **propriedades de ficheiro** descrevem o próprio ficheiro.  
+  Por exemplo `file.size` ou `file.ext`. Também pode referenciar o objeto ficheiro diretamente, por exemplo `file.hasLink()`.
+- As **propriedades de fórmula** são outras fórmulas da base.  
+  Exemplo: `formula.formatted_price`.
 
-A formula can use values from other formula properties, as long as there’s no circular reference.  
+Uma fórmula pode usar valores de outras propriedades de fórmula, desde que não haja referências circulares.
 
-Formula properties are always stored as strings in YAML, but their actual **output data type** is determined by the type of the underlying data and the return value of any functions used.
+As propriedades de fórmula são sempre armazenadas como strings em YAML, mas o seu **tipo de dados de saída** real é determinado pelo tipo dos dados subjacentes e pelo valor de retorno das funções utilizadas.
 
-Note the use of nested quotes is necessary to include text literals in the YAML field. Text literals must be enclosed in single or double quotes.
+Note que o uso de aspas aninhadas é necessário para incluir literais de texto no campo YAML. Os literais de texto devem estar entre aspas simples ou duplas.
 
 ### Properties
 
-The `properties` section allows storing configuration information about each property. It is up to the individual view how to use these configuration values. For example, in tables the display name is used for the column headers.
+A secção `properties` permite armazenar informações de configuração sobre cada propriedade. Cabe à vista individual como usar esses valores de configuração. Por exemplo, nas tabelas, o nome de exibição é usado nos cabeçalhos das colunas.
 
 ```yaml
 properties:
@@ -136,44 +135,44 @@ properties:
     displayName: Extension
 ```
 
-Display names are not used in filters or formulas.
+Os nomes de exibição não são usados em filtros ou fórmulas.
 
 ### Summaries
 
-The `summaries` section can be used to define custom summary formulas. In addition to defining summary formulas here, there are several default summary formulas available.
+A secção `summaries` pode ser usada para definir fórmulas de resumo personalizadas. Para além de definir fórmulas de resumo aqui, existem várias fórmulas de resumo predefinidas disponíveis.
 
 ```yaml
 summaries:
   customAverage: 'values.mean().round(3)'
 ```
 
-In this example, the `customAverage` formula is the same as the default `Average`, except the value is rounded to a different number of places. In summary formulas, the `values` key word is a list containing all of the values for that property across every note in the result set. The summary formula should return a single `Value`.
+Neste exemplo, a fórmula `customAverage` é igual à predefinição `Average`, exceto que o valor é arredondado para um número diferente de casas decimais. Nas fórmulas de resumo, a palavra-chave `values` é uma lista que contém todos os valores dessa propriedade em todas as notas do conjunto de resultados. A fórmula de resumo deve retornar um único `Value`.
 
-Note that this `summaries` section is different from the `summaries` section in the view config (explained below) where summary formulas as assigned to specific properties.
+Note que esta secção `summaries` é diferente da secção `summaries` na configuração da vista (explicada abaixo), onde as fórmulas de resumo são atribuídas a propriedades específicas.
 
-#### Default Summary Formulas
+#### Fórmulas de resumo predefinidas
 
-| Name      | Input Type | Description                                                   |
-| --------- | ---------- | ------------------------------------------------------------- |
-| Average   | Number     | The mathematical mean of all numbers from the input values.   |
-| Min       | Number     | The smallest number from the input values.                    |
-| Max       | Number     | The largest number from the input values.                     |
-| Sum       | Number     | The sum of all numbers in the input.                          |
-| Range     | Number     | The difference between `Max` and `Min`.                       |
-| Median    | Number     | The mathematical median of all numbers from the input values. |
-| Stddev    | Number     | The standard deviation of all numbers from the input values.  |
-| Earliest  | Date       | The earliest date from the input values.                      |
-| Latest    | Date       | The latest date from the input values.                        |
-| Range     | Date       | The difference between `Latest` and `Earliest`.               |
-| Checked   | Boolean    | The number of `true` values.                                  |
-| Unchecked | Boolean    | The number of `false` values.                                 |
-| Empty     | Any        | The number of values in the input that are empty.             |
-| Filled    | Any        | The number of values in the input that are not empty.         |
-| Unique    | Any        | The number of unique values in the input.                     |
+| Nome      | Tipo de entrada | Descrição                                                     |
+| --------- | --------------- | ------------------------------------------------------------- |
+| Average   | Number          | A média matemática de todos os números dos valores de entrada. |
+| Min       | Number          | O menor número dos valores de entrada.                        |
+| Max       | Number          | O maior número dos valores de entrada.                        |
+| Sum       | Number          | A soma de todos os números de entrada.                        |
+| Range     | Number          | A diferença entre `Max` e `Min`.                              |
+| Median    | Number          | A mediana matemática de todos os números dos valores de entrada. |
+| Stddev    | Number          | O desvio padrão de todos os números dos valores de entrada.   |
+| Earliest  | Date            | A data mais antiga dos valores de entrada.                    |
+| Latest    | Date            | A data mais recente dos valores de entrada.                   |
+| Range     | Date            | A diferença entre `Latest` e `Earliest`.                      |
+| Checked   | Boolean         | O número de valores `true`.                                   |
+| Unchecked | Boolean         | O número de valores `false`.                                  |
+| Empty     | Any             | O número de valores de entrada que estão vazios.              |
+| Filled    | Any             | O número de valores de entrada que não estão vazios.          |
+| Unique    | Any             | O número de valores únicos de entrada.                        |
 
 ### Views
 
-The `views` section defines how the data can be rendered. Each entry in the `views` list defines a separate view of the same data, and there can be as many different views as needed.
+A secção `views` define como os dados podem ser apresentados. Cada entrada na lista `views` define uma vista separada dos mesmos dados, e podem existir tantas vistas diferentes quantas forem necessárias.
 
 ```yaml
 views:
@@ -199,167 +198,167 @@ views:
       formula.ppu: Average
 ```
 
-- `type` selects from the built-in and plugin-added view types.
-- `name` is the display name, and can be used to define the default view.
-- `filters` are exactly the same as described above, but apply only to the view.
-- `groupBy` specifies a property and sort direction. The value of the specified property for each row is used to place the row into groups.
-- `summaries` maps property names to a named summary. Summaries perform an aggregation on the property across all rows.
+- `type` seleciona entre os tipos de vista incorporados e os adicionados por plugins.
+- `name` é o nome de exibição e pode ser usado para definir a vista predefinida.
+- `filters` são exatamente os mesmos descritos acima, mas aplicam-se apenas à vista.
+- `groupBy` especifica uma propriedade e a direção de ordenação. O valor da propriedade especificada para cada linha é usado para colocar a linha em grupos.
+- `summaries` mapeia nomes de propriedades para um resumo nomeado. Os resumos realizam uma agregação sobre a propriedade em todas as linhas.
 
-[[Vistas]] can add additional data to store any information needed to maintain state or properly render, however plugin authors should take care to not use keys already in use by the core Bases plugin. As an example, a table view may use this to limit the number of rows or to select which column is used to sort rows and in which direction. A different view type such as a map could use this for mapping which property in the note corresponds to the latitude and longitude and which property should be displayed as the pin title.
+As [[Vistas]] podem adicionar dados extras para armazenar qualquer informação necessária para manter o estado ou renderizar corretamente; no entanto, os autores de plugins devem ter cuidado para não usar chaves já utilizadas pelo plugin core de Bases. Por exemplo, uma vista de tabela pode usar isto para limitar o número de linhas ou para selecionar qual coluna é usada para ordenar as linhas e em que direção. Um tipo de vista diferente, como um mapa, pode usar isto para mapear qual propriedade da nota corresponde à latitude e longitude e qual propriedade deve ser apresentada como título do marcador.
 
-In the future, API will allow views to read and write these values, allowing the view to build its own interface for configuration.
+No futuro, a API permitirá que as vistas leiam e escrevam estes valores, permitindo que a vista construa a sua própria interface de configuração.
 
-## Properties
+## Propriedades
 
-There are three kinds of properties used in bases:
+Existem três tipos de propriedades usadas nas bases:
 
-1. **Note properties**, stored in frontmatter of Markdown files.
-2. **File properties**, accessible for all file types.
-3. **Formula properties**, defined in the `.base` file itself (see above).
+1. **Propriedades de nota**, armazenadas no frontmatter de ficheiros Markdown.
+2. **Propriedades de ficheiro**, acessíveis para todos os tipos de ficheiro.
+3. **Propriedades de fórmula**, definidas no próprio ficheiro `.base` (ver acima).
 
-### Note properties
+### Propriedades de nota
 
-[[Propriedades|Note properties]] are only available for Markdown files, and are stored in the YAML frontmatter of each note. These properties can be accessed using the format `note.author` or simply `author` as a shorthand.
+As [[Propriedades|propriedades de nota]] estão apenas disponíveis para ficheiros Markdown e são armazenadas no frontmatter YAML de cada nota. Estas propriedades podem ser acedidas usando o formato `note.author` ou simplesmente `author` como abreviatura.
 
-### File properties
+### Propriedades de ficheiro
 
-File properties refer to the file currently being tested or evaluated. File properties are available for all [[Formatos de ficheiro aceites|file types]], including attachments.
+As propriedades de ficheiro referem-se ao ficheiro atualmente a ser testado ou avaliado. As propriedades de ficheiro estão disponíveis para todos os [[Formatos de ficheiro aceites|tipos de ficheiro]], incluindo anexos.
 
-For example, a filter `file.ext == "md"` will be true for all Markdown files and false otherwise.
+Por exemplo, um filtro `file.ext == "md"` será verdadeiro para todos os ficheiros Markdown e falso caso contrário.
 
-| Property      | Type   | Description                                                   |
-| ------------- | ------ | ------------------------------------------------------------- |
-| `file.backlinks`  | List   | List of backlink files. Note: This property is performance heavy. When possible, reverse the lookup and use `file.links`. Does not automatically refresh results when the vault is changed. |
-| `file.ctime`  | Date   | Created time                                                  |
-| `file.embeds` | List   | List of all embeds in the note                                |
-| `file.ext`    | String | File extension                                                |
-| `file.file`   | File   | File object, only usable in specific functions                |
-| `file.folder` | String | Path of the file folder                                       |
-| `file.links`  | List   | List of all internal links in the note, including frontmatter |
-| `file.mtime`  | Date   | Modified time                                                 |
-| `file.name`   | String | File name                                                     |
-| `file.path`   | String | Path of the file                                              |
-| `file.properties`   | Object | All properties on the file. Note: Does not automatically refresh results when the vault is changed. |
-| `file.size`   | Number | File size                                                     |
-| `file.tags`   | List   | List of all tags in the file content and frontmatter          |
+| Propriedade         | Tipo   | Descrição                                                     |
+| ------------------- | ------ | ------------------------------------------------------------- |
+| `file.backlinks`    | List   | Lista de ficheiros com backlinks. Nota: Esta propriedade é pesada em termos de desempenho. Quando possível, inverta a pesquisa e use `file.links`. Não atualiza automaticamente os resultados quando o cofre é alterado. |
+| `file.ctime`        | Date   | Hora de criação                                               |
+| `file.embeds`       | List   | Lista de todos os embeds na nota                              |
+| `file.ext`          | String | Extensão do ficheiro                                          |
+| `file.file`         | File   | Objeto ficheiro, apenas utilizável em funções específicas     |
+| `file.folder`       | String | Caminho da pasta do ficheiro                                  |
+| `file.links`        | List   | Lista de todas as ligações internas na nota, incluindo frontmatter |
+| `file.mtime`        | Date   | Hora de modificação                                           |
+| `file.name`         | String | Nome do ficheiro                                              |
+| `file.path`         | String | Caminho do ficheiro                                           |
+| `file.properties`   | Object | Todas as propriedades do ficheiro. Nota: Não atualiza automaticamente os resultados quando o cofre é alterado. |
+| `file.size`         | Number | Tamanho do ficheiro                                           |
+| `file.tags`         | List   | Lista de todas as tags no conteúdo e frontmatter do ficheiro  |
 
-### Access properties with `this`
+### Aceder a propriedades com `this`
 
-Use the `this` object to access file properties. What `this` refers to, will depend on where the base is displayed. 
+Use o objeto `this` para aceder a propriedades de ficheiro. O que `this` referencia dependerá do local onde a base é apresentada.
 
-When the base is opened in main content area, `this` points to properties of the base file itself. For example, using `this.file.folder` returns the folder path where the base is located.
+Quando a base é aberta na área de conteúdo principal, `this` aponta para as propriedades do próprio ficheiro base. Por exemplo, usar `this.file.folder` retorna o caminho da pasta onde a base está localizada.
 
-When the base is embedded in another file, `this` points to properties of the _embedding_ file (the note or Canvas that contains the base). For example, using `this.file.name` returns the name of the embedding file, not the base.
+Quando a base é incorporada noutro ficheiro, `this` aponta para as propriedades do ficheiro _que incorpora_ (a nota ou Canvas que contém a base). Por exemplo, usar `this.file.name` retorna o nome do ficheiro que incorpora, não o da base.
 
-When the base is in a sidebar, `this` refers to the active file in the main content area. This lets you create queries based on the active file. For example, you can use `file.hasLink(this.file)` to replicate the backlinks pane.
+Quando a base está numa barra lateral, `this` refere-se ao ficheiro ativo na área de conteúdo principal. Isto permite criar consultas com base no ficheiro ativo. Por exemplo, pode usar `file.hasLink(this.file)` para replicar o painel de backlinks.
 
-## Operators
+## Operadores
 
-### Arithmetic operators
+### Operadores aritméticos
 
-Arithmetic operators perform arithmetic on numbers. For example, `radius * (2 * 3.14)`.
+Os operadores aritméticos realizam aritmética em números. Por exemplo, `radius * (2 * 3.14)`.
 
-| Operator | Description |
+| Operador | Descrição   |
 | -------- | ----------- |
-| `+`      | plus        |
-| `-`      | minus       |
-| `*`      | multiply    |
-| `/`      | divide      |
-| `%`      | modulo      |
-| `( )`    | parenthesis |
+| `+`      | adição      |
+| `-`      | subtração   |
+| `*`      | multiplicação |
+| `/`      | divisão     |
+| `%`      | módulo      |
+| `( )`    | parênteses  |
 
-### Date arithmetic
+### Aritmética de datas
 
-Dates can be modified by adding and subtracting durations. Duration units accept multiple formats:
+As datas podem ser modificadas adicionando e subtraindo durações. As unidades de duração aceitam múltiplos formatos:
 
-| Unit                     | Duration |
-| ------------------------ | -------- |
-| `y`, `year`, `years`     | year     |
-| `M`, `month`, `months`   | month    |
-| `d`, `day`, `days`       | day      |
-| `w`, `week`, `weeks`     | week     |
-| `h`, `hour`, `hours`     | hour     |
-| `m`, `minute`, `minutes` | minute   |
-| `s`, `second`, `seconds` | second   |
+| Unidade                  | Duração |
+| ------------------------ | ------- |
+| `y`, `year`, `years`     | ano     |
+| `M`, `month`, `months`   | mês     |
+| `d`, `day`, `days`       | dia     |
+| `w`, `week`, `weeks`     | semana  |
+| `h`, `hour`, `hours`     | hora    |
+| `m`, `minute`, `minutes` | minuto  |
+| `s`, `second`, `seconds` | segundo |
 
-To modify or offset Date objects, use the `+` or `-` operator with a duration string. For example, `date + "1M"` adds 1 month to the date, while `date - "2h"` subtracts 2 hours from the date.
+Para modificar ou deslocar objetos Date, use o operador `+` ou `-` com uma string de duração. Por exemplo, `date + "1M"` adiciona 1 mês à data, enquanto `date - "2h"` subtrai 2 horas da data.
 
-The global [[Funções|function]] `today()` can be used to get the current date, and `now()` can be used to get the current date with time.
+A [[Funções|função]] global `today()` pode ser usada para obter a data atual, e `now()` para obter a data atual com hora.
 
-- `now() + "1 day"` returns a datetime exactly 24 hours from the time of execution.
-- `file.mtime > now() - "1 week"` returns `true` if the file was modified within the last week.
-- `date("2024-12-01") + "1M" + "4h" + "3m"` returns a Date object representing `2025-01-01 04:03:00`.
-- Subtract two dates to get the millisecond difference between the two, for example, `now() - file.ctime`.
-- To get the date portion of a Date with time, use `datetime.date()`.
-- To format a Date object, use the `format()` function, for example `datetime.format("YYYY-MM-DD")`.
+- `now() + "1 day"` retorna um datetime exatamente 24 horas após o momento de execução.
+- `file.mtime > now() - "1 week"` retorna `true` se o ficheiro foi modificado na última semana.
+- `date("2024-12-01") + "1M" + "4h" + "3m"` retorna um objeto Date representando `2025-01-01 04:03:00`.
+- Subtrair duas datas obtém a diferença em milissegundos entre elas, por exemplo `now() - file.ctime`.
+- Para obter a parte de data de um Date com hora, use `datetime.date()`.
+- Para formatar um objeto Date, use a função `format()`, por exemplo `datetime.format("YYYY-MM-DD")`.
 
-### Comparison operators
+### Operadores de comparação
 
-Comparison operators can be used to compare numbers, or Date objects. Equal and not equal can be used with any kind of value, not just numbers and dates.
+Os operadores de comparação podem ser usados para comparar números ou objetos Date. Igual e diferente podem ser usados com qualquer tipo de valor, não apenas números e datas.
 
-| Operator | Description              |
-| -------- | ------------------------ |
-| `==`     | equals                   |
-| `!=`     | not equal                |
-| `>`      | greater than             |
-| `<`      | less than                |
-| `>=`     | greater than or equal to |
-| `<=`     | less than or equal to    |
+| Operador | Descrição              |
+| -------- | ---------------------- |
+| `==`     | igual a                |
+| `!=`     | diferente de           |
+| `>`      | maior que              |
+| `<`      | menor que              |
+| `>=`     | maior ou igual a       |
+| `<=`     | menor ou igual a       |
 
-### Boolean operators
+### Operadores booleanos
 
-Boolean operators can be used to combine or invert logical values, resulting in a true or false value.
+Os operadores booleanos podem ser usados para combinar ou inverter valores lógicos, resultando num valor verdadeiro ou falso.
 
-| Operator | Description |
-| -------- | ----------- |
-| `!`      | logical not |
-| `&&`     | logical and |
-| \|\|     | logical or  |
+| Operador | Descrição      |
+| -------- | -------------- |
+| `!`      | não lógico     |
+| `&&`     | e lógico       |
+| \|\|     | ou lógico      |
 
-## Functions
+## Funções
 
-See the [[Funções|list of functions]] that can be used in formulas and [[Vistas|filters]].
+Consulte a [[Funções|lista de funções]] que podem ser usadas em fórmulas e [[Vistas|filtros]].
 
-## Types
+## Tipos
 
-Bases have a type system which is used by formulas and filters to apply functions to properties.
+As Bases têm um sistema de tipos usado por fórmulas e filtros para aplicar funções a propriedades.
 
-### Strings, numbers, and booleans
+### Strings, números e booleanos
 
-Strings, numbers, and booleans are "primitive" values which do not require a function to create.
+Strings, números e booleanos são valores "primitivos" que não requerem uma função para serem criados.
 
-- Strings are enclosed in single or double quotes, for example `"message"`.
-- Numbers are written as digits, and may optionally be enclosed in parenthesis for clarity. For example, `1` or `(2.5)`.
-- Booleans are written as `true` or `false` without quotes.
+- As strings são delimitadas por aspas simples ou duplas, por exemplo `"message"`.
+- Os números são escritos como dígitos e podem opcionalmente ser delimitados por parênteses para maior clareza. Por exemplo, `1` ou `(2.5)`.
+- Os booleanos são escritos como `true` ou `false` sem aspas.
 
-### Dates and durations
+### Datas e durações
 
-Dates represent a specific date, or a date and time depending on the function used to create them, or that type that has been assigned to the [[Propriedades|property]].
+As datas representam uma data específica, ou uma data e hora dependendo da função usada para as criar, ou do tipo atribuído à [[Propriedades|propriedade]].
 
-- To construct a date, use the `date` function, for example `date("2025-01-01 12:00:00")`
-- To modify a date, add or remove a duration, for example `now() + "1 hour"` or `today() + "7d"`
-- Compare dates using comparison operators (e.g. `>` or `<`) and arithmetic operators (for example, `(now() + "1d") - now()` returns `86400000` milliseconds.)
-- To extract portions of a date, use the available fields (`now().hour`), or a convenience function (`now.time()`).
-- Many other [[Funções|fields and functions]] are available on date objects.
+- Para construir uma data, use a função `date`, por exemplo `date("2025-01-01 12:00:00")`
+- Para modificar uma data, adicione ou remova uma duração, por exemplo `now() + "1 hour"` ou `today() + "7d"`
+- Compare datas usando operadores de comparação (por exemplo `>` ou `<`) e operadores aritméticos (por exemplo, `(now() + "1d") - now()` retorna `86400000` milissegundos.)
+- Para extrair partes de uma data, use os campos disponíveis (`now().hour`) ou uma função de conveniência (`now.time()`).
+- Muitos outros [[Funções|campos e funções]] estão disponíveis em objetos de data.
 
-### Objects and lists
+### Objetos e listas
 
-- Turn a single element into a list using the `list()` function. This is especially helpful for properties which may contain a mixture of lists or single values.
-- Access list elements using square brackets, and a 0-based index. For example, `property[0]` returns the first element from the list.
-- Access object elements using square brackets and the element name or dot notation. For example, `property.subprop` or `property["subprop"]`.
+- Converta um único elemento numa lista usando a função `list()`. Isto é especialmente útil para propriedades que podem conter uma mistura de listas ou valores únicos.
+- Aceda a elementos de lista usando parênteses retos e um índice de base 0. Por exemplo, `property[0]` retorna o primeiro elemento da lista.
+- Aceda a elementos de objeto usando parênteses retos e o nome do elemento, ou notação de ponto. Por exemplo, `property.subprop` ou `property["subprop"]`.
 
-### Files and links
+### Ficheiros e ligações
 
-[[Ligar notas|Wikilinks]] in [[Propriedades|frontmatter properties]] are automatically recognized as Link objects. Links will render as a clickable link in the [[Vistas|view]].
+Os [[Ligar notas|Wikilinks]] nas [[Propriedades|propriedades de frontmatter]] são automaticamente reconhecidos como objetos Link. As ligações serão apresentadas como uma ligação clicável na [[Vistas|vista]].
 
-- To construct a link, use the global `link` [[Funções|function]], for example `link("filename")` or `link("https://obsidian.md")`.
-- You can create a link from any string, for example, `link(file.ctime.date().toString())`.
-- To set the display text, pass in an optional string or icon as a second parameter, for example `link("filename", "display")` or `link("filename", icon("plus"))`.
+- Para construir uma ligação, use a [[Funções|função]] global `link`, por exemplo `link("filename")` ou `link("https://obsidian.md")`.
+- Pode criar uma ligação a partir de qualquer string, por exemplo `link(file.ctime.date().toString())`.
+- Para definir o texto de exibição, passe uma string ou ícone opcional como segundo parâmetro, por exemplo `link("filename", "display")` ou `link("filename", icon("plus"))`.
 
-A File object can be turned into a link using `file.asLink()` with an optional display text.
+Um objeto File pode ser convertido numa ligação usando `file.asLink()` com um texto de exibição opcional.
 
-Links can be compared with `==` and `!=`. They are equivalent as long as they point to the same file, or if the file does not exist when looked up, their link text must be identical.
+As ligações podem ser comparadas com `==` e `!=`. São equivalentes desde que apontem para o mesmo ficheiro, ou se o ficheiro não existir quando pesquisado, o seu texto de ligação deve ser idêntico.
 
-Links can be compared to files such as `file` or `this`. They will equate if the link resolves to the file. For example, `author == this`.
+As ligações podem ser comparadas com ficheiros como `file` ou `this`. Serão iguais se a ligação resolver para o ficheiro. Por exemplo, `author == this`.
 
-Links can also be checked in list contains, for example, `authors.contains(this)`.
+As ligações também podem ser verificadas em listas, por exemplo `authors.contains(this)`.

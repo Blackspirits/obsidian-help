@@ -1,79 +1,78 @@
 ---
-localized: false
+description: Aprenda a usar a faixa de opções, um espaço para comandos comuns no Obsidian, e a personalizá-la no computador e em dispositivos móveis.
+mobile: true
 permalink: ribbon
 publish: true
-mobile: true
-description: 'Learn how to use the ribbon, a space for common commands in Obsidian, and customize it on desktop and mobile.'
 ---
 
-The ribbon functions as a space for common commands within Obsidian. 
+A faixa de opções funciona como um espaço para comandos comuns no Obsidian.
 
-On desktop, it's located in the [[Barra lateral#Open hidden sidebars|left Sidebar]] and remains visible even when the left Sidebar is closed. 
+No computador, está localizada na [[Barra lateral#Open hidden sidebars|barra lateral esquerda]] e permanece visível mesmo quando a barra lateral esquerda está fechada.
 
-On mobile, you can access the [[Aplicação móvel#Ribbon actions|Ribbon Actions]] by tapping the **Menu option** ![[lucide-menu.svg#icon]] at the bottom-right corner of the app when you're not editing a note.
+Em dispositivos móveis, pode aceder às [[Aplicação móvel#Ribbon actions|Ações da faixa de opções]] tocando na **opção de menu** ![[lucide-menu.svg#icon]] no canto inferior direito da aplicação quando não está a editar uma nota.
 
-## Actions
+## Ações
 
-Each action is represented by an icon in the ribbon. Hovering over these icons will display a tooltip, while selecting them will activate the associated action. On mobile, you can tap these icons to activate them.
+Cada ação é representada por um ícone na faixa de opções. Passar o cursor sobre estes ícones apresenta uma dica de ferramenta, enquanto selecioná-los ativa a ação associada. Em dispositivos móveis, pode tocar nestes ícones para os ativar.
 
-1. Open **[[Gerir cofres|Vault switcher]]** ![[obsidian-icon-vault-switcher.svg#icon]].
-2. Access **help** ![[lucide-help-circle.svg#icon]].
-3. Open **[[Configurações]]** ![[lucide-settings.svg#icon]].
+1. Abrir o **[[Gerir cofres|seletor de cofre]]** ![[obsidian-icon-vault-switcher.svg#icon]].
+2. Aceder à **ajuda** ![[lucide-help-circle.svg#icon]].
+3. Abrir as **[[Configurações]]** ![[lucide-settings.svg#icon]].
 
-In the mobile version, you can configure a quick access action on the ribbon. For more information, see the [[#Mobile|mobile section]] and [[Aplicação móvel]].
+Na versão móvel, pode configurar uma ação de acesso rápido na faixa de opções. Para mais informações, consulte a [[#Mobile|secção móvel]] e a [[Aplicação móvel]].
 
-## Customize the ribbon
+## Personalizar a faixa de opções
 
-Your customized ribbon layout is remembered across sessions. It synchronizes with other devices and the mobile app when app settings (in the `workspace.json` and `workspace-mobile.json` files) are synchronized.
+O esquema da sua faixa de opções personalizada é recordado entre sessões. Sincroniza com outros dispositivos e a aplicação móvel quando as definições da aplicação (nos ficheiros `workspace.json` e `workspace-mobile.json`) são sincronizadas.
 
-### Desktop
+### Computador
 
-On the desktop version, you can customize the ribbon as follows:
+Na versão de computador, pode personalizar a faixa de opções da seguinte forma:
 
-- Rearrange the order of ribbon actions by dragging and dropping the icons.
-- To hide specific actions, right-click on an empty space within the ribbon and uncheck the actions you want to hide.
+- Reorganizar a ordem das ações da faixa de opções arrastando e largando os ícones.
+- Para ocultar ações específicas, clique com o botão direito num espaço vazio dentro da faixa de opções e desmarque as ações que pretende ocultar.
 
-#### Hide the ribbon
+#### Ocultar a faixa de opções
 
-You can hide the ribbon in two ways:
+Pode ocultar a faixa de opções de duas formas:
 
-- Right-click on the ribbon and select **Hide ribbon**.
-- Open **[[Configurações]]** → **Appearance**, scroll down to **Advanced**, and disable **Show ribbon**.
+- Clique com o botão direito na faixa de opções e selecione **Ocultar faixa de opções**.
+- Abra **[[Configurações]]** → **Aspeto**, desça até **Avançadas** e desative **Mostrar faixa de opções**.
 
-#### Show the ribbon
+#### Mostrar a faixa de opções
 
-If you have hidden the ribbon and want to display it again:
+Se ocultou a faixa de opções e pretende apresentá-la novamente:
 
-1. Open **[[Configurações]]** → **Appearance**.
-2. Scroll down to **Advanced**.
-3. Enable **Show ribbon**.
-4. The ribbon will appear again on the left side of the window.
+1. Abra **[[Configurações]]** → **Aspeto**.
+2. Desça até **Avançadas**.
+3. Ative **Mostrar faixa de opções**.
+4. A faixa de opções voltará a aparecer no lado esquerdo da janela.
 
-> [!tip] Custom CSS
-> If you're using a community theme or custom CSS, make sure it does not hide the ribbon through custom style rules.
+> [!tip] CSS personalizado
+> Se estiver a usar um tema da comunidade ou CSS personalizado, certifique-se de que não oculta a faixa de opções através de regras de estilo personalizadas.
 
-### Mobile
+### Dispositivo móvel
 
-In the mobile version of Obsidian, you can perform quick access actions, rearrange items, and customize the ribbon menu. To access these customizations, follow these steps:
+Na versão móvel do Obsidian, pode executar ações de acesso rápido, reorganizar itens e personalizar o menu da faixa de opções. Para aceder a estas personalizações, siga estes passos:
 
-1. Open Obsidian's **[[Configurações]]** ![[lucide-cog.svg#icon]].
-2. Navigate to the **appearance** section.
-3. Scroll down to the **advanced** options.
-4. Select the **Manage** button under the **Ribbon menu** item.
+1. Abra as **[[Configurações]]** ![[lucide-cog.svg#icon]] do Obsidian.
+2. Navegue até à secção de **aspeto**.
+3. Desça até às opções **avançadas**.
+4. Selecione o botão **Gerir** sob o item **Menu da faixa de opções**.
 
-#### Quick access
+#### Acesso rápido
 
-By default, the quick access option is set to "Open ribbon menu" on a *short press*. If you choose another option as your quick access:
+Por predefinição, a opção de acesso rápido está definida como "Abrir menu da faixa de opções" com um *toque curto*. Se escolher outra opção como acesso rápido:
 
-- The selected option will be triggered with a *short press*.
-- The ribbon menu access will change to a *long press*.
+- A opção selecionada será acionada com um *toque curto*.
+- O acesso ao menu da faixa de opções mudará para um *toque longo*.
 
-> [!info] Quick access options depend on the Obsidian settings and core plugins you have enabled.
+> [!info] As opções de acesso rápido dependem das definições do Obsidian e dos plugins nativos que tem ativados.
 
-#### Rearrange and visibility
+#### Reorganizar e visibilidade
 
-To change the order of items in the ribbon menu, press and hold the **drag-and-drop** ![[lucide-menu.svg#icon]] button and move the selected item up or down.
+Para alterar a ordem dos itens no menu da faixa de opções, prima e mantenha premido o botão de **arrastar e largar** ![[lucide-menu.svg#icon]] e mova o item selecionado para cima ou para baixo.
 
-You can show or hide items in the ribbon menu using the red **remove** ![[lucide-minus-circle.svg#icon]] or green **add** ![[lucide-plus-circle.svg#icon]] buttons to toggle their visibility.
- 
- ![[ribbon-rearrange-visibility.jpeg#interface]]
+Pode mostrar ou ocultar itens no menu da faixa de opções usando os botões vermelho **remover** ![[lucide-minus-circle.svg#icon]] ou verde **adicionar** ![[lucide-plus-circle.svg#icon]] para alternar a sua visibilidade.
+
+![[ribbon-rearrange-visibility.jpeg#interface]]

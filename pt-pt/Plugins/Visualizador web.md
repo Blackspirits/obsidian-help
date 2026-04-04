@@ -1,29 +1,28 @@
 ---
-localized: false
 permalink: plugins/web-viewer
 ---
-Web viewer is a [[Plugins nativos|core plugin]] that lets you open external links within Obsidian on desktop. This lets you reading link content without leaving the app and makes multitasking on web research projects easier.
+O Visualizador web é um [[Plugins nativos|plugin nativo]] que lhe permite abrir ligações externas dentro do Obsidian no computador. Isto permite-lhe ler o conteúdo das ligações sem sair da aplicação e facilita a realização de várias tarefas em projetos de pesquisa na web.
 
-External links open as a [[Separadores|tab]] which you can rearrange, split, and open in a [[Janelas destacáveis|pop-out window]]. Any web page cards embedded in [[canvas]] files can be opened as web viewer tabs.
+As ligações externas abrem como um [[Separadores|separador]] que pode reorganizar, dividir e abrir numa [[Janelas destacáveis|janela destacável]]. Qualquer cartão de página web incorporado em ficheiros [[canvas]] pode ser aberto como separador do Visualizador web.
 
-Web viewer is not a replacement for your primary browser. Web viewer provides a quick way to access web pages for research within Obsidian. However, it does not offer the full functionality, security controls, or extensibility of a dedicated browser.
+O Visualizador web não é um substituto para o seu navegador principal. O Visualizador web fornece uma forma rápida de aceder a páginas web para pesquisa dentro do Obsidian. No entanto, não oferece a funcionalidade completa, os controlos de segurança ou a extensibilidade de um navegador dedicado.
 
-## Reader view
+## Vista de leitor
 
-Click the glasses icon to view a plain text version of the web page. This feature works by cleaning the content using Mozilla's Readability library developed for Firefox.
+Clique no ícone dos óculos para ver uma versão em texto simples da página web. Esta funcionalidade funciona através da limpeza do conteúdo usando a biblioteca Readability da Mozilla, desenvolvida para o Firefox.
 
-## Save to vault
+## Guardar no cofre
 
-Click the more actions icon to save a web page to your vault. You can customize the save page location by going to **[[Configurações]]** → **Web viewer**.
+Clique no ícone de mais ações para guardar uma página web no seu cofre. Pode personalizar a localização de guardação da página indo a **[[Configurações]]** → **Visualizador web**.
 
-## Ad blocking
+## Bloqueio de anúncios
 
-Web viewer blocks ads by default. You can customize ad blocking rules by adding lists such as [Easylist](https://easylist.to/). 
+O Visualizador web bloqueia anúncios por predefinição. Pode personalizar as regras de bloqueio de anúncios adicionando listas como o [Easylist](https://easylist.to/).
 
-## Security
+## Segurança
 
-If you use third-party Obsidian plugins, we recommend using your primary browser for sensitive tasks and password-protected websites instead of Web viewer.
+Se usar plugins de terceiros no Obsidian, recomendamos usar o seu navegador principal para tarefas sensíveis e sites protegidos por palavra-passe em vez do Visualizador web.
 
-Web viewer is based on the same [Chromium](https://developer.chrome.com/docs/apps/reference/webviewTag) feature that lets you embed web pages in [[Canvas]]. Web viewer has been [independently audited](https://obsidian.md/blog/cure53-second-client-audit/) to verify that it has been safely implemented.
+O Visualizador web baseia-se na mesma funcionalidade [Chromium](https://developer.chrome.com/docs/apps/reference/webviewTag) que permite incorporar páginas web no [[Canvas]]. O Visualizador web foi [auditado de forma independente](https://obsidian.md/blog/cure53-second-client-audit/) para verificar que foi implementado de forma segura.
 
-Obsidian plugins [[Segurança de plugins#Plugin capabilities|are not sandboxed]] and have deep control over the app. This design enables powerful functionality but also comes with security trade-offs. While Obsidian is running, third-party plugins have full access to cookies in Web viewer.
+Os plugins do Obsidian [[Segurança de plugins#Plugin capabilities|não estão em ambiente isolado]] e têm controlo profundo sobre a aplicação. Este design permite uma funcionalidade poderosa, mas também implica compromissos de segurança. Enquanto o Obsidian está em execução, plugins de terceiros têm acesso total aos cookies no Visualizador web.

@@ -1,40 +1,41 @@
 ---
-localized: false
+aliases:
+  - Obsidian Markdown
+description: Saiba mais sobre o Obsidian Flavored Markdown, incluindo extensões suportadas e como o Markdown interage com elementos HTML.
+mobile: true
 permalink: obsidian-flavored-markdown
 publish: true
-mobile: true
-description: 'Learn about Obsidian Flavored Markdown, including supported extensions and how Markdown interacts with HTML elements.'
 ---
 
-Obsidian strives for maximum capability without breaking any existing formats. As a result, we use a combination of flavors of [[Sintaxe de formatação básica|Markdown]].
+O Obsidian visa a máxima capacidade sem quebrar formatos existentes. Como resultado, usamos uma combinação de variantes do [[Sintaxe de formatação básica|Markdown]].
 
-Obsidian supports [CommonMark](https://commonmark.org/), [GitHub Flavored Markdown](https://github.github.com/gfm/), and [LaTeX](https://www.latex-project.org/). 
+O Obsidian suporta [CommonMark](https://commonmark.org/), [GitHub Flavored Markdown](https://github.github.com/gfm/) e [LaTeX](https://www.latex-project.org/).
 
-> [!tip]- Markdown inside HTML
-> Obsidian does not render Markdown syntax inside HTML elements. This is an intentional design choice for performance optimization and to keep parser complexity low when managing large documents.
+> [!tip]- Markdown dentro de HTML
+> O Obsidian não renderiza sintaxe Markdown dentro de elementos HTML. Esta é uma escolha de design intencional para otimização de desempenho e para manter a complexidade do parser baixa ao gerir documentos grandes.
 >
-> For example, Markdown formatting like `**bold**` or `` `code` `` will not be processed inside `<div>`, `<span>`, `<table>`, or any other HTML tags.
+> Por exemplo, a formatação Markdown como `**negrito**` ou `` `código` `` não será processada dentro de `<div>`, `<span>`, `<table>` ou quaisquer outras tags HTML.
 >
 > ```md
 > <div>
-> This **will not** be bold.
+> Este **não ficará** a negrito.
 > </div>
 > ```
 
-### Supported Markdown extensions
+### Extensões Markdown suportadas
 
-| Syntax          | Description                                                           |
-| --------------- | --------------------------------------------------------------------- |
-| `[[Link]]`      | [[Links internos]]                                                    |
-| `![[Link]]`     | [[Incorporar ficheiros]]                                                       |
-| `![[Link#^id]]` | [[Links internos#Link to a block in a note\|Block references]]        |
-| `^id`           | [[Links internos#Link to a block in a note\|Defining a block]]        |
-| `[^id]`         | [[Sintaxe de formatação básica#Footnotes\|Footnotes]]                      |
-| `%%Text%%`      | [[Sintaxe de formatação básica#Comments\|Comments]]                        |
-| `~~Text~~`      | [[Sintaxe de formatação básica#Bold, italics, highlights\|Strikethroughs]] |
-| `==Text==`      | [[Sintaxe de formatação básica#Bold, italics, highlights\|Highlights]]     |
-| `` ``` ``       | [[Sintaxe de formatação básica#Code blocks\|Code blocks]]                  |
-| `- [ ]`         | [[Sintaxe de formatação básica#Task lists\|Incomplete task]]               |
-| `- [x]`         | [[Sintaxe de formatação básica#Task lists\|Completed task]]                |
-| `> [!note]`     | [[Callouts]]                                                          |
-| (see link)      | [[Sintaxe de formatação avançada#Tables\|Tables]]                         |
+| Sintaxe         | Descrição                                                                         |
+| --------------- | --------------------------------------------------------------------------------- |
+| `[[Link]]`      | [[Links internos]]                                                                |
+| `![[Link]]`     | [[Incorporar ficheiros]]                                                          |
+| `![[Link#^id]]` | [[Links internos#Link to a block in a note\|Referências de bloco]]                |
+| `^id`           | [[Links internos#Link to a block in a note\|Definir um bloco]]                    |
+| `[^id]`         | [[Sintaxe de formatação básica#Footnotes\|Notas de rodapé]]                       |
+| `%%Texto%%`     | [[Sintaxe de formatação básica#Comments\|Comentários]]                            |
+| `~~Texto~~`     | [[Sintaxe de formatação básica#Bold, italics, highlights\|Tachado]]               |
+| `==Texto==`     | [[Sintaxe de formatação básica#Bold, italics, highlights\|Realce]]                |
+| `` ``` ``       | [[Sintaxe de formatação básica#Code blocks\|Blocos de código]]                    |
+| `- [ ]`         | [[Sintaxe de formatação básica#Task lists\|Tarefa incompleta]]                    |
+| `- [x]`         | [[Sintaxe de formatação básica#Task lists\|Tarefa concluída]]                     |
+| `> [!note]`     | [[Callouts]]                                                                      |
+| (ver ligação)   | [[Sintaxe de formatação avançada#Tables\|Tabelas]]                                |

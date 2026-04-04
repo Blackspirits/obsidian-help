@@ -1,131 +1,130 @@
 ---
-localized: false
 permalink: web-clipper/interpreter
 ---
-Interpreter is a [[Introdução ao Obsidian Web Clipper|Web Clipper]] feature that lets you interact with web pages using natural language. Interpreter helps you capture and modify data that you want to save to Obsidian. For example:
+O Interpretador é uma funcionalidade do [[Introdução ao Obsidian Web Clipper|Web Clipper]] que permite interagir com páginas web usando linguagem natural. O Interpretador ajuda-o a capturar e modificar dados que pretende guardar no Obsidian. Por exemplo:
 
-- Extract specific text fragments.
-- Summarize or explain information.
-- Convert text from one format to another.
-- Translate text to a different language.
+- Extrair fragmentos de texto específicos.
+- Resumir ou explicar informações.
+- Converter texto de um formato para outro.
+- Traduzir texto para um idioma diferente.
 
-Interpreter leverages language models to process information on a web page, and return results using [[Variáveis]] that you can add to your [[Obsidian Web Clipper/Modelos|Web Clipper Templates]].
+O Interpretador utiliza modelos de linguagem para processar informações numa página web e devolver resultados usando [[Variáveis]] que pode adicionar aos seus [[Obsidian Web Clipper/Modelos|modelos do Web Clipper]].
 
 ![[web-clipper-interpreter-demo.mp4#interface]]
 
-## Examples of prompts
+## Exemplos de prompts
 
-Prompts use the [[Variáveis|variable]] syntax `{{"your prompt"}}`. You can use this syntax with any natural language query, e.g.
+Os prompts usam a sintaxe de [[Variáveis|variável]] `{{"o seu prompt"}}`. Pode usar esta sintaxe com qualquer consulta em linguagem natural, por exemplo:
 
-- `{{"a summary of the page"}}` to extract a summary of the page.
-- `{{"a three bullet point summary, translated to French"}}` to extract bullet points about the page, and translate them to French.
-- `{{"un resumé de la page en trois points"}}` to extract three bullet points using a prompt in French.
+- `{{"um resumo da página"}}` para extrair um resumo da página.
+- `{{"um resumo em três pontos, traduzido para francês"}}` para extrair pontos sobre a página e traduzi-los para francês.
+- `{{"un resumé de la page en trois points"}}` para extrair três pontos usando um prompt em francês.
 
-The output of your prompts can be further manipulated using [[Filtros]]. Filters are processed after the prompt response is received from the model. For example: `{{"a summary of the page"|blockquote}}` will turn the response into a blockquote.
+O resultado dos seus prompts pode ser manipulado com [[Filtros]]. Os filtros são processados depois de a resposta do prompt ser recebida do modelo. Por exemplo: `{{"um resumo da página"|blockquote}}` irá transformar a resposta numa citação.
 
-## Get started
+## Começar a usar
 
-Interpreter works with almost any language model provider, including options that run privately on your device. To set up Interpreter:
+O Interpretador funciona com quase qualquer fornecedor de modelos de linguagem, incluindo opções que correm de forma privada no seu dispositivo. Para configurar o Interpretador:
 
-1. Go to the **Interpreter** section in Web Clipper settings.
-2. Toggle on **Enable Interpreter**.
-3. Configure your provider and model, see [[Interpretar páginas web#Models|models]] section below.
-4. Add [[Variáveis|prompt variables]] to your [[Obsidian Web Clipper/Modelos|templates]].
-5. If your template includes prompt variables, the Interpreter section will be visible when you [[Capturar páginas web|clip a page]]. Click **interpret** to process the prompt variables.
+1. Aceda à secção **Interpretador** nas definições do Web Clipper.
+2. Ative **Ativar Interpretador**.
+3. Configure o seu fornecedor e modelo, consulte a secção de [[Interpretar páginas web#Models|modelos]] abaixo.
+4. Adicione [[Variáveis|variáveis de prompt]] aos seus [[Obsidian Web Clipper/Modelos|modelos]].
+5. Se o seu modelo incluir variáveis de prompt, a secção Interpretador ficará visível quando [[Capturar páginas web|capturar uma página]]. Clique em **interpretar** para processar as variáveis de prompt.
 
-## How it works
+## Como funciona
 
-When Interpreter is enabled *and* your template contains [[Variáveis#Prompt variables|prompt variables]], a new Interpreter section is displayed in the extension window, above the **Add to Obsidian** button. This section lets you select a model and run Interpreter for the current page.
+Quando o Interpretador está ativado *e* o seu modelo contém [[Variáveis#Prompt variables|variáveis de prompt]], uma nova secção Interpretador é exibida na janela da extensão, acima do botão **Adicionar ao Obsidian**. Esta secção permite-lhe selecionar um modelo e executar o Interpretador para a página atual.
 
-When you click **interpret**, Interpreter sends the page context to your selected model, along with *all* the prompts in your template in one request. Depending on the model provider you choose, this can be an external call or local to your device. The model evaluates your prompts against the page context, and returns its responses. Interpreter then replaces the prompt variables with the response data.
+Quando clica em **interpretar**, o Interpretador envia o contexto da página para o modelo selecionado, juntamente com *todos* os prompts do seu modelo num único pedido. Dependendo do fornecedor de modelos que escolher, pode ser uma chamada externa ou local ao seu dispositivo. O modelo avalia os seus prompts em relação ao contexto da página e devolve as suas respostas. O Interpretador substitui então as variáveis de prompt pelos dados da resposta.
 
-The whole process can take milliseconds or more than 30 seconds depending on the model you use and the amount of data you are processing.
+Todo o processo pode demorar milissegundos ou mais de 30 segundos, dependendo do modelo que usar e da quantidade de dados que está a processar.
 
-## Context
+## Contexto
 
-The term *context* refers to the page data that Interpreter uses to process prompts. The smaller the context, the faster Interpreter runs. 
+O termo *contexto* refere-se aos dados da página que o Interpretador usa para processar prompts. Quanto menor for o contexto, mais rápido o Interpretador corre.
 
-By default, Interpreter uses the entire page HTML as its context, however this can make prompts slower and more expensive than necessary.
+Por defeito, o Interpretador usa o HTML completo da página como contexto, no entanto isso pode tornar os prompts mais lentos e mais caros do que o necessário.
 
-You can override the default context in Interpreter **Advanced settings** and define context per [[Obsidian Web Clipper/Modelos|template]].
+Pode substituir o contexto predefinido nas **Definições avançadas** do Interpretador e definir o contexto por [[Obsidian Web Clipper/Modelos|modelo]].
 
-To define a more targeted context use [[Variáveis#Selector variables|selector variables]] (or other variable types) to interpret a section of the page. For example, you could use the following selector variable in your template's Interpreter context:
+Para definir um contexto mais específico, use [[Variáveis#Selector variables|variáveis selector]] (ou outros tipos de variável) para interpretar uma secção da página. Por exemplo, pode usar a seguinte variável selector no contexto do Interpretador do seu modelo:
 
 ```
 {{selectorHtml:#main}}
 ```
 
- This would only run Interpreter on the `#main` element of a web page, if it exists. [[Filtros#HTML processing|HTML processing filters]] like `remove_html`, `strip_tags` and `strip_attr` can be useful to further reduce the context length and speed up processing.
+Isto executaria o Interpretador apenas no elemento `#main` de uma página web, se existir. Os [[Filtros#HTML processing|filtros de processamento HTML]] como `remove_html`, `strip_tags` e `strip_attr` podem ser úteis para reduzir ainda mais o comprimento do contexto e acelerar o processamento.
 
-## Models
+## Modelos
 
-> [!warning] Privacy
-> By using a third-party model provider you agree to their terms and privacy policy. Interpreter requests are sent directly to the provider you choose. Obsidian does not gather or store any data about your requests.
+> [!warning] Privacidade
+> Ao usar um fornecedor de modelos de terceiros, concorda com os seus termos e política de privacidade. Os pedidos do Interpretador são enviados diretamente para o fornecedor que escolher. O Obsidian não recolhe nem armazena quaisquer dados sobre os seus pedidos.
 
-### Preset providers
+### Fornecedores predefinidos
 
-Interpreter includes several preset providers. To use these providers you need an API key which you can get by logging into your provider's account. You will also need to decide which model(s) to use.
+O Interpretador inclui vários fornecedores predefinidos. Para usar estes fornecedores, precisa de uma chave API que pode obter ao iniciar sessão na conta do seu fornecedor. Também precisará de decidir qual(is) modelo(s) usar.
 
-| Provider           | API&nbsp;key                                                | Models                                                                               |
+| Fornecedor         | Chave&nbsp;API                                              | Modelos                                                                              |
 | ------------------ | ----------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| Anthropic          | [API&nbsp;key](https://console.anthropic.com/settings/keys) | [Models](https://docs.anthropic.com/en/docs/about-claude/models)                     |
-| Azure&nbsp;OpenAI  | [API&nbsp;key](https://oai.azure.com/portal/)               | [Models](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models) |
-| DeepSeek           | [API key](https://platform.deepseek.com/api_keys)           | [Models](https://api-docs.deepseek.com/quick_start/pricing)                          |
-| Google&nbsp;Gemini | [API&nbsp;key](https://aistudio.google.com/apikey)          | [Models](https://ai.google.dev/gemini-api/docs/models/gemini)                        |
-| Hugging Face       | [API key](https://huggingface.co/settings/tokens)           | [Models](https://huggingface.co/models?pipeline_tag=text-generation&sort=trending)   |
-| Meta               | [API key](https://llama.developer.meta.com)                 | [Models](https://llama.developer.meta.com/docs/models)                               |
-| Ollama             | n/a                                                         | [Models](https://ollama.com/search)                                                  |
-| OpenAI             | [API&nbsp;key](https://platform.openai.com/api-keys)        | [Models](https://platform.openai.com/docs/models)                                    |
-| OpenRouter         | [API&nbsp;key](https://openrouter.ai/settings/keys)         | [Models](https://openrouter.ai/models)                                               |
-| Perplexity         | [API key](https://www.perplexity.ai/settings/api)           | [Models](https://docs.perplexity.ai/guides/model-cards)                              |
-| xAI Grok           | [API key](https://console.x.ai/team/default/api-keys)       | [Models](https://docs.x.ai/docs/models)                                              |
+| Anthropic          | [Chave&nbsp;API](https://console.anthropic.com/settings/keys) | [Modelos](https://docs.anthropic.com/en/docs/about-claude/models)                  |
+| Azure&nbsp;OpenAI  | [Chave&nbsp;API](https://oai.azure.com/portal/)             | [Modelos](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models) |
+| DeepSeek           | [Chave API](https://platform.deepseek.com/api_keys)         | [Modelos](https://api-docs.deepseek.com/quick_start/pricing)                         |
+| Google&nbsp;Gemini | [Chave&nbsp;API](https://aistudio.google.com/apikey)        | [Modelos](https://ai.google.dev/gemini-api/docs/models/gemini)                       |
+| Hugging Face       | [Chave API](https://huggingface.co/settings/tokens)         | [Modelos](https://huggingface.co/models?pipeline_tag=text-generation&sort=trending)  |
+| Meta               | [Chave API](https://llama.developer.meta.com)               | [Modelos](https://llama.developer.meta.com/docs/models)                              |
+| Ollama             | n/d                                                         | [Modelos](https://ollama.com/search)                                                 |
+| OpenAI             | [Chave&nbsp;API](https://platform.openai.com/api-keys)      | [Modelos](https://platform.openai.com/docs/models)                                   |
+| OpenRouter         | [Chave&nbsp;API](https://openrouter.ai/settings/keys)       | [Modelos](https://openrouter.ai/models)                                              |
+| Perplexity         | [Chave API](https://www.perplexity.ai/settings/api)         | [Modelos](https://docs.perplexity.ai/guides/model-cards)                             |
+| xAI Grok           | [Chave API](https://console.x.ai/team/default/api-keys)     | [Modelos](https://docs.x.ai/docs/models)                                             |
 
-### Choosing a model
+### Escolher um modelo
 
-In general we recommend using small models with Web Clipper because they are faster and perform fairly accurately for this task. Examples of smaller models include **Anthropic's Claude Haiku**, **Google Gemini Flash**, **Llama** with 3B or 8B parameters, or **OpenAI's Mini** series of models.
+Em geral, recomendamos o uso de modelos pequenos com o Web Clipper porque são mais rápidos e têm um desempenho razoavelmente preciso para esta tarefa. Exemplos de modelos menores incluem o **Claude Haiku da Anthropic**, o **Google Gemini Flash**, o **Llama** com parâmetros 3B ou 8B, ou a série de modelos **Mini da OpenAI**.
 
-### Custom providers and models
+### Fornecedores e modelos personalizados
 
-To add a custom provider and/or model go to Web Clipper **[[Configurações]]** → **Interpreter**:
+Para adicionar um fornecedor e/ou modelo personalizado, aceda às **[[Configurações]]** do Web Clipper → **Interpretador**:
 
-- **Add provider** to configure preset and custom providers.
-- **Add model** to configure preset and custom models.
+- **Adicionar fornecedor** para configurar fornecedores predefinidos e personalizados.
+- **Adicionar modelo** para configurar modelos predefinidos e personalizados.
 
-When adding a custom provider, we recommend that you use their chat completions endpoint for the **Base URL** — it typically ends with `/chat/completions`.
+Ao adicionar um fornecedor personalizado, recomendamos que use o endpoint de completions de chat para o **URL base** — normalmente termina com `/chat/completions`.
 
-### Local models
+### Modelos locais
 
-Interpreter can use local models which offer greater privacy and offline compatibility. Several options for running local models exist. One of the easiest to configure is Ollama.
+O Interpretador pode usar modelos locais que oferecem maior privacidade e compatibilidade offline. Existem várias opções para executar modelos locais. Uma das mais fáceis de configurar é o Ollama.
 
 #### Ollama
 
-[Ollama](https://ollama.com/) lets you run language models locally and privately on your device. 
+O [Ollama](https://ollama.com/) permite executar modelos de linguagem localmente e de forma privada no seu dispositivo.
 
-Once you have downloaded and installed Ollama, add Ollama using **Add provider** in Interpreter settings. Ollama does not require an API key. Then choose a model from the [model list](https://ollama.com/search). For example if you want to use [Llama 3.2](https://ollama.com/library/llama3.2), click **Add model**, then:
+Depois de descarregar e instalar o Ollama, adicione o Ollama usando **Adicionar fornecedor** nas definições do Interpretador. O Ollama não requer uma chave API. Em seguida, escolha um modelo da [lista de modelos](https://ollama.com/search). Por exemplo, se pretender usar o [Llama 3.2](https://ollama.com/library/llama3.2), clique em **Adicionar modelo** e então:
 
-- **Provider:** Ollama
-- **Display name:** Llama 3.2, this value is customizable.
-- **Model ID:** `llama3.2`, this must exactly match the model ID from Olllama.
+- **Fornecedor:** Ollama
+- **Nome de exibição:** Llama 3.2, este valor é personalizável.
+- **ID do modelo:** `llama3.2`, deve corresponder exatamente ao ID do modelo do Ollama.
 
-**Start the Ollama server**
+**Iniciar o servidor Ollama**
 
-To allow a browser extension to interact with Ollama you must [give it explicit instruction](https://github.com/ollama/ollama/issues/2308) when running the server, or else you will see a `403` error. 
+Para permitir que uma extensão de browser interaja com o Ollama, deve [dar-lhe uma instrução explícita](https://github.com/ollama/ollama/issues/2308) ao executar o servidor, caso contrário verá um erro `403`.
 
-Close the Ollama app, and run the following command in your terminal. The protocol should be changed to your browser's extension protocol if you don't use Chrome or Firefox.
+Feche a aplicação Ollama e execute o seguinte comando no seu terminal. O protocolo deve ser alterado para o protocolo de extensão do seu browser se não usar o Chrome ou Firefox.
 
 ```
 OLLAMA_ORIGINS=moz-extension://*,chrome-extension://*,safari-web-extension://* ollama serve
 ```
 
-Then run your model with Ollama the normal way, e.g.
+Em seguida, execute o seu modelo com o Ollama da forma normal, por exemplo:
 
 ```
 ollama run llama3.2
 ```
 
-**Context length**
+**Comprimento do contexto**
 
-Ollama's context window defaults to 2048 tokens. This is the maximum number of tokens for the message and response. When clipping a long web page you can easily exceed this limit. Ollama will silently fail and return irrelevant results. Some options:
+A janela de contexto do Ollama tem por defeito 2048 tokens. Este é o número máximo de tokens para a mensagem e resposta. Ao capturar uma página web longa, pode facilmente ultrapassar este limite. O Ollama irá falhar silenciosamente e devolver resultados irrelevantes. Algumas opções:
 
-- Increase Ollama's `num_ctx` parameter. Be mindful that longer context requires more memory.
-- Use the [[#Context]] field in your template to provide a more targeted section of the page, or trim the context using a [[Filtros|filter]] e.g. `{{content|slice:0,1000}}`.
+- Aumente o parâmetro `num_ctx` do Ollama. Tenha em atenção que um contexto mais longo requer mais memória.
+- Use o campo [[#Context|Contexto]] no seu modelo para fornecer uma secção mais específica da página, ou reduza o contexto usando um [[Filtros|filtro]], por exemplo `{{content|slice:0,1000}}`.

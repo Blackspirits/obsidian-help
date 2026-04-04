@@ -1,90 +1,89 @@
 ---
-localized: false
 permalink: plugins/graph
 publish: true
 mobile: true
 description: Graph view is a core plugin that lets you visualize the relationships between the notes in your vault.
 ---
-Graph view is a [[Plugins nativos|core plugin]] that lets you visualize the relationships between the notes in your vault.
+A Vista de grafo é um [[Plugins nativos|plugin nativo]] que lhe permite visualizar as relações entre as notas no seu cofre.
 
-To open the Graph view, click **Open graph view** in the [[Faixa de opções]].
+Para abrir a Vista de grafo, clique em **Abrir vista de grafo** na [[Faixa de opções]].
 
-- Circles represent notes, or _nodes_.
-- Lines represent [[Links internos]] between two nodes.
+- Os círculos representam notas, ou _nós_.
+- As linhas representam [[Links internos]] entre dois nós.
 
-The more nodes that reference a given node, the bigger it gets.
+Quanto mais nós referenciam um dado nó, maior ele fica.
 
-To interact with notes in the graph:
+Para interagir com as notas no grafo:
 
-- Hover over each circle to highlight that note's connections.
-- Click a note in the graph to open that note.
-- Right-click a note to open a context menu with the actions available for that note.
+- Passe o cursor sobre cada círculo para realçar as ligações dessa nota.
+- Clique numa nota no grafo para a abrir.
+- Clique com o botão direito numa nota para abrir um menu de contexto com as ações disponíveis para essa nota.
 
-To navigate around the graph:
+Para navegar no grafo:
 
-- Zoom in and out using the scroll wheel on your mouse, or using the `+` and `-` keys.
-- Move the graph around by dragging it with your mouse cursor, or using the arrow keys.
+- Amplie e reduza usando a roda do rato, ou usando as teclas `+` e `-`.
+- Mova o grafo arrastando-o com o cursor do rato, ou usando as teclas de seta.
 
-You can hold Shift while using the keyboard to speed up the movements.
+Pode manter Shift premido enquanto usa o teclado para acelerar os movimentos.
 
-## Settings
+## Definições
 
-To open the graph settings, click the cog icon in the upper-right corner of the graph view.
+Para abrir as definições do grafo, clique no ícone de engrenagem no canto superior direito da vista de grafo.
 
-Click **Restore default settings** in the upper-right corner of the settings box to reset any changes you make.
+Clique em **Restaurar definições predefinidas** no canto superior direito da caixa de definições para repor quaisquer alterações que faça.
 
-### Filters
+### Filtros
 
-This section controls what nodes to show in the graph.
+Esta secção controla que nós mostrar no grafo.
 
-- **Search files** lets you filter notes based on a search term. To learn about how you can write more advanced search terms, refer to [[Pesquisa]].
-- **Tags** toggles whether to show tags in the graph.
-- **Attachments** toggles whether to show attachments in the graph.
-- **Existing files only** toggles whether to show notes that exists in your vault. Since a note doesn't need to exist to link to it, this can help limit your graph to notes that you actually have in your vault.
-- **Orphans** toggles whether to show notes without any links.
+- **Pesquisar ficheiros** permite-lhe filtrar notas com base num termo de pesquisa. Para saber como pode escrever termos de pesquisa mais avançados, consulte [[Pesquisa]].
+- **Tags** alterna se deve mostrar tags no grafo.
+- **Anexos** alterna se deve mostrar anexos no grafo.
+- **Apenas ficheiros existentes** alterna se deve mostrar notas que existem no seu cofre. Como uma nota não precisa de existir para criar uma ligação para ela, isto pode ajudar a limitar o seu grafo às notas que realmente tem no cofre.
+- **Órfãos** alterna se deve mostrar notas sem quaisquer ligações.
 
-> [!info] Excluded files
-> Files matching your [[Configurações#Excluded files|Excluded files]] patterns will not appear in Graph view.
+> [!info] Ficheiros excluídos
+> Os ficheiros que correspondam aos seus padrões de [[Configurações#Excluded files|Ficheiros excluídos]] não aparecerão na Vista de grafo.
 
-### Groups
+### Grupos
 
-Create groups of notes to distinguish them from each other using color.
+Crie grupos de notas para as distinguir entre si usando cores.
 
-To create a new group:
+Para criar um novo grupo:
 
-1. Click **New group**.
-2. In the search box, type a search term for the notes you want to add to the group.
-3. Click the colored circle to give the group a color.
+1. Clique em **Novo grupo**.
+2. Na caixa de pesquisa, escreva um termo de pesquisa para as notas que pretende adicionar ao grupo.
+3. Clique no círculo colorido para dar uma cor ao grupo.
 
-To learn about how you can write more advanced search terms, refer to [[Pesquisa]].
+Para saber como pode escrever termos de pesquisa mais avançados, consulte [[Pesquisa]].
 
-### Display
+### Apresentação
 
-This section controls how to visualize nodes and links in the graph.
+Esta secção controla como visualizar nós e ligações no grafo.
 
-- **Arrows** toggles whether to show the direction of each link.
-- **Text fade threshold** controls the text transparency for the name of each note.
-- **Node size** controls the size of the circle representing each note.
-- **Link thickness** controls the line width for each link.
-- **Animate** starts a [[#Start a time-lapse animation|time-lapse animation]].
+- **Setas** alterna se deve mostrar a direção de cada ligação.
+- **Limiar de desbotamento do texto** controla a transparência do texto para o nome de cada nota.
+- **Tamanho do nó** controla o tamanho do círculo que representa cada nota.
+- **Espessura da ligação** controla a largura da linha para cada ligação.
+- **Animar** inicia uma [[#Start a time-lapse animation|animação em time-lapse]].
 
-### Forces
+### Forças
 
-This section controls the forces that act on each node in the graph.
+Esta secção controla as forças que atuam em cada nó do grafo.
 
-- **Center force** controls how compact the graph is. A higher value creates a more circular graph.
-- **Repel force** controls how much a node pushes other nodes away from it.
-- **Link force** controls the pull on each link. If the link was a rubber band, the link force controls how tight or loose the band is.
-- **Link distance** controls the length of the lines between each note.
+- **Força central** controla o quão compacto é o grafo. Um valor mais alto cria um grafo mais circular.
+- **Força de repulsão** controla o quanto um nó empurra outros nós para longe dele.
+- **Força de ligação** controla a atração em cada ligação. Se a ligação fosse um elástico, a força de ligação controla o quão tenso ou frouxo é o elástico.
+- **Distância de ligação** controla o comprimento das linhas entre cada nota.
 
-## Start a time-lapse animation
+## Iniciar uma animação em time-lapse
 
-Notes and attachments appear in chronological order based on their creation time.
+As notas e os anexos aparecem por ordem cronológica com base na sua data de criação.
 
 ![[obsidian-graph-view.png#interface]]
 
-## Local Graph
+## Grafo local
 
-To open a local Graph view, use the **Open local graph** command. While the Graph view shows all notes in your vault, a local Graph view shows you notes connected to the active note.
+Para abrir uma Vista de grafo local, use o comando **Abrir grafo local**. Enquanto a Vista de grafo mostra todas as notas no seu cofre, uma Vista de grafo local mostra as notas ligadas à nota ativa.
 
-The local Graph view can use all of the [[#Settings]] available to the global Graph view. Additionally, you can change the depth of the local graph. Each level of depth will show notes connected to the notes revealed at the previous depth. To control local Graph depth, use the slider at the top of the local Graph Filter Settings panel.
+A Vista de grafo local pode usar todas as [[#Definições]] disponíveis para a Vista de grafo global. Adicionalmente, pode alterar a profundidade do grafo local. Cada nível de profundidade mostrará notas ligadas às notas reveladas na profundidade anterior. Para controlar a profundidade do grafo local, use o controlo deslizante no topo do painel de definições do filtro do grafo local.

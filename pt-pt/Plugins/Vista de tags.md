@@ -1,17 +1,16 @@
 ---
-localized: false
 permalink: plugins/tags
 ---
-Tags view is a [[Plugins nativos|core plugin]] that lists all tags in your vault and the number of notes for each tag.
+A Vista de tags é um [[Plugins nativos|plugin nativo]] que lista todas as tags no seu cofre e o número de notas para cada tag.
 
-Click a tag to search for it using [[Pesquisa]].
+Clique numa tag para pesquisá-la usando a [[Pesquisa]].
 
-To toggle a tag in the search term, click the tag while pressing `Ctrl` (or `Cmd` on macOS).
+Para alternar uma tag no termo de pesquisa, clique na tag enquanto prime `Ctrl` (ou `Cmd` no macOS).
 
-The plugin provides the following options:
+O plugin disponibiliza as seguintes opções:
 
-- **Change sort order** determines whether to sort the tags by **Tag name** or **Frequency**.
-- **Show nested tags** toggles whether to display nested tags as a tree or as a flat list.
-- **Expand all** and **Collapse all** expands and collapses the nested tags hierarchy.
+- **Alterar ordem de ordenação** determina se deve ordenar as tags por **Nome da tag** ou **Frequência**.
+- **Mostrar tags aninhadas** alterna entre apresentar as tags aninhadas como uma árvore ou como uma lista simples.
+- **Expandir tudo** e **Recolher tudo** expandem e recolhem a hierarquia de tags aninhadas.
 
-You can choose to expand or collapse each nested level separately by clicking the arrow next to it.
+Pode optar por expandir ou recolher cada nível aninhado separadamente clicando na seta junto a ele.

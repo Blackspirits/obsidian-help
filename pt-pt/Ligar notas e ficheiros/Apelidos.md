@@ -1,21 +1,24 @@
 ---
-localized: false
+aliases:
+  - alias
+  - aliases
+  - How to/Add aliases to note
 permalink: aliases
 cssclasses:
   - soft-embed
 ---
 
-If you want to reference a file using different names, consider adding _aliases_ to the note. An alias is an alternative name for a note.
+Se pretender referenciar um ficheiro usando nomes diferentes, considere adicionar _apelidos_ à nota. Um apelido é um nome alternativo para uma nota.
 
-Use aliases for things like acronyms, nicknames, or to refer to a note in a different language.
+Use apelidos para coisas como siglas, alcunhas, ou para referenciar uma nota noutro idioma.
 
-If you're only trying to change how a link looks in one place, see how to [[Links internos#Change the link display text|Change the link display text]] instead.
+Se apenas pretender alterar a aparência de uma ligação num único local, veja como [[Links internos#Change the link display text|Alterar o texto de apresentação da ligação]].
 
 ![[Links internos#^callout-internal-links-link-text]]
 
-## Add an alias to a note
+## Adicionar um apelido a uma nota
 
-To add an alias for a note, add `aliases` property in the note [[Propriedades]]. Aliases should always be formatted as a list in YAML.
+Para adicionar um apelido a uma nota, adicione a propriedade `aliases` nas [[Propriedades]] da nota. Os apelidos devem ser sempre formatados como uma lista em YAML.
 
 ```md
 ---
@@ -28,22 +31,22 @@ aliases:
 # Dog
 ```
 
-## Link to a note using an alias
+## Ligar a uma nota usando um apelido
 
-To link to a note using an alias:
+Para ligar a uma nota usando um apelido:
 
-1. Start typing the alias in an [[Links internos|internal link]]. Any alias shows up in the list of suggestions, with a curved arrow icon next to it.
-2. Press `Enter` to select the alias.
+1. Comece a escrever o apelido numa [[Links internos|ligação interna]]. Qualquer apelido aparece na lista de sugestões, com um ícone de seta curva ao lado.
+2. Prima `Enter` para selecionar o apelido.
 
-Obsidian creates the link with the alias as its custom display text, for example `[[Artificial Intelligence|AI]]`.
+O Obsidian cria a ligação com o apelido como texto de apresentação personalizado, por exemplo `[[Inteligência Artificial|IA]]`.
 
-> [!note] Note
-> Rather than just using the alias as the link destination (`[[AI]]`), Obsidian uses the `[[Artificial Intelligence|AI]]` link format to ensure interoperability with other applications using the Wikilink format.
+> [!note] Nota
+> Em vez de usar apenas o apelido como destino da ligação (`[[IA]]`), o Obsidian usa o formato de ligação `[[Inteligência Artificial|IA]]` para garantir a interoperabilidade com outras aplicações que usam o formato Wikilink.
 
-## Find unlinked mentions for an alias
+## Encontrar menções não ligadas para um apelido
 
-By using [[Links inversos]], you can find unlinked mentions of aliases.
+Usando [[Links inversos]], pode encontrar menções não ligadas de apelidos.
 
-For example, after setting "AI" as an alias for "Artificial intelligence", you can see mentions of "AI" in other notes.
+Por exemplo, após definir "IA" como apelido de "Inteligência artificial", pode ver menções de "IA" noutras notas.
 
-If you link an unlinked mention to an alias, Obsidian turns the mention into an [[Links internos|internal link]] with the alias as its display text.
+Se ligar uma menção não ligada a um apelido, o Obsidian transforma a menção numa [[Links internos|ligação interna]] com o apelido como texto de apresentação.

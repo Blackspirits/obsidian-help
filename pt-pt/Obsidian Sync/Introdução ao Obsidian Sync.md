@@ -16,7 +16,7 @@ O [Obsidian Sync](https://obsidian.md/sync) é um serviço adicional que permite
 	- Configure o Sync em todos os seus dispositivos.
 - [[Migrar para o Obsidian Sync|Switch to Obsidian Sync]]
 	- Prepare o seu cofre do Obsidian para utilizar o Sync.
-- [[Configurações do Sync e sincronização selectiva|Selective sync]]
+- [[Configurações do Sync e sincronização seletiva|Seletive sync]]
 	- Configure os ficheiros e as configurações a sincronizar.
 - [[Planos e limites de armazenamento]]
 	- Saiba mais sobre os planos de subscrição do Sync.
@@ -45,7 +45,7 @@ Se estiver a utilizar o Obsidian Sync em conjunto com outros fornecedores de arm
 
 Consulte as [[Perguntas frequentes]] para ver as perguntas mais frequentes e mais detalhes sobre o Obsidian Sync.
 
-> [!warning] Esta funcionalidade não está disponível em dispositivos Apple com o [modo de isolamento](https://support.apple.com/en-us/105120) activo, salvo se o Obsidian for adicionado como excepção.
+> [!warning] Esta funcionalidade não está disponível em dispositivos Apple com o [modo de isolamento](https://support.apple.com/en-us/105120) ativo, salvo se o Obsidian for adicionado como excepção.
 
 Está a ter interrupções inesperadas no serviço do Sync? Verifique o [estado do servidor](https://status.obsidian.md) aqui.
  

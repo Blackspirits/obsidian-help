@@ -1,132 +1,131 @@
 ---
-localized: false
 permalink: sync/messages
 publish: true
 mobile: true
 description: This page explains the Obsidian Sync status icons and provides details about the sync activity log.
 ---
 
-Obsidian Sync provides several elements to indicate sync status, mainly the [[#Sync status icon]] and [[#Sync activity log]]. Details about version control in Obsidian Sync are covered in the [[Histórico de versões]] page.
+O Obsidian Sync disponibiliza vários elementos para indicar o estado da sincronização, principalmente o [[#Ícone de estado do Sync]] e o [[#Registo de atividade do Sync]]. Os detalhes sobre o controlo de versões no Obsidian Sync estão disponíveis na página [[Histórico de versões]].
 
-## Sync status icon
+## Ícone de estado do Sync
 
-The Sync status icon is located in the [[Barra de estado]] on the desktop version and in the [[Barra lateral#Open hidden sidebars|right sidebar]] on mobile and tablet. The icon reflects various sync states:
+O ícone de estado do Sync encontra-se na [[Barra de estado]] na versão de desktop e na [[Barra lateral#Open hidden sidebars|barra lateral direita]] em dispositivos móveis e tablets. O ícone reflecte os vários estados de sincronização:
 
-- ![[obsidian-icon-sync-synced.svg#icon]] **Synced**: Obsidian Sync has fully synced your files. This icon is typically green.
-- ![[obsidian-icon-sync-syncing.svg#icon]] **Syncing**: Obsidian is currently updating the remote vault. This icon is usually purple.
-- ![[obsidian-icon-sync-paused.svg#icon]] **Paused**: Syncing has been paused, but Obsidian is still connected to the remote vault. The icon is typically purple.
-- ![[obsidian-icon-sync-disconnected.svg#icon]] **Disconnected**: The Sync core plugin is active, but the [[Cofres locais e remotos|local vault]] is not connected to a remote vault. This icon is typically red.
+- ![[obsidian-icon-sync-synced.svg#icon]] **Sincronizado**: O Obsidian Sync sincronizou completamente os seus ficheiros. Este ícone é normalmente verde.
+- ![[obsidian-icon-sync-syncing.svg#icon]] **A sincronizar**: O Obsidian está a atualizar o cofre remoto. Este ícone é normalmente roxo.
+- ![[obsidian-icon-sync-paused.svg#icon]] **Em pausa**: A sincronização foi pausada, mas o Obsidian ainda está ligado ao cofre remoto. O ícone é normalmente roxo.
+- ![[obsidian-icon-sync-disconnected.svg#icon]] **Desligado**: O plugin de base do Sync está ativo, mas o [[Cofres locais e remotos|cofre local]] não está ligado a um cofre remoto. Este ícone é normalmente vermelho.
 
-Clicking or tapping the icon opens a context menu with the following options:
-- ![[obsidian-icon-sync-paused.svg#icon]] Pause (or ![[lucide-circle-play.svg#icon]] Resume if paused)
-- ![[lucide-history.svg#icon]] [[Histórico de versões]] (Greyed out if not viewing a note)
-- ![[lucide-align-left.svg#icon]] Open [[#Sync activity log|Sync log]]
-- ![[lucide-trash-2.svg#icon]] [[Histórico de versões#Restore a deleted file|Deleted files]]
-- ![[lucide-cog.svg#icon]] [[Configurações do Sync e sincronização selectiva|Sync settings]]
+Ao clicar ou tocar no ícone, abre-se um menu de contexto com as seguintes opções:
+- ![[obsidian-icon-sync-paused.svg#icon]] Pausar (ou ![[lucide-circle-play.svg#icon]] Retomar se estiver em pausa)
+- ![[lucide-history.svg#icon]] [[Histórico de versões]] (A cinzento se não estiver a ver uma nota)
+- ![[lucide-align-left.svg#icon]] Abrir [[#Registo de atividade do Sync|registo do Sync]]
+- ![[lucide-trash-2.svg#icon]] [[Histórico de versões#Restore a deleted file|Ficheiros eliminados]]
+- ![[lucide-cog.svg#icon]] [[Configurações do Sync e sincronização seletiva|Configurações do Sync]]
 
-## Sync activity log
+## Registo de atividade do Sync
 
-Obsidian Sync includes a detailed sync log that tracks all interactions between your local files and the remote vault. The log shows uploads, downloads, deletions, and any issues like merge conflicts or connectivity problems.
+O Obsidian Sync inclui um registo detalhado que acompanha todas as interacções entre os seus ficheiros locais e o cofre remoto. O registo mostra carregamentos, transferências, eliminações e quaisquer problemas como conflitos de combinação ou problemas de conectividade.
 
-**Access the activity log:**
-- Click the sync status icon in the status bar
-- Go to **[[Configurações]] → Sync → Activity log**
-- Use **Command palette → Sync: Open activity log**
+**Aceder ao registo de atividade:**
+- Clique no ícone de estado do Sync na barra de estado
+- Aceda a **[[Configurações]] → Sync → Registo de atividade**
+- Use **Paleta de comandos → Sync: Open activity log**
 
-The log provides timestamps and details for each sync operation, making it useful for troubleshooting sync issues.
+O registo fornece carimbos temporais e detalhes para cada operação de sincronização, sendo útil para resolver problemas de sincronização.
 
-> [!warning] The Sync log does not persist after Obsidian is closed. If you encounter an issue, ensure you copy the log _before_ closing the app.
+> [!warning] O registo do Sync não persiste após o encerramento do Obsidian. Se encontrar um problema, certifique-se de que copia o registo _antes_ de fechar a aplicação.
 
-The log categorizes messages into the following types:
+O registo categoriza as mensagens nos seguintes tipos:
 
-- [[#General messages]]
-- [[#Error messages]]
-- [[#Skipped messages]]
-- [[#Account messages]]
+- [[#Mensagens gerais]]
+- [[#Mensagens de erro]]
+- [[#Mensagens de itens ignorados]]
+- [[#Mensagens de conta]]
 
-You can filter the Sync log by **All**, **Errors**, **Skipped**, and **Merge Conflicts**. Additionally, you can search the Sync log using the search box in the Sync window.
+Pode filtrar o registo do Sync por **Todos**, **Erros**, **Ignorados** e **Conflitos de combinação**. Adicionalmente, pode pesquisar no registo do Sync utilizando a caixa de pesquisa na janela do Sync.
 
-> [!summary] We have included some of the likely messages you have come across below. The list is not exhaustive. If you are experiencing an issue and have a sync log message you are not sure about, [[Ajuda e suporte#Contact Obsidian support|contact Obsidian support]].
+> [!summary] Incluímos abaixo algumas das mensagens mais prováveis com que se pode deparar. A lista não é exaustiva. Se estiver a ter um problema e não tiver a certeza sobre uma mensagem do registo do Sync, [[Ajuda e suporte#Contact Obsidian support|contacte o suporte da Obsidian]].
 
-### General messages
+### Mensagens gerais
 
-These are common day-to-day messages you might encounter. 
+Estas são mensagens comuns do dia-a-dia com que pode deparar-se.
 
-**Connecting to server**  
-Obsidian is trying to connect to your remote vault's [[Obsidian Sync/Segurança e privacidade#Where can I find my current Sync server and where is it hosted?|Sync server]].
+**A ligar ao servidor**  
+O Obsidian está a tentar ligar-se ao [[Obsidian Sync/Segurança e privacidade#Where can I find my current Sync server and where is it hosted?|servidor do Sync]] do seu cofre remoto.
 
-**Connected to server. Detecting changes...**  
-Obsidian has established a connection and is comparing the local vault with the remote vault to determine if changes are needed.
+**Ligado ao servidor. A detectar alterações...**  
+O Obsidian estabeleceu uma ligação e está a comparar o cofre local com o cofre remoto para determinar se são necessárias alterações.
 
-> [!info] This message can also indicate other potential Sync issues. If you see it repeatedly and believe there are still items to sync, [[Ajuda e suporte#Contact Obsidian support|contact Obsidian support]].
+> [!info] Esta mensagem também pode indicar outros potenciais problemas do Sync. Se a vir repetidamente e acreditar que ainda existem itens a sincronizar, [[Ajuda e suporte#Contact Obsidian support|contacte o suporte da Obsidian]].
 
-**Fully synced**  
-- The local and remote vaults are fully synchronized.
+**Totalmente sincronizado**  
+- Os cofres local e remoto estão completamente sincronizados.
 
-**Merging conflicted file**  
-A conflict was detected during syncing, and the file was merged rather than overwritten. See [[Resolução de problemas do Obsidian Sync#Conflict resolution|conflict resolution]] for more information. If the merge is unwanted, you can restore previous versions via [[Histórico de versões]] or [[Recuperação de ficheiros]].
+**A combinar ficheiro em conflito**  
+Foi detectado um conflito durante a sincronização e o ficheiro foi combinado em vez de substituído. Consulte [[Resolução de problemas do Obsidian Sync#Conflict resolution|resolução de conflitos]] para mais informações. Se a combinação não for desejada, pode restaurar versões anteriores através do [[Histórico de versões]] ou da [[Recuperação de ficheiros]].
 
-**Rejected server change**  
-The changes on the remote vault are older than the version on your local device, so the local version is kept and the remote change is ignored. 
+**Alteração do servidor rejeitada**  
+As alterações no cofre remoto são mais antigas do que a versão no seu dispositivo local, por isso a versão local é mantida e a alteração remota é ignorada.
 
-### Error messages
+### Mensagens de erro
 
-These are messages detailing an error in syncing a file.
+Estas são mensagens que detalham um erro na sincronização de um ficheiro.
 
-**Out of memory**  
-This issue typically occurs on mobile devices when there isn't enough storage space or memory available to download a file. It's most common with large files, such as videos.
+**Memória insuficiente**  
+Este problema ocorre normalmente em dispositivos móveis quando não há espaço de armazenamento ou memória suficiente para transferir um ficheiro. É mais comum com ficheiros grandes, como vídeos.
 
-### Skipped messages
+### Mensagens de itens ignorados
 
-These are messages detailing what was skipped, and potentially why. 
+Estas são mensagens que detalham o que foi ignorado e, potencialmente, porquê.
 
-**Unable to download file with illegal name**
+**Impossível transferir ficheiro com nome inválido**
 
-The file contains a [special character or naming convention](https://stackoverflow.com/questions/1976007/what-characters-are-forbidden-in-windows-and-linux-directory-names) that is not allowed on the receiving operating system. For ease, you can rename the file on it's source device to remove all special characters but `-` and `_`.
+O ficheiro contém um [carácter especial ou convenção de nomenclatura](https://stackoverflow.com/questions/1976007/what-characters-are-forbidden-in-windows-and-linux-directory-names) que não é permitido no sistema operativo de destino. Para facilitar, pode renomear o ficheiro no dispositivo de origem para remover todos os caracteres especiais excepto `-` e `_`.
 
-Note that this also includes files with multiple periods `.` in their name on Android devices. 
+Note que isto também inclui ficheiros com múltiplos pontos `.` no nome em dispositivos Android.
 
-### Account messages
+### Mensagens de conta
 
-These are messages related to a change in your subscription or account. 
+Estas são mensagens relacionadas com uma alteração na sua subscrição ou conta.
 
-**Vault limit exceeded**  
-Your account has exceeded the [[Perguntas frequentes#How large can each remote vault be|maximum storage size]]. Attachments and version history contribute to this size. Even if your vault seems smaller than the limit, older versions and files can push it over.
+**Limite do cofre excedido**  
+A sua conta excedeu o [[Perguntas frequentes#How large can each remote vault be|tamanho máximo de armazenamento]]. Os anexos e o histórico de versões contribuem para este tamanho. Mesmo que o seu cofre pareça menor do que o limite, versões e ficheiros mais antigos podem ultrapassá-lo.
 
-To reduce vault size:
-1. Open **[[Configurações]] → Sync**.
-2. Use the options under **Vault size over limit** to remove large files.
+Para reduzir o tamanho do cofre:
+1. Abra **[[Configurações]] → Sync**.
+2. Utilize as opções em **Tamanho do cofre acima do limite** para remover ficheiros grandes.
 
-**Vault not found**  
+**Cofre não encontrado**  
 `{"res":"err","msg":"Vault not found."}`
 
-This error may occur in these cases:
+Este erro pode ocorrer nestes casos:
 
-1. The vault was deleted from another device.
-2. The sync subscription was inactive for over 30 days, causing the remote vault to be removed.
-3. The subscription was canceled or refunded, resulting in the remote vault's deletion.
- 
-In these cases, you'll need to [[Configurar o Obsidian Sync#Disconnect from a remote vault|disconnect from the remote vault]] and [[Configurar o Obsidian Sync#Create a new remote vault|create a new remote vault]], ensuring your local data is preserved.
+1. O cofre foi eliminado de outro dispositivo.
+2. A subscrição do sync esteve inactiva durante mais de 30 dias, fazendo com que o cofre remoto fosse removido.
+3. A subscrição foi cancelada ou reembolsada, resultando na eliminação do cofre remoto.
 
-**Failed to authenticate: Your subscription to Obsidian Sync has expired**  
-Your account is now in a fully expired status as we were unable to process the payment on file. 
+Nestes casos, terá de [[Configurar o Obsidian Sync#Disconnect from a remote vault|desligar do cofre remoto]] e [[Configurar o Obsidian Sync#Create a new remote vault|criar um novo cofre remoto]], garantindo que os dados locais são preservados.
 
-To continue using Obsidian Sync, you will need to resubscribe within [your account](https://obsidian.md/account/sync).
+**Falha na autenticação: A sua subscrição do Obsidian Sync expirou**  
+A sua conta está agora em estado completamente expirado, pois não foi possível processar o pagamento registado.
 
-**Failed to authenticate: Not logged in**
+Para continuar a utilizar o Obsidian Sync, terá de subscrever novamente em [a sua conta](https://obsidian.md/account/sync).
 
-Obsidian Sync has detected that you are not currently logged in. You will need to log back in on the app in the [[Configurações#General#Account|Account]] section of **[[Configurações]]**.
+**Falha na autenticação: Não iniciou sessão**
 
-In some cases, a community plugin can also prevent Obsidian Sync from being able to confirm your account's login status. Please enter **[[Segurança de plugins#Restricted mode|Restricted mode]]** and try again. 
+O Obsidian Sync detectou que não tem sessão iniciada. Terá de iniciar sessão novamente na aplicação, na secção [[Configurações#General#Account|Conta]] das **[[Configurações]]**.
 
-### Network messages
+Em alguns casos, um plugin da comunidade também pode impedir que o Obsidian Sync confirme o estado de início de sessão da sua conta. Entre no **[[Segurança de plugins#Restricted mode|Modo restrito]]** e tente novamente.
 
-**Disconnected from server**
+### Mensagens de rede
+
+**Desligado do servidor**
 `Unable to connect to server`
 
-Obsidian Sync has disconnected from the Sync server for an unknown reason. Sync will attempt to reconnect to the server periodically.
+O Obsidian Sync desligou-se do servidor do Sync por razão desconhecida. O Sync tentará restabelecer a ligação ao servidor periodicamente.
 
-On iOS, this message displays as the following error:
+No iOS, esta mensagem é apresentada como o seguinte erro:
 `Null is not an object (evaluating 'this.socket.send')`
 
-It means exactly the same as the `Unable to connect to server` message, and is not in any way indication that something else is wrong. 
+Significa exactamente o mesmo que a mensagem `Unable to connect to server`, e não indica de forma alguma que algo mais esteja errado.

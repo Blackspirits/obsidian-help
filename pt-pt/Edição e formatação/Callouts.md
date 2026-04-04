@@ -1,87 +1,88 @@
 ---
-localized: false
+aliases:
+  - How to/Use callouts
+description: Esta página explica como usar callouts para incluir conteúdo adicional sem interromper o fluxo das suas notas.
+mobile: true
 permalink: callouts
 publish: true
-mobile: true
-description: This page details how to use callouts to include additional content without breaking the flow of your notes.
 ---
 
-Use callouts to include additional content without breaking the flow of your notes.
+Use callouts para incluir conteúdo adicional sem interromper o fluxo das suas notas.
 
-To create a callout, add `[!info]` to the first line of a blockquote, where `info` is the _type identifier_. The type identifier determines how the callout looks and feels. To see all available types, refer to [[#Supported types]]. Callouts are also supported natively on [[Introdução ao Obsidian Publish|Obsidian Publish]].
+Para criar um callout, adicione `[!info]` à primeira linha de uma citação em bloco, onde `info` é o _identificador de tipo_. O identificador de tipo determina o aspeto e comportamento do callout. Para ver todos os tipos disponíveis, consulte [[#Tipos suportados]]. Os callouts também são suportados nativamente no [[Introdução ao Obsidian Publish|Obsidian Publish]].
 
 ```markdown
-> [!info] Here's a callout title
-> Here's a callout block.
-> It supports **Markdown**, [[Internal link|Wikilinks]], and [[Incorporar ficheiros|embeds]]!
+> [!info] Título do callout
+> Aqui está um bloco callout.
+> Suporta **Markdown**, [[Internal link|Wikilinks]], e [[Incorporar ficheiros|incorporações]]!
 > ![[Engelbart.jpg]]
 ```
 
-> [!info] Here's a callout title
-> Here's a callout block.
-> It supports **Markdown**, [[Links internos|Wikilinks]] and [[Incorporar ficheiros|embeds]]!
+> [!info] Título do callout
+> Aqui está um bloco callout.
+> Suporta **Markdown**, [[Links internos|Wikilinks]] e [[Incorporar ficheiros|incorporações]]!
 > ![[Engelbart.jpg]]
 
-You can insert a default `[!note]` callout using the `Insert callout` [[Paleta de comandos|command]]. The cursor automatically positions in the callout name field, letting you delete the default name and type a new one before editing the content.
+Pode inserir um callout `[!note]` predefinido usando o [[Paleta de comandos|comando]] `Inserir callout`. O cursor posiciona-se automaticamente no campo do nome do callout, permitindo-lhe eliminar o nome predefinido e escrever um novo antes de editar o conteúdo.
 
-To wrap existing content in a callout, select the text (including lists, code blocks, etc.) and run the `Insert callout` command. The selected content will be automatically enclosed in the callout.
+Para envolver conteúdo existente num callout, selecione o texto (incluindo listas, blocos de código, etc.) e execute o comando `Inserir callout`. O conteúdo selecionado será automaticamente encerrado no callout.
 
-In [[Vistas e modo de edição#Live Preview|Live Preview]], you can also right-click the callout name to change the callout type.
+No [[Vistas e modo de edição#Live Preview|Live Preview]], também pode clicar com o botão direito no nome do callout para alterar o tipo de callout.
 
 
-### Change the title
+### Alterar o título
 
-By default, the title of the callout is its type identifier in title case. You can change it by adding text after the type identifier:
-
-```markdown
-> [!tip] Callouts can have custom titles
-> Like this one.
-```
-
-> [!tip] Callouts can have custom titles
-> Like this one.
-
-You can even omit the body to create title-only callouts:
+Por predefinição, o título do callout é o seu identificador de tipo com maiúsculas iniciais. Pode alterá-lo adicionando texto após o identificador de tipo:
 
 ```markdown
-> [!tip] Title-only callout
+> [!tip] Os callouts podem ter títulos personalizados
+> Como este.
 ```
 
-> [!tip] Title-only callout
+> [!tip] Os callouts podem ter títulos personalizados
+> Como este.
 
-### Foldable callouts
-
-You can make a callout foldable by adding a plus (`+`) or a minus (`-`) directly after the type identifier.
-
-A plus sign expands the callout by default, and a minus sign collapses it instead.
+Pode inclusive omitir o corpo para criar callouts apenas com título:
 
 ```markdown
-> [!faq]- Are callouts foldable?
-> Yes! In a foldable callout, the contents are hidden when the callout is collapsed.
+> [!tip] Callout só com título
 ```
 
-> [!faq]- Are callouts foldable?
-> Yes! In a foldable callout, the contents are hidden when collapsed.
+> [!tip] Callout só com título
 
-### Nested callouts
+### Callouts recolhíveis
 
-You can nest callouts in multiple levels.
+Pode tornar um callout recolhível adicionando um sinal de mais (`+`) ou de menos (`-`) imediatamente após o identificador de tipo.
+
+Um sinal de mais expande o callout por predefinição, e um sinal de menos recolhe-o.
 
 ```markdown
-> [!question] Can callouts be nested?
-> > [!todo] Yes!, they can.
-> > > [!example]  You can even use multiple layers of nesting.
+> [!faq]- Os callouts são recolhíveis?
+> Sim! Num callout recolhível, o conteúdo fica oculto quando o callout está recolhido.
 ```
 
-> [!question] Can callouts be nested?
-> > [!todo] Yes!, they can.
-> > > [!example]  You can even use multiple layers of nesting.
+> [!faq]- Os callouts são recolhíveis?
+> Sim! Num callout recolhível, o conteúdo fica oculto quando recolhido.
 
-### Customize callouts
+### Callouts aninhados
 
-[[Fragmentos CSS]] and [[Plugins da comunidade]] can define custom callouts, or even overwrite the default configuration.
+Pode aninhar callouts em múltiplos níveis.
 
-To define a custom callout, create the following CSS block:
+```markdown
+> [!question] Os callouts podem ser aninhados?
+> > [!todo] Sim!, podem.
+> > > [!example]  Pode inclusive usar múltiplos níveis de aninhamento.
+```
+
+> [!question] Os callouts podem ser aninhados?
+> > [!todo] Sim!, podem.
+> > > [!example]  Pode inclusive usar múltiplos níveis de aninhamento.
+
+### Personalizar callouts
+
+Os [[Fragmentos CSS]] e os [[Plugins da comunidade]] podem definir callouts personalizados ou mesmo substituir a configuração predefinida.
+
+Para definir um callout personalizado, crie o seguinte bloco CSS:
 
 ```css
 .callout[data-callout="custom-question-type"] {
@@ -90,29 +91,29 @@ To define a custom callout, create the following CSS block:
 }
 ```
 
-The value of the `data-callout` attribute is the type identifier you want to use, for example `[!custom-question-type]`.
+O valor do atributo `data-callout` é o identificador de tipo que pretende usar, por exemplo `[!custom-question-type]`.
 
-- `--callout-color` defines the background color using numbers (0–255) for red, green, and blue.
-- `--callout-icon` can be an icon ID from [lucide.dev](https://lucide.dev), or an SVG element. 
+- `--callout-color` define a cor de fundo usando números (0–255) para vermelho, verde e azul.
+- `--callout-icon` pode ser um ID de ícone de [lucide.dev](https://lucide.dev), ou um elemento SVG.
 
-> [!warning] Note about lucide icon versions
-> Obsidian updates Lucide icons periodically. The current version included is shown below; use these or earlier icons in custom callouts.
+> [!warning] Nota sobre versões de ícones Lucide
+> O Obsidian atualiza os ícones Lucide periodicamente. A versão atual incluída é mostrada abaixo; use estes ou ícones anteriores em callouts personalizados.
 > ![[Créditos#^lucide]]
 
-> [!tip] SVG icons
-> Instead of using a Lucide icon, you can also use a SVG element as the callout icon.
+> [!tip] Ícones SVG
+> Em vez de usar um ícone Lucide, pode também usar um elemento SVG como ícone do callout.
 >
 > ```css
-> --callout-icon: '<svg>...custom svg...</svg>';
+> --callout-icon: '<svg>...svg personalizado...</svg>';
 > ```
 
-### Supported types
+### Tipos suportados
 
-You can use several callout types and aliases. Each type comes with a different background color and icon.
+Pode usar vários tipos de callout e aliases. Cada tipo tem uma cor de fundo e ícone diferentes.
 
-To use these default styles, replace `info` in the examples with any of these types, such as `[!tip]` or `[!warning]`. Callout types can also be changed by right-clicking a callout in Live Preview mode.
+Para usar estes estilos predefinidos, substitua `info` nos exemplos por qualquer um destes tipos, como `[!tip]` ou `[!warning]`. Os tipos de callout também podem ser alterados clicando com o botão direito num callout no modo Live Preview.
 
-Unless you [[#Customize callouts]], any unsupported type defaults to the `note` type. The type identifier is case-insensitive.
+A não ser que [[#Personalizar callouts]], qualquer tipo não suportado assume o tipo `note`. O identificador de tipo não distingue maiúsculas de minúsculas.
 
 > [!note]
 > ```md

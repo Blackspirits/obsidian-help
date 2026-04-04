@@ -6,7 +6,7 @@ description: This page details how you can collaborate with other Obsidian Sync 
 ---
 Com o [[Introdução ao Obsidian Sync|Obsidian Sync]] pode colaborar num cofre partilhado com a sua equipa.
 
-Todos os colaboradores devem ter uma subscrição activa do Sync para aceder a um cofre partilhado. Aderir a um cofre partilhado não conta para o seu [[Perguntas frequentes#How many remote vaults can I have?|limite de cofres]].
+Todos os colaboradores devem ter uma subscrição ativa do Sync para aceder a um cofre partilhado. Aderir a um cofre partilhado não conta para o seu [[Perguntas frequentes#How many remote vaults can I have?|limite de cofres]].
 
 Se o cofre remoto tiver [[Obsidian Sync/Segurança e privacidade|encriptação ponta a ponta]], os colaboradores devem introduzir a palavra-passe de encriptação quando configuram o cofre.
 

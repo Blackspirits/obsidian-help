@@ -6,18 +6,18 @@ publish: true
 mobile: true
 description: Obsidian Sync keeps a record of all changes made to your notes and regularly checks for updates and creates new versions of your notes.
 ---
-O [[Introdução ao Obsidian Sync|Obsidian Sync]] verifica regularmente se existem actualizações nos seus [[Configurações do Sync e sincronização selectiva|ficheiros sincronizados]], registando todas as alterações. Estas ficam armazenadas como novas entradas no [[#Histórico de versões]]. Pode aceder a esta informação de várias formas:
+O [[Introdução ao Obsidian Sync|Obsidian Sync]] verifica regularmente se existem atualizações nos seus [[Configurações do Sync e sincronização seletiva|ficheiros sincronizados]], registando todas as alterações. Estas ficam armazenadas como novas entradas no [[#Histórico de versões]]. Pode aceder a esta informação de várias formas:
 
 - [[#Histórico do Sync]]
 - [[#Histórico de versões]]
 
-Embora não faça parte do Obsidian Sync, um histórico de versões local também está disponível em cada dispositivo se o plugin [[Recuperação de ficheiros]] estiver activo.
+Embora não faça parte do Obsidian Sync, um histórico de versões local também está disponível em cada dispositivo se o plugin [[Recuperação de ficheiros]] estiver ativo.
 
 ## Histórico do Sync
 
 A funcionalidade de histórico do Sync (ou barra lateral do Sync), introduzida na versão 1.7 do Obsidian, permite-lhe consultar rapidamente as notas e anexos criados ou modificados recentemente que foram sincronizados. Pode também encarar isto como um histórico de _edição_.
 
-Na barra lateral, pode seleccionar um item para abrir o ficheiro correspondente na janela activa. Os itens também dispõem de menus de contexto que permitem realizar acções como mover o ficheiro ou consultar o seu [[#Notas e anexos|histórico de versões]].
+Na barra lateral, pode seleccionar um item para abrir o ficheiro correspondente na janela ativa. Os itens também dispõem de menus de contexto que permitem realizar acções como mover o ficheiro ou consultar o seu [[#Notas e anexos|histórico de versões]].
 
 > [!compatibility] Funcionalidade exclusiva para desktop
 > Ao passar o rato sobre um ficheiro sincronizado na barra lateral, pode ver quem editou o ficheiro pela última vez. Isto é especialmente útil se estiver a [[Colaborar num cofre partilhado|colaborar]] num cofre partilhado.
@@ -27,11 +27,11 @@ Na barra lateral, pode seleccionar um item para abrir o ficheiro correspondente 
 
 ### Mostrar o histórico do Sync
 
-Quando activa o plugin de base [[Introdução ao Obsidian Sync|Sync]], o histórico do Sync é automaticamente activado, mas não aparece na barra lateral por omissão. Terá de o adicionar manualmente através de um comando ou de um atalho de teclado.
+Quando ativa o plugin de base [[Introdução ao Obsidian Sync|Sync]], o histórico do Sync é automaticamente ativado, mas não aparece na barra lateral por omissão. Terá de o adicionar manualmente através de um comando ou de um atalho de teclado.
 
-#### Activar através da Paleta de comandos
+#### Ativar através da Paleta de comandos
 
-> [!info] Esta opção requer que o plugin de base [[Paleta de comandos]] esteja activo.
+> [!info] Esta opção requer que o plugin de base [[Paleta de comandos]] esteja ativo.
 
 **Desktop/Tablet** ![[lucide-monitor-check.svg#icon]]
 
@@ -50,7 +50,7 @@ O histórico do Sync aparecerá então na [[Barra lateral|barra lateral direita]
 
 O histórico do Sync aparecerá então como uma opção de lista pendente na [[Barra lateral|barra lateral direita]].
 
-#### Activar através de um atalho de teclado
+#### Ativar através de um atalho de teclado
 
 1. Abra as **[[Configurações]]**.
 2. Na categoria **Opções**, seleccione **Atalhos de teclado**.

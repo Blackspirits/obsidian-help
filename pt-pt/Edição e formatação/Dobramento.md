@@ -1,24 +1,24 @@
 ---
-localized: false
+aliases: Fold
+description: Aprenda a obter uma melhor visão geral de notas grandes usando o dobramento para ocultar partes da nota
+mobile: false
 permalink: folding
 publish: true
-mobile: false
-description: Learn how to get a better overview of large notes by using folding to hide parts of the note
 ---
 
-Learn how to get a better overview of large notes by using _folding_ to hide parts of the note. Folding is useful when creating outlines for your notes and when you want to focus on what you're working on at the moment.
+Aprenda a obter uma melhor visão geral de notas grandes usando o _dobramento_ para ocultar partes da nota. O dobramento é útil ao criar esquemas para as suas notas e quando pretende focar-se no que está a trabalhar no momento.
 
-You can fold headings and indented lists by hovering the mouse cursor over the section you want to fold, and then selecting the arrow on the left. Folded sections show an arrow regardless of if you hover it or not.
+Pode dobrar cabeçalhos e listas indentadas passando o cursor do rato sobre a secção que pretende dobrar e, em seguida, selecionando a seta à esquerda. As secções dobradas mostram uma seta independentemente de o cursor estar sobre elas ou não.
 
-Folding is turned on by default. To turn off folding, open **[[Configurações]]** → **Editor**, and then turn off **Fold indent** or **Fold heading**, depending on your needs.
+O dobramento está ativado por predefinição. Para desativar o dobramento, abra **[[Configurações]]** → **Editor** e desative **Dobrar indentação** ou **Dobrar cabeçalho**, conforme as suas necessidades.
 
-To toggle all sections at the same time, use the following commands:
+Para alternar todas as secções ao mesmo tempo, use os seguintes comandos:
 
-- To collapse all sections, open the [[Paleta de comandos]], and then select **Fold all headings and lists**.
-- To expand all sections, open the [[Paleta de comandos]], and then select **Unfold all headings and lists**.
+- Para recolher todas as secções, abra a [[Paleta de comandos]] e selecione **Dobrar todos os cabeçalhos e listas**.
+- Para expandir todas as secções, abra a [[Paleta de comandos]] e selecione **Desdobrar todos os cabeçalhos e listas**.
 
-> [!tip] Tip
-> If you prefer to fold using your keyboard, you can assign [[Teclas de atalho|hotkeys]] to the **Fold less** and **Fold more** commands.
+> [!tip] Dica
+> Se preferir dobrar usando o teclado, pode atribuir [[Teclas de atalho|teclas de atalho]] aos comandos **Dobrar menos** e **Dobrar mais**.
 >
-> - **Fold less** unfolds the section at the text cursor.
-> - **Fold more** folds the section or list that contains the text cursor.
+> - **Dobrar menos** desdobra a secção na posição do cursor de texto.
+> - **Dobrar mais** dobra a secção ou lista que contém o cursor de texto.

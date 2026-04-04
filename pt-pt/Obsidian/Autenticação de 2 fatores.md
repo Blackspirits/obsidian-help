@@ -1,69 +1,68 @@
 ---
-localized: false
 permalink: 2fa
 ---
-If you have an [Obsidian account](https://obsidian.md/account) you can enable two-factor authentication (2FA) to protect your account with a second verification step.
+Se tiver uma [conta Obsidian](https://obsidian.md/account) pode ativar a autenticação de dois fatores (2FA) para proteger a sua conta com uma segunda etapa de verificação.
 
-## Enable 2FA
+## Ativar a 2FA
 
-- Log into [your Obsidian account](https://obsidian.md/account/profile) from your web browser.
-- In the **Profile** section, go to **2-factor authentication** and select **Enable**.
-- A popup window will appear to prompt you to connect an authenticator app with either a **QR code** or a **setup key**.
+- Inicie sessão na [sua conta Obsidian](https://obsidian.md/account/profile) a partir do seu browser.
+- Na secção **Perfil**, aceda a **Autenticação de 2 fatores** e selecione **Ativar**.
+- Aparecerá uma janela de popup a pedir-lhe que conecte uma aplicação de autenticação com um **código QR** ou uma **chave de configuração**.
 
-> [!hint]- Popular authentication applications
+> [!hint]- Aplicações de autenticação populares
 > - [Authy](https://authy.com)
 > - [Google Authenticator](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2)
 > - [Microsoft Authenticator](https://www.microsoft.com/en-us/security/mobile-authenticator-app)
 > - [iCloud Keychain](https://support.apple.com/en-gb/guide/iphone/ipha6173c19f/ios)
 
-- Once connected, your authenticator app will provide you a six digit code. Enter that code below the **QR code/setup key** section, in step 3.
-- Finally, enter your current password.
-- Select **Complete set up**.
-- The popup window will be replaced with a confirmation window and your recovery codes. Please download your recovery codes, as you will need these to unlock your account.
+- Depois de conectada, a sua aplicação de autenticação fornecer-lhe-á um código de seis dígitos. Introduza esse código abaixo da secção **código QR/chave de configuração**, no passo 3.
+- Por fim, introduza a sua palavra-passe atual.
+- Selecione **Concluir configuração**.
+- A janela de popup será substituída por uma janela de confirmação com os seus códigos de recuperação. Por favor, descarregue os seus códigos de recuperação, pois precisará deles para desbloquear a sua conta.
 
-Your 2FA is now set up.
+A sua 2FA está agora configurada.
 
-> [!warning]- QR code/setup key backups
-> If you decide to keep a backup of your **QR code** or **Setup key** in addition to your recovery codes, we strongly recommend keeping it in a password encrypted system.
+> [!warning]- Cópias de segurança do código QR/chave de configuração
+> Se decidir guardar uma cópia de segurança do seu **código QR** ou **chave de configuração** além dos seus códigos de recuperação, recomendamos vivamente que a guarde num sistema com encriptação por palavra-passe.
 
-## Generate recovery codes
+## Gerar códigos de recuperação
 
-If you enabled 2FA before recovery codes were available, or if you want to refresh your recovery codes, follow these steps:
+Se ativou a 2FA antes de os códigos de recuperação estarem disponíveis, ou se pretender atualizar os seus códigos de recuperação, siga estes passos:
 
-- Log into [your Obsidian account](https://obsidian.md/account/profile) from your web browser.
-- Next to 2-factor authentication, select **Refresh recovery codes**.
-- In the popup window, enter your **password** and **6-digit authenticator code**.
-- A confirmation window will display your recovery codes. You have two options:
-    - **Copy recovery codes**: Copy the codes to paste elsewhere.
-    - **Download recovery codes**: Download a `obsidian-recovery-codes.txt` file containing your codes.
-- Select **Got it** to close the popup window.
+- Inicie sessão na [sua conta Obsidian](https://obsidian.md/account/profile) a partir do seu browser.
+- Junto à autenticação de 2 fatores, selecione **Atualizar códigos de recuperação**.
+- Na janela de popup, introduza a sua **palavra-passe** e o **código de autenticação de 6 dígitos**.
+- Uma janela de confirmação mostrará os seus códigos de recuperação. Tem duas opções:
+    - **Copiar códigos de recuperação**: Copie os códigos para colar noutro local.
+    - **Descarregar códigos de recuperação**: Descarregue um ficheiro `obsidian-recovery-codes.txt` com os seus códigos.
+- Selecione **Percebido** para fechar a janela de popup.
 
-You can use a recovery code **once** instead of your **6-digit authenticator code**. You can also refresh your recovery codes at any time.
+Pode usar um código de recuperação **uma vez** em vez do seu **código de autenticação de 6 dígitos**. Também pode atualizar os seus códigos de recuperação a qualquer momento.
 
-## Disable 2FA
+## Desativar a 2FA
 
-- Log into [your Obsidian account](https://obsidian.md/account/profile) from your web browser.
-- In the **Profile** section, go to **2-factor authentication** and select **Disable**.
-- Enter your Obsidian Password.
-- Enter the current six digit code from your authentication app.
-- Select **Disable 2FA**.
-- You will be brought back to the Account management screen.
+- Inicie sessão na [sua conta Obsidian](https://obsidian.md/account/profile) a partir do seu browser.
+- Na secção **Perfil**, aceda a **Autenticação de 2 fatores** e selecione **Desativar**.
+- Introduza a sua palavra-passe do Obsidian.
+- Introduza o código atual de seis dígitos da sua aplicação de autenticação.
+- Selecione **Desativar 2FA**.
+- Será levado de volta ao ecrã de gestão de conta.
 
-The **2-factor authentication** setting will once again show an **Enable** button, indicating that 2FA has been disabled.
+A definição de **Autenticação de 2 fatores** voltará a mostrar um botão **Ativar**, indicando que a 2FA foi desativada.
 
-## FAQ
+## Perguntas frequentes
 
-**I have enabled 2FA. Will I be logged out of my current Obsidian devices?**
-No. Enabling 2FA does not log you out everywhere for your convenience. If you need to, you can manually do that from your account page, and subsequently login again on each of your devices.
+**Ativei a 2FA. Serei desconectado dos meus dispositivos Obsidian atuais?**
+Não. Ativar a 2FA não o desconecta em todo o lado por sua conveniência. Se necessário, pode fazê-lo manualmente a partir da sua página de conta e, subsequentemente, iniciar sessão novamente em cada um dos seus dispositivos.
 
-**I enabled, then disabled 2FA. I would like to set it up again. Can I use the original QR code or setup key?**
-No. You will be provided a new **QR code** and new **Setup key** every time you initiate a new setup of 2FA.
+**Ativei e depois desativei a 2FA. Gostaria de a configurar novamente. Posso usar o código QR ou chave de configuração original?**
+Não. Ser-lhe-á fornecido um novo **código QR** e uma nova **chave de configuração** sempre que iniciar uma nova configuração de 2FA.
 
-**I have enabled 2FA. I have yet to be asked for it after several log-out/log-in attempts. Is this working?**
-Your browser cache may be allowing you to appear as if you are making changes to the page (such as logging in or out) when in actuality you are accessing the stored data. Try using a private browsing window to log-in to confirm 2FA is working.
+**Ativei a 2FA. Ainda não me foi pedida após várias tentativas de sair/entrar. Está a funcionar?**
+A cache do seu browser pode estar a permitir-lhe parecer que está a fazer alterações na página (como iniciar ou terminar sessão) quando na realidade está a aceder aos dados guardados. Tente usar uma janela de navegação privada para iniciar sessão e confirmar que a 2FA está a funcionar.
 
-If you continue to experience this behavior, please [submit a bug report](https://forum.obsidian.md/c/bug-reports/7).
+Se continuar a ter este comportamento, por favor [submeta um relatório de erro](https://forum.obsidian.md/c/bug-reports/7).
 
-**I lost my recovery codes, authenticator, and everything needed to log into my account. What do I do?**
+**Perdi os meus códigos de recuperação, aplicação de autenticação e tudo o que preciso para iniciar sessão na minha conta. O que devo fazer?**
 
-If you've lost your recovery codes and authenticator, please email [support@obsidian.md](mailto:support@obsidian.md?subject=I%20lost%20my%202FA) for assistance in regaining access to your account.
+Se perdeu os seus códigos de recuperação e a aplicação de autenticação, envie um email para [support@obsidian.md](mailto:support@obsidian.md?subject=I%20lost%20my%202FA) para obter assistência no acesso à sua conta.

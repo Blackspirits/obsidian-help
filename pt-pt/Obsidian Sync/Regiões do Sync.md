@@ -16,7 +16,7 @@ As seguintes regiões estão disponíveis com o Obsidian Sync. Recomendamos a ut
 
 ## Alterar a região do Sync
 
-Para alterar a região do seu cofre remoto, terá de recriar o cofre num servidor do Sync diferente. Note que também pode alterar a região utilizando o assistente de migração [[Actualizar encriptação do Sync]], se o seu cofre remoto estiver numa versão mais antiga.
+Para alterar a região do seu cofre remoto, terá de recriar o cofre num servidor do Sync diferente. Note que também pode alterar a região utilizando o assistente de migração [[Atualizar encriptação do Sync]], se o seu cofre remoto estiver numa versão mais antiga.
 
 > [!danger] As migrações são destrutivas
 > 

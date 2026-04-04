@@ -1,121 +1,119 @@
 ---
-localized: false
 permalink: web-clipper/variables
 ---
-[[Obsidian Web Clipper/Modelos|Web Clipper templates]] can use variables to automatically pre-populate data from the page in a template. Variables can be used in the **note name**, **note location**, **properties**, and **note content**. Variables can also be modified using [[Filtros]].
+Os [[Obsidian Web Clipper/Modelos|modelos do Web Clipper]] podem usar variáveis para pré-preencher automaticamente dados da página num modelo. As variáveis podem ser usadas no **nome da nota**, **localização da nota**, **propriedades** e **conteúdo da nota**. As variáveis também podem ser modificadas usando [[Filtros]].
 
-Use the `...` icon in the [[Introdução ao Obsidian Web Clipper|Web Clipper]] extension to access the current page variables for use in templates. There are five types of variables you can use:
+Use o ícone `...` na extensão do [[Introdução ao Obsidian Web Clipper|Web Clipper]] para aceder às variáveis da página atual para uso em modelos. Existem cinco tipos de variáveis que pode usar:
 
-- [[Variáveis#Preset variables|Preset variables]]
-- [[Variáveis#Prompt variables|Prompt variables]]
-- [[Variáveis#Meta variables|Meta variables]]
-- [[Variáveis#Selector variables|Selector variables]]
-- [[Variáveis#Schema.org variables|Schema.org variables]]
+- [[Variáveis#Preset variables|Variáveis predefinidas]]
+- [[Variáveis#Prompt variables|Variáveis de prompt]]
+- [[Variáveis#Meta variables|Variáveis meta]]
+- [[Variáveis#Selector variables|Variáveis selector]]
+- [[Variáveis#Schema.org variables|Variáveis Schema.org]]
 
-## Preset variables
+## Variáveis predefinidas
 
-Preset variables are automatically generated based on the page content. These typically work for most websites.
+As variáveis predefinidas são geradas automaticamente com base no conteúdo da página. Normalmente funcionam para a maioria dos sites.
 
-The main content variable is `{{content}}`, which contains the article content, or the [[Destacar páginas web|highlights]], or the selection if there is any selected text on the page. Note that `{{content}}` attempts to extract the main content of the page, which may not always be what you want. In that case, you can use other preset variables or selector variables to extract the content you need.
+A variável de conteúdo principal é `{{content}}`, que contém o conteúdo do artigo, os [[Destacar páginas web|destaques]] ou a seleção se houver texto selecionado na página. Note que `{{content}}` tenta extrair o conteúdo principal da página, o que pode nem sempre ser o que pretende. Nesse caso, pode usar outras variáveis predefinidas ou variáveis selector para extrair o conteúdo de que precisa.
 
-| Variable            | Description                                                                            |
+| Variável            | Descrição                                                                              |
 | ------------------- | -------------------------------------------------------------------------------------- |
-| `{{author}}`        | Author of the page                                                                     |
-| `{{content}}`       | Article content, [[Highlight web pages\|highlights]], or selection, in Markdown format |
-| `{{contentHtml}}`   | Article content, [[Highlight web pages\|highlights]], or selection, in HTML format     |
-| `{{date}}`          | Current date, can be formatted using the `date` filter                                 |
-| `{{description}}`   | Description or excerpt                                                                 |
-| `{{domain}}`        | Domain                                                                                 |
-| `{{favicon}}`       | Favicon URL                                                                            |
-| `{{fullHtml}}`      | Unprocessed HTML for the full page content                                             |
-| `{{highlights}}`    | [[Highlight web pages\|Highlights]] with text and timestamps                           |
-| `{{image}}`         | Social share image URL                                                                 |
-| `{{published}}`     | Published date, can be formatted using the `date` filter                               |
-| `{{selection}}`     | Selection in Markdown format                                                           |
-| `{{selectionHtml}}` | Selection in HTML format                                                               |
-| `{{site}}`          | Site name or publisher                                                                 |
-| `{{title}}`         | Title of the page                                                                      |
-| `{{time}}`          | Current date and time                                                                  |
-| `{{url}}`           | Current URL                                                                            |
-| `{{words}}`         | Word count                                                                             |
+| `{{author}}`        | Autor da página                                                                        |
+| `{{content}}`       | Conteúdo do artigo, [[Highlight web pages\|destaques]] ou seleção, em formato Markdown |
+| `{{contentHtml}}`   | Conteúdo do artigo, [[Highlight web pages\|destaques]] ou seleção, em formato HTML     |
+| `{{date}}`          | Data atual, pode ser formatada usando o filtro `date`                                  |
+| `{{description}}`   | Descrição ou excerto                                                                   |
+| `{{domain}}`        | Domínio                                                                                |
+| `{{favicon}}`       | URL do favicon                                                                         |
+| `{{fullHtml}}`      | HTML não processado para o conteúdo completo da página                                 |
+| `{{highlights}}`    | [[Highlight web pages\|Destaques]] com texto e marcas temporais                        |
+| `{{image}}`         | URL da imagem de partilha social                                                       |
+| `{{published}}`     | Data de publicação, pode ser formatada usando o filtro `date`                          |
+| `{{selection}}`     | Seleção em formato Markdown                                                            |
+| `{{selectionHtml}}` | Seleção em formato HTML                                                                |
+| `{{site}}`          | Nome do site ou publicador                                                             |
+| `{{title}}`         | Título da página                                                                       |
+| `{{time}}`          | Data e hora atuais                                                                     |
+| `{{url}}`           | URL atual                                                                              |
+| `{{words}}`         | Contagem de palavras                                                                   |
 
-## Prompt variables
+## Variáveis de prompt
 
-Prompt variables leverage language models to extract and modify data using natural language. Prompt variables require [[Interpretar páginas web|Interpreter]] to be enabled and configured.
+As variáveis de prompt utilizam modelos de linguagem para extrair e modificar dados usando linguagem natural. As variáveis de prompt requerem que o [[Interpretar páginas web|Interpretador]] esteja ativado e configurado.
 
-Prompt variables use the syntax `{{"a summary of the page"}}`. The double quotes around the prompt are important and distinguish prompts from preset variables. Prompt responses can be post-processed with [[Filtros]], e.g. `{{"a summary of the page"|blockquote}}`.
+As variáveis de prompt usam a sintaxe `{{"um resumo da página"}}`. As aspas duplas em torno do prompt são importantes e distinguem os prompts das variáveis predefinidas. As respostas dos prompts podem ser pós-processadas com [[Filtros]], por exemplo `{{"um resumo da página"|blockquote}}`.
 
-### When to use prompt variables
+### Quando usar variáveis de prompt
 
-Prompt variables have the benefit of being extremely flexible and easy to write, however they come with several tradeoffs: they are slower to run, and may have cost and privacy considerations depending on the [[Interpretar páginas web#Models|provider]] you choose.
+As variáveis de prompt têm a vantagem de serem extremamente flexíveis e fáceis de escrever, no entanto têm várias desvantagens: são mais lentas a executar e podem ter considerações de custo e privacidade dependendo do [[Interpretar páginas web#Models|fornecedor]] que escolher.
 
-Unlike other variable types, prompt variables need to be processed by an external language model, so they are replaced only once [[Interpretar páginas web|Interpreter]] has run.
+Ao contrário de outros tipos de variáveis, as variáveis de prompt precisam de ser processadas por um modelo de linguagem externo, pelo que são substituídas apenas depois de o [[Interpretar páginas web|Interpretador]] ter sido executado.
 
-It is best to *not* use prompt variables if the data you want to extract is in a consistent format that could be extracted with other variable types. 
+É melhor *não* usar variáveis de prompt se os dados que pretende extrair estão num formato consistente que pode ser extraído com outros tipos de variáveis.
 
-On the other hand, prompt variables can be useful if the data you want to extract is an *inconsistent* format across websites. For example, you can make a [[Obsidian Web Clipper/Modelos|template]] to save books that is agnostic of the book site. Prompt variables like `{{"author of the book"}}` will work across any book site, whereas selector variables typically only work for one site.
+Por outro lado, as variáveis de prompt podem ser úteis se os dados que pretende extrair estão num formato *inconsistente* entre sites. Por exemplo, pode criar um [[Obsidian Web Clipper/Modelos|modelo]] para guardar livros que seja agnóstico do site de livros. Variáveis de prompt como `{{"autor do livro"}}` funcionarão em qualquer site de livros, enquanto as variáveis selector normalmente funcionam apenas para um site.
 
-### Examples
+### Exemplos
 
-Prompts can use almost any natural language query. Depending on the model you use, prompts can query or translate data across languages.
+Os prompts podem usar quase qualquer consulta em linguagem natural. Dependendo do modelo que usar, os prompts podem consultar ou traduzir dados em vários idiomas.
 
-- `{{"a three bullet point summary, translated to French"}}` to extract bullet points about the page, and translate them to French.
-- `{{"un resumé de la page en trois points"}}` to extract three bullet points using a prompt in French.
+- `{{"um resumo em três pontos, traduzido para francês"}}` para extrair pontos sobre a página e traduzi-los para francês.
+- `{{"un resumé de la page en trois points"}}` para extrair três pontos usando um prompt em francês.
 
-Prompts can transform page content into JSON that can be manipulated with [[Filtros|filters]]. For example:
+Os prompts podem transformar o conteúdo da página em JSON que pode ser manipulado com [[Filtros|filtros]]. Por exemplo:
 
 ```
-{{"return a JSON object for each tweet, that includes the author, tweet_text, date in YYYY-MM-DD format, and images array (if there are any)"|map:tweet => ({text: tweet.tweet_text, author: tweet.author, date: tweet.date})|template:"${text}\n— [[@${author}]], [[${date}]]\n"}}
+{{"devolver um objeto JSON para cada tweet, que inclua o autor, tweet_text, data no formato YYYY-MM-DD e matriz de imagens (se existirem)"|map:tweet => ({text: tweet.tweet_text, author: tweet.author, date: tweet.date})|template:"${text}\n— [[@${author}]], [[${date}]]\n"}}
 ```
 
 
-## Meta variables
+## Variáveis meta
 
-Meta variables allow you to extract data from [meta elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta) in the page, including [Open Graph](https://ogp.me/) data used to populate social share previews.
+As variáveis meta permitem extrair dados de [elementos meta](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta) na página, incluindo dados do [Open Graph](https://ogp.me/) usados para preencher pré-visualizações de partilha social.
 
-- `{{meta:name}}` returns the content of the meta name tag with the given name, e.g. `{{meta:name:description}}` for the `description` meta tag.
-- `{{meta:property}}` returns the content of the meta property tag with the given property, e.g. `{{meta:property:og:title}}` for the `og:title` meta tag.
+- `{{meta:name}}` devolve o conteúdo da tag meta name com o nome fornecido, por exemplo `{{meta:name:description}}` para a tag meta `description`.
+- `{{meta:property}}` devolve o conteúdo da tag meta property com a propriedade fornecida, por exemplo `{{meta:property:og:title}}` para a tag meta `og:title`.
 
-## Selector variables
+## Variáveis selector
 
-Selector variables allow you to extract text content from elements on the page using [CSS selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators).
+As variáveis selector permitem extrair conteúdo de texto de elementos na página usando [seletores CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators).
 
-The syntax is `{{selector:cssSelector?attribute}}`, where `?attribute` is optional. If no attribute is specified, the text content of the element is returned. You can also use `{{selectorHtml:cssSelector}}` to get the HTML content of the element. Selector variables tend to work best on a specific website or set of websites that have consistent HTML structure.
+A sintaxe é `{{selector:seletorCSS?atributo}}`, onde `?atributo` é opcional. Se não for especificado nenhum atributo, é devolvido o conteúdo de texto do elemento. Também pode usar `{{selectorHtml:seletorCSS}}` para obter o conteúdo HTML do elemento. As variáveis selector tendem a funcionar melhor num site específico ou conjunto de sites que têm uma estrutura HTML consistente.
 
-- `{{selector:h1}}` returns text content of any `h1` elements on the page.
-- `{{selector:.author}}` returns text content of any `.author` elements on the page.
-- `{{selector:img.hero?src}}` returns the `src` attribute of the image with class `hero`.
-- `{{selector:a.main-link?href}}` returns the `href` attribute of the anchor tag with class `main-link`.
-- `{{selectorHtml:body|markdown}}` returns the entire HTML of the `body` element, converted to Markdown using the `markdown` [[Filtros#HTML processing|filter]].
-- Nested CSS selectors and combinators are supported if you need more specificity.
-- If multiple elements match the selector, an array is returned, which you can process with [[Filtros#Arrays and objects|array and object filters]] like `join` or `map`.
+- `{{selector:h1}}` devolve o conteúdo de texto de quaisquer elementos `h1` na página.
+- `{{selector:.author}}` devolve o conteúdo de texto de quaisquer elementos `.author` na página.
+- `{{selector:img.hero?src}}` devolve o atributo `src` da imagem com a classe `hero`.
+- `{{selector:a.main-link?href}}` devolve o atributo `href` da tag âncora com a classe `main-link`.
+- `{{selectorHtml:body|markdown}}` devolve o HTML completo do elemento `body`, convertido para Markdown usando o [[Filtros#HTML processing|filtro]] `markdown`.
+- Os seletores CSS aninhados e combinadores são suportados se precisar de maior especificidade.
+- Se múltiplos elementos corresponderem ao seletor, é devolvida uma matriz, que pode processar com [[Filtros#Arrays and objects|filtros de matriz e objeto]] como `join` ou `map`.
 
-Selector variables can also be used directly in [[Lógica|template logic]]:
+As variáveis selector também podem ser usadas diretamente na [[Lógica|lógica de template]]:
 
-- In loops: `{% for comment in selector:.comment %}...{% endfor %}`
-- In conditionals: `{% if selector:.premium-badge %}...{% endif %}`
-- In variable assignment: `{% set items = selector:.list-item %}`
+- Em ciclos: `{% for comment in selector:.comment %}...{% endfor %}`
+- Em condicionais: `{% if selector:.premium-badge %}...{% endif %}`
+- Em atribuição de variáveis: `{% set items = selector:.list-item %}`
 
-## Schema.org variables
+## Variáveis Schema.org
 
-Schema variables allow you to extract data from [schema.org](https://schema.org/) JSON-LD on the page. Schema.org data can also be used to automatically [[Obsidian Web Clipper/Modelos#Schema.org matching|trigger a template]].
+As variáveis schema permitem extrair dados do [schema.org](https://schema.org/) JSON-LD na página. Os dados do Schema.org também podem ser usados para [[Obsidian Web Clipper/Modelos#Schema.org matching|acionar automaticamente um modelo]].
 
-- `{{schema:@Type:key}}` returns the value of the key from the schema.
-- `{{schema:@Type:parent.child}}` returns the value of a nested property.
-- `{{schema:@Type:arrayKey}}` returns the first item in an array.
-- `{{schema:@Type:arrayKey[index].property}}` returns the item at the specified index in an array.
-- `{{schema:@Type:arrayKey[*].property}}` returns a specific property from all items in an array.
+- `{{schema:@Tipo:chave}}` devolve o valor da chave do schema.
+- `{{schema:@Tipo:pai.filho}}` devolve o valor de uma propriedade aninhada.
+- `{{schema:@Tipo:chaveMatriz}}` devolve o primeiro item de uma matriz.
+- `{{schema:@Tipo:chaveMatriz[índice].propriedade}}` devolve o item no índice especificado de uma matriz.
+- `{{schema:@Tipo:chaveMatriz[*].propriedade}}` devolve uma propriedade específica de todos os itens de uma matriz.
 
-You can also use a shorthand notation without specifying the schema type:
+Também pode usar uma notação abreviada sem especificar o tipo de schema:
 
-- `{{schema:author}}` will match the first `author` property found in any schema type.
-- `{{schema:name}}` will match the first `name` property found in any schema type.
+- `{{schema:author}}` corresponderá à primeira propriedade `author` encontrada em qualquer tipo de schema.
+- `{{schema:name}}` corresponderá à primeira propriedade `name` encontrada em qualquer tipo de schema.
 
-This shorthand is particularly useful when you don't know or don't care about the specific schema type, but you know the property name you're looking for.
+Esta abreviatura é particularmente útil quando não sabe ou não se preocupa com o tipo de schema específico, mas sabe o nome da propriedade que procura.
 
-Nested properties and array access work as well, both with and without the schema `@Type` specified:
+As propriedades aninhadas e o acesso a matrizes também funcionam, com e sem o `@Tipo` de schema especificado:
 
-- `{{schema:author.name}}` will find the first `author` property and then access its `name` sub-property.
-- `{{schema:author[0].name}}` will access the `name` of the first author in an array of authors.
-- `{{schema:author[*].name}}` will return an array of all author names.
-
+- `{{schema:author.name}}` encontrará a primeira propriedade `author` e depois acederá à sua subpropriedade `name`.
+- `{{schema:author[0].name}}` acederá ao `name` do primeiro autor numa matriz de autores.
+- `{{schema:author[*].name}}` devolverá uma matriz com todos os nomes de autores.

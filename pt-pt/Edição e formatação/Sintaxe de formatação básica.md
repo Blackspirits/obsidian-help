@@ -1,192 +1,194 @@
 ---
-localized: false
+aliases:
+  - How to/Format your notes
+  - Markdown
+description: Aprenda a aplicar formatação básica às suas notas no Obsidian, usando Markdown.
+mobile: true
 permalink: syntax
 publish: true
-mobile: true
-description: 'Learn how to apply basic formatting to your notes in Obsidian, using Markdown.'
 ---
 
-Learn how to apply basic formatting to your notes, using [Markdown](https://daringfireball.net/projects/markdown/). For more advanced formatting syntax, refer to [[Sintaxe de formatação avançada]].
+Aprenda a aplicar formatação básica às suas notas, usando [Markdown](https://daringfireball.net/projects/markdown/). Para uma sintaxe de formatação mais avançada, consulte [[Sintaxe de formatação avançada]].
 
-## Paragraphs
+## Parágrafos
 
-To create paragraphs in Markdown, use a **blank line** to separate blocks of text. Each block of text separated by a blank line is treated as a distinct paragraph.
+Para criar parágrafos em Markdown, use uma **linha em branco** para separar blocos de texto. Cada bloco de texto separado por uma linha em branco é tratado como um parágrafo distinto.
 
 ```md
-This is a paragraph.
+Este é um parágrafo.
 
-This is another paragraph.
+Este é outro parágrafo.
 ```
 
-This is a paragraph.
+Este é um parágrafo.
 
-This is another paragraph.
+Este é outro parágrafo.
 
-A blank line between lines of text creates separate paragraphs. This is the default behavior in Markdown.
+Uma linha em branco entre linhas de texto cria parágrafos separados. Este é o comportamento predefinido em Markdown.
 
-> [!tip]- Multiple blank spaces
-> Multiple adjacent blank spaces within and between paragraphs collapse into a single space when displayed in [[Vistas e modo de edição#Reading view|Reading view]] or on [[Introdução ao Obsidian Publish|Obsidian Publish]] sites.
-> 
+> [!tip]- Múltiplos espaços em branco
+> Múltiplos espaços adjacentes dentro e entre parágrafos colapsam num único espaço quando apresentados na [[Vistas e modo de edição#Reading view|Vista de leitura]] ou em sites do [[Introdução ao Obsidian Publish|Obsidian Publish]].
+>
 > ```md
-> Multiple          adjacent          spaces
-> 
-> 
-> 
-> and multiple newlines between paragraphs.
+> Múltiplos          espaços          adjacentes
+>
+>
+>
+> e múltiplas linhas novas entre parágrafos.
 > ```
-> 
-> > Multiple          adjacent          spaces
-> > 
-> > 
-> > 
-> > and multiple newlines between paragraphs.
-> 
-> If you want to prevent spaces from collapsing or add multiple blank spaces, you can use the `&nbsp;` (non-breaking space) or `<br>` (line break) HTML tags.
+>
+> > Múltiplos          espaços          adjacentes
+> >
+> >
+> >
+> > e múltiplas linhas novas entre parágrafos.
+>
+> Se pretender evitar que os espaços colapsem ou adicionar múltiplos espaços em branco, pode usar as tags HTML `&nbsp;` (espaço não separável) ou `<br>` (quebra de linha).
 
-### Line breaks
+### Quebras de linha
 
-By default in Obsidian, pressing `Enter` once will create a new line in your note, but this is treated as a *continuation* of the same paragraph in the rendered output, following typical Markdown behavior. To insert a line break *within* a paragraph without starting a new paragraph, you can either:
+Por predefinição no Obsidian, premir `Enter` uma vez criará uma nova linha na sua nota, mas esta é tratada como uma *continuação* do mesmo parágrafo no resultado renderizado, seguindo o comportamento típico do Markdown. Para inserir uma quebra de linha *dentro* de um parágrafo sem começar um novo parágrafo, pode:
 
-- Add **two spaces** at the end of a line before pressing `Enter`, or
-- Use the shortcut `Shift+Enter` to directly insert a line break.
+- Adicionar **dois espaços** no final de uma linha antes de premir `Enter`, ou
+- Usar o atalho `Shift+Enter` para inserir diretamente uma quebra de linha.
 
-> [!question]- Why don't multiple `Enter` presses create more line breaks in reading view?
-> In Markdown, a single `Enter` is ignored, and multiple consecutive `Enter` presses result in just one new paragraph. This behavior aligns with Markdown’s soft wrap rule, where extra blank lines do not generate additional line breaks or paragraphs—they are collapsed into a single paragraph break. This is how Markdown handles text by default, ensuring that paragraphs flow naturally without unexpected breaks​.
+> [!question]- Por que múltiplas pressões de `Enter` não criam mais quebras de linha na vista de leitura?
+> Em Markdown, um único `Enter` é ignorado e múltiplas pressões consecutivas de `Enter` resultam em apenas um novo parágrafo. Este comportamento está alinhado com a regra de ajuste suave do Markdown, onde linhas em branco extra não geram quebras de linha ou parágrafos adicionais — são colapsadas numa única quebra de parágrafo. É assim que o Markdown trata o texto por predefinição, garantindo que os parágrafos fluem naturalmente sem quebras inesperadas.
 
-Obsidian includes a **[[Configurações#Strict line breaks|Strict line breaks]]** setting, which makes Obsidian follow the standard Markdown specification for line breaks.
+O Obsidian inclui uma definição de **[[Configurações#Strict line breaks|Quebras de linha estritas]]**, que faz o Obsidian seguir a especificação Markdown padrão para quebras de linha.
 
-To enable this feature:
+Para ativar esta funcionalidade:
 
-1. Open **[[Configurações]]**.
-2. Go to the **Editor** tab.
-3. Enable **Strict Line Breaks**.
+1. Abra as **[[Configurações]]**.
+2. Vá ao separador **Editor**.
+3. Ative **Quebras de linha estritas**.
 
-When **Strict Line Breaks** is enabled in Obsidian, line breaks have three distinct behaviors depending on how the lines are separated:
+Quando as **Quebras de linha estritas** estão ativas no Obsidian, as quebras de linha têm três comportamentos distintos dependendo de como as linhas são separadas:
 
-**Single return with no spaces**: A single `Enter` with no trailing spaces will combine the two separate lines into a single line when rendered.
+**Return único sem espaços**: Um único `Enter` sem espaços no final combinará as duas linhas separadas numa única linha quando renderizadas.
 
 ```md
-line one
-line two
+linha um
+linha dois
 ```
 
-Renders as:
+Renderiza como:
 
-line one line two
+linha um linha dois
 
-**Single return with two or more trailing spaces**: If you add two or more spaces at the end of the first line before pressing `Enter`, the two lines remain part of the same paragraph, but are broken by a line break (HTML `<br>` element). We'll use two underscores to stand in for spaces in this example.
+**Return único com dois ou mais espaços no final**: Se adicionar dois ou mais espaços no final da primeira linha antes de premir `Enter`, as duas linhas permanecem parte do mesmo parágrafo, mas são separadas por uma quebra de linha (elemento HTML `<br>`). Usaremos dois sublinhados para representar espaços neste exemplo.
 
 ```md
-line three__  
-line four
+linha três__
+linha quatro
 ```
 
-Renders as:
+Renderiza como:
 
-line three<br>
-line four
+linha três<br>
+linha quatro
 
-**Double return (with or without trailing spaces)**: Pressing `Enter` twice (or more) separates the lines into two distinct paragraphs (HTML `<p>` elements), regardless of whether you add spaces at the end of the first line.
+**Return duplo (com ou sem espaços no final)**: Premir `Enter` duas vezes (ou mais) separa as linhas em dois parágrafos distintos (elementos HTML `<p>`), independentemente de adicionar espaços no final da primeira linha.
 
 ```md
-line five
+linha cinco
 
-line six
+linha seis
 ```
 
-Renders as:
+Renderiza como:
 
-<p>line five</p>
-<p>line six</p>
+<p>linha cinco</p>
+<p>linha seis</p>
 
-## Headings
+## Cabeçalhos
 
-To create a heading, add up to six `#` symbols before your heading text. The number of `#` symbols sets the level of the heading (as shown in the [[Sumário]]).
+Para criar um cabeçalho, adicione até seis símbolos `#` antes do texto do cabeçalho. O número de símbolos `#` define o nível do cabeçalho (como mostrado no [[Sumário]]).
 
 ```md
-# This is a heading 1
-## This is a heading 2
-### This is a heading 3
-#### This is a heading 4
-##### This is a heading 5
-###### This is a heading 6
+# Este é um cabeçalho 1
+## Este é um cabeçalho 2
+### Este é um cabeçalho 3
+#### Este é um cabeçalho 4
+##### Este é um cabeçalho 5
+###### Este é um cabeçalho 6
 ```
 
 %% These headings use HTML to avoid cluttering the Outline/Table of contents %%
-<h1>This is a heading 1</h1>
-<h2>This is a heading 2</h2>
-<h3>This is a heading 3</h3>
-<h4>This is a heading 4</h4>
-<h5>This is a heading 5</h5>
-<h6>This is a heading 6</h6>
+<h1>Este é um cabeçalho 1</h1>
+<h2>Este é um cabeçalho 2</h2>
+<h3>Este é um cabeçalho 3</h3>
+<h4>Este é um cabeçalho 4</h4>
+<h5>Este é um cabeçalho 5</h5>
+<h6>Este é um cabeçalho 6</h6>
 
-## Bold, italics, highlights
+## Negrito, itálico, realces
 
-Text formatting can also be applied using [[Atalhos de edição]].
+A formatação de texto também pode ser aplicada usando [[Atalhos de edição]].
 
-| Style | Syntax | Example | Output |
+| Estilo | Sintaxe | Exemplo | Resultado |
 |-|-|-|-|
-| Bold | `** **` or `__ __` | `**Bold text**` | **Bold text** |
-| Italic | `* *` or `_ _`  | `*Italic text*` | *Italic text* |
-| Strikethrough | `~~ ~~` |  `~~Striked out text~~` | ~~Striked out text~~ |
-| Highlight | `== ==` |  `==Highlighted text==` | ==Highlighted text== |
-| Bold and nested italic | `** **` and `_ _`  | `**Bold text and _nested italic_ text**` | **Bold text and _nested italic_ text** |
-| Bold and italic | `*** ***` or `___ ___` |  `***Bold and italic text***` | ***Bold and italic text*** |
+| Negrito | `** **` ou `__ __` | `**Texto a negrito**` | **Texto a negrito** |
+| Itálico | `* *` ou `_ _` | `*Texto em itálico*` | *Texto em itálico* |
+| Tachado | `~~ ~~` | `~~Texto tachado~~` | ~~Texto tachado~~ |
+| Realce | `== ==` | `==Texto realçado==` | ==Texto realçado== |
+| Negrito e itálico aninhado | `** **` e `_ _` | `**Texto a negrito e _itálico aninhado_**` | **Texto a negrito e _itálico aninhado_** |
+| Negrito e itálico | `*** ***` ou `___ ___` | `***Texto a negrito e itálico***` | ***Texto a negrito e itálico*** |
 
-Formatting can be forced to display in plain text by adding a backslash `\` in front of it.
+A formatação pode ser forçada a aparecer como texto simples adicionando uma barra invertida `\` antes dela.
 
-\*\*This line will not be bold\*\*
-
-```markdown
-\*\*This line will not be bold\*\*
-```
-
-\**This line will be italic and show the asterisks*\*
+\*\*Esta linha não ficará a negrito\*\*
 
 ```markdown
-\**This line will be italic and show the asterisks*\*
+\*\*Esta linha não ficará a negrito\*\*
 ```
 
-## Internal links
+\**Esta linha ficará em itálico e mostrará os asteriscos*\*
 
-Obsidian supports two formats for [[Links internos]] between notes:
+```markdown
+\**Esta linha ficará em itálico e mostrará os asteriscos*\*
+```
 
-- Wikilink: `[[Three laws of motion]]`
-- Markdown: `[Three laws of motion](Three%20laws%20of%20motion.md)`
+## Ligações internas
 
-## External links
+O Obsidian suporta dois formatos para [[Links internos]] entre notas:
 
-If you want to link to an external URL, you can create an inline link by surrounding the link text in brackets (`[ ]`), and then the URL in parentheses (`( )`).
+- Wikilink: `[[Três leis do movimento]]`
+- Markdown: `[Três leis do movimento](Tres%20leis%20do%20movimento.md)`
+
+## Ligações externas
+
+Se pretender criar uma ligação para um URL externo, pode criar uma ligação inline rodeando o texto da ligação entre parênteses retos (`[ ]`), e depois o URL entre parênteses curvos (`( )`).
 
 ```md
-[Obsidian Help](https://help.obsidian.md)
+[Ajuda do Obsidian](https://help.obsidian.md)
 ```
 
-[Obsidian Help](https://help.obsidian.md)
+[Ajuda do Obsidian](https://help.obsidian.md)
 
-You can also create external links to files in other vaults, by linking to an [[Obsidian URI|Obsidian URI]].
+Também pode criar ligações externas para ficheiros noutros cofres, ligando a um [[Obsidian URI|URI do Obsidian]].
 
 ```md
-[Note](obsidian://open?vault=MainVault&file=Note.md)
+[Nota](obsidian://open?vault=CoffrePrincipal&file=Nota.md)
 ```
 
-### Escape blank spaces in links
+### Escapar espaços em ligações
 
-If your URL contains blank spaces, you must escape them by replacing them with `%20`.
+Se o seu URL contiver espaços, deve escapá-los substituindo-os por `%20`.
 
 ```md
-[My Note](obsidian://open?vault=MainVault&file=My%20Note.md)
+[A minha nota](obsidian://open?vault=CoffrePrincipal&file=A%20minha%20nota.md)
 ```
 
-You can also escape the URL by wrapping it with angled brackets (`< >`).
+Também pode escapar o URL envolvendo-o com parênteses angulares (`< >`).
 
 ```md
-[My Note](<obsidian://open?vault=MainVault&file=My Note.md>)
+[A minha nota](<obsidian://open?vault=CoffrePrincipal&file=A minha nota.md>)
 ```
 
-## External images
+## Imagens externas
 
-You can add images with external URLs, by adding a `!` symbol before an [[#External links|external link]].
+Pode adicionar imagens com URLs externos, adicionando um símbolo `!` antes de uma [[#Ligações externas|ligação externa]].
 
 ```md
 ![Engelbart](https://history-computer.com/ModernComputer/Basis/images/Engelbart.jpg)
@@ -194,151 +196,140 @@ You can add images with external URLs, by adding a `!` symbol before an [[#Exter
 
 ![Engelbart](https://history-computer.com/ModernComputer/Basis/images/Engelbart.jpg)
 
-You can change the image dimensions, by adding `|640x480` to the link destination, where 640 is the width and 480 is the height.
+Pode alterar as dimensões da imagem adicionando `|640x480` ao destino da ligação, onde 640 é a largura e 480 é a altura.
 
 ```md
 ![Engelbart|100x145](https://history-computer.com/ModernComputer/Basis/images/Engelbart.jpg)
 ```
 
-If you only specify the width, the image scales according to its original aspect ratio. For example:
+Se especificar apenas a largura, a imagem é dimensionada de acordo com a sua proporção original. Por exemplo:
 
 ```md
 ![Engelbart|100](https://history-computer.com/ModernComputer/Basis/images/Engelbart.jpg)
 ```
 
-> [!tip]- Tip
-> If you want to add an image from inside your vault, you can also [[Incorporar ficheiros#Embed an image in a note|embed an image in a note]].
+> [!tip]- Dica
+> Se pretender adicionar uma imagem de dentro do seu cofre, também pode [[Incorporar ficheiros#Embed an image in a note|incorporar uma imagem numa nota]].
 
-## Quotes
+## Citações
 
-You can quote text by adding a `>` symbols before the text.
+Pode citar texto adicionando um símbolo `>` antes do texto.
 
 ```md
-> Human beings face ever more complex and urgent problems, and their effectiveness in dealing with these problems is a matter that is critical to the stability and continued progress of society.
+> Os seres humanos enfrentam problemas cada vez mais complexos e urgentes, e a sua eficácia em lidar com estes problemas é uma questão crítica para a estabilidade e o progresso contínuo da sociedade.
 
 \- Doug Engelbart, 1961
 ```
 
-> Human beings face ever more complex and urgent problems, and their effectiveness in dealing with these problems is a matter that is critical to the stability and continued progress of society.
+> Os seres humanos enfrentam problemas cada vez mais complexos e urgentes, e a sua eficácia em lidar com estes problemas é uma questão crítica para a estabilidade e o progresso contínuo da sociedade.
 
 \- Doug Engelbart, 1961
 
-> [!tip]- Tip
-> You can turn your quote into a [[Callouts|callout]] by adding `[!info]` as the first line in a quote.
+> [!tip]- Dica
+> Pode transformar a sua citação num [[Callouts|callout]] adicionando `[!info]` como primeira linha numa citação.
 
-## Lists
+## Listas
 
-You can create an unordered list by adding a `-`, `*`, or `+` before the text.
-
-```md
-- First list item
-- Second list item
-- Third list item
-```
-
-- First list item
-- Second list item
-- Third list item
-
-To create an ordered list, start each line with a number followed by a `.` or `)` symbol.
+Pode criar uma lista não ordenada adicionando `-`, `*` ou `+` antes do texto.
 
 ```md
-1. First list item
-2. Second list item
-3. Third list item
+- Primeiro item da lista
+- Segundo item da lista
+- Terceiro item da lista
 ```
 
-1. First list item
-2. Second list item
-3. Third list item
+- Primeiro item da lista
+- Segundo item da lista
+- Terceiro item da lista
+
+Para criar uma lista ordenada, comece cada linha com um número seguido de `.` ou `)`.
 
 ```md
-1) First list item
-2) Second list item
-3) Third list item
+1. Primeiro item da lista
+2. Segundo item da lista
+3. Terceiro item da lista
 ```
 
-1) First list item
-2) Second list item
-3) Third list item
-
-You can use `Shift+Enter` to insert a [[#Line breaks|line break]] within an ordered list without altering the numbering.
+1. Primeiro item da lista
+2. Segundo item da lista
+3. Terceiro item da lista
 
 ```md
-1. First list item
-   
-2. Second list item
-3. Third list item
-   
-4. Fourth list item
-5. Fifth list item
-6. Sixth list item
+1) Primeiro item da lista
+2) Segundo item da lista
+3) Terceiro item da lista
 ```
 
-### Task lists
+1) Primeiro item da lista
+2) Segundo item da lista
+3) Terceiro item da lista
 
-To create a task list, start each list item with a hyphen and space followed by `[ ]`.
+Pode usar `Shift+Enter` para inserir uma [[#Quebras de linha|quebra de linha]] numa lista ordenada sem alterar a numeração.
+
+### Listas de tarefas
+
+Para criar uma lista de tarefas, comece cada item da lista com um hífen e um espaço seguido de `[ ]`.
 
 ```md
-- [x] This is a completed task.
-- [ ] This is an incomplete task.
+- [x] Esta é uma tarefa concluída.
+- [ ] Esta é uma tarefa incompleta.
 ```
 
-- [x] This is a completed task.
-- [ ] This is an incomplete task.
+- [x] Esta é uma tarefa concluída.
+- [ ] Esta é uma tarefa incompleta.
 
-You can toggle a task in Reading view by selecting the checkbox.
+Pode marcar uma tarefa na Vista de leitura selecionando a caixa de verificação.
 
-> [!tip]- Tip
-> You can use any character inside the brackets to mark it as complete.
+> [!tip]- Dica
+> Pode usar qualquer carácter dentro dos parênteses retos para a marcar como concluída.
 >
 > ```md
-> - [x] Milk
-> - [?] Eggs
-> - [-] Eggs
+> - [x] Leite
+> - [?] Ovos
+> - [-] Ovos
 > ```
 >
-> - [x] Milk
-> - [?] Eggs
-> - [-] Eggs
+> - [x] Leite
+> - [?] Ovos
+> - [-] Ovos
 
-### Nesting lists
+### Aninhar listas
 
-You can nest any type of list—ordered, unordered, or task lists—under any other type of list.
+Pode aninhar qualquer tipo de lista — ordenada, não ordenada ou de tarefas — sob qualquer outro tipo de lista.
 
-To create a nested list, indent one or more list items. You can mix list types within a nested structure:
-
-```md
-1. First list item
-   1. Ordered nested list item
-2. Second list item
-   - Unordered nested list item
-```
-
-1. First list item
-   1. Ordered nested list item
-2. Second list item
-   - Unordered nested list item
-
-Similarly, you can create a nested task list by indenting one or more list items:
+Para criar uma lista aninhada, indente um ou mais itens da lista. Pode misturar tipos de listas numa estrutura aninhada:
 
 ```md
-- [ ] Task item 1
-	- [ ] Subtask 1
-- [ ] Task item 2
-	- [ ] Subtask 1
+1. Primeiro item da lista
+   1. Item de lista ordenada aninhada
+2. Segundo item da lista
+   - Item de lista não ordenada aninhada
 ```
 
-- [ ] Task item 1
-	- [ ] Subtask 1
-- [ ] Task item 2
-	- [ ] Subtask 1
+1. Primeiro item da lista
+   1. Item de lista ordenada aninhada
+2. Segundo item da lista
+   - Item de lista não ordenada aninhada
 
-Use `Tab` or `Shift+Tab` to indent or unindent selected list items to easily organize them.
+Da mesma forma, pode criar uma lista de tarefas aninhada indentando um ou mais itens:
 
-## Horizontal rule
+```md
+- [ ] Item de tarefa 1
+	- [ ] Subtarefa 1
+- [ ] Item de tarefa 2
+	- [ ] Subtarefa 1
+```
 
-You can use three or more stars `***`, hyphens `---`, or underscore `___` on its own line to add a horizontal bar. You can also separate symbols using spaces.
+- [ ] Item de tarefa 1
+	- [ ] Subtarefa 1
+- [ ] Item de tarefa 2
+	- [ ] Subtarefa 1
+
+Use `Tab` ou `Shift+Tab` para indentar ou desidentar itens de lista selecionados para os organizar facilmente.
+
+## Linha horizontal
+
+Pode usar três ou mais asteriscos `***`, hífens `---` ou sublinhados `___` numa linha própria para adicionar uma barra horizontal. Também pode separar símbolos usando espaços.
 
 ```md
 ***
@@ -354,25 +345,25 @@ _ _ _
 
 ***
 
-## 
+## Código
 
-You can format  both inline within a sentence, or in its own block.
+Pode formatar código tanto inline dentro de uma frase como num bloco próprio.
 
-### Inline code
+### Código inline
 
-You can format code within a sentence using single backticks.
+Pode formatar código dentro de uma frase usando crases simples.
 
 ```md
-Text inside `backticks` on a line will be formatted like code.
+O texto dentro de `crases` numa linha será formatado como código.
 ```
 
-Text inside `backticks` on a line will be formatted like code.
+O texto dentro de `crases` numa linha será formatado como código.
 
-If you want to put backticks in an inline code block, surround it with double backticks like so: inline ``code with a backtick ` inside``.
+Se pretender colocar crases num bloco de código inline, rodeie-o com crases duplas: código inline ``com uma crase ` dentro``.
 
-### Code blocks
+### Blocos de código
 
-To format code as a block, enclose it with three or more backticks or three or more tildes.
+Para formatar código como um bloco, encerre-o com três ou mais crases ou três ou mais tils.
 
 ~~~
 `````
@@ -388,12 +379,12 @@ cd ~/Desktop
 cd ~/Desktop
 `````
 
-You can also create a code block by indenting the text using `Tab` or 4 blank spaces.
+Também pode criar um bloco de código indentando o texto com `Tab` ou 4 espaços em branco.
 `````md
     cd ~/Desktop
 `````
 
-You can add syntax highlighting to a code block, by adding a language code after the first set of backticks.
+Pode adicionar realce de sintaxe a um bloco de código adicionando um código de linguagem após o primeiro conjunto de crases.
 
 ~~~md
 `````js
@@ -412,26 +403,26 @@ function fancyAlert(arg) {
 }
 `````
 
-Obsidian uses Prism for syntax highlighting. For more information, refer to [Supported languages](https://prismjs.com/#supported-languages).
+O Obsidian usa o Prism para realce de sintaxe. Para mais informações, consulte [Linguagens suportadas](https://prismjs.com/#supported-languages).
 
-> [!info]+ PrismJS and editing views
-> [[Vistas e modo de edição#Source mode|Source mode]] and [[Vistas e modo de edição#Live Preview|Live Preview]] do not support PrismJS, and may render syntax highlighting differently.
+> [!info]+ PrismJS e vistas de edição
+> O [[Vistas e modo de edição#Source mode|Modo de código-fonte]] e o [[Vistas e modo de edição#Live Preview|Live Preview]] não suportam PrismJS e podem renderizar o realce de sintaxe de forma diferente.
 
-#### Nesting code blocks
+#### Aninhar blocos de código
 
-When you need to include a code block inside another code block (for example, when documenting how to use code blocks), you can use more than three backticks or tildes for the outer code block.
+Quando precisa de incluir um bloco de código dentro de outro bloco de código (por exemplo, ao documentar como usar blocos de código), pode usar mais de três crases ou tils para o bloco de código exterior.
 
-To nest code blocks, use four or more backticks (or tildes) for the outer block, while the inner block uses three:
+Para aninhar blocos de código, use quatro ou mais crases (ou tils) para o bloco exterior, enquanto o bloco interior usa três:
 `````md
 ````md
-Here's how to create a code block:
+Aqui está como criar um bloco de código:
 ```js
-console.log("Hello world")
+console.log("Olá mundo")
 ```
 ````
 `````
 
-You can also mix backticks and tildes. This is particularly useful when working with code that generates other code blocks:
+Também pode misturar crases e tils. Isto é particularmente útil ao trabalhar com código que gera outros blocos de código:
 `````md
 ````md
 ```dataviewjs
@@ -445,75 +436,75 @@ graph TD
 ````
 `````
 
-The key principle is that the outer code block must use **more** fence characters (backticks or tildes) than any inner code block, or use a different fence character type.
+O princípio fundamental é que o bloco de código exterior deve usar **mais** carateres de cerca (crases ou tils) do que qualquer bloco interior, ou usar um tipo diferente de carácter de cerca.
 
-## Footnotes
+## Notas de rodapé
 
-You can add footnotes[^footnote] to your notes using the following syntax:
+Pode adicionar notas de rodapé[^nota] às suas notas usando a seguinte sintaxe:
 
-[^footnote]: This is a footnote.
+[^nota]: Esta é uma nota de rodapé.
 
 ```md
-This is a simple footnote[^1].
+Esta é uma nota de rodapé simples[^1].
 
-[^1]: This is the referenced text.
-[^2]: Add 2 spaces at the start of each new line.
-  This lets you write footnotes that span multiple lines.
-[^note]: Named footnotes still appear as numbers, but can make it easier to identify and link references.
+[^1]: Este é o texto referenciado.
+[^2]: Adicione 2 espaços no início de cada nova linha.
+  Isto permite escrever notas de rodapé que abrangem múltiplas linhas.
+[^nota]: As notas de rodapé com nome ainda aparecem como números, mas podem facilitar a identificação e ligação de referências.
 ```
 
-You can also inline footnotes in a sentence. Note that the caret goes outside the brackets.
+Também pode incluir notas de rodapé inline numa frase. Note que o acento circunflexo vai fora dos parênteses retos.
 
 ```md
-You can also use inline footnotes. ^[This is an inline footnote.]
+Também pode usar notas de rodapé inline. ^[Esta é uma nota de rodapé inline.]
 ```
 
-> [!note] Note
-> Inline footnotes only work in reading view, not in Live Preview.
+> [!note] Nota
+> As notas de rodapé inline só funcionam na vista de leitura, não no Live Preview.
 
-## Comments
+## Comentários
 
-You can add comments by wrapping text with `%%`. Comments are only visible in Editing view.
+Pode adicionar comentários envolvendo texto com `%%`. Os comentários só são visíveis na Vista de edição.
 
 ```md
-This is an %%inline%% comment.
+Este é um comentário %%inline%%.
 
 %%
-This is a block comment.
+Este é um comentário em bloco.
 
-Block comments can span multiple lines.
+Os comentários em bloco podem abranger múltiplas linhas.
 %%
 ```
 
-## Escaping Markdown Syntax
+## Escapar sintaxe Markdown
 
-In some cases, you may need to display special characters in Markdown, such as `*`, `_`, or `#`, without triggering their formatting. To display these characters literally, place a backslash (`\`) before them.
+Em alguns casos, poderá precisar de apresentar carateres especiais em Markdown, como `*`, `_` ou `#`, sem acionar a sua formatação. Para apresentar estes carateres literalmente, coloque uma barra invertida (`\`) antes deles.
 
-> [!example] Common characters to escape
-> 
-> - Asterisk: `\*`
-> - Underscore: `\_`
-> - Hashtag: `\#`
-> - Backtick: `` \` ``
-> - Pipe (used in tables): `\|`
-> - Tilde: `\~`
-
-```md
-\*This text will not be italicized\*.
-```
-
-\*This text will not be italicized\*.
-
-When working with numbered lists, you may need to escape the period after the number to prevent automatic list formatting. Place the backslash (`\`) before the period, **not** before the number.
+> [!example] Carateres comuns a escapar
+>
+> - Asterisco: `\*`
+> - Sublinhado: `\_`
+> - Cardinal: `\#`
+> - Crase: `` \` ``
+> - Barra vertical (usada em tabelas): `\|`
+> - Til: `\~`
 
 ```md
-1\. This won't be a list item.
+\*Este texto não ficará em itálico\*.
 ```
 
-1\. This won't be a list item.
+\*Este texto não ficará em itálico\*.
 
-## Learn more
+Ao trabalhar com listas numeradas, poderá precisar de escapar o ponto após o número para evitar a formatação automática de lista. Coloque a barra invertida (`\`) antes do ponto, **não** antes do número.
 
-To learn more advanced formatting syntax, such as tables, diagrams, and math expressions, refer to [[Sintaxe de formatação avançada]].
+```md
+1\. Isto não será um item de lista.
+```
 
-To learn more about how Obsidian parses Markdown, refer to [[Obsidian Flavored Markdown]].
+1\. Isto não será um item de lista.
+
+## Saber mais
+
+Para aprender sintaxe de formatação mais avançada, como tabelas, diagramas e expressões matemáticas, consulte [[Sintaxe de formatação avançada]].
+
+Para aprender mais sobre como o Obsidian processa o Markdown, consulte [[Obsidian Flavored Markdown]].

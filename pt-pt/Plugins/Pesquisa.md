@@ -1,162 +1,161 @@
 ---
-localized: false
 permalink: plugins/search
 publish: true
 mobile: true
 description: Search is a core plugin that helps you find data in your Obsidian vault by using search terms and operators to narrow down results.
 ---
 
-Search is a [[Plugins nativos|core plugin]] that helps you find data in your Obsidian vault by using search terms and operators to narrow down results.
+A Pesquisa é um [[Plugins nativos|plugin nativo]] que o ajuda a encontrar dados no seu cofre do Obsidian usando termos de pesquisa e operadores para restringir os resultados.
 
-By default, you can find Search in the left sidebar ![[lucide-search.svg#icon]]. You can also open Search by pressing `Ctrl+Shift+F` (Windows/Linux) or `Command+Shift+F` (macOS).
+Por predefinição, pode encontrar a Pesquisa na barra lateral esquerda ![[lucide-search.svg#icon]]. Também pode abrir a Pesquisa premindo `Ctrl+Shift+F` (Windows/Linux) ou `Command+Shift+F` (macOS).
 
-- **Search selected text**: If you select text in the editor and open Search with the keyboard shortcut, Search shows you the search results for the selected text.
-- **Search recent search terms**: Open Search with an empty search term to list recent search terms. Click any of them to use the search term again.
+- **Pesquisar texto selecionado**: Se selecionar texto no editor e abrir a Pesquisa com o atalho de teclado, a Pesquisa mostra os resultados para o texto selecionado.
+- **Pesquisar termos recentes**: Abra a Pesquisa com um termo de pesquisa vazio para listar os termos de pesquisa recentes. Clique em qualquer um deles para usar o termo de pesquisa novamente.
 
-> [!info] Excluded files
-> Files matching your [[Configurações#Excluded files|Excluded files]] patterns will not appear in Search results.
+> [!info] Ficheiros excluídos
+> Os ficheiros que correspondam aos seus padrões de [[Configurações#Excluded files|Ficheiros excluídos]] não aparecerão nos resultados da Pesquisa.
 
-## Search terms
+## Termos de pesquisa
 
-A search term is the word or phrase that you enter in the search field. Learning how to write search terms effectively can help you quickly find what you're looking for, even in large vaults. Obsidian only searches the contents of notes and canvases.
+Um termo de pesquisa é a palavra ou frase que introduz no campo de pesquisa. Aprender a escrever termos de pesquisa eficazmente pode ajudá-lo a encontrar rapidamente o que procura, mesmo em cofres grandes. O Obsidian pesquisa apenas o conteúdo de notas e canvas.
 
-> [!tip]- Searching paths and filenames
-> By default, you can only search the paths and filenames of notes and canvases. To search for a path or filename of any file in the vault, use the `path` or `file` operator.
+> [!tip]- Pesquisar caminhos e nomes de ficheiros
+> Por predefinição, só pode pesquisar os caminhos e nomes de ficheiros de notas e canvas. Para pesquisar o caminho ou nome de ficheiro de qualquer ficheiro no cofre, use o operador `path` ou `file`.
 
-Each word in the search term is matched independently within each file. To search for an exact phrase, surround it with quotes, for example `"star wars"`. To search for quoted text within an exact phrase, you can _escape_ the quotes by adding a backslash (`\`) in front of the quote, for example `"they said \"hello\" to each other"`.
+Cada palavra no termo de pesquisa é correspondida independentemente em cada ficheiro. Para pesquisar uma frase exata, coloque-a entre aspas, por exemplo `"star wars"`. Para pesquisar texto entre aspas dentro de uma frase exata, pode _escapar_ as aspas adicionando uma barra invertida (`\`) antes das aspas, por exemplo `"eles disseram \"olá\" um ao outro"`.
 
-You can control whether to return files that contain _all_ the words in your search term, or _any_ of the words:
+Pode controlar se devem ser devolvidos ficheiros que contêm _todas_ as palavras do seu termo de pesquisa ou _qualquer uma_ das palavras:
 
-- `meeting work` returns files that contain both `meeting` and `work`.
-- `meeting OR work` returns files that contain either `meeting` or `work`.
+- `reunião trabalho` devolve ficheiros que contêm `reunião` e `trabalho`.
+- `reunião OR trabalho` devolve ficheiros que contêm `reunião` ou `trabalho`.
 
-You can even combine the two in the same search term.
+Pode até combinar os dois no mesmo termo de pesquisa.
 
-- `meeting work OR meetup personal` returns files for work meetings and personal meetups.
+- `reunião trabalho OR encontro pessoal` devolve ficheiros para reuniões de trabalho e encontros pessoais.
 
-You can use parentheses to control the priority of each expression.
+Pode usar parênteses para controlar a prioridade de cada expressão.
 
-- `meeting (work OR meetup) personal` returns files that contain `meeting`, `personal`, and either `work` or `meetup`.
+- `reunião (trabalho OR encontro) pessoal` devolve ficheiros que contêm `reunião`, `pessoal` e `trabalho` ou `encontro`.
 
-To exclude, or negate, a word from the search results, add a hyphen (`-`) in front of it:
+Para excluir, ou negar, uma palavra dos resultados da pesquisa, adicione um hífen (`-`) antes dela:
 
-- `meeting -work` returns files that contain `meeting` but not `work`.
+- `reunião -trabalho` devolve ficheiros que contêm `reunião` mas não `trabalho`.
 
-You can exclude multiple expressions:
+Pode excluir várias expressões:
 
-- `meeting -work -meetup` returns files that contain `meeting` but not `work` or `meetup`.
+- `reunião -trabalho -encontro` devolve ficheiros que contêm `reunião` mas não `trabalho` nem `encontro`.
 
-You can exclude a combination of expressions using parentheses:
+Pode excluir uma combinação de expressões usando parênteses:
 
-- `meeting -(work meetup)` returns files that contain `meeting` but not _both_ `work` and `meetup`.
+- `reunião -(trabalho encontro)` devolve ficheiros que contêm `reunião` mas não _ambos_ `trabalho` e `encontro`.
 
-To filter results using the less than (`<`) and greater than (`>`) operators, surround them with square brackets (`[]`) or quotes (`""`):
+Para filtrar resultados usando os operadores menor que (`<`) e maior que (`>`), coloque-os entre parênteses retos (`[]`) ou aspas (`""`):
 
-- `meeting [duration:<5]` returns files where meeting is present, and duration is less than 5.
-- `meeting [duration:>5]` returns files where meeting is present, and duration is greater than 5.
+- `reunião [duração:<5]` devolve ficheiros onde reunião está presente e a duração é menor que 5.
+- `reunião [duração:>5]` devolve ficheiros onde reunião está presente e a duração é maior que 5.
 
-> [!tip]- Explain search term
-> If you need to troubleshoot a complex search term, you can click **Explain search term** in Search for an explanation of your search term.
+> [!tip]- Explicar termo de pesquisa
+> Se precisar de resolver um termo de pesquisa complexo, pode clicar em **Explicar termo de pesquisa** na Pesquisa para obter uma explicação do seu termo de pesquisa.
 
-## Search operators
+## Operadores de pesquisa
 
-Search operators enable more fine-grained search terms to filter your results even more.
+Os operadores de pesquisa permitem termos de pesquisa mais detalhados para filtrar os resultados ainda mais.
 
-Some operators even allow you to add a nested search term within parentheses, for example: `task:(call OR email)`.
+Alguns operadores permitem até adicionar um termo de pesquisa aninhado entre parênteses, por exemplo: `task:(ligar OR email)`.
 
-| Search operator | Description                                                                                                                                                                                                                                                                                                        |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `file:`         | Find text in filename. Matches any file in the vault.<p/>Example: `file:.jpg` or `file:202209`.                                                                                                                                                                                                                    |
-| `path:`         | Find text in file path. Matches any file in the vault.<p/>Example: `path:"Daily notes/2022-07"`.                                                                                                                                                                                                                   |
-| `content:`      | Find text in file content.<p/>Example: `content:"happy cat"`.                                                                                                                                                                                                                                                      |
-| `match-case:`   | Case-sensitive match.<p/>Example: `match-case:HappyCat`.                                                                                                                                                                                                                                                           |
-| `ignore-case:`  | Case-insensitive match.<p/>Example: `ignore-case:ikea`.                                                                                                                                                                                                                                                            |
-| `tag:`          | Find tag in file.<p/>Example: `tag:#work`.<p/>Keep in mind that searching for `tag:#work` will not return results for `#myjob/work`.<br /><br />**Note**: Since `tag:` ignores matches in code blocks and in non-Markdown content, it's often faster and more accurate than a normal full-text search for `#work`. |
-| `line:`         | Find files that contain at least one line matching `x`.<p/>Example: `line:(mix flour)`.<p/><br>**Note:** Using `-line` negates the search, meaning it will find files where no line matches `x`.                                                                                                                   |
-| `block:`        | Find matches in the same block.<p/>Example: `block:(dog cat)`.<p/>**Note**: Since `block:` requires Search to parse the Markdown content in every file, it can cause your search term to take longer time to finish.                                                                                               |
-| `section:`      | Find matches in the same section (text between two headings).<p/>Example: `section:(dog cat)`.                                                                                                                                                                                                                     |
-| `task:`         | Find matches in a [[Sintaxe de formatação básica#Task lists\|task]] on a block-by-block basis.<p/>Example: `task:call`.                                                                                                                                                                                                 |
-| `task-todo:`    | Find matches in an *uncompleted* [[Sintaxe de formatação básica#Task lists\|task]] on a block-by-block basis.<p/>Example: `task-todo:call`.                                                                                                                                                                             |
-| `task-done:`    | Find matches in a *completed* [[Sintaxe de formatação básica#Task lists\|task]] on a block-by-block basis.<p/>Example: `task-done:call`.                                                                                                                                                                                |
+| Operador de pesquisa | Descrição                                                                                                                                                                                                                                                                                                                              |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `file:`              | Encontrar texto no nome do ficheiro. Corresponde a qualquer ficheiro no cofre.<p/>Exemplo: `file:.jpg` ou `file:202209`.                                                                                                                                                                                                               |
+| `path:`              | Encontrar texto no caminho do ficheiro. Corresponde a qualquer ficheiro no cofre.<p/>Exemplo: `path:"Notas diárias/2022-07"`.                                                                                                                                                                                                          |
+| `content:`           | Encontrar texto no conteúdo do ficheiro.<p/>Exemplo: `content:"gato feliz"`.                                                                                                                                                                                                                                                           |
+| `match-case:`        | Correspondência sensível a maiúsculas/minúsculas.<p/>Exemplo: `match-case:GatoFeliz`.                                                                                                                                                                                                                                                  |
+| `ignore-case:`       | Correspondência insensível a maiúsculas/minúsculas.<p/>Exemplo: `ignore-case:ikea`.                                                                                                                                                                                                                                                    |
+| `tag:`               | Encontrar tag no ficheiro.<p/>Exemplo: `tag:#trabalho`.<p/>Tenha em mente que pesquisar `tag:#trabalho` não devolverá resultados para `#meuprojeto/trabalho`.<br /><br />**Nota**: Como `tag:` ignora correspondências em blocos de código e em conteúdo não Markdown, é frequentemente mais rápido e preciso do que uma pesquisa de texto completo por `#trabalho`. |
+| `line:`              | Encontrar ficheiros que contenham pelo menos uma linha correspondente a `x`.<p/>Exemplo: `line:(misturar farinha)`.<p/><br>**Nota:** Usar `-line` nega a pesquisa, o que significa que encontrará ficheiros onde nenhuma linha corresponde a `x`.                                                                                       |
+| `block:`             | Encontrar correspondências no mesmo bloco.<p/>Exemplo: `block:(cão gato)`.<p/>**Nota**: Como `block:` exige que a Pesquisa analise o conteúdo Markdown em cada ficheiro, pode fazer com que o seu termo de pesquisa demore mais tempo a concluir.                                                                                      |
+| `section:`           | Encontrar correspondências na mesma secção (texto entre dois cabeçalhos).<p/>Exemplo: `section:(cão gato)`.                                                                                                                                                                                                                            |
+| `task:`              | Encontrar correspondências numa [[Sintaxe de formatação básica#Task lists\|tarefa]] bloco a bloco.<p/>Exemplo: `task:ligar`.                                                                                                                                                                                                           |
+| `task-todo:`         | Encontrar correspondências numa [[Sintaxe de formatação básica#Task lists\|tarefa]] *incompleta* bloco a bloco.<p/>Exemplo: `task-todo:ligar`.                                                                                                                                                                                         |
+| `task-done:`         | Encontrar correspondências numa [[Sintaxe de formatação básica#Task lists\|tarefa]] *concluída* bloco a bloco.<p/>Exemplo: `task-done:ligar`.                                                                                                                                                                                          |
 
-## Search properties
+## Pesquisar propriedades
 
-You can use data stored in [[Propriedades]] in your search terms.
+Pode usar dados armazenados em [[Propriedades]] nos seus termos de pesquisa.
 
-Use brackets around a property name `[property]` to return files with that property:
+Use parênteses retos em torno do nome de uma propriedade `[propriedade]` para devolver ficheiros com essa propriedade:
 
-- `[aliases]` returns files that contain the `aliases` property
+- `[aliases]` devolve ficheiros que contêm a propriedade `aliases`
 
-Use brackets and a colon `[property:value]` to return files with that property and value:
+Use parênteses retos e dois pontos `[propriedade:valor]` para devolver ficheiros com essa propriedade e valor:
 
-- `[aliases:Name]` returns files where the `aliases` property value is `Name`
+- `[aliases:Nome]` devolve ficheiros onde o valor da propriedade `aliases` é `Nome`
 
-Use `null` as a value to find properties that have no value:
+Use `null` como valor para encontrar propriedades sem valor:
 
-- `[aliases:null]` returns files where the `aliases` property exists but has no value
+- `[aliases:null]` devolve ficheiros onde a propriedade `aliases` existe mas não tem valor
 
-> [!info]+ Empty values
-> The `null` operator works when a property is empty (e.g., `aliases: `), but not when the property contains empty quotes (`""`) or empty brackets (`[]`).
+> [!info]+ Valores vazios
+> O operador `null` funciona quando uma propriedade está vazia (por exemplo, `aliases: `), mas não quando a propriedade contém aspas vazias (`""`) ou parênteses retos vazios (`[]`).
 
-Both property and value allow sub-queries, such as parentheses for grouping, the `OR` operator, double-quotes for exact matching, and regex.
+Tanto a propriedade como o valor permitem subconsultas, tais como parênteses para agrupamento, o operador `OR`, aspas duplas para correspondência exata e expressões regulares.
 
-- `[status:Draft OR Published]` returns files where the `status` property value is `Draft` or `Published`
+- `[status:Rascunho OR Publicado]` devolve ficheiros onde o valor da propriedade `status` é `Rascunho` ou `Publicado`
 
-## Change case sensitivity
+## Alterar sensibilidade a maiúsculas/minúsculas
 
-By default, search terms are not case sensitive. If you want to search for the exact case of your search term, select **Match case** ![[obsidian-icon-upper-lowercase.svg#icon]] inside the search bar.
+Por predefinição, os termos de pesquisa não são sensíveis a maiúsculas/minúsculas. Se pretender pesquisar com a capitalização exata do seu termo de pesquisa, selecione **Corresponder capitalização** ![[obsidian-icon-upper-lowercase.svg#icon]] dentro da barra de pesquisa.
 
-This setting can be toggled. If **Match case** icon is highlighted, that means you’re currently doing a case sensitive search.
+Esta definição pode ser alternada. Se o ícone **Corresponder capitalização** estiver realçado, significa que está atualmente a fazer uma pesquisa sensível a maiúsculas/minúsculas.
 
-## Change result sort order
+## Alterar a ordem de ordenação dos resultados
 
-1. Enter a [[#Search terms|search term]].
-2. Under the search field, select the dropdown on the right.
-3. Select the sort order you want. Default is "File name (A to Z)".
+1. Introduza um [[#Termos de pesquisa|termo de pesquisa]].
+2. Abaixo do campo de pesquisa, selecione a lista pendente à direita.
+3. Selecione a ordem de ordenação que pretende. A predefinição é "Nome do ficheiro (A a Z)".
 
-The following options are available:
+Estão disponíveis as seguintes opções:
 
-- File name (A to Z)
-- File name (Z to A)
-- Modified time (new to old)
-- Modified time (old to new)
-- Created time (new to old)
-- Created time (old to new)
+- Nome do ficheiro (A a Z)
+- Nome do ficheiro (Z a A)
+- Data de modificação (mais recente primeiro)
+- Data de modificação (mais antiga primeiro)
+- Data de criação (mais recente primeiro)
+- Data de criação (mais antiga primeiro)
 
-## Copy search results
+## Copiar resultados da pesquisa
 
-1. Enter a [[#Search terms|search term]].
-2. Under the search field, select the three dots icon next to the number of results.
-3. Select **Copy search results**.
+1. Introduza um [[#Termos de pesquisa|termo de pesquisa]].
+2. Abaixo do campo de pesquisa, selecione o ícone dos três pontos junto ao número de resultados.
+3. Selecione **Copiar resultados da pesquisa**.
 
-## Use regular expressions
+## Usar expressões regulares
 
-A regular expression is a set of characters that describe a text pattern. To use regular expressions in your search term, surround the expression with forward slashes (`/`).
+Uma expressão regular é um conjunto de caracteres que descreve um padrão de texto. Para usar expressões regulares no seu termo de pesquisa, coloque a expressão entre barras oblíquas (`/`).
 
-- `/\d{4}-\d{2}-\d{2}/` matches an ISO 8601 date, such as 2022-01-01.
+- `/\d{4}-\d{2}-\d{2}/` corresponde a uma data ISO 8601, como 2022-01-01.
 
-You can even combine regular expressions with search operators:
+Pode até combinar expressões regulares com operadores de pesquisa:
 
-- `path:/\d{4}-\d{2}-\d{2}/` returns files with a date in the file path.
+- `path:/\d{4}-\d{2}-\d{2}/` devolve ficheiros com uma data no caminho do ficheiro.
 
-For more information on how to write regular expressions, refer to FreeCodeCamp's [Practical Regex guide](https://www.freecodecamp.org/news/practical-regex-guide-with-real-life-examples/) or Mozilla's [Regular expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
+Para mais informações sobre como escrever expressões regulares, consulte o [Guia Prático de Regex](https://www.freecodecamp.org/news/practical-regex-guide-with-real-life-examples/) do FreeCodeCamp ou as [Expressões regulares](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) da Mozilla.
 
-> [!info]+ JavaScript-flavored regular expressions
-> Regular expressions come in different flavors that may look different from each other. Obsidian uses JavaScript-flavored regular expressions.
+> [!info]+ Expressões regulares com sabor JavaScript
+> As expressões regulares existem em diferentes variantes que podem parecer diferentes entre si. O Obsidian usa expressões regulares com sabor JavaScript.
 
-## Configure search settings
+## Configurar definições da pesquisa
 
-To configure Search, select **Search settings** ![[lucide-sliders-horizontal.svg#icon]] on the right side of the search bar to see the toggles.
+Para configurar a Pesquisa, selecione **Definições da pesquisa** ![[lucide-sliders-horizontal.svg#icon]] no lado direito da barra de pesquisa para ver os botões de alternância.
 
-| Setting                 | Description                                                                 |
-|-------------------------|-----------------------------------------------------------------------------|
-| **Explain search term** | Breaks down the search terms and explains it in plain text.                 |
-| **Collapse results**    | Toggles whether to show the search context.                                 |
-| **Show more context**   | Expands the search result to show more text around the match.               |
+| Definição                   | Descrição                                                                         |
+|-----------------------------|-----------------------------------------------------------------------------------|
+| **Explicar termo de pesquisa** | Decompõe os termos de pesquisa e explica-os em texto simples.                  |
+| **Recolher resultados**     | Alterna entre mostrar ou ocultar o contexto da pesquisa.                          |
+| **Mostrar mais contexto**   | Expande o resultado da pesquisa para mostrar mais texto em torno da correspondência. |
 
-## Embed search results in a note
+## Incorporar resultados de pesquisa numa nota
 
-To embed search results in a note, add a `query` code block:
+Para incorporar resultados de pesquisa numa nota, adicione um bloco de código `query`:
 
 ````
 ```query
@@ -164,6 +163,6 @@ embed OR search
 ```
 ````
 
-[[Introdução ao Obsidian Publish|Obsidian Publish]] doesn't support embedded [[Limitações do Publish#Search|search results]]. To see a live rendered example, use the code block above within your vault.
+O [[Introdução ao Obsidian Publish|Obsidian Publish]] não suporta [[Limitações do Publish#Search|resultados de pesquisa]] incorporados. Para ver um exemplo renderizado ao vivo, use o bloco de código acima no seu cofre.
 
 ![[search-query-rendered.png]]

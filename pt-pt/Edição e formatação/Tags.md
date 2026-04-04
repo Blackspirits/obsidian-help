@@ -1,61 +1,62 @@
 ---
-localized: false
+aliases:
+  - How to/Working with tags
 permalink: tags
 ---
-Tags are keywords or topics that help you quickly find the notes you want.
+As etiquetas são palavras-chave ou tópicos que o ajudam a encontrar rapidamente as notas que pretende.
 
-## Add a tag to a note
+## Adicionar uma etiqueta a uma nota
 
-To create a tag, enter a hash symbol (`#`) in the editor, followed by a keyword. For example, `#meeting`.
+Para criar uma etiqueta, introduza um símbolo de cardinal (`#`) no editor, seguido de uma palavra-chave. Por exemplo, `#reunião`.
 
-You can also add tags using the `tags` [[Propriedades|property]]. Tags in YAML should always be formatted as a list:
+Também pode adicionar etiquetas usando a [[Propriedades|propriedade]] `tags`. As etiquetas em YAML devem ser sempre formatadas como uma lista:
 
 ```yaml
 ---
 tags:
-  - recipe
-  - cooking
+  - receita
+  - culinária
 ---
 ```
 
-## Find notes using tags
+## Encontrar notas usando etiquetas
 
-To find notes using the [[Pesquisa]] plugin, use the `tag` [[Pesquisa#Search operators|search operator]] in your search term, for example `tag:#meeting`.
+Para encontrar notas usando o plugin [[Pesquisa]], use o [[Pesquisa#Search operators|operador de pesquisa]] `tag` no seu termo de pesquisa, por exemplo `tag:#reunião`.
 
-You can also search for tags by clicking on them in your notes.
+Também pode pesquisar etiquetas clicando nelas nas suas notas.
 
-To find notes using the [[Vista de tags|Tags view]] plugin, select **Tags: Show tags** in the [[Paleta de comandos]], and then select the tag you want to search for.
+Para encontrar notas usando o plugin [[Vista de tags]], selecione **Etiquetas: Mostrar etiquetas** na [[Paleta de comandos]] e, em seguida, selecione a etiqueta que pretende pesquisar.
 
-## Nested tags
+## Etiquetas aninhadas
 
-Nested tags define tag hierarchies that make it easier to find and filter related tags.
+As etiquetas aninhadas definem hierarquias de etiquetas que facilitam a localização e filtragem de etiquetas relacionadas.
 
-Create nested tags by using forward slashes (`/`) in the tag name, for example `#inbox/to-read` and `#inbox/processing`.
+Crie etiquetas aninhadas usando barras oblíquas (`/`) no nome da etiqueta, por exemplo `#entrada/para-ler` e `#entrada/em-processamento`.
 
-- In [[Pesquisa]], `tag:inbox` will match `#inbox` as well as all nested tags such as `#inbox/to-read`.  
-- In the [[Vista de tags]], nested tags are shown as belonging to their parent tag.  
-- In [[Introdução ao Bases|Bases]], nested tags are recognized by the [[Funções#hasTag|`hasTag`]] function, so `file.hasTag("a")` will match both `#a` and `#a/b`.  
+- Na [[Pesquisa]], `tag:entrada` corresponderá a `#entrada` bem como a todas as etiquetas aninhadas como `#entrada/para-ler`.
+- Na [[Vista de tags]], as etiquetas aninhadas são mostradas como pertencentes à etiqueta principal.
+- Em [[Introdução ao Bases|Bases]], as etiquetas aninhadas são reconhecidas pela função [[Funções#hasTag|`hasTag`]], pelo que `file.hasTag("a")` corresponderá a `#a` e `#a/b`.
 
-## Tag format
+## Formato das etiquetas
 
-You can use any of the following characters in your tags:
+Pode usar qualquer um dos seguintes carateres nas suas etiquetas:
 
-- Alphabetical letters
-- Numbers
-- Underscore (`_`)
-- Hyphen (`-`)
-- Forward slash (`/`) for [[#Nested tags]]
-- Commonly accepted Unicode characters, including emojis and other symbols
+- Letras do alfabeto
+- Números
+- Sublinhado (`_`)
+- Hífen (`-`)
+- Barra oblíqua (`/`) para [[#Etiquetas aninhadas]]
+- Carateres Unicode amplamente aceites, incluindo emojis e outros símbolos
 
-Tags must contain at least one non-numerical character. For example, #1984 isn't a valid tag, but #y1984 is.
+As etiquetas devem conter pelo menos um carácter não numérico. Por exemplo, #1984 não é uma etiqueta válida, mas #a1984 é.
 
-Tags are case-insensitive. For example, #tag and #TAG will be treated as identical.
+As etiquetas não distinguem maiúsculas de minúsculas. Por exemplo, #etiqueta e #ETIQUETA serão tratadas como idênticas.
 
-> [!note] 
-> Tags will display with the casing they are first created with in the [[Vista de tags]]. 
-> For example, creating #Tag and then #TAG will display #Tag for both. 
+> [!note]
+> As etiquetas serão apresentadas com as maiúsculas com que foram criadas pela primeira vez na [[Vista de tags]].
+> Por exemplo, criar #Etiqueta e depois #ETIQUETA mostrará #Etiqueta para ambas.
 
-Tags can't contain blank spaces. To separate two or more words, you can instead use the following formats:
+As etiquetas não podem conter espaços em branco. Para separar duas ou mais palavras, pode usar os seguintes formatos:
 
 - #camelCase
 - #PascalCase

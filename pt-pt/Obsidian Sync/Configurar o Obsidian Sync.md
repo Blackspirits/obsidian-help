@@ -16,12 +16,12 @@ Adquiriu o Obsidian Sync e está pronto para começar. Este guia irá ajudá-lo 
 
 Nesta secção, irá criar um novo [[Cofres locais e remotos|cofre remoto]] e ligá-lo a um cofre local existente. Não precisa de criar um cofre local novo e vazio para utilizar o Obsidian Sync para este fim.
 
-> [!info] O seu cofre actual está numa pasta do iCloud, OneDrive, Dropbox ou noutro serviço de sincronização? Se a resposta for **sim**, ou se **não tiver a certeza**, leia [[Perguntas frequentes#Can I use a third-party sync with Obsidian Sync?|isto]] e [[Migrar para o Obsidian Sync]] antes de continuar.
+> [!info] O seu cofre atual está numa pasta do iCloud, OneDrive, Dropbox ou noutro serviço de sincronização? Se a resposta for **sim**, ou se **não tiver a certeza**, leia [[Perguntas frequentes#Can I use a third-party sync with Obsidian Sync?|isto]] e [[Migrar para o Obsidian Sync]] antes de continuar.
 
 **Pré-requisitos**
 
 - Uma conta Obsidian. Se não tiver uma, [registe-se agora](https://obsidian.md/auth?returnto=%2Faccount%2Fsync#signup).
-- Uma [[Planos e limites de armazenamento|subscrição]] activa do Obsidian Sync. Se não tiver uma, subscreva a partir do [painel da sua conta](https://obsidian.md/account/sync).
+- Uma [[Planos e limites de armazenamento|subscrição]] ativa do Obsidian Sync. Se não tiver uma, subscreva a partir do [painel da sua conta](https://obsidian.md/account/sync).
 - **Recomendado**: Um [[Criar cópia de segurança dos seus ficheiros do Obsidian|sistema de cópias de segurança]] configurado para os seus ficheiros Obsidian. Um serviço de sincronização não é uma cópia de segurança.
 
 ### Iniciar sessão com a sua conta Obsidian
@@ -33,11 +33,11 @@ Nesta secção, irá criar um novo [[Cofres locais e remotos|cofre remoto]] e li
 5. Em **Password**, introduza a sua palavra-passe.
 6. Seleccione **Login**.
 
-### Activar o Obsidian Sync
+### Ativar o Obsidian Sync
 
 1. Abra as **[[Configurações]]**.
 2. Na barra lateral, em **Options**, seleccione **Core Plugins**.
-3. Active o **Sync**.
+3. Ative o **Sync**.
 
 ### Criar um novo cofre remoto
 
@@ -63,8 +63,8 @@ Nesta secção, irá criar um novo [[Cofres locais e remotos|cofre remoto]] e li
 
 1. Navegue para **[[Configurações]]** → **Sync**, se necessário.
 2. Se ainda não foi adicionado um nome ao dispositivo, adicione um para facilitar a leitura dos registos do Sync!
-3. Active as definições em **Selective Sync** e **Vault configuration sync** para indicar quais os itens que devem ser sincronizados de e para o cofre remoto.
-    - **Nota**: Se se desligou recentemente de um cofre remoto e está a reconectar-se sem reiniciar a aplicação, algumas definições podem já estar activadas.
+3. Ative as definições em **Seletive Sync** e **Vault configuration sync** para indicar quais os itens que devem ser sincronizados de e para o cofre remoto.
+    - **Nota**: Se se desligou recentemente de um cofre remoto e está a reconectar-se sem reiniciar a aplicação, algumas definições podem já estar ativadas.
 4. Se efectuar alterações a quaisquer definições, reinicie completamente o Obsidian.
 5. Depois de o Obsidian ser reiniciado, regresse a **[[Configurações]]** → **Sync**.
 
@@ -82,7 +82,7 @@ Se está a iniciar a sincronização após ajustar as definições do Obsidian S
 
 Para ligar outros dispositivos ao cofre remoto recém-criado e sincronizado, avance para [[Configurar o Obsidian Sync#Sync a remote vault on another device|Sincronizar um cofre remoto noutro dispositivo]].
 
-Para saber mais sobre definições e ficheiros, avance para [[Configurações do Sync e sincronização selectiva]].
+Para saber mais sobre definições e ficheiros, avance para [[Configurações do Sync e sincronização seletiva]].
 
 ## Sincronizar um cofre remoto noutro dispositivo
 
@@ -90,9 +90,9 @@ Nesta secção, já criou um cofre remoto e carregou dados para o mesmo. Agora, 
 
 **Pré-requisitos**
 - Uma conta Obsidian. Se não tiver uma, [registe-se agora](https://obsidian.md/account#mode=signup).
-- Uma subscrição activa do Obsidian Sync. Se não tiver uma, subscreva a partir do [painel da sua conta](https://obsidian.md/account).
-- O Sync activado nas definições dos [[Plugins nativos]].
-- Um cofre remoto activo. Se ainda não criou um, crie primeiro um [[Configurar o Obsidian Sync#Create a new remote vault|cofre remoto]].
+- Uma subscrição ativa do Obsidian Sync. Se não tiver uma, subscreva a partir do [painel da sua conta](https://obsidian.md/account).
+- O Sync ativado nas definições dos [[Plugins nativos]].
+- Um cofre remoto ativo. Se ainda não criou um, crie primeiro um [[Configurar o Obsidian Sync#Create a new remote vault|cofre remoto]].
 - **Recomendado**: Um [[Criar cópia de segurança dos seus ficheiros do Obsidian|sistema de cópias de segurança]] configurado para os seus ficheiros Obsidian no dispositivo que mais utiliza. Um serviço de sincronização não é uma cópia de segurança.
 
 ### Sincronizar o seu cofre a partir do selector de cofres
@@ -165,7 +165,7 @@ Está agora desligado do cofre remoto e já não está a sincronizar neste dispo
 
 O Obsidian Sync permite-lhe escolher a localização de alojamento do seu cofre remoto. Se estiver a utilizar a versão `1.4.16` ou anterior do Obsidian, a localização será escolhida automaticamente.
 
-Se não tiver a certeza de qual é a região do seu cofre actual, consulte [[Obsidian Sync/Segurança e privacidade#Where can I find my current Sync server and where is it hosted?|Onde posso encontrar o meu servidor Sync actual e onde está alojado?]] para obter orientação.
+Se não tiver a certeza de qual é a região do seu cofre atual, consulte [[Obsidian Sync/Segurança e privacidade#Where can I find my current Sync server and where is it hosted?|Onde posso encontrar o meu servidor Sync atual e onde está alojado?]] para obter orientação.
 
 ![[sync-regional-sync-servers.png#interface|300]]
 
@@ -177,7 +177,7 @@ Após seleccionar uma localização, o seu centro de dados **não pode** ser mov
 
 Seguem-se alguns documentos sugeridos para ler a seguir.
 
-- Explore mais sobre [[Configurações do Sync e sincronização selectiva|a selecção de ficheiros e definições a sincronizar]].
+- Explore mais sobre [[Configurações do Sync e sincronização seletiva|a selecção de ficheiros e definições a sincronizar]].
 - Saiba o que acontece se o seu cofre remoto [[Histórico de versões|ficar cheio]].
 - [[Colaborar num cofre partilhado]] com outro utilizador do Obsidian Sync.
 - Consulte as [[Perguntas frequentes|Perguntas frequentes do Sync]] para obter respostas a questões comuns.

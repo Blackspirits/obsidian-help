@@ -1,127 +1,125 @@
 ---
-localized: false
 permalink: bases/views
 ---
-Views allow you to organize the information in a [[Introdução ao Bases|Base]] in multiple ways. A base can contain several views, and each view can have a unique configuration to display, sort, and filter files.
+As vistas permitem-lhe organizar a informação de uma [[Introdução ao Bases|Base]] de múltiplas formas. Uma base pode conter várias vistas, e cada vista pode ter uma configuração única para apresentar, ordenar e filtrar ficheiros.
 
-For example, you may want to create a base called "Books" that has separate views for "Reading list" and "Recently finished".
+Por exemplo, pode criar uma base chamada "Livros" com vistas separadas para "Lista de leitura" e "Lidos recentemente".
 
-## Toolbar
+## Barra de ferramentas
 
-At the top of a base is a toolbar that lets you interact with views and their results.
+No topo de uma base existe uma barra de ferramentas que lhe permite interagir com as vistas e os seus resultados.
 
-- ![[lucide-table.svg#icon]] **View menu** — create, edit, and switch views.
-- **Results** — limit, copy and export files.
-- ![[lucide-arrow-up-down.svg#icon]] **Sort** — sort and group files.
-- ![[lucide-list-filter.svg#icon]] **Filter** — filter files.
-- ![[lucide-list.svg#icon]] **Properties** — choose properties to display and create [[Fórmulas]].
-- ![[lucide-search.svg#icon]] **Search** — search for items using their displayed properties.
-- ![[lucide-plus.svg#icon]] **New** — create a new file in the current view.
+- ![[lucide-table.svg#icon]] **Menu de vistas** — criar, editar e alternar vistas.
+- **Resultados** — limitar, copiar e exportar ficheiros.
+- ![[lucide-arrow-up-down.svg#icon]] **Ordenar** — ordenar e agrupar ficheiros.
+- ![[lucide-list-filter.svg#icon]] **Filtrar** — filtrar ficheiros.
+- ![[lucide-list.svg#icon]] **Propriedades** — escolher propriedades a apresentar e criar [[Fórmulas]].
+- ![[lucide-search.svg#icon]] **Pesquisar** — pesquisar itens pelas suas propriedades apresentadas.
+- ![[lucide-plus.svg#icon]] **Novo** — criar um novo ficheiro na vista atual.
 
-## Add and switch views
+## Adicionar e alternar vistas
 
-There are two ways to add a view to a base:
+Existem duas formas de adicionar uma vista a uma base:
 
-- Click the view name in the top left and select ![[lucide-plus.svg#icon]] **Add view**.
-- Use the [[Paleta de comandos]] and select **Bases: Add view**.
+- Clique no nome da vista no canto superior esquerdo e selecione ![[lucide-plus.svg#icon]] **Adicionar vista**.
+- Use a [[Paleta de comandos]] e selecione **Bases: Adicionar vista**.
 
-The first view in your list of views will load by default. Drag views by their icon to change their order.
+A primeira vista da lista carrega por predefinição. Arraste as vistas pelo ícone para alterar a sua ordem.
 
-## View settings
+## Definições de vista
 
-Each view has its own configuration options. To edit view settings:
+Cada vista tem as suas próprias opções de configuração. Para editar as definições de uma vista:
 
-1. Click the view name in the top left.
-2. Click the right arrow next to the view you want to configure.
+1. Clique no nome da vista no canto superior esquerdo.
+2. Clique na seta para a direita ao lado da vista que pretende configurar.
 
-Alternatively *right-click* the view name in the base's toolbar to quickly access the view settings.
+Em alternativa, clique com o botão direito no nome da vista na barra de ferramentas da base para aceder rapidamente às definições da vista.
 
-## Layout
+## Esquema
 
-Views can be displayed with different layouts including as  ![[lucide-table.svg#icon]] **table**, ![[lucide-list.svg#icon]] **list**, ![[lucide-layout-grid.svg#icon]] **cards**, and ![[lucide-map.svg#icon]] **map**. Additional layouts can be added by [[Plugins da comunidade]]. Some layouts are still being developed and require [[Versões de acesso antecipado]] of Obsidian.
+As vistas podem ser apresentadas com diferentes esquemas, incluindo ![[lucide-table.svg#icon]] **tabela**, ![[lucide-list.svg#icon]] **lista**, ![[lucide-layout-grid.svg#icon]] **cartões** e ![[lucide-map.svg#icon]] **mapa**. Esquemas adicionais podem ser adicionados por [[Plugins da comunidade]]. Alguns esquemas ainda estão em desenvolvimento e requerem [[Versões de acesso antecipado]] do Obsidian.
 
-| Layout                | Description                                                                                   | App&nbsp;version |
-| --------------------- | --------------------------------------------------------------------------------------------- | ---------------- |
-| [[Table view\|Table]] | Display files as rows in a table. Columns are populated from [[Propriedades]] in your notes.    | 1.9              |
-| [[Cards view\|Cards]] | Display files as a grid of cards. Lets you create gallery-like views with images.             | 1.9              |
-| [[List view\|List]]   | Display files as a [[Sintaxe de formatação básica#Lists\|list]] with bulleted or numbered markers. | 1.10             |
-| [[Map view\|Map]]     | Display files as pins on an interactive map. Requires the Maps plugin.                        | 1.10             |
+| Esquema                    | Descrição                                                                                          | Versão&nbsp;app |
+| -------------------------- | -------------------------------------------------------------------------------------------------- | --------------- |
+| [[Table view\|Tabela]]     | Apresenta ficheiros como linhas numa tabela. As colunas são preenchidas com [[Propriedades]] das suas notas. | 1.9             |
+| [[Cards view\|Cartões]]    | Apresenta ficheiros como uma grelha de cartões. Permite criar vistas de galeria com imagens.       | 1.9             |
+| [[List view\|Lista]]       | Apresenta ficheiros como uma [[Sintaxe de formatação básica#Lists\|lista]] com marcadores ou numeração. | 1.10            |
+| [[Map view\|Mapa]]         | Apresenta ficheiros como marcadores num mapa interativo. Requer o plugin Mapas.                    | 1.10            |
 
+## Filtros
 
-## Filters
+Abra o menu ![[lucide-list-filter.svg#icon]] **Filtrar** no topo de uma base para adicionar filtros.
 
-Open the ![[lucide-list-filter.svg#icon]] **Filter** menu at the top of a base to add filters.
+Uma base sem filtros mostra todos os ficheiros do seu cofre. Os filtros restringem os resultados para mostrar apenas ficheiros que cumprem critérios específicos. Por exemplo, pode usar filtros para apresentar apenas ficheiros com uma determinada [[Tags|etiqueta]] ou dentro de uma pasta específica. Existem muitos tipos de filtros disponíveis.
 
-A base without filters shows all the files in your vault. Filters narrow down the results to only show files that meet specific criteria. For example, you can use filters to only display files with a specific [[Tags|tag]] or within a specific folder. Many filter types are available.
+Os filtros podem ser aplicados a todas as vistas de uma base, ou apenas a uma única vista, escolhendo nas duas secções do menu ![[lucide-list-filter.svg#icon]] **Filtrar**.
 
-Filters can be applied to all views in a base, or just a single view by choosing from the two sections in the ![[lucide-list-filter.svg#icon]] **Filter** menu.
+- **Todas as vistas** aplica filtros a todas as vistas da base.
+- **Esta vista** aplica filtros à vista ativa.
 
-- **All views** applies filters to all views in the base.
-- **This view** applies filters to the active view.
+#### Componentes de um filtro
 
-#### Components of a filter
+Os filtros têm três componentes:
 
-Filters have three components:
+1. **Propriedade** — permite escolher uma [[Propriedades|propriedade]] do seu cofre, incluindo [[Sintaxe de Bases#File properties|propriedades de ficheiro]].
+2. **Operador** — permite escolher como comparar as condições. A lista de operadores disponíveis depende do tipo de propriedade (texto, data, número, etc.)
+3. **Valor** — permite escolher o valor com que está a comparar. Os valores podem incluir expressões matemáticas e [[Funções|funções]].
 
-1. **Property** — lets you choose a [[Propriedades|property]] in your vault, including [[Sintaxe de Bases#File properties|file properties]].
-2. **Operator** — lets you choose how to compare the conditions. The list of available operators depends on the property type (text, date, number, etc) 
-3. **Value** — lets you choose the value you are comparing to. Values can include math and [[Funções|functions]].
+#### Conjunções
 
-#### Conjunctions
+- **Todas as seguintes são verdadeiras** é uma instrução `and` — os resultados só são mostrados se *todas* as condições do grupo de filtros forem cumpridas.
+- **Qualquer das seguintes é verdadeira** é uma instrução `or` — os resultados são mostrados se *alguma* das condições do grupo de filtros for cumprida.
+- **Nenhuma das seguintes é verdadeira** é uma instrução `not` — os resultados não são mostrados se *alguma* das condições do grupo de filtros for cumprida.
 
-- **All the following are true** is an `and` statement — results will only be shown if *all* conditions in the filter group are met.
-- **Any of the following are true** is an `or` statement — results will be shown if *any* of the conditions in the filter group are met.
-- **None of the following are true** is a `not` statement — results will not be shown if *any* of the conditions in the filter group are met.
+#### Grupos de filtros
 
-#### Filter groups
+Os grupos de filtros permitem criar lógica mais complexa através de combinações de conjunções.
 
-Filter groups allow you to create more complex logic by creating combinations on conjunctions.
+#### Editor de filtros avançado
 
-#### Advanced filter editor
+Clique no botão de código ![[lucide-code-xml.svg#icon]] para utilizar o editor de **filtros avançado**. Este apresenta a [[Sintaxe de Bases|sintaxe]] em bruto do filtro e pode ser usado com [[Funções|funções]] mais complexas que não podem ser apresentadas na interface de ponto e clique.
 
-Click the code button ![[lucide-code-xml.svg#icon]] to use the **advanced filter** editor. This displays the raw [[Sintaxe de Bases|syntax]] for the filter, and can be used with more complex [[Funções|functions]] that cannot be displayed using the point-and-click interface.
+## Ordenar e agrupar resultados
 
-## Sort and group results
+Abra o menu ![[lucide-arrow-up-down.svg#icon]] **Ordenar** para ordenar e agrupar os resultados de uma vista.
 
-Open the ![[lucide-arrow-up-down.svg#icon]] **Sort** menu to sort and group the results in a view.
+Pode organizar os resultados por uma ou mais propriedades em ordem ascendente ou descendente. Isto facilita a listagem de notas por nome, hora da última edição ou qualquer outra propriedade — incluindo fórmulas.
 
-You can arrange results by one or more properties in ascending or descending order. This makes it easy to list notes by name, last edited time, or any other property — including formulas.
+Também pode agrupar resultados por uma propriedade para organizar itens semelhantes em secções visualmente distintas. Atualmente, o Obsidian suporta agrupamento por apenas uma propriedade.
 
-You can also group results by a property to organize similar items into visually distinct sections. Currently, Obsidian supports grouping by only one property.
+### Adicionar uma ordenação
 
-### Add a sort
+1. Abra o menu ![[lucide-arrow-up-down.svg#icon]] **Ordenar** no topo da vista.
+2. Escolha a propriedade pela qual pretende ordenar (ou agrupar).
+3. Se tiver múltiplas ordenações, arraste-as para cima ou para baixo usando a pega ![[lucide-grip-vertical.svg#icon]] para alterar a sua prioridade.
 
-1. Open the ![[lucide-arrow-up-down.svg#icon]] **Sort** menu at the top of the view.
-2. Choose the property you want to sort (or group) by.
-3. If you have multiple sorts, drag them up or down using the ![[lucide-grip-vertical.svg#icon]] grip handle to change their priority.
+As opções de ordenação dos resultados dependem do tipo de propriedade:
 
-The options for ordering results depend on the property type:
+- **Texto**: ordenar *alfabeticamente* (A→Z) ou em *ordem alfabética inversa* (Z→A).
+- **Número**: ordenar do *menor para o maior* (0→1) ou do *maior para o menor* (1→0).
+- **Data e hora**: ordenar do *mais antigo para o mais recente* ou do *mais recente para o mais antigo*.
 
-- **Text**: sort *alphabetically* (A→Z) or in *reverse alphabetical order* (Z→A).
-- **Number**: sort from *smallest to largest* (0→1) or *largest to smallest* (1→0).
-- **Date and time**: sort by *old to new*, or *new to old*.
+### Remover uma ordenação
 
-### Remove a sort
+1. Abra o menu ![[lucide-arrow-up-down.svg#icon]] **Ordenar** no topo da vista.
+2. Clique no botão do caixote do lixo ![[lucide-trash-2.svg#icon]] ao lado da ordenação ou agrupamento que pretende remover.
 
-1. Open the ![[lucide-arrow-up-down.svg#icon]] **Sort** menu at the top of the view.
-2. Click the ![[lucide-trash-2.svg#icon]] trash can button next to the sort or group you want to remove.
+## Limitar, copiar e exportar resultados
 
-## Limit, copy, and export results
+### Limitar resultados
 
-### Limit results
+O menu *resultados* mostra o número de resultados na vista. Clique no botão de resultados para limitar o número de resultados e aceder a ações adicionais.
 
-The *results* menu shows the number of results in view. Click the results button to limit the number of results, and access additional actions.
+### Copiar para a área de transferência
 
-### Copy to clipboard
+Esta ação copia a vista para a sua área de transferência. Uma vez na área de transferência, pode colá-la num ficheiro Markdown ou noutras aplicações de documentos, incluindo folhas de cálculo como Google Sheets, Excel e Numbers.
 
-This action copies the view to your clipboard. Once in your clipboard you can paste it into a Markdown file, or into other document apps including spreadsheets like Google Sheets, Excel, and Numbers.
+### Exportar CSV
 
-### Export CSV
+Esta ação guarda um CSV da sua vista atual.
 
-This action saves a CSV of your current view.
+## Incorporar uma vista
 
-## Embed a view
+Pode incorporar ficheiros de base em [[Incorporar ficheiros|qualquer outro ficheiro]] usando a sintaxe `![[Ficheiro.base]]`. A primeira vista da lista será utilizada. Pode alterar a ordem arrastando as vistas no menu de vistas.
 
-You can embed base files in [[Incorporar ficheiros|any other file]] using the `![[File.base]]` syntax. The first view in the list will be used. You can change the order by dragging views in the view menu.
-
-To specify the default view for an embed use `![[File.base#View]]`.
+Para especificar a vista predefinida para uma incorporação, use `![[Ficheiro.base#Vista]]`.

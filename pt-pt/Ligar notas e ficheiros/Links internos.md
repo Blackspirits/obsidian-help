@@ -1,180 +1,182 @@
 ---
-localized: false
-permalink: links
+aliases:
+  - How to/Internal link
+  - How to/Link to blocks
 cssclasses:
   - soft-embed
-publish: true
+description: Aprenda a ligar a notas, anexos e outros ficheiros a partir das suas notas, usando ligações internas.
 mobile: true
-description: 'Learn how to link to notes, attachments, and other files from your notes, using internal links.'
+permalink: links
+publish: true
 ---
 
-Learn how to link to notes, attachments, and other files from your notes, using _internal links_. By linking notes, you can create a network of knowledge. ^b15695
+Aprenda a ligar a notas, anexos e outros ficheiros a partir das suas notas, usando _ligações internas_. Ao ligar notas, pode criar uma rede de conhecimento. ^b15695
 
-Obsidian can automatically update internal links in your vault when you rename a file. If you want to be prompted instead, you can disable it under: 
+O Obsidian pode atualizar automaticamente as ligações internas no seu cofre quando renomeia um ficheiro. Se preferir ser questionado, pode desativar esta opção em:
 
-**[[Configurações]]** → **[[Configurações#Files and links|Files and links]]** → **[[Configurações#Automatically update internal links|Automatically update internal links]]**.
+**[[Configurações]]** → **[[Configurações#Files and links|Ficheiros e ligações]]** → **[[Configurações#Automatically update internal links|Atualizar automaticamente ligações internas]]**.
 
-## Supported formats for internal links
+## Formatos suportados para ligações internas
 
-Obsidian supports the following link formats:
+O Obsidian suporta os seguintes formatos de ligação:
 
-- Wikilink: `[[Three laws of motion]]` or `[[Three laws of motion.md]]`
-- Markdown: `[Three laws of motion](Three%20laws%20of%20motion)` or `[Three laws of motion](Three%20laws%20of%20motion.md)`
+- Wikilink: `[[Três leis do movimento]]` ou `[[Três leis do movimento.md]]`
+- Markdown: `[Três leis do movimento](Tres%20leis%20do%20movimento)` ou `[Três leis do movimento](Tres%20leis%20do%20movimento.md)`
 
-The examples above are equivalent, and they appear the same way in the editor and links to the same note.
+Os exemplos acima são equivalentes e aparecem da mesma forma no editor e ligam à mesma nota.
 
-> [!note] Note
-> When using the Markdown format, make sure to [URL encode](https://en.wikipedia.org/wiki/Percent-encoding) the link destination. For example, blank spaces become `%20`.
+> [!note] Nota
+> Ao usar o formato Markdown, certifique-se de [codificar o URL](https://en.wikipedia.org/wiki/Percent-encoding) do destino da ligação. Por exemplo, os espaços em branco tornam-se `%20`.
 
-By default, due to its more compact format, Obsidian generates links using the Wikilink format. If interoperability is important to you, you can disable Wikilinks and use Markdown links instead.
+Por predefinição, devido ao seu formato mais compacto, o Obsidian gera ligações usando o formato Wikilink. Se a interoperabilidade for importante para si, pode desativar os Wikilinks e usar ligações Markdown em vez disso.
 
-To use the Markdown format:
+Para usar o formato Markdown:
 
-1. Open **[[Configurações]]**.
-2. Under **Files and Links**, disable **Use \[\[Wikilinks\]\]**.
+1. Abra as **[[Configurações]]**.
+2. Em **Ficheiros e Ligações**, desative **Usar \[\[Wikilinks\]\]**.
 
-Even if you disable the Wikilink format, you can still autocomplete links by typing two square brackets `[[`. When you select one of the suggested files, Obsidian instead generates a Markdown link.
+Mesmo que desative o formato Wikilink, ainda pode autocompletar ligações digitando dois parênteses retos `[[`. Quando seleciona um dos ficheiros sugeridos, o Obsidian gera uma ligação Markdown em vez disso.
 
-> [!note] Invalid characters
-> A string which contains the following characters may not work as a link: `# | ^ : %% [[ ]]`. 
-> 
-> We recommend avoiding using those characters and practicing [safe filename practices](https://stackoverflow.com/questions/1976007/what-characters-are-forbidden-in-windows-and-linux-directory-names). 
+> [!note] Carateres inválidos
+> Uma cadeia que contenha os seguintes carateres pode não funcionar como ligação: `# | ^ : %% [[ ]]`.
+>
+> Recomendamos evitar o uso desses carateres e praticar [boas práticas de nomes de ficheiros](https://stackoverflow.com/questions/1976007/what-characters-are-forbidden-in-windows-and-linux-directory-names).
 
-## Link to a file
+## Ligar a um ficheiro
 
-To create a link while in Editing view, use either of the following ways:
+Para criar uma ligação na Vista de edição, use qualquer uma das seguintes formas:
 
-- Type `[[` in the editor and then select the file you want to create a link to.
-- Select text in the editor and then type `[[`.
-- Open the [[Command palette]] and then select Add internal link.
+- Digite `[[` no editor e selecione o ficheiro para o qual pretende criar uma ligação.
+- Selecione texto no editor e depois digite `[[`.
+- Abra a [[Command palette]] e selecione Adicionar ligação interna.
 
 ![[Alternador rápido#^search-autocomplete-large]]
 
-While you can link to any of the [[Formatos de ficheiro aceites]], links to file formats other than Markdown needs to include a file extension, such as `[[Figure 1.png]]`.
+Embora possa ligar a qualquer um dos [[Formatos de ficheiro aceites]], as ligações para formatos de ficheiro diferentes de Markdown precisam de incluir a extensão do ficheiro, como `[[Figura 1.png]]`.
 
-> [!tip] Prefixing an internal link with an exclamation mark (!) allows you to embed the linked content. For more details, see [[Incorporar ficheiros]].
+> [!tip] Prefixar uma ligação interna com um ponto de exclamação (!) permite-lhe incorporar o conteúdo ligado. Para mais detalhes, consulte [[Incorporar ficheiros]].
 
-> [!info] Excluded files
-> Files matching your [[Configurações#Excluded files|Excluded files]] patterns are deprioritized in link suggestions when creating internal links.
+> [!info] Ficheiros excluídos
+> Os ficheiros que correspondem aos seus padrões de [[Configurações#Excluded files|Ficheiros excluídos]] têm menor prioridade nas sugestões de ligações ao criar ligações internas.
 
-## Link to a heading in a note
+## Ligar a um cabeçalho numa nota
 
-You can link to specific headings in notes, also known as _anchor links_.
+Pode ligar a cabeçalhos específicos em notas, também conhecidos como _ligações de âncora_.
 
-**Linking to a heading within the same note**
+**Ligar a um cabeçalho na mesma nota**
 
-To link to a heading within the same note, type `[[#` to get a list of headings within the note to link to.
+Para ligar a um cabeçalho na mesma nota, digite `[[#` para obter uma lista de cabeçalhos dentro da nota para ligar.
 
-For example, `[[#Preview a linked file]]` will create a link to [[#Preview a linked file]].
+Por exemplo, `[[#Pré-visualizar um ficheiro ligado]]` criará uma ligação para [[#Pré-visualizar um ficheiro ligado]].
 
-**Linking to a heading in another note**
+**Ligar a um cabeçalho noutra nota**
 
-To link to a heading in another note, add a hash (`#`) at the end of the link destination, followed by the heading text.
+Para ligar a um cabeçalho noutra nota, adicione um cardinal (`#`) no final do destino da ligação, seguido do texto do cabeçalho.
 
-For example, `[[Sobre o Obsidian#Links are first-class citizens]]` will create a link to [[Sobre o Obsidian#Links are first-class citizens]].
+Por exemplo, `[[Sobre o Obsidian#Links are first-class citizens]]` criará uma ligação para [[Sobre o Obsidian#Links are first-class citizens]].
 
-**Linking to subheadings**
+**Ligar a subcabeçalhos**
 
-You can add multiple hash symbols for each subheading.
+Pode adicionar múltiplos símbolos de cardinal para cada subcabeçalho.
 
-For example, `[[Ajuda e suporte#Questions and advice#Report bugs and request features]]` will create a link to [[Ajuda e suporte#Questions and advice#Report bugs and request features]].
+Por exemplo, `[[Ajuda e suporte#Questions and advice#Report bugs and request features]]` criará uma ligação para [[Ajuda e suporte#Questions and advice#Report bugs and request features]].
 
-**Searching for headers across the vault**
+**Pesquisar cabeçalhos em todo o cofre**
 
-To search for headers across the entire vault, use the `[[## header]]` syntax.
+Para pesquisar cabeçalhos em todo o cofre, use a sintaxe `[[## cabeçalho]]`.
 
-For example, `[[##` will search generically across the vault, whereas `[[## team]]` will search for all headers that contain the word _team_.
+Por exemplo, `[[##` pesquisará genericamente em todo o cofre, enquanto `[[## equipa]]` pesquisará todos os cabeçalhos que contêm a palavra _equipa_.
 
-> [!info]- Screenshot of searching for a heading link
+> [!info]- Captura de ecrã da pesquisa de uma ligação de cabeçalho
 >
 > ![[internal-links-header.png#interface]]
 
-## Link to a block in a note
+## Ligar a um bloco numa nota
 
-A block is a unit of text in your note, such as a paragraph, block quote, or list item.
+Um bloco é uma unidade de texto na sua nota, como um parágrafo, citação em bloco ou item de lista.
 
-You can link to a block by adding `#^` at the end of your link destination, followed by a unique block identifier. For example: `[[2023-01-01#^37066d]]`. Fortunately, you don't need to manually find the identifier—when you type the caret (`^`), a list of suggestions will appear, allowing you to select the correct block.
+Pode ligar a um bloco adicionando `#^` no final do destino da ligação, seguido de um identificador de bloco único. Por exemplo: `[[2023-01-01#^37066d]]`. Felizmente, não precisa de encontrar manualmente o identificador — quando digita o acento circunflexo (`^`), aparece uma lista de sugestões, permitindo-lhe selecionar o bloco correto.
 
-For *simple paragraphs*, place a blank space followed by a caret `^` and the block identifier at the end of the line:
+Para *parágrafos simples*, coloque um espaço em branco seguido de um acento circunflexo `^` e o identificador de bloco no final da linha:
 
 ```md
 The quick purple gem dashes through the paragraph with blazing speed. Pen in hand and a paperclip in the other, Gemmy works toward her goal of making the world of note-taking a happier place. ^37066d
 ```
 
-For *structured blocks* (lists, quotations, callouts, tables), the block identifier should be on a separate line, with a blank line before and after:
+Para *blocos estruturados* (listas, citações, callouts, tabelas), o identificador de bloco deve estar numa linha separada, com uma linha em branco antes e depois:
 
 ```md
 > The quick purple gem dashes through the paragraph with blazing speed. Pen in hand and a paperclip in the other, Gemmy works toward her goal of making the world of note-taking a happier place.
 
 ^37066f
 
-This is the tale of Gemmy, the Unhelpful assistant.  
+This is the tale of Gemmy, the Unhelpful assistant.
 ```
 
-For *specific lines within a list*, the block identifier can be placed directly on a bullet point:
+Para *linhas específicas dentro de uma lista*, o identificador de bloco pode ser colocado diretamente num item de marcador:
 
 ```mathjax
 - Gemmy
-    $$Paperclip / Pen$$ 
+    $$Paperclip / Pen$$
     ^37006f
 - Unhelpful assistant
 ```
 
-> [!warning] We do not support links to specific parts of quotations, callouts, and tables.
+> [!warning] Não suportamos ligações para partes específicas de citações, callouts e tabelas.
 
-**Searching for blocks across the vault**
+**Pesquisar blocos em todo o cofre**
 
-You can also search for blocks to link to from across your vault using the `[[^^block]]` syntax. However, more items qualify as blocks compared to [[#Link to a heading in a note|heading links]], so this list will be much longer.
+Também pode pesquisar blocos para ligar em todo o cofre usando a sintaxe `[[^^bloco]]`. No entanto, mais itens se qualificam como blocos em comparação com [[#Link to a heading in a note|ligações de cabeçalho]], por isso esta lista será muito maior.
 
-> [!info]- Screenshot of searching for a block link 
+> [!info]- Captura de ecrã da pesquisa de uma ligação de bloco
 > ![[link-block-heading.png#interface]]
 
-You can also create human-readable block identifiers by adding a blank space followed by a caret (`^`) and the identifier. Block identifiers can only consist of Latin letters, numbers, and dashes.
+Também pode criar identificadores de bloco legíveis por humanos adicionando um espaço em branco seguido de um acento circunflexo (`^`) e o identificador. Os identificadores de bloco só podem consistir em letras latinas, números e hífens.
 
-For example, add `^quote-of-the-day` at the end of a block:
+Por exemplo, adicione `^citacao-do-dia` no final de um bloco:
 
 ```md
-"You do not rise to the level of your goals. You fall to the level of your systems." by James Clear ^quote-of-the-day
+"You do not rise to the level of your goals. You fall to the level of your systems." by James Clear ^citacao-do-dia
 ```
 
-Now you can link to the block by typing `[[2023-01-01#^quote-of-the-day]]`.
+Agora pode ligar ao bloco digitando `[[2023-01-01#^citacao-do-dia]]`.
 
-> [!warning] Interoperability
-> Block references are specific to Obsidian and not part of the standard Markdown format. Links containing block references won't work outside of Obsidian.
+> [!warning] Interoperabilidade
+> As referências de bloco são específicas do Obsidian e não fazem parte do formato Markdown padrão. As ligações que contêm referências de bloco não funcionarão fora do Obsidian.
 
-## Change the link display text
+## Alterar o texto de apresentação da ligação
 
-By default, Obsidian will show the link text as it appears. For example:  
-- `[[Example]]` displays as [[Example]]  
-- `[[Example#Details]]` displays as [[Example#Details]]
+Por predefinição, o Obsidian mostrará o texto da ligação tal como aparece. Por exemplo:
+- `[[Exemplo]]` aparece como [[Exemplo]]
+- `[[Exemplo#Detalhes]]` aparece como [[Exemplo#Detalhes]]
 
-You can change how a link is displayed by customizing its link text:
+Pode alterar a forma como uma ligação é apresentada personalizando o seu texto de ligação:
 
-**Wikilink format**:  
-Use a vertical bar (`|`) to change the display text.
+**Formato Wikilink**:
+Use uma barra vertical (`|`) para alterar o texto de apresentação.
 
-- `[[Example|Custom name]]` appears as [[Example|Custom name]]  
-- `[[Example#Details|Section name]]` appears as [[Example#Details|Section name]]
+- `[[Exemplo|Nome personalizado]]` aparece como [[Exemplo|Nome personalizado]]
+- `[[Exemplo#Detalhes|Nome da secção]]` aparece como [[Exemplo#Detalhes|Nome da secção]]
 
-**Markdown format**:  
-Use `[Display text](Link URL)` to customize how the link appears.
+**Formato Markdown**:
+Use `[Texto de apresentação](URL da ligação)` para personalizar a aparência da ligação.
 
-- `[Custom name](Example.md)` appears as [Custom name](Example.md)  
-- `[Section name](Example.md#Details)` appears as [Section name](Example.md#Details)
+- `[Nome personalizado](Exemplo.md)` aparece como [Nome personalizado](Exemplo.md)
+- `[Nome da secção](Exemplo.md#Detalhes)` aparece como [Nome da secção](Exemplo.md#Detalhes)
 
-This method is helpful for one-off situations where you want to change how a link looks in a specific context. If you want to set up an alternate link name that you can reuse throughout your vault, consider using an [[Apelidos|alias]] instead. 
+Este método é útil para situações pontuais em que pretende alterar a aparência de uma ligação num contexto específico. Se pretender configurar um nome de ligação alternativo que possa reutilizar em todo o cofre, considere usar um [[Apelidos|apelido]].
 
-For example, if you regularly refer to `[[Three laws of motion]]` as `[[The 3 laws]]`, adding "3 laws" as an alias lets you type just that — no need to add custom display text each time.
+Por exemplo, se referenciar regularmente `[[Três leis do movimento]]` como `[[As 3 leis]]`, adicionar "3 leis" como apelido permite-lhe digitar apenas isso — sem necessidade de adicionar texto de apresentação personalizado de cada vez.
 
-> [!tip] Tip
-> Use [[#Change the link display text|link display text]] when you want to customize how a link looks *in a specific place*.  
-> 
-> Use [[Apelidos|aliases]] when you want to refer to the same note using *different names* throughout your vault.
+> [!tip] Dica
+> Use o [[#Change the link display text|texto de apresentação da ligação]] quando pretender personalizar a aparência de uma ligação *num local específico*.
+>
+> Use [[Apelidos|apelidos]] quando pretender referenciar a mesma nota usando *nomes diferentes* em todo o cofre.
 ^callout-internal-links-link-text
 
-## Preview a linked file
+## Pré-visualizar um ficheiro ligado
 
-> [!note] Note
-> To preview linked files, you first need to enable [[Pré-visualização de página]].
+> [!note] Nota
+> Para pré-visualizar ficheiros ligados, primeiro precisa de ativar a [[Pré-visualização de página]].
 
-To preview a linked file, hover over an internal link. While in editing mode, press `Ctrl` (or `Cmd` on macOS) while hovering the cursor over the link. A preview of the file content appears next to the cursor.
+Para pré-visualizar um ficheiro ligado, passe o cursor sobre uma ligação interna. No modo de edição, prima `Ctrl` (ou `Cmd` no macOS) enquanto passa o cursor sobre a ligação. Aparece uma pré-visualização do conteúdo do ficheiro junto ao cursor.

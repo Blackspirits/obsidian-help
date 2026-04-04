@@ -1,46 +1,45 @@
 ---
-localized: false
 permalink: plugins/templates
 cssclasses:
   - soft-embed
 publish: true
 mobile: true
-description: Templates is a Core plugins|core plugin that lets you insert pre-defined snippets of text into your active note.
+description: Templates is a Core plugins|core plugin that lets you insert pre-defined snippets of text into your ative note.
 ---
 
-Templates is a [[Plugins nativos|core plugin]] that lets you insert pre-defined snippets of text into your active note.
+Modelos é um [[Plugins nativos|plugin nativo]] que lhe permite inserir fragmentos de texto predefinidos na sua nota ativa.
 
-## Set your template folder
+## Definir a pasta de modelos
 
-1. In the bottom-left corner, click **[[Configurações]]** ![[lucide-cog.svg#icon]].
-2. Under **Core plugins → Templates → Template folder location**, enter the folder containing your templates.
+1. No canto inferior esquerdo, clique em **[[Configurações]]** ![[lucide-cog.svg#icon]].
+2. Em **Plugins nativos → Modelos → Localização da pasta de modelos**, introduza a pasta que contém os seus modelos.
 
-## Template variables
+## Variáveis de modelo
 
-You can add dynamic information to your templates, using _template variables_. When you insert a template containing a template variable, Templates replaces it with its corresponding value.
+Pode adicionar informações dinâmicas aos seus modelos usando _variáveis de modelo_. Quando insere um modelo que contém uma variável de modelo, o plugin Modelos substitui-a pelo valor correspondente.
 
-| Variable    | Description                                     |
-|-------------|-------------------------------------------------|
-| `{{title}}` | Title of the active note.                       |
-| `{{date}}`  | Today's date. **Default format:** `YYYY-MM-DD`. |
-| `{{time}}`  | Current time. **Default format:** `HH:mm`.      |
+| Variável    | Descrição                                              |
+|-------------|--------------------------------------------------------|
+| `{{title}}` | Título da nota ativa.                                  |
+| `{{date}}`  | Data de hoje. **Formato predefinido:** `YYYY-MM-DD`.   |
+| `{{time}}`  | Hora atual. **Formato predefinido:** `HH:mm`.          |
 
-Both `{{date}}` and `{{time}}` allow you to change the default format using a _format string_.
+Tanto `{{date}}` como `{{time}}` permitem alterar o formato predefinido usando uma _cadeia de formato_.
 
-To set a format string, add a colon (`:`) followed by a string of [Moment.js format tokens](https://momentjs.com/docs/#/displaying/format/), for example `{{date:YYYY-MM-DD}}`.
+Para definir uma cadeia de formato, adicione dois pontos (`:`) seguidos de uma cadeia de [tokens de formato do Moment.js](https://momentjs.com/docs/#/displaying/format/), por exemplo `{{date:YYYY-MM-DD}}`.
 
-You can use `{{date}}` and `{{time}}` interchangeably with format strings, for example `{{time:YYYY-MM-DD}}`.
+Pode usar `{{date}}` e `{{time}}` de forma intercambiável com cadeias de formato, por exemplo `{{time:YYYY-MM-DD}}`.
 
-You can change the default date and time formats under **[[Configurações]] → Templates → Date format** and **[[Configurações]] → Templates → Time format**. ^template-settings-date-time-formatting
+Pode alterar os formatos de data e hora predefinidos em **[[Configurações]] → Modelos → Formato de data** e **[[Configurações]] → Modelos → Formato de hora**. ^template-settings-date-time-formatting
 
-> [!tip] Tip
-> You can also use the `{{date}}` and `{{time}}` template variables in the [[Notas diárias]] and [[Criador de nota única]] plugins.
+> [!tip] Dica
+> Também pode usar as variáveis de modelo `{{date}}` e `{{time}}` nos plugins [[Notas diárias]] e [[Criador de nota única]].
 
-## Create a template
+## Criar um modelo
 
-In the [[#Set your template folder|template folder]], [[Gerir notas#Create a new note|create a note]] containing the text you want to appear when you use the template. You can use [[#Template variables|template variables]] for dynamic text like the current date.
+Na [[#Definir a pasta de modelos|pasta de modelos]], [[Gerir notas#Create a new note|crie uma nota]] com o texto que pretende que apareça quando usar o modelo. Pode usar [[#Variáveis de modelo|variáveis de modelo]] para texto dinâmico como a data atual.
 
-For example, here's a template for study notes:
+Por exemplo, aqui está um modelo para notas de estudo:
 
 ```markdown
 ---
@@ -53,42 +52,42 @@ tags:
 
 # {{title}}
 
-## Key Concepts
+## Conceitos-chave
 
 
-## Important Details
+## Detalhes importantes
 
 
-## Examples
+## Exemplos
 
 
-## Questions
+## Questões
 - 
 
-## Summary
+## Resumo
 
 
-## Related Topics
+## Tópicos relacionados
 - [[]]
 ```
 
-## Insert a template into the active note
+## Inserir um modelo na nota ativa
 
-**Important:**  To insert a template, you need to first [[#Set your template folder]].
+**Importante:** Para inserir um modelo, precisa primeiro de [[#Definir a pasta de modelos]].
 
-1. In the ribbon, click **Insert template**.
-2. Select the template to insert at the cursor position in the active note.
+1. Na faixa de opções, clique em **Inserir modelo**.
+2. Selecione o modelo para inserir na posição do cursor na nota ativa.
 
-To insert a template using the [[Paleta de comandos]] or [[Teclas de atalho#Set a hotkey|a custom keyboard shortcut]], use the command `Templates: Insert template`.
+Para inserir um modelo usando a [[Paleta de comandos]] ou [[Teclas de atalho#Set a hotkey|um atalho de teclado personalizado]], use o comando `Modelos: Inserir modelo`.
 
-The content of the template is inserted at your current cursor position. If your cursor is not in the note body, the content is inserted at your last cursor position.
+O conteúdo do modelo é inserido na posição atual do cursor. Se o cursor não estiver no corpo da nota, o conteúdo é inserido na última posição do cursor.
 
-### Template properties
+### Propriedades do modelo
 
 ![[Propriedades#^templates-properties]]
 
-## Inserting current date and time into the active note
+## Inserir a data e hora atuais na nota ativa
 
-Use the commands `Templates: Insert current date` and `Templates: Insert current time` to insert the current date and time at your current cursor position. Like the `Insert template` command this can be done with the [[Paleta de comandos]] or [[Teclas de atalho#Set a hotkey|a custom keyboard shortcut]].
+Use os comandos `Modelos: Inserir data atual` e `Modelos: Inserir hora atual` para inserir a data e hora atuais na posição atual do cursor. Tal como o comando `Inserir modelo`, isto pode ser feito com a [[Paleta de comandos]] ou [[Teclas de atalho#Set a hotkey|um atalho de teclado personalizado]].
 
-The inserted date and time uses the [[#^template-settings-date-time-formatting|formatting set in the plugin settings]].
+A data e hora inseridas usam a [[#^template-settings-date-time-formatting|formatação definida nas definições do plugin]].
