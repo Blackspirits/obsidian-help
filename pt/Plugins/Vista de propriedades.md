@@ -2,7 +2,7 @@
 permalink: plugins/properties
 publish: true
 mobile: true
-description: Visualização de propriedades é um plugin principal que adiciona duas visualizações na barra lateral que você pode usar para gerenciar Propriedades.
+description: Vista de propriedades é um plugin principal que adiciona duas vistas na barra lateral que pode utilizar para gerir Propriedades.
 ---
 Vista de propriedades é um [[Plugins Base|plugin principal]] que adiciona duas vistas na barra lateral que pode utilizar para gerir [[Propriedades]]:
 

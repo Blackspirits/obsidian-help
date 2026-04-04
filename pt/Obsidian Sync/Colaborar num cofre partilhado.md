@@ -2,7 +2,7 @@
 permalink: sync/collaborate
 publish: true
 mobile: true
-description: Esta página detalha como você pode colaborar com outros usuários do Obsidian Sync.
+description: Esta página detalha como pode colaborar com outros utilizadores do Obsidian Sync.
 ---
 Com o [[Introdução ao Obsidian Sync|Obsidian Sync]] pode colaborar num cofre partilhado com a sua equipa.
 
@@ -40,7 +40,7 @@ Permissões detalhadas ainda não são suportadas. Todos os colaboradores recebe
 
 Os cofres partilhados permitem que as equipas trabalhem em conjunto num conjunto de ficheiros, no entanto o Obsidian ainda não suporta edição colaborativa em direto no mesmo ficheiro. Não verá o cursor do outro utilizador, e as suas edições só aparecerão quando as alterações forem sincronizadas.
 
-Se vários utilizadores estiverem a editar o mesmo ficheiro ao mesmo tempo, [[Resolver problemas do Obsidian Sync#Resolução de conflitos|as alterações serão mescladas]] durante o processo de sincronização. As alterações podem ser visualizadas e restauradas utilizando a [[História de versionamento]].
+Se vários utilizadores estiverem a editar o mesmo ficheiro ao mesmo tempo, [[Resolver problemas do Obsidian Sync#Resolução de conflitos|as alterações serão combinadas]] durante o processo de sincronização. As alterações podem ser visualizadas e restauradas utilizando a [[História de versionamento]].
 
 ![[version-history-collaboration.png]]^version-history-image
 

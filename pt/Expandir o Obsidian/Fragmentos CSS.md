@@ -2,7 +2,7 @@
 permalink: snippets
 publish: true
 mobile: true
-description: Aprenda a alterar partes da aparência do aplicativo Obsidian sem criar um tema completo.
+description: Aprenda a alterar partes da aparência da aplicação Obsidian sem criar um tema completo.
 ---
 Aprenda como modificar aspetos da aparência da aplicação Obsidian sem precisar de [construir um tema](https://docs.obsidian.md/Themes/App+themes/Build+a+theme).
 

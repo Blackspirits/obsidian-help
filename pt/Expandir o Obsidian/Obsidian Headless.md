@@ -1,6 +1,6 @@
 ---
 permalink: headless
-description: O Obsidian Headless é um cliente de linha de comando para os serviços do Obsidian. Sincronize seus cofres sem o aplicativo de desktop.
+description: O Obsidian Headless é um cliente de linha de comandos para os serviços do Obsidian. Sincronize os seus cofres sem a aplicação de ambiente de trabalho.
 ---
 Obsidian Headless **(beta aberta)** é um cliente sem interface para os serviços do Obsidian. Permite [[Sync sem interface|sincronizar cofres]] a partir da linha de comandos sem a aplicação de ambiente de trabalho, com toda a velocidade, privacidade e benefícios de [[Introdução ao Obsidian Sync|encriptação ponto a ponto]] do Obsidian Sync.
 

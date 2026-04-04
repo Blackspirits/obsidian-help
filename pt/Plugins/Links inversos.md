@@ -2,7 +2,7 @@
 permalink: plugins/backlinks
 publish: true
 mobile: false
-description: 'Com o plugin Backlinks, você pode ver todos os backlinks da nota ativa.'
+description: 'Com o plugin Backlinks, pode ver todos os backlinks da nota ativa.'
 ---
 Com o [[Plugins Base|plugin]] de Links inversos, pode ver todos os _links inversos_ da nota ativa.
 
@@ -61,6 +61,6 @@ Em vez de mostrar os links inversos num separador separado, pode mostrar os link
 Para mostrar links inversos numa nota:
 
 1. Abra a [[Paleta de comando]].
-2. Selecione **Links inversos: Ativar backlinks no document**.
+2. Selecione **Links inversos: Ativar backlinks no documento**.
 
 Ou ative **Links inversos no documento** nas opções do plugin de Links inversos para ativar automaticamente os links inversos quando abre uma nova nota.

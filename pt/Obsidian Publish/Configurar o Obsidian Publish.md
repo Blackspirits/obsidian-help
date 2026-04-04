@@ -1,7 +1,7 @@
 ---
 permalink: publish/setup
 mobile: true
-description: 'Neste guia, você habilitará o Obsidian Publish para o seu cofre, criará um site e publicará suas notas nele.'
+description: 'Neste guia, vai ativar o Obsidian Publish para o seu cofre, criar um site e publicar as suas notas nele.'
 ---
 Neste guia, vai ativar o [[Introdução ao Obsidian Publish|Obsidian Publish]] para o seu cofre, criar um site e publicar as suas notas nele.
 
